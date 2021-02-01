@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hienhoang.ml","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog">
+<meta property="og:url" content="https://hienhoang.ml/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Hien Hoang">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://hienhoang.ml/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">62</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hoangchunghien@gmail.com" title="E-Mail → mailto:hoangchunghien@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+      
+
+      
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/02/01/year-end-2020/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/01/year-end-2020/" class="post-title-link" itemprop="url">Year End 2020</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-02-01 22:56:40" itemprop="dateCreated datePublished" datetime="2021-02-01T22:56:40+07:00">2021-02-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-02 00:25:21" itemprop="dateModified" datetime="2021-02-02T00:25:21+07:00">2021-02-02</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Living/" itemprop="url" rel="index"><span itemprop="name">Living</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Hey, how do you do? Hope you had a good time in 2020.</p>
+<p><img src="/images/2021-02-01/004.jpg"></p>
+<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
+<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
+<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
+<p><img src="/images/2021-02-01/001.jpeg"></p>
+<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
+<p><img src="/images/2021-02-01/002.jpeg"></p>
+<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
+<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
+<p><img src="/images/2021-02-01/003.jpeg"></p>
+<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
+<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
+<p>Thanks for reading up to this line!</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/01/28/how-to-replace-environment-variables-in-a-file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/28/how-to-replace-environment-variables-in-a-file/" class="post-title-link" itemprop="url">How to replace environment variables in a file</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-28 13:53:30" itemprop="dateCreated datePublished" datetime="2021-01-28T13:53:30+07:00">2021-01-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-01 22:53:22" itemprop="dateModified" datetime="2021-02-01T22:53:22+07:00">2021-02-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Shell/" itemprop="url" rel="index"><span itemprop="name">Shell</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="load-environment-from-.env-file">1. Load environment from <code>.env</code> file</h1>
+<ul>
+<li><p>Let say we have a <code>.env</code> file: <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WEBSITE_URL=https://hienhoang.ml</span><br><span class="line">USERNAME=hienhoang</span><br><span class="line">PASSWORD=p@ssword</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Then run this script will load all environment variables to current shell terminal <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export $(grep -v &#x27;^#&#x27; .env | xargs)</span><br></pre></td></tr></table></figure></p></li>
+<li><p>You can also unset variables using below script <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unset $(grep -v &#x27;^#&#x27; .env | sed -E &#x27;s/(.*)=.*/\1/&#x27; | xargs)</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="substitute-all-environment-variables-in-a-file">2. Substitute all environment variables in a file</h1>
+<ul>
+<li><p><code>template.yml</code> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">website:</span> $&#123;WEBSITE_URL&#125;</span><br><span class="line"><span class="symbol">username:</span> $&#123;USERNAME&#125;</span><br><span class="line"><span class="symbol">password:</span> $&#123;PASSWORD&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Run this script to substitute variable in the <code>template.yml</code> file and output to <code>config.yml</code> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">envsubst &lt; template.yml &gt; config.yml</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Result is the <code>config.yml</code> <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">website:</span> <span class="symbol">https:</span>/<span class="regexp">/hienhoang.ml</span></span><br><span class="line"><span class="regexp">username: hienhoang</span></span><br><span class="line"><span class="regexp">password: p@ssword</span></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/01/21/Django-Object-Level-Permission-Templage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/21/Django-Object-Level-Permission-Templage/" class="post-title-link" itemprop="url">Django Object Level Permission Template</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-21 16:39:07" itemprop="dateCreated datePublished" datetime="2021-01-21T16:39:07+07:00">2021-01-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-01 22:53:22" itemprop="dateModified" datetime="2021-02-01T22:53:22+07:00">2021-02-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/Django/" itemprop="url" rel="index"><span itemprop="name">Django</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>A template to guide you how to setup a Django Project with Object Level Permission.</p>
+<h2 id="authentication">1. Authentication</h2>
+<h3 id="packages">1.1. Packages</h3>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://djoser.readthedocs.io/">Djoser</a> provide commonly use authentication functions such as: Sign Up, Login, Change Password, Forgot Password, User Account Activation, User Profile</p></li>
+<li><p><a target="_blank" rel="noopener" href="https://django-rest-framework-simplejwt.readthedocs.io/">Simple JWT</a> provide Json Web Token authentication method.</p></li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/django-guardian/django-guardian">Django Guardian</a> provide object level permission management.</p></li>
+</ul>
+<h3 id="configuration">1.2. Configuration</h3>
+<ul>
+<li>JWT authentication is configured in</li>
+</ul>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Application definition</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;rest_framework&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;djoser&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;guardian&#x27;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">AUTHENTICATION_BACKENDS = (</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth.backends.ModelBackend&#x27;</span>, <span class="comment"># default</span></span><br><span class="line">    <span class="string">&#x27;guardian.backends.ObjectPermissionBackend&#x27;</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Configuration for Django Rest Framework</span></span><br><span class="line"><span class="comment"># https://www.django-rest-framework.org/</span></span><br><span class="line"></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">&#x27;DEFAULT_AUTHENTICATION_CLASSES&#x27;</span>: (</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Simple JWT Authentication</span></span><br><span class="line">        <span class="comment"># https://django-rest-framework-simplejwt.readthedocs.io/</span></span><br><span class="line">        <span class="string">&#x27;rest_framework_simplejwt.authentication.JWTAuthentication&#x27;</span>,</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>core/urls.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls&#x27;</span>)),</span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls.jwt&#x27;</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h3 id="data-model">1.3. Data Model</h3>
+<h4 id="using-a-custom-model">1.3.1. Using a custom model</h4>
+<p>If you’re starting a new project, it’s highly recommended to set up a custom user model, even if the default User model is sufficient for you. This model behaves identically to the default user model, but you’ll be able to customize it in the future if the need arises.</p>
+<p><code>core/user/models.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> AbstractUser</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>(<span class="params">AbstractUser</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AUTH_USER_MODEL = <span class="string">&#x27;user.User&#x27;</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line">    <span class="string">&#x27;core.user&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h4 id="reusable-apps-and-auth_user_model">1.3.2. Reusable apps and AUTH_USER_MODEL</h4>
+<p>Reusable apps shouldn’t implement a custom user model. A project may use many apps, and two reusable apps that implemented a custom user model couldn’t be used together. If you need to store per user information in your app, use a <code>ForeignKey</code> or <code>OneToOneField</code> to <code>settings.AUTH_USER_MODEL</code> as described below.</p>
+<h5 id="referencing-the-user-model">Referencing the User model</h5>
+<p>If you reference <code>User</code> directly (for example, by referring to it in a foreign key), your code will not work in projects where the <code>AUTH_USER_MODEL</code> setting has been changed to a different user model.</p>
+<p>Instead of referring to User directly, you should reference the user model using <code>django.contrib.auth.get_user_model()</code>. This method will return the currently active user model – the custom user model if one is specified, or User otherwise.</p>
+<p>When you define a <code>foreign key</code> or <code>many-to-many</code> relations to the user model, you should specify the custom model using the <code>AUTH_USER_MODEL</code> setting. For example:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    author = models.ForeignKey(</span><br><span class="line">        settings.AUTH_USER_MODEL,</span><br><span class="line">        on_delete=models.CASCADE,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<h3 id="declare-model-permissions">1.4. Declare model permissions</h3>
+<h4>
+1.4.1 <a target="_blank" rel="noopener" href="https://docs.djangoproject.com/en/3.0/topics/auth/default/#permissions-and-authorization">Django builtin permission</a>
+</h4>
+<p>Django comes with a built-in permissions system. It provides a way to assign permissions to specific users and groups of users.</p>
+<p>When <code>django.contrib.auth</code> is listed in your <strong>INSTALLED_APPS</strong> setting, it will ensure that four default permissions – <code>add</code>, <code>change</code>, <code>delete</code>, and <code>view</code> – are created for each Django model defined in one of your installed applications.</p>
+<h4>
+1.4.2 Declare new permission
+</h4>
+<p>Define directly inside model <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Job</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    (...)</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        permissions = [(<span class="string">&#x27;review_job&#x27;</span>, <span class="string">&#x27;Can review job (approve or deny)&#x27;</span>)]</span><br></pre></td></tr></table></figure></p>
+Define programmatically <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> myapp.models <span class="keyword">import</span> Job</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Permission</span><br><span class="line"><span class="keyword">from</span> django.contrib.contenttypes.models <span class="keyword">import</span> ContentType</span><br><span class="line"></span><br><span class="line">content_type = ContentType.objects.get_for_model(Job)</span><br><span class="line">permission = Permission.objects.create(</span><br><span class="line">    codename=<span class="string">&#x27;review_job&#x27;</span>,</span><br><span class="line">    name=<span class="string">&#x27;Can review job (approve or deny)&#x27;</span>,</span><br><span class="line">    content_type=content_type,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4>
+1.4.3 Assign permission to user/group
+</h4>
+<p><strong>Global Permission</strong> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Object Permission</strong> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
+<h4>
+1.4.4 Retrieve user permitted objects
+</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; leaders = Group.objects.create(name=<span class="string">&#x27;leaders&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm, get_objects_for_user</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet []&gt;</span><br><span class="line"></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;]&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Let try with global permission</span></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;, &lt;Group: level1&gt;]&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="database">2. Database</h2>
+<h3 id="packages-1">2.1. Packages</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/jacobian/dj-database-url">dj-database-url</a> database connection string parser that is helpful to parse database configuration in a connection string style.</li>
+</ul>
+<h3 id="supported-url-connection-schema">2.2. Supported URL connection schema</h3>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 55%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Engine</th>
+<th>Django Backend</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SQLite</td>
+<td><code>django.db.backends.sqlite3</code></td>
+<td><code>sqlite:///PATH</code></td>
+</tr>
+<tr class="even">
+<td>PostgreSQL</td>
+<td><code>django.db.backends.postgresql</code></td>
+<td><code>postgres://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>PostGIS</td>
+<td><code>django.contrib.gis.db.backends.postgis</code></td>
+<td><code>postgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>MSSQL</td>
+<td><code>sql_server.pyodbc</code></td>
+<td><code>mssql://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>MySQL</td>
+<td><code>django.db.backends.mysql</code></td>
+<td><code>mysql://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>MySQL (GIS)</td>
+<td><code>django.contrib.gis.db.backends.mysql</code></td>
+<td><code>mysqlgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>Oracle</td>
+<td><code>django.db.backends.oracle</code></td>
+<td><code>oracle://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>Oracle (GIS)</td>
+<td><code>django.contrib.gis.db.backends.oracle</code></td>
+<td><code>oraclegis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>Redshift</td>
+<td><code>django_redshift_backend</code></td>
+<td><code>redshift://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>SpatiaLite</td>
+<td><code>django.contrib.gis.db.backends.spatialite</code></td>
+<td><code>spatialite:///PATH</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-1">2.3. Configuration</h3>
+<p>This is configuration for the database, the default database will use sqlite3 for simple to quick to run in development mode. This may conflict with database you run on production mode because some of the funtion sqlite may not support. It is recommended to config the database in development mode have the same database system you run on production. To change the database system, config the environment variable <code>DATABASE_URL</code></p>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dj_database_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># Database</span></span><br><span class="line"><span class="comment"># https://docs.djangoproject.com/en/3.0/ref/settings/#databases</span></span><br><span class="line"></span><br><span class="line">DATABASE_URL = os.environ.get(<span class="string">&#x27;DATABASE_URL&#x27;</span>, <span class="string">&#x27;sqlite:///&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(os.path.join(BASE_DIR, <span class="string">&#x27;db.sqlite3&#x27;</span>)))</span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: dj_database_url.config(default=DATABASE_URL)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="api-development">3. API Development</h2>
+<h3 id="packages-2">3.1. Packages</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://django-rest-framework-json-api.readthedocs.io/en/stable/">djangorestframework-jsonapi</a> provide the implementation of the <a target="_blank" rel="noopener" href="http://jsonapi.org/format/">JSON API format specification</a></li>
+</ul>
+<h3 id="serializers">3.2. Serializers</h3>
+<blockquote>
+<p>TODO What is serializers, how to code one?</p>
+</blockquote>
+<h3 id="views">3.3. Views</h3>
+<blockquote>
+<p>TODO What is views, how to code one?</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2020/12/28/Use-Vagrant-for-cross-environment-development/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/28/Use-Vagrant-for-cross-environment-development/" class="post-title-link" itemprop="url">Use Vagrant for cross environment development</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-28 15:37:26" itemprop="dateCreated datePublished" datetime="2020-12-28T15:37:26+07:00">2020-12-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote><h4>
+What's Vagrant?
+</h4>
+<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.</p>
+<h4>
+Why Vagrant?
+</h4>
+<p>Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.</p>
+<footer><strong>Vagrant</strong><cite><a target="_blank" rel="noopener" href="https://www.vagrantup.com/intro">www.vagrantup.com/intro</a></cite></footer></blockquote>
+<h1 id="getting-started">Getting Started</h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.virtualbox.org/wiki/Downloads">Download</a> VirtualBox for virtualization</li>
+<li><a target="_blank" rel="noopener" href="https://www.vagrantup.com/downloads">Download</a> and install Vagrant</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install virtualbox</span><br><span class="line"></span><br><span class="line">curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb</span><br><span class="line">sudo apt install ./vagrant_2.2.9_x86_64.deb</span><br></pre></td></tr></table></figure>
+<h1 id="init-environment">Init environment</h1>
+<p>Run the command to init a new vagrant development environment using <code>ubuntu 20.04</code>.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant init bento/ubuntu-20.04</span><br></pre></td></tr></table></figure>
+<p>The script will generate a initial <code>Vagrantfile</code>.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line">Vagrant.configure(<span class="string">&quot;2&quot;</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># The most common configuration options are documented and commented below.</span></span><br><span class="line">  <span class="comment"># For a complete reference, please see the online documentation at</span></span><br><span class="line">  <span class="comment"># https://docs.vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line">  <span class="comment"># boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  config.vm.box = <span class="string">&quot;bento/ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Disable automatic box update checking. If you disable this, then</span></span><br><span class="line">  <span class="comment"># boxes will only be checked for updates when the user runs</span></span><br><span class="line">  <span class="comment"># `vagrant box outdated`. This is not recommended.</span></span><br><span class="line">  <span class="comment"># config.vm.box_check_update = false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine and only allow access</span></span><br><span class="line">  <span class="comment"># via 127.0.0.1 to disable public access</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;public_network&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line">  <span class="comment">#   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line">  <span class="comment">#   vb.gui = true</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # Customize the amount of memory on the VM:</span></span><br><span class="line">  <span class="comment">#   vb.memory = &quot;1024&quot;</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you are using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line">  <span class="comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span></span><br><span class="line">  <span class="comment"># documentation for more information about their specific syntax and use.</span></span><br><span class="line">  <span class="comment"># config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line">  <span class="comment">#   apt-get update</span></span><br><span class="line">  <span class="comment">#   apt-get install -y apache2</span></span><br><span class="line">  <span class="comment"># SHELL</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Enable <code>config.vm.synced_folder "./", "/vagrant_data"</code> to share folder with the virtual machine.</li>
+<li>Enable <code>config.vm.network "forwarded_port", guest: 80, host: 8080</code> to expose virtual machine port <code>80</code> to <code>localhost:8080</code></li>
+<li>To install required packages on init. Enable:</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">config.vm.provision <span class="string">&quot;shell&quot;</span>, <span class="symbol">inline:</span> &lt;&lt;-SHELL</span><br><span class="line">  apt-get update</span><br><span class="line">  apt-get install url -y </span><br><span class="line">  curl <span class="symbol">https:</span>/<span class="regexp">/raw.githubusercontent.com/creationix</span><span class="regexp">/nvm/master</span><span class="regexp">/install.sh | bash</span></span><br><span class="line"><span class="regexp">SHELL</span></span><br></pre></td></tr></table></figure>
+<h1 id="up-and-run">Up and run</h1>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vagrant up</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Bringing machine &#x27;default&#x27; up with &#x27;virtualbox&#x27; provider...</span><br><span class="line">==&gt; default: Box &#x27;bento/ubuntu-20.04&#x27; could not be found. Attempting to find and install...</span><br><span class="line">    default: Box Provider: virtualbox</span><br><span class="line">    default: Box Version: &gt;= 0</span><br><span class="line">==&gt; default: Loading metadata for box &#x27;bento/ubuntu-20.04&#x27;</span><br><span class="line">    default: URL: https://vagrantcloud.com/bento/ubuntu-20.04</span><br><span class="line">==&gt; default: Adding box &#x27;bento/ubuntu-20.04&#x27; (v202012.23.0) for provider: virtualbox</span><br><span class="line">    default: Downloading: https://vagrantcloud.com/bento/boxes/ubuntu-20.04/versions/202012.23.0/providers/virtualbox.box</span><br><span class="line">==&gt; default: Box download is resuming from prior download progress</span><br><span class="line">Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com</span><br><span class="line">Progress: 0% (Rate: 215k/s, Estimated time remaining: 0:34:56)</span><br></pre></td></tr></table></figure>
+<h1 id="connect-to-the-vm">Connect to the VM</h1>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure>
+<h1 id="stop-the-vm">Stop the VM</h1>
+<ul>
+<li>Stop without destroy the VM</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant halt</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Stop and destroy the VM</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant destroy</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2020/12/26/How-to-find-a-website-IP-behide-CloudFlare/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/26/How-to-find-a-website-IP-behide-CloudFlare/" class="post-title-link" itemprop="url">How to find a website IP behind CloudFlare</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-26 14:44:45" itemprop="dateCreated datePublished" datetime="2020-12-26T14:44:45+07:00">2020-12-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Security/" itemprop="url" rel="index"><span itemprop="name">Security</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>CloudFlare provides high security for the target website to hide their real server IP address. Make it harder for the hacker to attack the website real server. But it doesn't mean it is impossible. Let's find it out on one website - <code>https://www.g2.com</code> - use CloudFlare to hide it IP address.</p>
+<h2 id="find-dns-history-records">1. Find DNS history records</h2>
+<p>I use <a target="_blank" rel="noopener" href="https://securitytrails.com/">SecurityTrails</a> to find the domain DNS history. <img src="/images/2020-12-26/001.png"></p>
+<h2 id="digging-deeper">2. Digging deeper</h2>
+<p>Now use the <code>dig</code> command to reveal the DNS history on <code>ns4.ogilvy.com</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> dig @ns4.ogilvy.com www.g2.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.16.1-Ubuntu &lt;&lt;&gt;&gt; @ns4.ogilvy.com www.g2.com                                                                </span><br><span class="line">; (1 server found)                                                                                                      </span><br><span class="line">;; global options: +cmd                                                                                                 </span><br><span class="line">;; Got answer:                                                                                                          </span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 24883                                                               </span><br><span class="line">;; flags: qr aa rd; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1                                                    </span><br><span class="line">;; WARNING: recursion requested but not available                                                                                                                                                                                               </span><br><span class="line">;; OPT PSEUDOSECTION:                                                                                                   </span><br><span class="line">; EDNS: version: 0, flags:; udp: 1220                                                                                   </span><br><span class="line">; COOKIE: a7c6382d3646792f30fe538c5fe6e580eb39a7455513923d (good)                                                       </span><br><span class="line">;; QUESTION SECTION:                                                                                                    </span><br><span class="line">;www.g2.com.                    IN      A                                                                                                                                                                                                       </span><br><span class="line">;; ANSWER SECTION:                                                                                                      </span><br><span class="line">www.g2.com.             3600    IN      CNAME   www.geometry.com.                                                       </span><br><span class="line">www.geometry.com.       600     IN      CNAME   awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com.                                                                                                                                </span><br><span class="line">;; Query time: 254 msec                                                                                                 </span><br><span class="line">;; SERVER: 199.20.46.10#53(199.20.46.10)                                                                                </span><br><span class="line">;; WHEN: Sat Dec 26 14:25:53 +07 2020                                                                                   </span><br><span class="line">;; MSG SIZE  rcvd: 168   </span><br></pre></td></tr></table></figure>
+<p>Look like their website is hosting on <code>awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com</code> domain.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">nslookup awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com</span><br><span class="line"></span><br><span class="line">Server:         8.8.8.8</span><br><span class="line">Address:        8.8.8.8#53</span><br><span class="line"></span><br><span class="line">Non-authoritative answer:</span><br><span class="line">Name:   awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com</span><br><span class="line">Address: 34.xxx.xxx.xx</span><br><span class="line">Name:   awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com</span><br><span class="line">Address: 18.xxx.xxx.xx</span><br><span class="line">Name:   awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com</span><br><span class="line">Address: 54.xxx.xx.xxx</span><br></pre></td></tr></table></figure>
+<p>Let's check the ip <code>34.xxx.xxx.xx</code></p>
+<ul>
+<li>Using <code>curl</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> curl -i -H &quot;Host: www.g2.com&quot; 34.xxx.xxx.xx</span><br><span class="line"></span><br><span class="line">Server: awselb/2.0</span><br><span class="line">Date: Sat, 26 Dec 2020 08:40:34 GMT</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Content-Length: 134</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Location: https://www.g2.com:443/</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Using <code>Postman</code> <img src="/images/2020-12-26/002.png"></li>
+</ul>
+<p>Hmm, look like we found the correct website IP address <code>34.x.x.x</code>. The host force all requests to redirect to <code>www.g2.com</code> which is through CloudFlare. Or maybe we need some special headers to be able to bypass it security checking.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
