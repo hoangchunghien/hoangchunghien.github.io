@@ -202,7 +202,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -215,7 +215,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">78</span>
+        <span class="site-state-item-count">86</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -259,6 +259,224 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/01/21/Django-Object-Level-Permission-Templage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/21/Django-Object-Level-Permission-Templage/" class="post-title-link" itemprop="url">Django Object Level Permission Template</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-21 16:39:07" itemprop="dateCreated datePublished" datetime="2021-01-21T16:39:07+07:00">2021-01-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-01 22:53:22" itemprop="dateModified" datetime="2021-02-01T22:53:22+07:00">2021-02-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/Django/" itemprop="url" rel="index"><span itemprop="name">Django</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>A template to guide you how to setup a Django Project with Object Level Permission.</p>
+<h2 id="authentication">1. Authentication</h2>
+<h3 id="packages">1.1. Packages</h3>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://djoser.readthedocs.io/">Djoser</a> provide commonly use authentication functions such as: Sign Up, Login, Change Password, Forgot Password, User Account Activation, User Profile</p></li>
+<li><p><a target="_blank" rel="noopener" href="https://django-rest-framework-simplejwt.readthedocs.io/">Simple JWT</a> provide Json Web Token authentication method.</p></li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/django-guardian/django-guardian">Django Guardian</a> provide object level permission management.</p></li>
+</ul>
+<h3 id="configuration">1.2. Configuration</h3>
+<ul>
+<li>JWT authentication is configured in</li>
+</ul>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Application definition</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;rest_framework&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;djoser&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;guardian&#x27;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">AUTHENTICATION_BACKENDS = (</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth.backends.ModelBackend&#x27;</span>, <span class="comment"># default</span></span><br><span class="line">    <span class="string">&#x27;guardian.backends.ObjectPermissionBackend&#x27;</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Configuration for Django Rest Framework</span></span><br><span class="line"><span class="comment"># https://www.django-rest-framework.org/</span></span><br><span class="line"></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">&#x27;DEFAULT_AUTHENTICATION_CLASSES&#x27;</span>: (</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Simple JWT Authentication</span></span><br><span class="line">        <span class="comment"># https://django-rest-framework-simplejwt.readthedocs.io/</span></span><br><span class="line">        <span class="string">&#x27;rest_framework_simplejwt.authentication.JWTAuthentication&#x27;</span>,</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>core/urls.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls&#x27;</span>)),</span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls.jwt&#x27;</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h3 id="data-model">1.3. Data Model</h3>
+<h4 id="using-a-custom-model">1.3.1. Using a custom model</h4>
+<p>If you’re starting a new project, it’s highly recommended to set up a custom user model, even if the default User model is sufficient for you. This model behaves identically to the default user model, but you’ll be able to customize it in the future if the need arises.</p>
+<p><code>core/user/models.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> AbstractUser</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>(<span class="params">AbstractUser</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AUTH_USER_MODEL = <span class="string">&#x27;user.User&#x27;</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line">    <span class="string">&#x27;core.user&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h4 id="reusable-apps-and-auth_user_model">1.3.2. Reusable apps and AUTH_USER_MODEL</h4>
+<p>Reusable apps shouldn’t implement a custom user model. A project may use many apps, and two reusable apps that implemented a custom user model couldn’t be used together. If you need to store per user information in your app, use a <code>ForeignKey</code> or <code>OneToOneField</code> to <code>settings.AUTH_USER_MODEL</code> as described below.</p>
+<h5 id="referencing-the-user-model">Referencing the User model</h5>
+<p>If you reference <code>User</code> directly (for example, by referring to it in a foreign key), your code will not work in projects where the <code>AUTH_USER_MODEL</code> setting has been changed to a different user model.</p>
+<p>Instead of referring to User directly, you should reference the user model using <code>django.contrib.auth.get_user_model()</code>. This method will return the currently active user model – the custom user model if one is specified, or User otherwise.</p>
+<p>When you define a <code>foreign key</code> or <code>many-to-many</code> relations to the user model, you should specify the custom model using the <code>AUTH_USER_MODEL</code> setting. For example:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    author = models.ForeignKey(</span><br><span class="line">        settings.AUTH_USER_MODEL,</span><br><span class="line">        on_delete=models.CASCADE,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<h3 id="declare-model-permissions">1.4. Declare model permissions</h3>
+<h4>
+1.4.1 <a target="_blank" rel="noopener" href="https://docs.djangoproject.com/en/3.0/topics/auth/default/#permissions-and-authorization">Django builtin permission</a>
+</h4>
+<p>Django comes with a built-in permissions system. It provides a way to assign permissions to specific users and groups of users.</p>
+<p>When <code>django.contrib.auth</code> is listed in your <strong>INSTALLED_APPS</strong> setting, it will ensure that four default permissions – <code>add</code>, <code>change</code>, <code>delete</code>, and <code>view</code> – are created for each Django model defined in one of your installed applications.</p>
+<h4>
+1.4.2 Declare new permission
+</h4>
+<p>Define directly inside model <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Job</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    (...)</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        permissions = [(<span class="string">&#x27;review_job&#x27;</span>, <span class="string">&#x27;Can review job (approve or deny)&#x27;</span>)]</span><br></pre></td></tr></table></figure></p>
+Define programmatically <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> myapp.models <span class="keyword">import</span> Job</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Permission</span><br><span class="line"><span class="keyword">from</span> django.contrib.contenttypes.models <span class="keyword">import</span> ContentType</span><br><span class="line"></span><br><span class="line">content_type = ContentType.objects.get_for_model(Job)</span><br><span class="line">permission = Permission.objects.create(</span><br><span class="line">    codename=<span class="string">&#x27;review_job&#x27;</span>,</span><br><span class="line">    name=<span class="string">&#x27;Can review job (approve or deny)&#x27;</span>,</span><br><span class="line">    content_type=content_type,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4>
+1.4.3 Assign permission to user/group
+</h4>
+<p><strong>Global Permission</strong> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Object Permission</strong> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
+<h4>
+1.4.4 Retrieve user permitted objects
+</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; leaders = Group.objects.create(name=<span class="string">&#x27;leaders&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm, get_objects_for_user</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet []&gt;</span><br><span class="line"></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;]&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Let try with global permission</span></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;, &lt;Group: level1&gt;]&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="database">2. Database</h2>
+<h3 id="packages-1">2.1. Packages</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/jacobian/dj-database-url">dj-database-url</a> database connection string parser that is helpful to parse database configuration in a connection string style.</li>
+</ul>
+<h3 id="supported-url-connection-schema">2.2. Supported URL connection schema</h3>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 55%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Engine</th>
+<th>Django Backend</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SQLite</td>
+<td><code>django.db.backends.sqlite3</code></td>
+<td><code>sqlite:///PATH</code></td>
+</tr>
+<tr class="even">
+<td>PostgreSQL</td>
+<td><code>django.db.backends.postgresql</code></td>
+<td><code>postgres://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>PostGIS</td>
+<td><code>django.contrib.gis.db.backends.postgis</code></td>
+<td><code>postgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>MSSQL</td>
+<td><code>sql_server.pyodbc</code></td>
+<td><code>mssql://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>MySQL</td>
+<td><code>django.db.backends.mysql</code></td>
+<td><code>mysql://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>MySQL (GIS)</td>
+<td><code>django.contrib.gis.db.backends.mysql</code></td>
+<td><code>mysqlgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>Oracle</td>
+<td><code>django.db.backends.oracle</code></td>
+<td><code>oracle://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>Oracle (GIS)</td>
+<td><code>django.contrib.gis.db.backends.oracle</code></td>
+<td><code>oraclegis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>Redshift</td>
+<td><code>django_redshift_backend</code></td>
+<td><code>redshift://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>SpatiaLite</td>
+<td><code>django.contrib.gis.db.backends.spatialite</code></td>
+<td><code>spatialite:///PATH</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-1">2.3. Configuration</h3>
+<p>This is configuration for the database, the default database will use sqlite3 for simple to quick to run in development mode. This may conflict with database you run on production mode because some of the funtion sqlite may not support. It is recommended to config the database in development mode have the same database system you run on production. To change the database system, config the environment variable <code>DATABASE_URL</code></p>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dj_database_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># Database</span></span><br><span class="line"><span class="comment"># https://docs.djangoproject.com/en/3.0/ref/settings/#databases</span></span><br><span class="line"></span><br><span class="line">DATABASE_URL = os.environ.get(<span class="string">&#x27;DATABASE_URL&#x27;</span>, <span class="string">&#x27;sqlite:///&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(os.path.join(BASE_DIR, <span class="string">&#x27;db.sqlite3&#x27;</span>)))</span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: dj_database_url.config(default=DATABASE_URL)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="api-development">3. API Development</h2>
+<h3 id="packages-2">3.1. Packages</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://django-rest-framework-json-api.readthedocs.io/en/stable/">djangorestframework-jsonapi</a> provide the implementation of the <a target="_blank" rel="noopener" href="http://jsonapi.org/format/">JSON API format specification</a></li>
+</ul>
+<h3 id="serializers">3.2. Serializers</h3>
+<blockquote>
+<p>TODO What is serializers, how to code one?</p>
+</blockquote>
+<h3 id="views">3.3. Views</h3>
+<blockquote>
+<p>TODO What is views, how to code one?</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -663,106 +881,6 @@ Why Vagrant?
 <h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
 <p>Multiple workers will subscribe to a same subscriptions to receive difference tasks from a same publisher.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2020/11/27/Schedule-Task-Runner-with-Celery/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hien Hoang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/27/Schedule-Task-Runner-with-Celery/" class="post-title-link" itemprop="url">Schedule Task Runner with Celery</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-11-27 10:20:51" itemprop="dateCreated datePublished" datetime="2020-11-27T10:20:51+07:00">2020-11-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote><p>Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so that your product can scale and integrate with other languages, and it comes with the tools and support you need to run such a system in production.</p>
-<footer><strong>Celery</strong><cite><a target="_blank" rel="noopener" href="https://docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html">docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install celery</span><br></pre></td></tr></table></figure>
-<h1 id="choosing-a-broker">Choosing a Broker</h1>
-<p>Celery requires a solution to send and receive messages; usually this comes in the form of a separate service called a message broker. In this example, I use RabbitMQ on docker for the most simple experiment.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 5672:5672 rabbitmq</span><br></pre></td></tr></table></figure>
-<h1 id="the-application">The Application</h1>
-<ul>
-<li><p>Python code to define the task to run <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>
-<li><p>Run the worker <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">celery -A tasks worker -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-------------- celery@Lap-012 v5.0.2 (singularity)</span><br><span class="line">--- ***** ----- </span><br><span class="line">-- ******* ---- Linux-5.4.0-54-generic-x86_64-with-debian-bullseye-sid 2020-11-27 10:13:21</span><br><span class="line">- *** --- * --- </span><br><span class="line">- ** ---------- [config]</span><br><span class="line">- ** ---------- .&gt; app:         tasks:0x7f5b26a11750</span><br><span class="line">- ** ---------- .&gt; transport:   amqp://guest:**@localhost:5672//</span><br><span class="line">- ** ---------- .&gt; results:     disabled://</span><br><span class="line">- *** --- * --- .&gt; concurrency: 8 (prefork)</span><br><span class="line">-- ******* ---- .&gt; task events: OFF (enable -E to monitor tasks in this worker)</span><br><span class="line">--- ***** ----- </span><br><span class="line"> -------------- [queues]</span><br><span class="line">                .&gt; celery           exchange=celery(direct) key=celery</span><br><span class="line">                </span><br><span class="line">[tasks]</span><br><span class="line">  . tasks.add</span><br><span class="line"></span><br><span class="line">[2020-11-27 10:13:21,496: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//</span><br><span class="line">[2020-11-27 10:13:21,506: INFO/MainProcess] mingle: searching for neighbors</span><br><span class="line">[2020-11-27 10:13:22,528: INFO/MainProcess] mingle: all alone</span><br><span class="line">[2020-11-27 10:13:22,568: INFO/MainProcess] celery@Lap-012 ready.</span><br></pre></td></tr></table></figure></p></li>
-<li><p>The Scheduler, let add few more code to config schedule task <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p>Run the scheduler, open new terminal and run <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">celery -A tasks beat -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">celery beat v5.0.2 (singularity) is starting.</span><br><span class="line">__    -    ... __   -        _</span><br><span class="line">LocalTime -&gt; 2020-11-27 10:18:19</span><br><span class="line">Configuration -&gt;</span><br><span class="line">    . broker -&gt; amqp://guest:**@localhost:5672//</span><br><span class="line">    . loader -&gt; celery.loaders.app.AppLoader</span><br><span class="line">    . scheduler -&gt; celery.beat.PersistentScheduler</span><br><span class="line">    . db -&gt; celerybeat-schedule</span><br><span class="line">    . logfile -&gt; [stderr]@%INFO</span><br><span class="line">    . maxinterval -&gt; 5.00 minutes (300s)</span><br><span class="line">[2020-11-27 10:18:19,508: INFO/MainProcess] beat: Starting...</span><br><span class="line">[2020-11-27 10:18:49,552: INFO/MainProcess] Scheduler: Sending due task add-every-30-seconds (tasks.add)</span><br></pre></td></tr></table></figure></p></li>
-<li><p>You can check whether the worker is running on the terminal log <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[2020-11-27 10:19:19,546: INFO/MainProcess] Received task: tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4]  </span><br><span class="line">[2020-11-27 10:19:19,549: INFO/ForkPoolWorker-5] Task tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4] succeeded in 0.00027026102179661393s: 32</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="organize-all-together-using-docker-compose">Organize all together using docker-compose</h1>
-<ul>
-<li><p>./Dockerfile <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install celery</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . .</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p>./docker-compose.yml <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rabbitmq:3.7</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">worker:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">worker</span> <span class="string">-l</span> <span class="string">info</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">sched:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">beat</span> <span class="string">-l</span> <span class="string">info</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p>./tasks.py <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">MQ_HOST = os.environ.get(<span class="string">&#x27;MQ_HOST&#x27;</span>, <span class="string">&#x27;localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">f&#x27;amqp://<span class="subst">&#123;MQ_HOST&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
-</ul>
 
       
     </div>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hienhoang.ml","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+
+  <meta name="description" content="1. Overview  Source: https:&#x2F;&#x2F;www.robots.ox.ac.uk&#x2F;~vgg&#x2F;data&#x2F;pets&#x2F; 2. Fully Convolution Network (FCN) 2.1. Dataset In this example, I will use Oxford-IIIT Pet dataset. We can access it by using tensorfl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Image Semantic Segmentation">
+<meta property="og:url" content="https://hienhoang.ml/2021/04/21/Image-Semantic-Segmentation/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="1. Overview  Source: https:&#x2F;&#x2F;www.robots.ox.ac.uk&#x2F;~vgg&#x2F;data&#x2F;pets&#x2F; 2. Fully Convolution Network (FCN) 2.1. Dataset In this example, I will use Oxford-IIIT Pet dataset. We can access it by using tensorfl">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/output.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/output.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/output.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/output.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_image.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_mask.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_output.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_image.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_mask.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_output.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_image.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_mask.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_output.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_image.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_mask.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/unet_output.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/pretrain_output.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/pretrain_output.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/pretrain_output.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/pretrain_output.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/maskrcnn_output.01.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/maskrcnn_output.02.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/maskrcnn_output.03.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/image.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/mask.04.jpg">
+<meta property="og:image" content="https://hienhoang.ml/images/2021-04-21/maskrcnn_output.04.jpg">
+<meta property="article:published_time" content="2021-04-21T09:17:20.000Z">
+<meta property="article:modified_time" content="2021-04-24T07:20:44.425Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="CNN">
+<meta property="article:tag" content="Computer Vision">
+<meta property="article:tag" content="Deep Learning">
+<meta property="article:tag" content="Tensorflow">
+<meta property="article:tag" content="Keras">
+<meta property="article:tag" content="Machine Learning">
+<meta property="article:tag" content="Convolution Neural Network">
+<meta property="article:tag" content="Image Segmentation">
+<meta property="article:tag" content="Oxford-IIIT Pet">
+<meta property="article:tag" content="FCN">
+<meta property="article:tag" content="U-Net">
+<meta property="article:tag" content="Mask-RCNN">
+<meta property="article:tag" content="MobileNet-V2">
+<meta property="article:tag" content="Pretrain">
+<meta property="article:tag" content="Fully Convolution Network">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg">
+
+
+<link rel="canonical" href="https://hienhoang.ml/2021/04/21/Image-Semantic-Segmentation/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Image Semantic Segmentation | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#overview"><span class="nav-text">1. Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fully-convolution-network-fcn"><span class="nav-text">2. Fully Convolution Network (FCN)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset"><span class="nav-text">2.1. Dataset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#define-the-model"><span class="nav-text">2.2. Define the model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training"><span class="nav-text">2.3. Training</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiment"><span class="nav-text">2.4. Experiment</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u-net"><span class="nav-text">3. U-Net</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset-1"><span class="nav-text">3.1. Dataset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#define-the-model-1"><span class="nav-text">3.2. Define the model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training-1"><span class="nav-text">3.3. Training</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiment-1"><span class="nav-text">3.4. Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-it-works"><span class="nav-text">3.5. How it works?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u-net-with-pretrain"><span class="nav-text">4. U-Net With Pretrain</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dataset-2"><span class="nav-text">4.1. Dataset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#define-model"><span class="nav-text">4.2. Define model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#training-2"><span class="nav-text">4.3. Training</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiment-2"><span class="nav-text">4.4. Experiment</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mask-rcnn"><span class="nav-text">5. Mask-RCNN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#load-pretrain-model-from-tensorflow-hub"><span class="nav-text">5.1. Load pretrain model from tensorflow hub</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-visualization-utils-from-tensorflow-models"><span class="nav-text">5.2. Install visualization utils from tensorflow models</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#experiment-3"><span class="nav-text">5.3. Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#see-also"><span class="nav-text">5.4. See also</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">86</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hoangchunghien@gmail.com" title="E-Mail → mailto:hoangchunghien@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/04/21/Image-Semantic-Segmentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Image Semantic Segmentation
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-21 16:17:20" itemprop="dateCreated datePublished" datetime="2021-04-21T16:17:20+07:00">2021-04-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-24 14:20:44" itemprop="dateModified" datetime="2021-04-24T14:20:44+07:00">2021-04-24</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine Learning</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Machine-Learning/Deep-Learning/" itemprop="url" rel="index"><span itemprop="name">Deep Learning</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="overview">1. Overview</h1>
+<p><img src="https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg"></p>
+<p>Source: https://www.robots.ox.ac.uk/~vgg/data/pets/</p>
+<h1 id="fully-convolution-network-fcn">2. Fully Convolution Network (FCN)</h1>
+<h2 id="dataset">2.1. Dataset</h2>
+<p>In this example, I will use <code>Oxford-IIIT Pet</code> dataset. We can access it by using <code>tensorflow-datasets</code> package.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow-datasets</span><br></pre></td></tr></table></figure>
+<p>Now load the data</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow_datasets <span class="keyword">as</span> tfds</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">dataset, info = tfds.load(<span class="string">&#x27;oxford_iiit_pet&#x27;</span>, with_info=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">TRAIN_SIZE = info.splits[<span class="string">&#x27;train&#x27;</span>].num_examples</span><br><span class="line">VALIDATION_SIZE = info.splits[<span class="string">&#x27;test&#x27;</span>].num_examples</span><br><span class="line"></span><br><span class="line">BATCH_SIZE = <span class="number">32</span></span><br><span class="line">BUFFER_SIZE = <span class="number">1000</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span>(<span class="params">input_image, input_mask</span>):</span></span><br><span class="line">    input_image = tf.cast(input_image, tf.float32) / <span class="number">255.0</span></span><br><span class="line">    input_mask -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> input_image, input_mask</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_image</span>(<span class="params">dataset_element</span>):</span></span><br><span class="line">    input_image = tf.image.resize(dataset_element[<span class="string">&#x27;image&#x27;</span>], (<span class="number">256</span>, <span class="number">256</span>))</span><br><span class="line">    input_mask = tf.image.resize(dataset_element[<span class="string">&#x27;segmentation_mask&#x27;</span>], (<span class="number">256</span>, <span class="number">256</span>))</span><br><span class="line">    input_image, input_mask = normalize(input_image, input_mask)</span><br><span class="line">    <span class="keyword">return</span> input_image, input_mask</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">train_dataset = (dataset[<span class="string">&#x27;train&#x27;</span>]</span><br><span class="line">                 .<span class="built_in">map</span>(load_image, num_parallel_calls=tf.data.experimental.AUTOTUNE)</span><br><span class="line">                 .shuffle(BUFFER_SIZE)</span><br><span class="line">                 .batch(BATCH_SIZE)</span><br><span class="line">                 .prefetch(tf.data.experimental.AUTOTUNE))</span><br><span class="line"></span><br><span class="line">test_dataset = (dataset[<span class="string">&#x27;test&#x27;</span>]</span><br><span class="line">                .<span class="built_in">map</span>(load_image, num_parallel_calls=tf.data.experimental.AUTOTUNE)</span><br><span class="line">                .batch(BATCH_SIZE))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="define-the-model">2.2. Define the model</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">inputs = tf.keras.layers.Input(shape=(<span class="number">256</span>, <span class="number">256</span>, <span class="number">3</span>))</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">64</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block1_conv1&#x27;</span>)(inputs)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">64</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&quot;relu&quot;</span>, </span><br><span class="line">    padding=<span class="string">&quot;same&quot;</span>, </span><br><span class="line">    name=<span class="string">&quot;block1_conv2&quot;</span>)(x)</span><br><span class="line">x = tf.keras.layers.MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>), strides=<span class="number">2</span>, name=<span class="string">&#x27;block1_pool&#x27;</span>)(x)</span><br><span class="line"></span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">128</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block2_conv1&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">128</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block2_conv2&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>), strides=<span class="number">2</span>, name=<span class="string">&#x27;block2_pool&#x27;</span>)(x)</span><br><span class="line"></span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">256</span>,</span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block3_conv1&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">256</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block3_conv2&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">256</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block3_conv3&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>), strides=<span class="number">2</span>, name=<span class="string">&#x27;block3_pool&#x27;</span>)(x)</span><br><span class="line">block3_pool = x</span><br><span class="line"></span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">512</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block4_conv1&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">512</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block4_conv2&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">512</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block4_conv3&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>), strides=<span class="number">2</span>, name=<span class="string">&#x27;block4_pool&#x27;</span>)(x)</span><br><span class="line">block4_pool = x</span><br><span class="line"></span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">512</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block5_conv1&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">512</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block5_conv2&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">512</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;block5_conv3&#x27;</span>)(x)</span><br><span class="line">x = tf.keras.layers.MaxPooling2D(pool_size=(<span class="number">2</span>, <span class="number">2</span>), strides=<span class="number">2</span>, name=<span class="string">&#x27;block5_pool&#x27;</span>)(x)</span><br><span class="line">block5_pool = x</span><br><span class="line"></span><br><span class="line">outputs = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">3</span>, </span><br><span class="line">    kernel_size=(<span class="number">7</span>, <span class="number">7</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;conv6&#x27;</span>)(block5_pool)</span><br><span class="line">conv6_4 = tf.keras.layers.Conv2DTranspose(</span><br><span class="line">    filters=<span class="number">3</span>, </span><br><span class="line">    kernel_size=(<span class="number">4</span>, <span class="number">4</span>), </span><br><span class="line">    strides=<span class="number">4</span>, </span><br><span class="line">    use_bias=<span class="literal">False</span>)(outputs)</span><br><span class="line"></span><br><span class="line">pool4_n = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">3</span>, </span><br><span class="line">    kernel_size=(<span class="number">1</span>, <span class="number">1</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;pool4_n&#x27;</span>)(block4_pool)</span><br><span class="line">pool4_n_2 = tf.keras.layers.Conv2DTranspose(</span><br><span class="line">    filters=<span class="number">3</span>, </span><br><span class="line">    kernel_size=(<span class="number">2</span>, <span class="number">2</span>), </span><br><span class="line">    strides=<span class="number">2</span>, </span><br><span class="line">    use_bias=<span class="literal">False</span>)(pool4_n)</span><br><span class="line"></span><br><span class="line">pool3_n = tf.keras.layers.Conv2D(</span><br><span class="line">    filters=<span class="number">3</span>, </span><br><span class="line">    kernel_size=(<span class="number">3</span>, <span class="number">3</span>), </span><br><span class="line">    activation=<span class="string">&#x27;relu&#x27;</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    name=<span class="string">&#x27;pool3_n&#x27;</span>)(block3_pool)</span><br><span class="line"></span><br><span class="line">output = tf.keras.layers.Add(name=<span class="string">&#x27;add&#x27;</span>)([pool4_n_2, pool3_n, conv6_4])</span><br><span class="line">output = tf.keras.layers.Conv2DTranspose(filters=<span class="number">3</span>, kernel_size=(<span class="number">8</span>, <span class="number">8</span>), strides=<span class="number">8</span>, use_bias=<span class="literal">False</span>)(output)</span><br><span class="line">output = tf.keras.layers.Softmax()(output)</span><br><span class="line"></span><br><span class="line">fcn_model = tf.keras.models.Model(inputs, output)</span><br><span class="line"></span><br><span class="line">fcn_model.<span class="built_in">compile</span>(</span><br><span class="line">    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=<span class="literal">True</span>), </span><br><span class="line">    optimizer=tf.keras.optimizers.RMSprop(), </span><br><span class="line">    metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br><span class="line"></span><br><span class="line">fcn_model.summary()</span><br></pre></td></tr></table></figure>
+<p>In this step, we use <code>SparseCategoricalCrossentropy</code> as loss function for pixel classification task. The output channels here are 3 because each pixel can be categorized into one of three classes.</p>
+<p>The network summary</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">Model: &quot;functional<span class="emphasis">_1&quot;</span></span><br><span class="line"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">Layer (type)                    Output Shape         Param #     Connected to                     </span></span></span><br><span class="line"><span class="emphasis"><span class="strong">==================================================================================================</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">input<span class="emphasis">_2 (InputLayer)            [(None, 256, 256, 3) 0                                            </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block1<span class="emphasis">_conv1 (Conv2D)           (None, 256, 256, 64) 1792        input_</span>2[<span class="string">0</span>][<span class="symbol">0</span>]                    </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block1_</span>conv2 (Conv2D)           (None, 256, 256, 64) 36928       block1<span class="emphasis">_conv1[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block1<span class="emphasis">_pool (MaxPooling2D)      (None, 128, 128, 64) 0           block1_</span>conv2[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block2_</span>conv1 (Conv2D)           (None, 128, 128, 128 73856       block1<span class="emphasis">_pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block2<span class="emphasis">_conv2 (Conv2D)           (None, 128, 128, 128 147584      block2_</span>conv1[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block2_</span>pool (MaxPooling2D)      (None, 64, 64, 128)  0           block2<span class="emphasis">_conv2[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block3<span class="emphasis">_conv1 (Conv2D)           (None, 64, 64, 256)  295168      block2_</span>pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block3_</span>conv2 (Conv2D)           (None, 64, 64, 256)  590080      block3<span class="emphasis">_conv1[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block3<span class="emphasis">_conv3 (Conv2D)           (None, 64, 64, 256)  590080      block3_</span>conv2[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block3_</span>pool (MaxPooling2D)      (None, 32, 32, 256)  0           block3<span class="emphasis">_conv3[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block4<span class="emphasis">_conv1 (Conv2D)           (None, 32, 32, 512)  1180160     block3_</span>pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block4_</span>conv2 (Conv2D)           (None, 32, 32, 512)  2359808     block4<span class="emphasis">_conv1[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block4<span class="emphasis">_conv3 (Conv2D)           (None, 32, 32, 512)  2359808     block4_</span>conv2[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block4_</span>pool (MaxPooling2D)      (None, 16, 16, 512)  0           block4<span class="emphasis">_conv3[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block5<span class="emphasis">_conv1 (Conv2D)           (None, 16, 16, 512)  2359808     block4_</span>pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block5_</span>conv2 (Conv2D)           (None, 16, 16, 512)  2359808     block5<span class="emphasis">_conv1[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">block5<span class="emphasis">_conv3 (Conv2D)           (None, 16, 16, 512)  2359808     block5_</span>conv2[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">block5_</span>pool (MaxPooling2D)      (None, 8, 8, 512)    0           block5<span class="emphasis">_conv3[<span class="string">0</span>][<span class="symbol">0</span>]               </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">pool4<span class="emphasis">_n (Conv2D)                (None, 16, 16, 3)    1539        block4_</span>pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">conv6 (Conv2D)                  (None, 8, 8, 3)      75267       block5_</span>pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span></span><br><span class="line"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span><br><span class="line"><span class="emphasis">conv2d_</span>transpose<span class="emphasis">_1 (Conv2DTrans (None, 32, 32, 3)    36          pool4_</span>n[<span class="string">0</span>][<span class="symbol">0</span>]                    </span><br><span class="line"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span><br><span class="line"><span class="strong">pool3<span class="emphasis">_n (Conv2D)                (None, 32, 32, 3)    6915        block3_</span>pool[<span class="string">0</span>][<span class="symbol">0</span>]                </span></span><br><span class="line"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span><br><span class="line">conv2d<span class="emphasis">_transpose (Conv2DTranspo (None, 32, 32, 3)    144         conv6[<span class="string">0</span>][<span class="symbol">0</span>]                      </span></span><br><span class="line"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">add (Add)                       (None, 32, 32, 3)    0           conv2d<span class="emphasis">_transpose_</span>1[<span class="string">0</span>][<span class="symbol">0</span>]         </span></span></span><br><span class="line"><span class="emphasis"><span class="strong">                                                                 pool3<span class="emphasis">_n[<span class="string">0</span>][<span class="symbol">0</span>]                    </span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis">                                                                 conv2d_</span>transpose[<span class="string">0</span>][<span class="symbol">0</span>]           </span></span></span><br><span class="line"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span><br><span class="line"><span class="emphasis">conv2d_</span>transpose<span class="emphasis">_2 (Conv2DTrans (None, 256, 256, 3)  576         add[<span class="string">0</span>][<span class="symbol">0</span>]                        </span></span><br><span class="line"><span class="emphasis"><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">__</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">softmax (Softmax)               (None, 256, 256, 3)  0           conv2d<span class="emphasis">_transpose_</span>2[<span class="string">0</span>][<span class="symbol">0</span>]         </span></span></span><br><span class="line"><span class="emphasis"><span class="strong">==================================================================================================</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">Total params: 14,799,165</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">Trainable params: 14,799,165</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">Non-trainable params: 0</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">__</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span><span class="strong">____</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="training">2.3. Training</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(</span><br><span class="line">    filepath=<span class="string">&#x27;./model.best.hdf5&#x27;</span>, </span><br><span class="line">    save_weights_only=<span class="literal">False</span>, </span><br><span class="line">    save_best_only=<span class="literal">True</span>,</span><br><span class="line">    monitor=<span class="string">&#x27;val_loss&#x27;</span>)</span><br><span class="line"></span><br><span class="line">hist = fcn_model.fit(</span><br><span class="line">    train_dataset, </span><br><span class="line">    epochs=<span class="number">120</span>,  </span><br><span class="line">    validation_data=test_dataset, </span><br><span class="line">    callbacks=[model_checkpoint_callback])</span><br></pre></td></tr></table></figure>
+<h2 id="experiment">2.4. Experiment</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_mask</span>(<span class="params">prediction_mask</span>):</span></span><br><span class="line">    prediction_mask = tf.argmax(prediction_mask, axis=<span class="number">-1</span>)</span><br><span class="line">    prediction_mask = prediction_mask[..., tf.newaxis]</span><br><span class="line">    <span class="keyword">return</span> prediction_mask</span><br><span class="line"></span><br><span class="line">batch = <span class="built_in">next</span>(<span class="built_in">iter</span>(test_dataset))</span><br><span class="line">results = fcn_model.predict(batch)</span><br><span class="line">images, masks = batch</span><br><span class="line"></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> image, mask, result <span class="keyword">in</span> <span class="built_in">zip</span>(images, masks, results):</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line">    image = tf.keras.preprocessing.image.array_to_img(image)</span><br><span class="line">    mask = tf.keras.preprocessing.image.array_to_img(mask)</span><br><span class="line">    output = tf.keras.preprocessing.image.array_to_img(create_mask(result))</span><br><span class="line">    </span><br><span class="line">    image.save(<span class="string">f&#x27;image.<span class="subst">&#123;i:<span class="number">02</span>d&#125;</span>.jpg&#x27;</span>)</span><br><span class="line">    mask.save(<span class="string">f&#x27;mask.<span class="subst">&#123;i:<span class="number">02</span>d&#125;</span>.jpg&#x27;</span>)</span><br><span class="line">    output.save(<span class="string">f&#x27;output.<span class="subst">&#123;i:<span class="number">02</span>d&#125;</span>.jpg&#x27;</span>)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>Some results</p>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Raw Image</th>
+<th>Ground truth</th>
+<th>Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><img src="/images/2021-04-21/image.01.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.01.jpg" /></td>
+<td><img src="/images/2021-04-21/output.01.jpg" /></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><img src="/images/2021-04-21/image.02.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.02.jpg" /></td>
+<td><img src="/images/2021-04-21/output.02.jpg" /></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><img src="/images/2021-04-21/image.03.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.03.jpg" /></td>
+<td><img src="/images/2021-04-21/output.03.jpg" /></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><img src="/images/2021-04-21/image.04.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.04.jpg" /></td>
+<td><img src="/images/2021-04-21/output.04.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<p>Read more about FCN <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1411.4038">here</a></p>
+<h1 id="u-net">3. U-Net</h1>
+<h2 id="dataset-1">3.1. Dataset</h2>
+<p>I will use the same dataset <code>Oxford-IIIT Pet</code> in this example.</p>
+<h2 id="define-the-model-1">3.2. Define the model</h2>
+<p>We will need some building block</p>
+<ul>
+<li>Down sampling block use normal convolution to down sample it inputs</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">down_sample</span>(<span class="params">filters, kernel_size, batch_norm=<span class="literal">True</span></span>):</span></span><br><span class="line">    initializer = tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">    layers = tf.keras.Sequential()</span><br><span class="line">    layers.add(tf.keras.layers.Conv2D(</span><br><span class="line">        filters=filters, </span><br><span class="line">        kernel_size=kernel_size, </span><br><span class="line">        strides=<span class="number">2</span>, </span><br><span class="line">        padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">        kernel_initializer=initializer, </span><br><span class="line">        use_bias=<span class="literal">False</span>)</span><br><span class="line">    )</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> batch_norm:</span><br><span class="line">        layers.add(tf.keras.layers.BatchNormalization())</span><br><span class="line">    </span><br><span class="line">    layers.add(tf.keras.layers.LeakyReLU())</span><br><span class="line">    <span class="keyword">return</span> layers</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Up sampling block use transpose convolution to up sample it inputs</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">up_sample</span>(<span class="params">filters, kernel_size, dropout=<span class="literal">False</span></span>):</span></span><br><span class="line">    initializer = tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">    layers = tf.keras.Sequential()</span><br><span class="line">    layers.add(tf.keras.layers.Conv2DTranspose(</span><br><span class="line">        filters=filters, </span><br><span class="line">        kernel_size=kernel_size, </span><br><span class="line">        strides=<span class="number">2</span>, </span><br><span class="line">        padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">        kernel_initializer=initializer, </span><br><span class="line">        use_bias=<span class="literal">False</span>)</span><br><span class="line">    )</span><br><span class="line">    layers.add(tf.keras.layers.BatchNormalization())</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> dropout:</span><br><span class="line">        layers.add(tf.keras.layers.Dropout(<span class="number">0.5</span>))</span><br><span class="line">    </span><br><span class="line">    layers.add(tf.keras.layers.ReLU())</span><br><span class="line">    <span class="keyword">return</span> layers</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Construct the U-Net model</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">down_stack = [down_sample(<span class="number">64</span>, <span class="number">4</span>, batch_norm=<span class="literal">False</span>)]</span><br><span class="line"><span class="keyword">for</span> filters <span class="keyword">in</span> [<span class="number">128</span>, <span class="number">256</span>, <span class="number">512</span>, <span class="number">512</span>, <span class="number">512</span>, <span class="number">512</span>, <span class="number">512</span>]:</span><br><span class="line">    down_stack.append(down_sample(filters, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line">up_stack = []</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    up_stack.append(up_sample(<span class="number">512</span>, <span class="number">4</span>, dropout=<span class="literal">True</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> filters <span class="keyword">in</span> [<span class="number">512</span>, <span class="number">256</span>, <span class="number">128</span>, <span class="number">64</span>]:</span><br><span class="line">    up_stack.append(up_sample(filters, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">inputs = tf.keras.layers.Input(shape=(<span class="number">256</span>, <span class="number">256</span>, <span class="number">3</span>))</span><br><span class="line">x = inputs</span><br><span class="line">skip_layers = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> down <span class="keyword">in</span> down_stack:</span><br><span class="line">    x = down(x)</span><br><span class="line">    skip_layers.append(x)</span><br><span class="line"></span><br><span class="line">skip_layers = <span class="built_in">reversed</span>(skip_layers[:<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># We use skip connection to avoid vanishing gradient problem</span></span><br><span class="line"><span class="keyword">for</span> up, skip_connection <span class="keyword">in</span> <span class="built_in">zip</span>(up_stack, skip_layers):</span><br><span class="line">    x = up(x)</span><br><span class="line">    x = tf.keras.layers.Concatenate()([x, skip_connection])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N_CLASSES = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">initializer = tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">outputs = tf.keras.layers.Conv2DTranspose(</span><br><span class="line">    filters=N_CLASSES, </span><br><span class="line">    kernel_size=<span class="number">3</span>, </span><br><span class="line">    strides=<span class="number">2</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    kernel_initializer=initializer)(x)</span><br><span class="line"></span><br><span class="line">model = tf.keras.models.Model(inputs=inputs, outputs=outputs)</span><br><span class="line"></span><br><span class="line">model.<span class="built_in">compile</span>(loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=<span class="literal">True</span>), </span><br><span class="line">    optimizer=tf.keras.optimizers.RMSprop(), </span><br><span class="line">    metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="training-1">3.3. Training</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(</span><br><span class="line">    filepath=<span class="string">&#x27;./unet.&#123;val_loss:.9f&#125;.hdf5&#x27;</span>, </span><br><span class="line">    save_weights_only=<span class="literal">False</span>, </span><br><span class="line">    save_best_only=<span class="literal">True</span>,</span><br><span class="line">    monitor=<span class="string">&#x27;val_loss&#x27;</span>)</span><br><span class="line"></span><br><span class="line">model.fit(train_dataset, epochs=<span class="number">50</span>, validation_data=test_dataset, callbacks=[model_checkpoint_callback])</span><br></pre></td></tr></table></figure>
+<h2 id="experiment-1">3.4. Experiment</h2>
+<p>Some results</p>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Raw Image</th>
+<th>Ground truth</th>
+<th>Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><img src="/images/2021-04-21/unet_image.01.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_mask.01.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_output.01.jpg" /></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><img src="/images/2021-04-21/unet_image.02.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_mask.02.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_output.02.jpg" /></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><img src="/images/2021-04-21/unet_image.03.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_mask.03.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_output.03.jpg" /></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><img src="/images/2021-04-21/unet_image.04.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_mask.04.jpg" /></td>
+<td><img src="/images/2021-04-21/unet_output.04.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-it-works">3.5. How it works?</h2>
+<p>To understand more about vanishing gradient, click <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Vanishing_gradient_problem">here</a></p>
+<p>Read more about <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1505.04597">U-Net</a></p>
+<h1 id="u-net-with-pretrain">4. U-Net With Pretrain</h1>
+<h2 id="dataset-2">4.1. Dataset</h2>
+<p>I will use the same dataset <code>Oxford-IIIT Pet</code> in this example.</p>
+<h2 id="define-model">4.2. Define model</h2>
+<ul>
+<li>The pretrain model <a target="_blank" rel="noopener" href="https://keras.io/api/applications/mobilenet/#mobilenetv2-function">MobileNetV2</a> will be used in this example.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">pretrain_model = tf.keras.applications.MobileNetV2(</span><br><span class="line">    input_shape=(<span class="number">256</span>, <span class="number">256</span>, <span class="number">3</span>), </span><br><span class="line">    include_top=<span class="literal">False</span>, </span><br><span class="line">    weights=<span class="string">&#x27;imagenet&#x27;</span>)</span><br><span class="line"></span><br><span class="line">target_values = [</span><br><span class="line">    <span class="string">&#x27;block_1_expand_relu&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;block_3_expand_relu&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;block_6_expand_relu&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;block_13_expand_relu&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;block_16_project&#x27;</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">layers = [pretrain_model.get_layer(layer).output <span class="keyword">for</span> layer <span class="keyword">in</span> target_values]</span><br><span class="line"></span><br><span class="line">down_stack = tf.keras.models.Model(inputs=pretrain_model.<span class="built_in">input</span>, outputs=layers)</span><br><span class="line">down_stack.trainable = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">up_stack = []</span><br><span class="line"><span class="keyword">for</span> filters <span class="keyword">in</span> [<span class="number">512</span>, <span class="number">256</span>, <span class="number">128</span>, <span class="number">64</span>]:</span><br><span class="line">    up_stack.append(up_sample(filters, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line">inputs = tf.keras.layers.Input(shape=(<span class="number">256</span>, <span class="number">256</span>, <span class="number">3</span>))</span><br><span class="line">x = inputs</span><br><span class="line"></span><br><span class="line">skip_layers = down_stack(x)</span><br><span class="line"></span><br><span class="line">x = skip_layers[<span class="number">-1</span>]</span><br><span class="line">skip_layers = <span class="built_in">reversed</span>(skip_layers[:<span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> up, skip_connection <span class="keyword">in</span> <span class="built_in">zip</span>(up_stack, skip_layers):</span><br><span class="line">    x = up(x)</span><br><span class="line">    x = tf.keras.layers.Concatenate()([x, skip_connection])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N_CLASSES = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">initializer = tf.random_normal_initializer(<span class="number">0.0</span>, <span class="number">0.02</span>)</span><br><span class="line">outputs = tf.keras.layers.Conv2DTranspose(</span><br><span class="line">    filters=N_CLASSES, </span><br><span class="line">    kernel_size=<span class="number">3</span>, </span><br><span class="line">    strides=<span class="number">2</span>, </span><br><span class="line">    padding=<span class="string">&#x27;same&#x27;</span>, </span><br><span class="line">    kernel_initializer=initializer)(x)</span><br><span class="line"></span><br><span class="line">model = tf.keras.models.Model(inputs=inputs, outputs=outputs)</span><br><span class="line"></span><br><span class="line">model.<span class="built_in">compile</span>(</span><br><span class="line">    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=<span class="literal">True</span>), </span><br><span class="line">    optimizer=tf.keras.optimizers.RMSprop(), </span><br><span class="line">    metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="training-2">4.3. Training</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(</span><br><span class="line">    filepath=<span class="string">&#x27;./unet.pretrain.&#123;val_loss:.9f&#125;.hdf5&#x27;</span>, </span><br><span class="line">    save_weights_only=<span class="literal">False</span>, </span><br><span class="line">    save_best_only=<span class="literal">True</span>,</span><br><span class="line">    monitor=<span class="string">&#x27;val_loss&#x27;</span>)</span><br><span class="line"></span><br><span class="line">hist = model.fit(</span><br><span class="line">    train_dataset, </span><br><span class="line">    epochs=<span class="number">50</span>, </span><br><span class="line">    validation_data=test_dataset, </span><br><span class="line">    callbacks=[model_checkpoint_callback])</span><br></pre></td></tr></table></figure>
+<h2 id="experiment-2">4.4. Experiment</h2>
+<p>Some results</p>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Raw Image</th>
+<th>Ground truth</th>
+<th>Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><img src="/images/2021-04-21/image.01.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.01.jpg" /></td>
+<td><img src="/images/2021-04-21/pretrain_output.01.jpg" /></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><img src="/images/2021-04-21/image.02.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.02.jpg" /></td>
+<td><img src="/images/2021-04-21/pretrain_output.02.jpg" /></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><img src="/images/2021-04-21/image.03.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.03.jpg" /></td>
+<td><img src="/images/2021-04-21/pretrain_output.03.jpg" /></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><img src="/images/2021-04-21/image.04.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.04.jpg" /></td>
+<td><img src="/images/2021-04-21/pretrain_output.04.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<h1 id="mask-rcnn">5. Mask-RCNN</h1>
+<h2 id="load-pretrain-model-from-tensorflow-hub">5.1. Load pretrain model from tensorflow hub</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow_hub <span class="keyword">as</span> hub</span><br><span class="line"></span><br><span class="line">MODEL_PATH = (<span class="string">&#x27;https://tfhub.dev/tensorflow/mask_rcnn/inception_resnet_v2_1024x1024/1&#x27;</span>)</span><br><span class="line">mask_rcnn = hub.load(MODEL_PATH)</span><br></pre></td></tr></table></figure>
+<h2 id="install-visualization-utils-from-tensorflow-models">5.2. Install visualization utils from tensorflow models</h2>
+<ul>
+<li>Shell script</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone –-depth 1 https://github.com/tensorflow/models</span><br><span class="line">sudo apt install -y protobuf-compiler</span><br><span class="line">cd models/research</span><br><span class="line">protoc object_detection/protos/*.proto --python_out=.</span><br><span class="line">cp object_detection/packages/tf2/setup.py .</span><br><span class="line">python -m pip install -q .</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Import visualization package</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> object_detection.utils <span class="keyword">import</span> ops</span><br><span class="line"><span class="keyword">from</span> object_detection.utils <span class="keyword">import</span> visualization_utils <span class="keyword">as</span> viz</span><br><span class="line"><span class="keyword">from</span> object_detection.utils.label_map_util <span class="keyword">import</span> create_category_index_from_labelmap</span><br></pre></td></tr></table></figure>
+<h2 id="experiment-3">5.3. Experiment</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">results = mask_rcnn(image)</span><br><span class="line">model_output = &#123;k: v.numpy() <span class="keyword">for</span> k, v <span class="keyword">in</span> results.items()&#125;</span><br><span class="line"></span><br><span class="line">detection_masks = model_output[<span class="string">&#x27;detection_masks&#x27;</span>][<span class="number">0</span>]</span><br><span class="line">detection_masks = tf.convert_to_tensor(detection_masks)</span><br><span class="line"></span><br><span class="line">detection_boxes = model_output[<span class="string">&#x27;detection_boxes&#x27;</span>][<span class="number">0</span>]</span><br><span class="line">detection_boxes = tf.convert_to_tensor(detection_boxes)</span><br><span class="line"></span><br><span class="line">detection_masks_reframed = ops.reframe_box_masks_to_image_masks(</span><br><span class="line">    detection_masks, </span><br><span class="line">    detection_boxes, </span><br><span class="line">    image.shape[<span class="number">1</span>], </span><br><span class="line">    image.shape[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">detection_masks_reframed = tf.cast(detection_masks_reframed &gt; <span class="number">0.5</span>, tf.uint8)</span><br><span class="line"></span><br><span class="line">model_output[<span class="string">&#x27;detection_masks_reframed&#x27;</span>] = detection_masks_reframed.numpy()</span><br><span class="line"></span><br><span class="line">boxes = model_output[<span class="string">&#x27;detection_boxes&#x27;</span>][<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">classes = model_output[<span class="string">&#x27;detection_classes&#x27;</span>][<span class="number">0</span>].astype(<span class="string">&#x27;int&#x27;</span>)</span><br><span class="line">scores = model_output[<span class="string">&#x27;detection_scores&#x27;</span>][<span class="number">0</span>]</span><br><span class="line">masks = model_output[<span class="string">&#x27;detection_masks_reframed&#x27;</span>]</span><br><span class="line"></span><br><span class="line">image_with_mask = image.copy()</span><br><span class="line">viz.visualize_boxes_and_labels_on_image_array(</span><br><span class="line">    image=image_with_mask[<span class="number">0</span>], </span><br><span class="line">    boxes=boxes,</span><br><span class="line">    classes=classes,</span><br><span class="line">    scores=scores,</span><br><span class="line">    category_index=CATEGORY_IDX,</span><br><span class="line">    use_normalized_coordinates=<span class="literal">True</span>,</span><br><span class="line">    max_boxes_to_draw=<span class="number">200</span>,</span><br><span class="line">    min_score_thresh=<span class="number">0.30</span>,</span><br><span class="line">    agnostic_mode=<span class="literal">False</span>,</span><br><span class="line">    instance_masks=masks,</span><br><span class="line">    line_thickness=<span class="number">5</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">24</span>, <span class="number">32</span>))</span><br><span class="line">plt.imshow(image_with_mask[<span class="number">0</span>])</span><br><span class="line">plt.savefig(<span class="string">f&#x27;maskrcnn_output.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Some results</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Raw Image</th>
+<th>Ground truth</th>
+<th>Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><img src="/images/2021-04-21/image.01.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.01.jpg" /></td>
+<td><img width="256" height="256" src="/images/2021-04-21/maskrcnn_output.01.jpg" /></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><img src="/images/2021-04-21/image.02.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.02.jpg" /></td>
+<td><img width="256" height="256" src="/images/2021-04-21/maskrcnn_output.02.jpg" /></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><img src="/images/2021-04-21/image.03.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.03.jpg" /></td>
+<td><img width="256" height="256" src="/images/2021-04-21/maskrcnn_output.03.jpg" /></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><img src="/images/2021-04-21/image.04.jpg" /></td>
+<td><img src="/images/2021-04-21/mask.04.jpg" /></td>
+<td><img width="256" height="256" src="/images/2021-04-21/maskrcnn_output.04.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">5.4. See also</h2>
+<ul>
+<li>https://tfhub.dev/tensorflow/mask_rcnn/inception_resnet_v2_1024x1024/1</li>
+<li>https://arxiv.org/abs/1703.06870</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/CNN/" rel="tag"># CNN</a>
+              <a href="/tags/Computer-Vision/" rel="tag"># Computer Vision</a>
+              <a href="/tags/Deep-Learning/" rel="tag"># Deep Learning</a>
+              <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
+              <a href="/tags/Keras/" rel="tag"># Keras</a>
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+              <a href="/tags/Convolution-Neural-Network/" rel="tag"># Convolution Neural Network</a>
+              <a href="/tags/Image-Segmentation/" rel="tag"># Image Segmentation</a>
+              <a href="/tags/Oxford-IIIT-Pet/" rel="tag"># Oxford-IIIT Pet</a>
+              <a href="/tags/FCN/" rel="tag"># FCN</a>
+              <a href="/tags/U-Net/" rel="tag"># U-Net</a>
+              <a href="/tags/Mask-RCNN/" rel="tag"># Mask-RCNN</a>
+              <a href="/tags/MobileNet-V2/" rel="tag"># MobileNet-V2</a>
+              <a href="/tags/Pretrain/" rel="tag"># Pretrain</a>
+              <a href="/tags/Fully-Convolution-Network/" rel="tag"># Fully Convolution Network</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/17/Encode-your-image-using-Autoencoders/" rel="prev" title="Encode image using Autoencoders">
+                  <i class="fa fa-chevron-left"></i> Encode image using Autoencoders
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
