@@ -202,7 +202,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -215,7 +215,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -259,6 +259,113 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/" class="post-title-link" itemprop="url">Setup Apache Airflow Using Docker Compose</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-08 16:28:48 / Modified: 17:12:32" itemprop="dateCreated datePublished" datetime="2021-05-08T16:28:48+07:00">2021-05-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img width="480" src="/images/2021-05-08/001.png" /></p>
+<p>Do you find it so complicated to set up <a target="_blank" rel="noopener" href="https://airflow.apache.org/">Apache Airflow</a> for using right away? Don't worry, I can show you a simple and fast way! Are you ready? Then please take a look the instruction below.</p>
+<h1 id="getting-started">1. Getting Started</h1>
+<ul>
+<li>Install <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/">docker</a> if you haven't.</li>
+<li>Install <a target="_blank" rel="noopener" href="https://docs.docker.com/compose/install/">Docker Compose &gt;= v1.27.0</a></li>
+</ul>
+<h1 id="download-docker-compose.yml">2. Download <code>docker-compose.yml</code></h1>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LfO &#x27;https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml&#x27;</span><br></pre></td></tr></table></figure>
+<h1 id="initialize-the-environment">3. Initialize the environment</h1>
+<ul>
+<li>Prepare some folders to store application data and script</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir ./dags ./logs ./plugins</span><br><span class="line"></span><br><span class="line">echo -e &quot;AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0&quot; &gt; .env</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Initialize database</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up airflow-init</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Use the login user <code>airflow</code> and the password <code>airflow</code>.</li>
+</ul>
+<h1 id="start-the-application">4. Start the application</h1>
+<ul>
+<li>Start all containers defined in the docker-compose.yml</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Access the web interface <code>http://localhost:8080</code></li>
+</ul>
+<h1 id="reference">5. Reference</h1>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html">Airflow Docs</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -990,102 +1097,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Initialize Q(s, a), ∀s ∈ S, a ∈ A(s), arbitrarily, and Q(terminal-state, ·) &#x3D; 0 </span><br><span class="line">Repeat (for each episode):</span><br><span class="line">    Initialize S</span><br><span class="line">    Repeat (for each step of episode):</span><br><span class="line">        Choose A from S using policy derived from Q (e.g., ε-greedy) </span><br><span class="line">        Take action A, observe R, S′</span><br><span class="line">        Q(S, A) ← Q(S, A) + α[R + γ*max(Q(S′, a)) − Q(S, A)] </span><br><span class="line">        S ← S′;</span><br><span class="line">    until S is terminal</span><br></pre></td></tr></table></figure>
 <h2 id="implementation-2">Implementation</h2>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* QLearningAgent.js */</span></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">QLearningAgent</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">&#123; epsilon = <span class="number">0.1</span>, discount = <span class="number">0.9</span>, alpha = <span class="number">0.01</span>, player = O &#125;</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.epsilon = epsilon;</span><br><span class="line">    <span class="built_in">this</span>.discount = discount;</span><br><span class="line">    <span class="built_in">this</span>.alpha = alpha;</span><br><span class="line">    <span class="built_in">this</span>.player = player;</span><br><span class="line">    <span class="built_in">this</span>.episode = [];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">this</span>._Q = &#123;&#125;;</span><br><span class="line">    <span class="built_in">this</span>.Q = <span class="keyword">new</span> <span class="built_in">Proxy</span>(<span class="built_in">this</span>._Q, &#123;</span><br><span class="line">      get: <span class="function">(<span class="params">target, name</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (!(name <span class="keyword">in</span> target)) &#123;</span><br><span class="line">          target[name] = range(<span class="number">0</span>, <span class="number">9</span>, <span class="number">0.0</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> target[name];</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  policy = <span class="function">(<span class="params">game</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; board &#125; = game;</span><br><span class="line">    <span class="keyword">const</span> validMoves = getValidMoves(board);</span><br><span class="line">    <span class="keyword">const</span> boardString = boardToString(board);</span><br><span class="line">    <span class="keyword">let</span> A = range(<span class="number">0</span>, <span class="number">9</span>, <span class="number">0.0</span>);</span><br><span class="line">    <span class="keyword">const</span> cloned = clone(<span class="built_in">this</span>.Q[boardString]);</span><br><span class="line">    <span class="keyword">const</span> pulled = pullAt(cloned, validMoves);</span><br><span class="line">    <span class="keyword">const</span> bestScore = max(pulled);</span><br><span class="line">    <span class="keyword">const</span> bestAction = validMoves[pulled.indexOf(bestScore)];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; validMoves.length; i++) &#123;</span><br><span class="line">      <span class="keyword">const</span> a = validMoves[i];</span><br><span class="line">      A[a] = <span class="built_in">this</span>.epsilon / validMoves.length;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (validMoves.includes(bestAction)) &#123;</span><br><span class="line">      A[bestAction] += <span class="number">1.0</span> - <span class="built_in">this</span>.epsilon;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> someAction = sample(validMoves);</span><br><span class="line">      A[someAction] += <span class="number">1.0</span> - <span class="built_in">this</span>.epsilon;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> A;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  learn = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> memory = <span class="built_in">this</span>.episode;</span><br><span class="line">    <span class="keyword">if</span> (memory.length &gt;= <span class="number">2</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> record1 = memory[memory.length - <span class="number">2</span>];</span><br><span class="line">      <span class="keyword">const</span> record2 = memory[memory.length - <span class="number">1</span>];</span><br><span class="line">      <span class="keyword">const</span> state = record1[<span class="number">0</span>];</span><br><span class="line">      <span class="keyword">const</span> action = record1[<span class="number">1</span>];</span><br><span class="line">      <span class="keyword">const</span> nextState = record2[<span class="number">0</span>];</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">const</span> reward = calculateReward(nextState, <span class="built_in">this</span>.player);</span><br><span class="line">      <span class="keyword">const</span> stateString = boardToString(state.board);</span><br><span class="line">      <span class="keyword">const</span> nextStateString = boardToString(nextState.board);</span><br><span class="line">      <span class="keyword">const</span> nextStateValue = nextState.gameover</span><br><span class="line">        ? <span class="number">0</span></span><br><span class="line">        : max(<span class="built_in">this</span>.Q[nextStateString]);</span><br><span class="line">      <span class="keyword">const</span> tdTarget = reward + <span class="built_in">this</span>.discount * nextStateValue;</span><br><span class="line">      <span class="keyword">const</span> tdDelta = tdTarget - <span class="built_in">this</span>.Q[stateString][action];</span><br><span class="line">      <span class="built_in">this</span>.Q[stateString][action] += <span class="built_in">this</span>.alpha * tdDelta;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  observe = <span class="function">(<span class="params">state, action</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.episode.push([state, action]);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  newEpisode = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.episode = [];</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/02/01/year-end-2020/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hien Hoang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/01/year-end-2020/" class="post-title-link" itemprop="url">Year End 2020</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-02-01 22:56:40" itemprop="dateCreated datePublished" datetime="2021-02-01T22:56:40+07:00">2021-02-01</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-02 00:25:21" itemprop="dateModified" datetime="2021-02-02T00:25:21+07:00">2021-02-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Living/" itemprop="url" rel="index"><span itemprop="name">Living</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Hey, how do you do? Hope you had a good time in 2020.</p>
-<p><img src="/images/2021-02-01/004.jpg"></p>
-<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
-<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
-<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
-<p><img src="/images/2021-02-01/001.jpeg"></p>
-<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
-<p><img src="/images/2021-02-01/002.jpeg"></p>
-<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
-<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
-<p><img src="/images/2021-02-01/003.jpeg"></p>
-<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
-<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
-<p>Thanks for reading up to this line!</p>
 
       
     </div>
