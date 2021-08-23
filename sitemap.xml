@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hienhoang.ml/2021/08/23/Rau-Yeu-Thuong/</loc>
+    
+    <lastmod>2021-08-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hienhoang.ml/2021/03/14/How-to-tech-computer-to-play-Tictactoe/</loc>
     
     <lastmod>2021-08-22</lastmod>
@@ -100,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/2021/01/28/how-to-replace-environment-variables-in-a-file/</loc>
+    <loc>https://hienhoang.ml/2021/01/21/Django-Object-Level-Permission-Templage/</loc>
     
     <lastmod>2021-02-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/2021/01/21/Django-Object-Level-Permission-Templage/</loc>
+    <loc>https://hienhoang.ml/2021/01/28/how-to-replace-environment-variables-in-a-file/</loc>
     
     <lastmod>2021-02-01</lastmod>
     
@@ -135,13 +142,6 @@
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/2020/10/30/setup-self-openvpn-server/</loc>
-    
-    <lastmod>2021-01-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hienhoang.ml/2020/12/28/Use-Vagrant-for-cross-environment-development/</loc>
     
     <lastmod>2021-01-19</lastmod>
@@ -150,6 +150,13 @@
   
   <url>
     <loc>https://hienhoang.ml/2020/11/20/run-headless-chrome-inside-a-docker-container/</loc>
+    
+    <lastmod>2021-01-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/2020/10/30/setup-self-openvpn-server/</loc>
     
     <lastmod>2021-01-19</lastmod>
     
@@ -177,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/2020/11/23/Manage-ssh-keys/</loc>
+    <loc>https://hienhoang.ml/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</loc>
     
     <lastmod>2021-01-19</lastmod>
     
@@ -191,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</loc>
+    <loc>https://hienhoang.ml/2020/11/23/Manage-ssh-keys/</loc>
     
     <lastmod>2021-01-19</lastmod>
     
@@ -221,7 +228,7 @@
 
   <url>
     <loc>https://hienhoang.ml/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -229,693 +236,693 @@
   
   <url>
     <loc>https://hienhoang.ml/tags/Microsoft/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Azure/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Microsoft-Certified/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Administrator/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Azure-Fundamentals/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/DevOps/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/tags/Solution-Architect/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Autoencoders/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/CNN/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Computer-Vision/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Deep-Learning/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Tensorflow/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Keras/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/CINIC/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Fashion-MNIST/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Machine-Learning/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Convolution-Neural-Network/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Python/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <loc>https://hienhoang.ml/tags/Azure-Fundamentals/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Pub-Sub/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/GCP/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Google-Cloud/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Distributed-Processing/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Minibatch-Processing/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/tags/Compute-Engine/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <loc>https://hienhoang.ml/tags/Python/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/tags/Backup/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Machine-Image/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/GitLab/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/GitHub/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/SSH/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Git/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Security/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Hacking/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <loc>https://hienhoang.ml/tags/Solution-Architect/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Networking/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Reinforcement-Learning/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Artificial-Intelligent/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/AI/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Tictactoe/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Game/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Javascript/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Tool/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/HTTP/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Debugging/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Snipping/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Living/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Family/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/My-Life-Story/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/SQLAlchemy/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/ORM/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/SQL/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Pandas/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/HDF5/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Parquet/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/CSV/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Benchmark/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Celery/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Cronjob/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Docker/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/RabbitMQ/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Linux/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Shell/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Script/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Django/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Template/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Django-Guardian/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Djoser/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Object-Level-Permission/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Security/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Hacking/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Reinforcement-Learning/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Machine-Learning/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Artificial-Intelligent/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/AI/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Tictactoe/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Game/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Javascript/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Compute-Engine/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Backup/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Machine-Image/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Autoencoders/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/CNN/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Computer-Vision/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Deep-Learning/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Tensorflow/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Keras/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/CINIC/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Fashion-MNIST/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Convolution-Neural-Network/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Pandas/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/HDF5/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Parquet/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/CSV/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Benchmark/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Living/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Family/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/My-Life-Story/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/GitLab/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/GitHub/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/SSH/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Git/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/SQLAlchemy/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/ORM/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/SQL/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Celery/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Cronjob/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Docker/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/RabbitMQ/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Airflow/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/docker-compose/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/VPN/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/DIY/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Chung-Yeung/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Anniversary/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Productivity/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/VirtualBox/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Selenium/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Headless-Browser/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Linux/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Shell/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Script/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/VPN/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/DIY/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Chung-Yeung/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Anniversary/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Data-visualization/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Chart/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Decomposition/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/t-SNE/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Jupyter-Notebook/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/MNIST/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Matplotlib/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Seaborn/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/TF-IDF/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/NLP/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Search-Engine/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Bag-of-Words/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/BOW/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Information-Retrieval/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/tags/Scikit-Learn/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Image-Segmentation/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Oxford-IIIT-Pet/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/FCN/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/U-Net/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Mask-RCNN/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/MobileNet-V2/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Pretrain/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/tags/Fully-Convolution-Network/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/TF-IDF/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/NLP/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Search-Engine/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Bag-of-Words/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/BOW/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Information-Retrieval/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/tags/Scikit-Learn/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -924,112 +931,112 @@
   
   <url>
     <loc>https://hienhoang.ml/categories/Certification/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/Machine-Learning/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/categories/Google-Cloud/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/DevOps/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/Security/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/Reinforcement-Learning/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/Machine-Learning/Deep-Learning/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/categories/Networking/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/Living/</loc>
-    <lastmod>2021-08-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hienhoang.ml/categories/Google-Cloud/Pub-Sub/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/categories/Python/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/categories/Benchmark/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <loc>https://hienhoang.ml/categories/Security/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hienhoang.ml/categories/Shell/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <loc>https://hienhoang.ml/categories/Reinforcement-Learning/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/DevOps/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/Google-Cloud/Pub-Sub/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/categories/Python/Django/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/Machine-Learning/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/Benchmark/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/Living/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/Machine-Learning/Deep-Learning/</loc>
+    <lastmod>2021-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hienhoang.ml/categories/Shell/</loc>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/categories/Analytics/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hienhoang.ml/categories/Natural-Language-Processing/</loc>
-    <lastmod>2021-08-22</lastmod>
+    <lastmod>2021-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
