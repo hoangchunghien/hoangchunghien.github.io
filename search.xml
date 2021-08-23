@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Azure Fundamentals Achievement</title>
+    <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
+<p>Great engineers always keep on learning and improving knowledge, skills as well as new technologies. Recently, I have just achieved the Microsoft Certified Azure Fundamentals after one-month learning, which provides me the basic understanding of how to work with Microsoft Azure cloud-based solutions and services.</p>
+<p>This achievement can open a new opportunity for my career as an software engineer, because nowadays, cloud service has been played the highly important role in digital age. That now everything is on the cloud leads to the demand of human resouces having experiences to build and operate the cloud systems, including networking, storage, compute, application support, and application development. Therefore, to me, the Microsoft Certified Azure Fundamentals is really vital and achieving it can attract more clients.</p>
+<p>I started learning the course from 22 Mar 2021 on Microsoft Learn Center Website. After finishing 6 parts in the learning path section, candidates can get the certification once passing an exam registered online at Pearson VUE. It takes $55.00 for candidates in Vietnam. Then, I went to Pearson VUE center in District 1, Ho Chi Minh City, where I took the exam. The result was announced right after submiting the test. And, I passed :)</p>
+<p>Last but not least, I would like to show my gratefullness to the company <a href="https://www.tpptechnology.com">TP&amp;P Technology</a> for big supporting, which provided me good studying conditions to achieve the goal. Keep on learning!!!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Azure Fundamentals</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Azure Administrator Associate achievement</title>
     <url>/2021/06/12/Azure-Administrator-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
@@ -37,13 +56,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Azure Fundamentals Achievement</title>
-    <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
-<p>Great engineers always keep on learning and improving knowledge, skills as well as new technologies. Recently, I have just achieved the Microsoft Certified Azure Fundamentals after one-month learning, which provides me the basic understanding of how to work with Microsoft Azure cloud-based solutions and services.</p>
-<p>This achievement can open a new opportunity for my career as an software engineer, because nowadays, cloud service has been played the highly important role in digital age. That now everything is on the cloud leads to the demand of human resouces having experiences to build and operate the cloud systems, including networking, storage, compute, application support, and application development. Therefore, to me, the Microsoft Certified Azure Fundamentals is really vital and achieving it can attract more clients.</p>
-<p>I started learning the course from 22 Mar 2021 on Microsoft Learn Center Website. After finishing 6 parts in the learning path section, candidates can get the certification once passing an exam registered online at Pearson VUE. It takes $55.00 for candidates in Vietnam. Then, I went to Pearson VUE center in District 1, Ho Chi Minh City, where I took the exam. The result was announced right after submiting the test. And, I passed :)</p>
-<p>Last but not least, I would like to show my gratefullness to the company <a href="https://www.tpptechnology.com">TP&amp;P Technology</a> for big supporting, which provided me good studying conditions to achieve the goal. Keep on learning!!!</p>
+    <title>Azure Solution Architect Achievement</title>
+    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
+<p>Finally got it, after many days of learning from <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft Learning</a>.</p>
+<p>To be able to earn this certification you should have advanced experience and knowledge of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platform, budgeting, and governance. In addition, you should have expert-level skills in Azure administration and have experience with development and DevOps processes.</p>
 ]]></content>
       <categories>
         <category>Certification</category>
@@ -52,7 +69,8 @@
         <tag>Microsoft</tag>
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
-        <tag>Azure Fundamentals</tag>
+        <tag>DevOps</tag>
+        <tag>Solution Architect</tag>
       </tags>
   </entry>
   <entry>
@@ -89,63 +107,6 @@
         <tag>Distributed Processing</tag>
         <tag>Minibatch Processing</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure Solution Architect Achievement</title>
-    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
-<p>Finally got it, after many days of learning from <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft Learning</a>.</p>
-<p>To be able to earn this certification you should have advanced experience and knowledge of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platform, budgeting, and governance. In addition, you should have expert-level skills in Azure administration and have experience with development and DevOps processes.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
-        <tag>Solution Architect</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hijack your computer http request with Fiddler</title>
-    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
-<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
-<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
-<p>On my laptop, I use the linux version. You can download here</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
-<h1 id="configuration">Configuration</h1>
-<p>This is the main view of the tool</p>
-<p><img src="/images/2020-12-23/001.png"></p>
-<ol type="1">
-<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
-</ol>
-<p><img src="/images/2020-12-23/005.png"></p>
-<ol start="2" type="1">
-<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
-</ol>
-<p><img src="/images/2020-12-23/003.png"></p>
-<ol start="3" type="1">
-<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
-</ol>
-<p><img src="/images/2020-12-23/004.png"></p>
-<h1 id="experiement">Experiement</h1>
-<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
-<p><img src="/images/2020-12-23/002.png"></p>
-]]></content>
-      <categories>
-        <category>Networking</category>
-      </categories>
-      <tags>
-        <tag>Networking</tag>
-        <tag>Tool</tag>
-        <tag>HTTP</tag>
-        <tag>Debugging</tag>
-        <tag>Snipping</tag>
       </tags>
   </entry>
   <entry>
@@ -324,9 +285,9 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <category>Security</category>
       </categories>
       <tags>
-        <tag>Networking</tag>
         <tag>Security</tag>
         <tag>Hacking</tag>
+        <tag>Networking</tag>
       </tags>
   </entry>
   <entry>
@@ -439,6 +400,84 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Compute Engine</tag>
         <tag>Backup</tag>
         <tag>Machine Image</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
+    <url>/2020/11/23/Manage-ssh-keys/</url>
+    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>for example, I have 2 keys in my laptop</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>Next, add the new key you just created</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>You can check your added keys</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-the-connection">3. Test the connection</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
+<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add public key to your source control profile setting</h1>
+<p>Copy the public key to clipboard</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
+<p>Paste the key to gitlab ssh setting</p>
+<p><img src="/images/2020-11-23/001.png"></p>
+<p>Paste the key to github ssh setting</p>
+<p><img src="/images/2020-11-23/002.png"></p>
+<h1 id="clone-the-source-code-using-different-user">5. Clone the source code using different user</h1>
+<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
+<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
+<p>That's all! Good luck!</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GitLab</tag>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hijack your computer http request with Fiddler</title>
+    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
+<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
+<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
+<p>On my laptop, I use the linux version. You can download here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
+<h1 id="configuration">Configuration</h1>
+<p>This is the main view of the tool</p>
+<p><img src="/images/2020-12-23/001.png"></p>
+<ol type="1">
+<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
+</ol>
+<p><img src="/images/2020-12-23/005.png"></p>
+<ol start="2" type="1">
+<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
+</ol>
+<p><img src="/images/2020-12-23/003.png"></p>
+<ol start="3" type="1">
+<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
+</ol>
+<p><img src="/images/2020-12-23/004.png"></p>
+<h1 id="experiement">Experiement</h1>
+<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
+<p><img src="/images/2020-12-23/002.png"></p>
+]]></content>
+      <categories>
+        <category>Networking</category>
+      </categories>
+      <tags>
+        <tag>Networking</tag>
+        <tag>Tool</tag>
+        <tag>HTTP</tag>
+        <tag>Debugging</tag>
+        <tag>Snipping</tag>
       </tags>
   </entry>
   <entry>
@@ -628,6 +667,66 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Ngày giãn cách ở Sài Gòn</title>
+    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
+    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
+<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
+<p><img src="/images/2021-07-18/001.jpg"></p>
+<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
+<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng, nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ, hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè, nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã già?!</p>
+<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau 21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị; ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn (tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
+<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ, một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu phải đi cách ly, vì Donnie còn quá nhỏ.</p>
+<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách lúc này.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rau Yêu Thương</title>
+    <url>/2021/08/23/Rau-Yeu-Thuong/</url>
+    <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một phần quà tiếp sức vượt qua mùa dịch.</p>
+<p><img src="images/2021-08-23/001.jpg"></p>
+<p>Thú thật là tôi cảm thấy rất ấm áp khi nhận được món quà "Rau Yêu Thương" từ công ty, bởi tôi cảm nhận được tình cảm, sự quan tâm dành cho mình qua những túi rau, đậu, quả, trái, đủ dùng trong nhiều ngày. Gia đình tôi không thuộc diện khó khăn, nhưng trong thời buổi dịch bệnh hoành hành với những chính sách hạn chế khiến cho việc mua đồ ăn trở nên chật vật hơn, ví dụ như, một là hôm nay không có món này món kia, hai là xếp hàng chờ mua thật lâu, tới lượt mình liền hết hàng. Bây giờ bất kể là thực phẩm tươi sống gì cũng đều rất quý giá, vậy nên nhận được một bó rau thôi cũng là một điều vô cùng đáng trân trọng.</p>
+<p>Người Việt có câu "Lá lành đùm lá rách", trong một tập thể, chúng ta hãy luôn sẵn lòng đưa tay ra giúp đỡ lẫn nhau những lúc khó khăn. Tôi tin rằng, với tinh thần này, chúng ta sẽ cùng nhau vượt qua được đại dịch Covid, và tôi mong sẽ sớm được gặp lại các bạn đồng nghiệp thân thương của mình.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLAlchemy for Python ORM Mapping</title>
+    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
+<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
+<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+<h1 id="table-define">Table Define</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="example">Example</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>SQLAlchemy</tag>
+        <tag>ORM</tag>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Pandas Efficient Data Storage Benchmark</title>
     <url>/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/</url>
     <content><![CDATA[<p>Do you agree that dealing with large data file is such a painful task? If yes, then you shouldn't ignore this post! In this post, I'll show you which is the best storage format to work with if you are using <code>Pandas</code>. Is it <code>csv</code>, <code>hdf5</code> or <code>parquet</code>? Let's find out.</p>
@@ -759,97 +858,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Parquet</tag>
         <tag>CSV</tag>
         <tag>Benchmark</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ngày giãn cách ở Sài Gòn</title>
-    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
-    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
-<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
-<p><img src="/images/2021-07-18/001.jpg"></p>
-<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
-<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng, nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ, hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè, nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã già?!</p>
-<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau 21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị; ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn (tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
-<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ, một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu phải đi cách ly, vì Donnie còn quá nhỏ.</p>
-<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách lúc này.</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-        <tag>My Life Story</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rau Yêu Thương</title>
-    <url>/2021/08/23/Rau-Yeu-Thuong/</url>
-    <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một phần quà tiếp sức vượt qua mùa dịch.</p>
-<p><img src="images/2021-08-23/001.jpg"></p>
-<p>Thú thật là tôi cảm thấy rất ấm áp khi nhận được món quà "Rau Yêu Thương" từ công ty, bởi tôi cảm nhận được tình cảm, sự quan tâm dành cho mình qua những túi rau, đậu, quả, trái, đủ dùng trong nhiều ngày. Gia đình tôi không thuộc diện khó khăn, nhưng trong thời buổi dịch bệnh hoành hành với những chính sách hạn chế khiến cho việc mua đồ ăn trở nên chật vật hơn, ví dụ như, một là hôm nay không có món này món kia, hai là xếp hàng chờ mua thật lâu, tới lượt mình liền hết hàng. Bây giờ bất kể là thực phẩm tươi sống gì cũng đều rất quý giá, vậy nên nhận được một bó rau thôi cũng là một điều vô cùng đáng trân trọng.</p>
-<p>Người Việt có câu "Lá lành đùm lá rách", trong một tập thể, chúng ta hãy luôn sẵn lòng đưa tay ra giúp đỡ lẫn nhau những lúc khó khăn. Tôi tin rằng, với tinh thần này, chúng ta sẽ cùng nhau vượt qua được đại dịch Covid, và tôi mong sẽ sớm được gặp lại các bạn đồng nghiệp thân thương của mình.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
-    <url>/2020/11/23/Manage-ssh-keys/</url>
-    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>for example, I have 2 keys in my laptop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>Next, add the new key you just created</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>You can check your added keys</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-the-connection">3. Test the connection</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
-<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add public key to your source control profile setting</h1>
-<p>Copy the public key to clipboard</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
-<p>Paste the key to gitlab ssh setting</p>
-<p><img src="/images/2020-11-23/001.png"></p>
-<p>Paste the key to github ssh setting</p>
-<p><img src="/images/2020-11-23/002.png"></p>
-<h1 id="clone-the-source-code-using-different-user">5. Clone the source code using different user</h1>
-<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
-<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
-<p>That's all! Good luck!</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GitLab</tag>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQLAlchemy for Python ORM Mapping</title>
-    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
-<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
-<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
-<h1 id="table-define">Table Define</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="example">Example</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>SQLAlchemy</tag>
-        <tag>ORM</tag>
-        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,47 +1030,6 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
-    <title>Run Headless Chrome Browser Inside a Docker Container</title>
-    <url>/2020/11/20/run-headless-chrome-inside-a-docker-container/</url>
-    <content><![CDATA[<h1 id="overview">1. Overview</h1>
-<p>This is a simple example of how to config your own headless chrome browser inside a docker container. Then use a simple Python web application to say hello world with python selenium.</p>
-<p>Project structure: - app.py - Dockerfile - bin/ + chromedriver + google-chrome-87_amd64.deb</p>
-<p>Source code on <a href="https://github.com/hoangchunghien/headless-browser-docker-example">GitHub</a></p>
-<h1 id="coding">2. Coding</h1>
-<ul>
-<li><code>Dockerfile</code></li>
-</ul>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>app.py</code></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, send_file</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">options = Options()</span><br><span class="line">options.add_argument(<span class="string">&#x27;--headless&#x27;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-gpu&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-dev-shm-usage&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--no-sandbox&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span>():</span></span><br><span class="line">    driver = webdriver.Chrome(chrome_options=options)</span><br><span class="line">    driver.get(<span class="string">&#x27;https://www.google.com&#x27;</span>)</span><br><span class="line">    driver.save_screenshot(<span class="string">&quot;screenshot.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> send_file(<span class="string">&quot;screenshot.png&quot;</span>, mimetype=<span class="string">&#x27;image/png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="built_in">int</span>(os.environ.get(<span class="string">&#x27;PORT&#x27;</span>, <span class="number">5000</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-it">3. Test it</h1>
-<ul>
-<li>Build the docker image</li>
-</ul>
-<p><code>docker build -t headless .</code></p>
-<ul>
-<li>Run the docker container</li>
-</ul>
-<p><code>docker run -it -p 5000:5000 headless</code></p>
-<ul>
-<li>Open the link <a href="http://localhost:5000">http://localhost:5000</a></li>
-</ul>
-<p><img src="/images/2020-11-20/001.png"></p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Python</tag>
-        <tag>Docker</tag>
-        <tag>Selenium</tag>
-        <tag>Headless Browser</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>How to replace environment variables in a file</title>
     <url>/2021/01/28/how-to-replace-environment-variables-in-a-file/</url>
     <content><![CDATA[<h1 id="load-environment-from-.env-file">1. Load environment from <code>.env</code> file</h1>
@@ -1085,131 +1052,6 @@ Why Vagrant?
         <tag>Linux</tag>
         <tag>Shell</tag>
         <tag>Script</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Setup your VPN server the easy way using docker</title>
-    <url>/2020/10/30/setup-self-openvpn-server/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-30/004.png" /></p>
-<p>In this post, I will show you how to setup your own VPN server in a few simple steps.</p>
-<h2 id="setup">## 1. Setup</h2>
-<h3 id="step-1---create-a-docker-volume-to-save-configuration">Step 1 - Create a docker volume to save configuration</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker volume create --name ovpn-data</span></span><br></pre></td></tr></table></figure>
-<h3 id="step-2---generate-config">Step 2 - Generate config</h3>
-<p>This step will pull the docker image <code>kylemanna/openvpn:2.3</code> and run command <code>ovpn_genconfig</code>. The <strong>IP_ADDRESS</strong> or <strong>DOMAIN</strong> is your public ip address, eg <code>udp://vpn.hienhoang.ml</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_genconfig -u udp://&#123;&#123;IP_ADDRESS | DOMAIN&#125;&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="step-3---generate-public-private-key">Step 3 - Generate public private key</h3>
-<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key. <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure></p>
-<p>Next command is to generate client key <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn:2.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 easyrsa build-client-full my_vpn nopass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ...................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ........+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/my_vpn.key.XXXXpkifIk&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> -----</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="step-4---export-the-ovpn-file">Step 4 - Export the ovpn file</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_getclient my_vpn &gt; my_vpn.ovpn</span></span><br></pre></td></tr></table></figure>
-<p>That's it. <code>my_vpn.ovpn</code> is what you need to connect to this VPN server.</p>
-<h2 id="usage">## 2. Usage</h2>
-<h3 id="check-your-vpn-server-running">Check your VPN server running</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker ps</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS              PORTS                    NAMES</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 04002f98ff76        kylemanna/openvpn:2.3   <span class="string">&quot;ovpn_run&quot;</span>          4 minutes ago       Up 4 minutes        0.0.0.0:1194-&gt;1194/udp   strange_wilbur</span></span><br></pre></td></tr></table></figure>
-<h3 id="import-the-.ovpn-file-using-openvpn-client">Import the .ovpn file using openvpn client</h3>
-<p><code>Import profile</code> -&gt; <code>FILE</code> <img src="/images/2020-10-30/001.png" /></p>
-<p>Open the <code>.ovpn</code> file you generated above. <img src="/images/2020-10-30/002.png" /></p>
-<p>Then click <code>Add</code> and Connect <img src="/images/2020-10-30/003.png" /></p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>VPN</tag>
-        <tag>DIY</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Chinese Double Ninth Festival</title>
-    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
-<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
-<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
-<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
-<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
-<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
-<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>My Life Story</tag>
-        <tag>Chung Yeung</tag>
-        <tag>Anniversary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Year End 2020</title>
-    <url>/2021/02/01/year-end-2020/</url>
-    <content><![CDATA[<p>Hey, how do you do? Hope you had a good time in 2020.</p>
-<p><img src="/images/2021-02-01/004.jpg"></p>
-<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
-<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
-<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
-<p><img src="/images/2021-02-01/001.jpeg"></p>
-<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
-<p><img src="/images/2021-02-01/002.jpeg"></p>
-<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
-<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
-<p><img src="/images/2021-02-01/003.jpeg"></p>
-<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
-<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
-<p>Thanks for reading up to this line!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-        <tag>My Life Story</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>When I become Daddy</title>
-    <url>/2020/11/14/when-i-become-father/</url>
-    <content><![CDATA[<p>Hello there, how are you today? My answer is <strong>"Better than good"</strong> if you ask :) Today I would like to tell you about how I have changed since I knew I was going to be called <em>Daddy</em>. That is one of the most beautiful stories in my life. After 5 years together, we finally have a baby. At this time last year, I spent a trip to Dalat City in Lam Dong, for my wife as her birthday gift, when we had no idea that our baby was about 2 months old. Until we came back to work, she got a health check, then the baby turned 3 months. WOW, yeah, she texted me that amazing good news when I was working in the office. I knew, from that moment, my life - our lives - started changing to be better and happier with the new beloved member.</p>
-<p><img src="/images/2020-12-15/001.jpg"></p>
-<p>My wife got a warning from a doctor because she missed the previous health checks for the baby, which made her worried for a while. She likes drinking chill beers and some kinds of alcohol, but don't get me wrong, she enjoys its tastes, not a kind of alcoholic. When we were in Dalat City, we had a night in a bar, drinking some cocktail. Therefore, she was worried for the baby's development. As the result, after a full health check, our baby was fine. I realized that I must have changed to be stronger than ever, in both financial as well as emotional aspects, in order to take care of her and our baby better.</p>
-<p>That the night my wife gave birth to our baby was also so unforgetable to us. Two days before the surgery date, after the midnight, she was unexpectedly in travail, rupture of amniotic fluid. We rushed to the international hospital that was 14km in distance, where she had registered to get surgery. It was 3:00 am, luckily, the street was empty throughout the way we went. We sat in the taxi and prayed. I prayed everything would be fine, my wife and our baby could come over this situation without hurt. At 5:18am, our baby was born, safe and sound!</p>
-<p>"Oh Congratulation! Here you are, a football player!", the doctor said with a smile.</p>
-<p>It was funny that we hadn't known our baby's gender until that moment came. We had a son! His crying sound was lovely and special to me! He was laying on his mother's chest and crying out loud gently. I was so happy that almost forgot to take pictures, a nurse kindly reminded me. After 9 months, we finally met each other, son! 15 minutes later, our son was brought to warming room. When I hold him im my arms, I felt amazing, unbelievable, sweet and complete. He was strong, healthy, sleeping like an angel. Since then, our lives routine changed quite much to take care of him.</p>
-<p><img src="/images/2020-12-15/002.jpg"></p>
-<p>I would like to share top things I have changed since my wife got pregnant.</p>
-<ol type="1">
-<li>Doing houseworks in smart way</li>
-</ol>
-<p>After knowing my wife got pregnant, I started looking for a bigger and more convenient apartment for her to live. The one we chose was 63m2 with kitchen and two private rooms. My wife enjoyed cooking quite much so when there was the kitchen there, she could cooked healthy fresh dishes for us, espcially for the baby as well. I wasn't good at cooking but I could support her in washing dishes after meals, cleaning the floors, carrying heavy stuffs, etc. Doing lots of houseworks made me realize that how incredible my wife got through all everyday while she was still going to work. Unexpectedly, there was a big changes in human resource in my wife's company, because of her pregnancy, she had to leave the position according to the new company policy. Then my wife stayed at home alone and relaxed, while I was still working during the Covid-19. I bought her a washing dishes machine, a portable vacuum cleaner, and a pressure cooker to help things done faster and easier. Shortly after that, due to the growth of Covid-19, the government asked people to work from home, I could stay with my wife. It was a very good news to my wife, because she had someone to talk and take care of her.</p>
-<ol start="2" type="1">
-<li>Being a better listener</li>
-</ol>
-<p>I admit that I am not a good listener, but for my wife, I am trying to learn how to be her listener. Pregnant women are usually sensitive, grumpy and have a lot of thoughts. Fortunately, although my wife is open-minded and she seemed to be happier after having the baby, she still had some negative thoughts and fears inside. So I needed to be her mental support, reading her emotions and listening to her thoughts without any judgment. Especially after she gave birth to our baby, she faced huge changes in both physical and mental. I have been always by her side to help easing her bad feelings, together taking care of the baby.</p>
-<ol start="3" type="1">
-<li>Leanring to become richer. Being more mature and responsible</li>
-</ol>
-<p>Small renting rooms are not suitable for us anymore. Now we have a child, he needs a better environemnt for living and growing, for example, better educations, better neighbors, better health care etc. Therefore, we become more serious about the future with bigger houses and greater amount of assets. I began watching videos from rich successful people, learning their mindsets and taking their advices, then improving our values to get better chances in lives. Having baby motivates us so much to do harder to get richer and richer. And we strongly believe that we will soon have a beautiful villa and high standard living conditions.</p>
-<p>Some of my friends told me that I have looked more mature or older after having baby. I consider it as a praise. I want to be a great and responsible dad to guide our child to become an excellent person too.</p>
-<ol start="4" type="1">
-<li>Habbits &amp; Hobbies</li>
-</ol>
-<p>There are some new habits approaching me after our son was born. For instance, shooting photos of my litlle family to save the simple beautiful moments of our daily life with our son. He is super cute and growing so fast that we want to keep those sweet memories forever. I bought a new camera and we are saving budget to travel together and capture beautiful scenes. I didnot have that habit before.</p>
-<p>Now, everyday I have felt more excited when coming back home from work. I never knew that becoming father brings many positive feelings and thinking like that - a complete family. Love you all, my wife and little son.</p>
-<p><img src="/images/2020-12-15/003.jpg"></p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-        <tag>My Life Story</tag>
       </tags>
   </entry>
   <entry>
@@ -1253,6 +1095,300 @@ Why Vagrant?
         <tag>MNIST</tag>
         <tag>Matplotlib</tag>
         <tag>Seaborn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Chinese Double Ninth Festival</title>
+    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
+<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
+<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
+<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
+<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
+<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
+<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>My Life Story</tag>
+        <tag>Chung Yeung</tag>
+        <tag>Anniversary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>When I become Daddy</title>
+    <url>/2020/11/14/when-i-become-father/</url>
+    <content><![CDATA[<p>Hello there, how are you today? My answer is <strong>"Better than good"</strong> if you ask :) Today I would like to tell you about how I have changed since I knew I was going to be called <em>Daddy</em>. That is one of the most beautiful stories in my life. After 5 years together, we finally have a baby. At this time last year, I spent a trip to Dalat City in Lam Dong, for my wife as her birthday gift, when we had no idea that our baby was about 2 months old. Until we came back to work, she got a health check, then the baby turned 3 months. WOW, yeah, she texted me that amazing good news when I was working in the office. I knew, from that moment, my life - our lives - started changing to be better and happier with the new beloved member.</p>
+<p><img src="/images/2020-12-15/001.jpg"></p>
+<p>My wife got a warning from a doctor because she missed the previous health checks for the baby, which made her worried for a while. She likes drinking chill beers and some kinds of alcohol, but don't get me wrong, she enjoys its tastes, not a kind of alcoholic. When we were in Dalat City, we had a night in a bar, drinking some cocktail. Therefore, she was worried for the baby's development. As the result, after a full health check, our baby was fine. I realized that I must have changed to be stronger than ever, in both financial as well as emotional aspects, in order to take care of her and our baby better.</p>
+<p>That the night my wife gave birth to our baby was also so unforgetable to us. Two days before the surgery date, after the midnight, she was unexpectedly in travail, rupture of amniotic fluid. We rushed to the international hospital that was 14km in distance, where she had registered to get surgery. It was 3:00 am, luckily, the street was empty throughout the way we went. We sat in the taxi and prayed. I prayed everything would be fine, my wife and our baby could come over this situation without hurt. At 5:18am, our baby was born, safe and sound!</p>
+<p>"Oh Congratulation! Here you are, a football player!", the doctor said with a smile.</p>
+<p>It was funny that we hadn't known our baby's gender until that moment came. We had a son! His crying sound was lovely and special to me! He was laying on his mother's chest and crying out loud gently. I was so happy that almost forgot to take pictures, a nurse kindly reminded me. After 9 months, we finally met each other, son! 15 minutes later, our son was brought to warming room. When I hold him im my arms, I felt amazing, unbelievable, sweet and complete. He was strong, healthy, sleeping like an angel. Since then, our lives routine changed quite much to take care of him.</p>
+<p><img src="/images/2020-12-15/002.jpg"></p>
+<p>I would like to share top things I have changed since my wife got pregnant.</p>
+<ol type="1">
+<li>Doing houseworks in smart way</li>
+</ol>
+<p>After knowing my wife got pregnant, I started looking for a bigger and more convenient apartment for her to live. The one we chose was 63m2 with kitchen and two private rooms. My wife enjoyed cooking quite much so when there was the kitchen there, she could cooked healthy fresh dishes for us, espcially for the baby as well. I wasn't good at cooking but I could support her in washing dishes after meals, cleaning the floors, carrying heavy stuffs, etc. Doing lots of houseworks made me realize that how incredible my wife got through all everyday while she was still going to work. Unexpectedly, there was a big changes in human resource in my wife's company, because of her pregnancy, she had to leave the position according to the new company policy. Then my wife stayed at home alone and relaxed, while I was still working during the Covid-19. I bought her a washing dishes machine, a portable vacuum cleaner, and a pressure cooker to help things done faster and easier. Shortly after that, due to the growth of Covid-19, the government asked people to work from home, I could stay with my wife. It was a very good news to my wife, because she had someone to talk and take care of her.</p>
+<ol start="2" type="1">
+<li>Being a better listener</li>
+</ol>
+<p>I admit that I am not a good listener, but for my wife, I am trying to learn how to be her listener. Pregnant women are usually sensitive, grumpy and have a lot of thoughts. Fortunately, although my wife is open-minded and she seemed to be happier after having the baby, she still had some negative thoughts and fears inside. So I needed to be her mental support, reading her emotions and listening to her thoughts without any judgment. Especially after she gave birth to our baby, she faced huge changes in both physical and mental. I have been always by her side to help easing her bad feelings, together taking care of the baby.</p>
+<ol start="3" type="1">
+<li>Leanring to become richer. Being more mature and responsible</li>
+</ol>
+<p>Small renting rooms are not suitable for us anymore. Now we have a child, he needs a better environemnt for living and growing, for example, better educations, better neighbors, better health care etc. Therefore, we become more serious about the future with bigger houses and greater amount of assets. I began watching videos from rich successful people, learning their mindsets and taking their advices, then improving our values to get better chances in lives. Having baby motivates us so much to do harder to get richer and richer. And we strongly believe that we will soon have a beautiful villa and high standard living conditions.</p>
+<p>Some of my friends told me that I have looked more mature or older after having baby. I consider it as a praise. I want to be a great and responsible dad to guide our child to become an excellent person too.</p>
+<ol start="4" type="1">
+<li>Habbits &amp; Hobbies</li>
+</ol>
+<p>There are some new habits approaching me after our son was born. For instance, shooting photos of my litlle family to save the simple beautiful moments of our daily life with our son. He is super cute and growing so fast that we want to keep those sweet memories forever. I bought a new camera and we are saving budget to travel together and capture beautiful scenes. I didnot have that habit before.</p>
+<p>Now, everyday I have felt more excited when coming back home from work. I never knew that becoming father brings many positive feelings and thinking like that - a complete family. Love you all, my wife and little son.</p>
+<p><img src="/images/2020-12-15/003.jpg"></p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Setup your VPN server the easy way using docker</title>
+    <url>/2020/10/30/setup-self-openvpn-server/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-30/004.png" /></p>
+<p>In this post, I will show you how to setup your own VPN server in a few simple steps.</p>
+<h2 id="setup">## 1. Setup</h2>
+<h3 id="step-1---create-a-docker-volume-to-save-configuration">Step 1 - Create a docker volume to save configuration</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker volume create --name ovpn-data</span></span><br></pre></td></tr></table></figure>
+<h3 id="step-2---generate-config">Step 2 - Generate config</h3>
+<p>This step will pull the docker image <code>kylemanna/openvpn:2.3</code> and run command <code>ovpn_genconfig</code>. The <strong>IP_ADDRESS</strong> or <strong>DOMAIN</strong> is your public ip address, eg <code>udp://vpn.hienhoang.ml</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_genconfig -u udp://&#123;&#123;IP_ADDRESS | DOMAIN&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="step-3---generate-public-private-key">Step 3 - Generate public private key</h3>
+<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key. <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure></p>
+<p>Next command is to generate client key <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn:2.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 easyrsa build-client-full my_vpn nopass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ...................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ........+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/my_vpn.key.XXXXpkifIk&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> -----</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="step-4---export-the-ovpn-file">Step 4 - Export the ovpn file</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_getclient my_vpn &gt; my_vpn.ovpn</span></span><br></pre></td></tr></table></figure>
+<p>That's it. <code>my_vpn.ovpn</code> is what you need to connect to this VPN server.</p>
+<h2 id="usage">## 2. Usage</h2>
+<h3 id="check-your-vpn-server-running">Check your VPN server running</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker ps</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS              PORTS                    NAMES</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 04002f98ff76        kylemanna/openvpn:2.3   <span class="string">&quot;ovpn_run&quot;</span>          4 minutes ago       Up 4 minutes        0.0.0.0:1194-&gt;1194/udp   strange_wilbur</span></span><br></pre></td></tr></table></figure>
+<h3 id="import-the-.ovpn-file-using-openvpn-client">Import the .ovpn file using openvpn client</h3>
+<p><code>Import profile</code> -&gt; <code>FILE</code> <img src="/images/2020-10-30/001.png" /></p>
+<p>Open the <code>.ovpn</code> file you generated above. <img src="/images/2020-10-30/002.png" /></p>
+<p>Then click <code>Add</code> and Connect <img src="/images/2020-10-30/003.png" /></p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>VPN</tag>
+        <tag>DIY</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Year End 2020</title>
+    <url>/2021/02/01/year-end-2020/</url>
+    <content><![CDATA[<p>Hey, how do you do? Hope you had a good time in 2020.</p>
+<p><img src="/images/2021-02-01/004.jpg"></p>
+<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
+<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
+<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
+<p><img src="/images/2021-02-01/001.jpeg"></p>
+<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
+<p><img src="/images/2021-02-01/002.jpeg"></p>
+<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
+<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
+<p><img src="/images/2021-02-01/003.jpeg"></p>
+<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
+<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
+<p>Thanks for reading up to this line!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Run Headless Chrome Browser Inside a Docker Container</title>
+    <url>/2020/11/20/run-headless-chrome-inside-a-docker-container/</url>
+    <content><![CDATA[<h1 id="overview">1. Overview</h1>
+<p>This is a simple example of how to config your own headless chrome browser inside a docker container. Then use a simple Python web application to say hello world with python selenium.</p>
+<p>Project structure: - app.py - Dockerfile - bin/ + chromedriver + google-chrome-87_amd64.deb</p>
+<p>Source code on <a href="https://github.com/hoangchunghien/headless-browser-docker-example">GitHub</a></p>
+<h1 id="coding">2. Coding</h1>
+<ul>
+<li><code>Dockerfile</code></li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>app.py</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, send_file</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">options = Options()</span><br><span class="line">options.add_argument(<span class="string">&#x27;--headless&#x27;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-gpu&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-dev-shm-usage&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--no-sandbox&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span>():</span></span><br><span class="line">    driver = webdriver.Chrome(chrome_options=options)</span><br><span class="line">    driver.get(<span class="string">&#x27;https://www.google.com&#x27;</span>)</span><br><span class="line">    driver.save_screenshot(<span class="string">&quot;screenshot.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> send_file(<span class="string">&quot;screenshot.png&quot;</span>, mimetype=<span class="string">&#x27;image/png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="built_in">int</span>(os.environ.get(<span class="string">&#x27;PORT&#x27;</span>, <span class="number">5000</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-it">3. Test it</h1>
+<ul>
+<li>Build the docker image</li>
+</ul>
+<p><code>docker build -t headless .</code></p>
+<ul>
+<li>Run the docker container</li>
+</ul>
+<p><code>docker run -it -p 5000:5000 headless</code></p>
+<ul>
+<li>Open the link <a href="http://localhost:5000">http://localhost:5000</a></li>
+</ul>
+<p><img src="/images/2020-11-20/001.png"></p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Python</tag>
+        <tag>Docker</tag>
+        <tag>Selenium</tag>
+        <tag>Headless Browser</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Build a Search Engine with TF-IDF</title>
+    <url>/2020/11/22/Build-a-Search-Engine-with-TF-IDF/</url>
+    <content><![CDATA[<blockquote><p>TF-IDF short for term frequency – inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in searches of information retrieval, text mining, and user modeling. The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general. tf–idf is one of the most popular term-weighting schemes today.</p>
+<footer><strong>Wikipedia</strong><cite><a href="https://en.wikipedia.org/wiki/Tf–idf">en.wikipedia.org/wiki/Tf–idf</a></cite></footer></blockquote>
+<h2 id="bag-of-words">1. Bag of words</h2>
+<h3 id="tokenize-a-sentence">Tokenize a sentence</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> TreebankWordTokenizer</span><br><span class="line"></span><br><span class="line">sentence = <span class="string">&quot;The faster Harry got to the store, the faster Harry, the faster, would get home.&quot;</span></span><br><span class="line">tokenizer = TreebankWordTokenizer()</span><br><span class="line">token_sequence = tokenizer.tokenize(sentence.lower())</span><br><span class="line">print(token_sequence)</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+['the', 'faster', 'harry', 'got', 'to', 'the', 'store', ',', 'the', 'faster', 'harry', ',', 'the', 'faster', ',', 'would', 'get', 'home', '.']
+</div>
+<h3 id="tokens-counter">Tokens counter</h3>
+<p>We only care about the unique words and how many times a word occurs in the sentence.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line">bag_of_words = Counter(token_sequence)</span><br><span class="line">print(bag_of_words)</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+Counter({'the': 4, 'faster': 3, ',': 3, 'harry': 2, 'got': 1, 'to': 1, 'store': 1, 'would': 1, 'get': 1, 'home': 1, '.': 1})
+</div>
+<p>What is the most common words?</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">word_list = bag_of_words.most_common()</span><br><span class="line">print(word_list)</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+[('the', 4), ('faster', 3), (',', 3), ('harry', 2), ('got', 1), ('to', 1), ('store', 1), ('would', 1), ('get', 1), ('home', 1), ('.', 1)]
+</div>
+<p>The number of times a word occurs in a document is called <em>term frequency</em> or <em>TF</em>. Let compute one example.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">harry_count = bag_of_words[<span class="string">&#x27;harry&#x27;</span>]</span><br><span class="line">unique_words = <span class="built_in">len</span>(bag_of_words)</span><br><span class="line"></span><br><span class="line">print(<span class="built_in">round</span>(harry_count / unique_words, <span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+<p>0.1818</p>
+</div>
+<p>Let compute with another example. Take a look at below document.</p>
+<div style="font-size: 14px;font-family:tahoma">
+<p>
+A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of the kite at the correct angle so the wind can lift it. A kite’s wing also may be so designed so a bridle is not needed; when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, a wing in the system is still often called the kite.
+</p>
+<p>
+The lift that sustains the kite in flight is generated when air flows around the kite’s surface, producing low pressure above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (such as the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or vehicle).
+</p>
+<p>
+The same principles of fluid flow apply in liquids and kites are also used under water. A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon.
+</p>
+<p>
+Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. Even Man-lifting kites have been made.
+</p>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kite_text = <span class="string">&quot;A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of the kite at the correct angle so the wind can lift it. A kite&#x27;s wing also may be so designed so a bridle is not needed; when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, a wing in the system is still often called the kite. The lift that sustains the kite in flight is generated when air flows around the kite&#x27;s surface, producing low pressure above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (e.g., the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or vehicle). The same principles of fluid flow apply in liquids and kites are also used under water. A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon. Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. Even Man-lifting kites have been made.&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> TreebankWordTokenizer</span><br><span class="line">tokenizer = TreebankWordTokenizer()</span><br><span class="line">tokens = tokenizer.tokenize(kite_text.lower())</span><br><span class="line">token_count = Counter(tokens)</span><br><span class="line">print(token_count)</span><br></pre></td></tr></table></figure>
+<div style="font-size:12px;">
+<p>Counter({'the': 26, 'a': 20, 'kite': 16, ',': 15, 'and': 10, 'of': 10, 'kites': 8, 'is': 7, 'in': 7, 'or': 6, 'wing': 5, 'to': 5, 'be': 5, 'as': 5, 'lift': 4, 'have': 4, 'may': 4, 'at': 3, 'so': 3, 'can': 3, 'also': 3, 'kiting': 3, 'are': 3, 'flown': 3, 'tethered': 2, 'craft': 2, 'with': 2, 'that': 2, 'air': 2, 'consists': 2, 'tethers': 2, 'anchors.': 2, 'often': 2, 'bridle': 2, 'wind': 2, "'s": 2, 'designed': 2, ';': 2, 'when': 2, 'for': 2, 'moving': 2, 'technical': 2, 'even': 2, 'called': 2, 'surface': 2, 'pressure': 2, 'drag': 2, 'force': 2, 'by': 2, 'which': 2, '.': 2, 'used': 2, 'power': 2, 'traditionally': 1, 'heavier-than-air': 1, 'surfaces': 1, 'react': 1, 'against': 1, 'create': 1, 'drag.': 1, 'wings': 1, 'guide': 1, 'face': 1, 'correct': 1, 'angle': 1, 'it.': 1, 'not': 1, 'needed': 1, 'sailplane': 1, 'launch': 1, 'tether': 1, 'meets': 1, 'single': 1, 'point.': 1, 'fixed': 1, 'untraditionally': 1, 'tether-set-coupled': 1, 'sets': 1, 'though': 1, 'system': 1, 'still': 1, 'kite.': 1, 'sustains': 1, 'flight': 1, 'generated': 1, 'flows': 1, 'around': 1, 'producing': 1, 'low': 1, 'above': 1, 'high': 1, 'below': 1, 'wings.': 1, 'interaction': 1, 'generates': 1, 'horizontal': 1, 'along': 1, 'direction': 1, 'wind.': 1, 'resultant': 1, 'vector': 1, 'from': 1, 'components': 1, 'opposed': 1, 'tension': 1, 'one': 1, 'more': 1, 'lines': 1, 'attached.': 1, 'anchor': 1, 'point': 1, 'line': 1, 'static': 1, '(': 1, 'e.g.': 1, 'towing': 1, 'running': 1, 'person': 1, 'boat': 1, 'free-falling': 1, 'anchors': 1, 'paragliders': 1, 'fugitive': 1, 'parakites': 1, 'vehicle': 1, ')': 1, 'same': 1, 'principles': 1, 'fluid': 1, 'flow': 1, 'apply': 1, 'liquids': 1, 'under': 1, 'water.': 1, 'hybrid': 1, 'comprising': 1, 'both': 1, 'lighter-than-air': 1, 'balloon': 1, 'well': 1, 'lifting': 1, 'kytoon.': 1, 'long': 1, 'varied': 1, 'history': 1, 'many': 1, 'different': 1, 'types': 1, 'individually': 1, 'festivals': 1, 'worldwide.': 1, 'recreation': 1, 'art': 1, 'other': 1, 'practical': 1, 'uses.': 1, 'sport': 1, 'aerial': 1, 'ballet': 1, 'sometimes': 1, 'part': 1, 'competition.': 1, 'multi-line': 1, 'steerable': 1, 'generate': 1, 'large': 1, 'forces': 1, 'activities': 1, 'such': 1, 'surfing': 1, 'landboarding': 1, 'fishing': 1, 'buggying': 1, 'new': 1, 'trend': 1, 'snow': 1, 'kiting.': 1, 'man-lifting': 1, 'been': 1, 'made': 1})</p>
+</div>
+<p>Hmm, you can see that <code>the</code>, <code>a</code>, <code>and</code> and many other stop-words occurs too much. How about apply stopwords clean up.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line"></span><br><span class="line">nltk.download(<span class="string">&#x27;stopwords&#x27;</span>, quiet=<span class="literal">True</span>)</span><br><span class="line">stopwords = nltk.corpus.stopwords.words(<span class="string">&#x27;english&#x27;</span>)</span><br><span class="line">tokens = [x <span class="keyword">for</span> x <span class="keyword">in</span> tokens <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> stopwords]</span><br><span class="line">kite_counts = Counter(tokens)</span><br><span class="line">print(kite_counts)</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px;font-family:tahoma">
+<p>Counter({'kite': 16, ',': 15, 'kites': 8, 'wing': 5, 'lift': 4, 'may': 4, 'also': 3, 'kiting': 3, 'flown': 3, 'tethered': 2, 'craft': 2, 'air': 2, 'consists': 2, 'tethers': 2, 'anchors.': 2, 'often': 2, 'bridle': 2, 'wind': 2, "'s": 2, 'designed': 2, ';': 2, 'moving': 2, 'technical': 2, 'even': 2, 'called': 2, 'surface': 2, 'pressure': 2, 'drag': 2, 'force': 2, '.': 2, 'used': 2, 'power': 2, 'traditionally': 1, 'heavier-than-air': 1, 'surfaces': 1, 'react': 1, 'create': 1, 'drag.': 1, 'wings': 1, 'guide': 1, 'face': 1, 'correct': 1, 'angle': 1, 'it.': 1, 'needed': 1, 'sailplane': 1, 'launch': 1, 'tether': 1, 'meets': 1, 'single': 1, 'point.': 1, 'fixed': 1, 'untraditionally': 1, 'tether-set-coupled': 1, 'sets': 1, 'though': 1, 'system': 1, 'still': 1, 'kite.': 1, 'sustains': 1, 'flight': 1, 'generated': 1, 'flows': 1, 'around': 1, 'producing': 1, 'low': 1, 'high': 1, 'wings.': 1, 'interaction': 1, 'generates': 1, 'horizontal': 1, 'along': 1, 'direction': 1, 'wind.': 1, 'resultant': 1, 'vector': 1, 'components': 1, 'opposed': 1, 'tension': 1, 'one': 1, 'lines': 1, 'attached.': 1, 'anchor': 1, 'point': 1, 'line': 1, 'static': 1, '(': 1, 'e.g.': 1, 'towing': 1, 'running': 1, 'person': 1, 'boat': 1, 'free-falling': 1, 'anchors': 1, 'paragliders': 1, 'fugitive': 1, 'parakites': 1, 'vehicle': 1, ')': 1, 'principles': 1, 'fluid': 1, 'flow': 1, 'apply': 1, 'liquids': 1, 'water.': 1, 'hybrid': 1, 'comprising': 1, 'lighter-than-air': 1, 'balloon': 1, 'well': 1, 'lifting': 1, 'kytoon.': 1, 'long': 1, 'varied': 1, 'history': 1, 'many': 1, 'different': 1, 'types': 1, 'individually': 1, 'festivals': 1, 'worldwide.': 1, 'recreation': 1, 'art': 1, 'practical': 1, 'uses.': 1, 'sport': 1, 'aerial': 1, 'ballet': 1, 'sometimes': 1, 'part': 1, 'competition.': 1, 'multi-line': 1, 'steerable': 1, 'generate': 1, 'large': 1, 'forces': 1, 'activities': 1, 'surfing': 1, 'landboarding': 1, 'fishing': 1, 'buggying': 1, 'new': 1, 'trend': 1, 'snow': 1, 'kiting.': 1, 'man-lifting': 1, 'made': 1})</p>
+</div>
+<p>Look better, you can easily see that there are some importance terms <code>kite</code>, <code>kites</code>, <code>wing</code>, <code>lift</code>. Just by looking purely at this, you will learn something about this document.</p>
+<h2 id="vectorizing">2. Vectorizing</h2>
+<h3 id="how-to-compute-document-vector">How to compute document vector?</h3>
+<p>Document vector on the kite example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">document_vector = []</span><br><span class="line">doc_length = <span class="built_in">len</span>(tokens)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> kite_counts.most_common():</span><br><span class="line">    document_vector.append(value / doc_length)</span><br><span class="line"></span><br><span class="line">document_vector</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>[0.07207207207207207,<br/> 0.06756756756756757,<br/> 0.036036036036036036,<br/> ...<br/> 0.0045045045045045045,<br/> 0.0045045045045045045,<br/> 0.0045045045045045045]</p>
+</div>
+<p>Hmm, interesting. This is one vector of a document. We might need more than one document to do math on. Let build another simple example. Let's say I have this three documents.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc_0 = <span class="string">&quot;The faster Harry got to the store, the faster Harry, the faster, would get home.&quot;</span></span><br><span class="line">doc_1 = <span class="string">&quot;Harry is hairy and faster than Jill.&quot;</span></span><br><span class="line">doc_2 = <span class="string">&quot;Jill is not as hairy as Harry.&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Now, convert those docs to tokens</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tokens_0 = tokenizer.tokenize(doc_0.lower())</span><br><span class="line">tokens_1 = tokenizer.tokenize(doc_1.lower())</span><br><span class="line">tokens_2 = tokenizer.tokenize(doc_2.lower())</span><br><span class="line">lexicon = <span class="built_in">set</span>(tokens_0 + tokens_1 + tokens_2)</span><br><span class="line"></span><br><span class="line">print(lexicon)</span><br><span class="line">print(<span class="built_in">len</span>(lexicon))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>{'hairy', 'jill', 'harry', 'faster', 'the', 'would', 'get', 'is', 'got', 'and', 'than', ',', '.', 'not', 'as', 'store', 'home', 'to'}<br/> 18</p>
+</div>
+<p>All of this three documents must have the same length, that is <code>18</code>.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"><span class="comment"># I create a zero vector as a template for all the vectors in this example</span></span><br><span class="line">zero_vector = OrderedDict((token, <span class="number">0</span>) <span class="keyword">for</span> token <span class="keyword">in</span> lexicon)</span><br><span class="line">zero_vector</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>OrderedDict([('hairy', 0), ('jill', 0), ('harry', 0), ('faster', 0), ('the', 0), ('would', 0), ('get', 0), ('is', 0), ('got', 0), ('and', 0), ('than', 0), (',', 0), ('.', 0), ('not', 0), ('as', 0), ('store', 0), ('home', 0), ('to', 0)])</p>
+</div>
+<p>Here a how three document vectors created <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">document_vectors = []</span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> [doc_0, doc_1, doc_2]:</span><br><span class="line">    <span class="comment"># Don&#x27;t edit directly on the template, just clone one for new vector</span></span><br><span class="line">    vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">    tokens = tokenizer.tokenize(doc.lower())</span><br><span class="line">    token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">        <span class="comment"># compute TF</span></span><br><span class="line">        vec[key] = value / <span class="built_in">len</span>(lexicon)</span><br><span class="line">    document_vectors.append(vec)</span><br></pre></td></tr></table></figure></p>
+<h3 id="what-is-vector">What is vector?</h3>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/fNk_zzaMoSs" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="cosine-similarity-implementation">Cosine Similarity Implementation</h3>
+<p><span class="math display">\[\begin{align*}
+\cos \theta &amp;= \frac{A \cdot B}{|A| |B|}
+\end{align*}\]</span></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cosine_sim</span>(<span class="params">vec1, vec2</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Since our vectors are dictionaries, lets convert them to lists for easier mathing.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    vec1 = [val <span class="keyword">for</span> val <span class="keyword">in</span> vec1.values()]</span><br><span class="line">    vec2 = [val <span class="keyword">for</span> val <span class="keyword">in</span> vec2.values()]</span><br><span class="line">    </span><br><span class="line">    dot_prod = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(vec1):</span><br><span class="line">        dot_prod += v * vec2[i]</span><br><span class="line">        </span><br><span class="line">    mag_1 = math.sqrt(<span class="built_in">sum</span>([x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> vec1]))</span><br><span class="line">    mag_2 = math.sqrt(<span class="built_in">sum</span>([x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> vec2]))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dot_prod / (mag_1 * mag_2)</span><br></pre></td></tr></table></figure>
+<p>A consine similarity of <strong>1</strong> represents vectors that point in the exactly same direction. In NLP, that mean two documents have the same meaning.</p>
+<p>A cosine similarity of <strong>0</strong> represent two vectors share no components. They are orthogonal.</p>
+<p>A consine similarty of <strong>-1</strong> represents two vectors that are anti-similar, they are pointing in the opposite. Or NLP, two documents talking about the opposite things. But, we never see the opposite direction in TF vectors, because counting words can never be negative.</p>
+<p>So, let go to verify the above three vectors</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(cosine_sim(document_vectors[<span class="number">0</span>], document_vectors[<span class="number">1</span>]))</span><br><span class="line">print(cosine_sim(document_vectors[<span class="number">0</span>], document_vectors[<span class="number">2</span>]))</span><br><span class="line">print(cosine_sim(document_vectors[<span class="number">1</span>], document_vectors[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>0.3162277660168379<br/> 0.14142135623730948<br/> 0.5590169943749475</p>
+</div>
+<p>We can easily see that, doc1 and doc2 have much similar score. They are talking something similar.</p>
+<h2 id="topic-modeling">3. Topic Modeling</h2>
+<p>Word counts are useful, but it doesn't tell much more information and the relative with all other documents in the corpus. Inverse Document Frequency (IDF), compute on documents count in the entire corpus.</p>
+<p><span class="math display">\[\begin{align*}
+tf(t, d) &amp;= \frac{count(t)}{count(d)}
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+idf(t, D) &amp;= \log \frac{count(D)}{count(D_t)}
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+tfidf(t, d, D) &amp;= tf(t, d) * idf(t, D)
+\end{align*}\]</span></p>
+<p>The more time a word appear in a document, the important it is in a document. On the other hand, the number of documents contains a word, the less important it is in the entire corpus.</p>
+<p>Compute the tfidf on the above example <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">document_tfidf_vectors = []</span><br><span class="line">documents = [doc_0, doc_1, doc_2]</span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> documents:</span><br><span class="line"></span><br><span class="line">    vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">    tokens = tokenizer.tokenize(doc.lower())</span><br><span class="line">    token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">        docs_containing_key = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> _doc <span class="keyword">in</span> documents:</span><br><span class="line">            <span class="keyword">if</span> key <span class="keyword">in</span> _doc:</span><br><span class="line">                docs_containing_key += <span class="number">1</span></span><br><span class="line">        tf = value / <span class="built_in">len</span>(lexicon)</span><br><span class="line">        <span class="keyword">if</span> docs_containing_key:</span><br><span class="line">            idf = <span class="built_in">len</span>(documents) / docs_containing_key</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            idf = <span class="number">0</span></span><br><span class="line">        vec[key] = tf * idf </span><br><span class="line">    document_tfidf_vectors.append(vec)</span><br></pre></td></tr></table></figure></p>
+Let try with a simple query <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">documents = [doc_0, doc_1, doc_2]</span><br><span class="line">query = <span class="string">&quot;How long does it take to get to the store?&quot;</span></span><br><span class="line">query_vec = copy.copy(vector_template) </span><br><span class="line"></span><br><span class="line">query_vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">tokens = tokenizer.tokenize(query.lower())</span><br><span class="line">token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">    docs_containing_key = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _doc <span class="keyword">in</span> documents:</span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> _doc.lower():</span><br><span class="line">            docs_containing_key += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> docs_containing_key == <span class="number">0</span>:  <span class="comment"># We didn&#x27;t find that token in the lexicon go to next key</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    tf = value / <span class="built_in">len</span>(tokens)</span><br><span class="line">    idf = <span class="built_in">len</span>(documents) / docs_containing_key </span><br><span class="line">    query_vec[key] = tf * idf </span><br><span class="line"></span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">0</span>]))</span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">1</span>]))</span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>0.5235048549676834<br/> 0.0<br/> 0.0</p>
+</div>
+<p>This is clearly that, the <code>doc0</code> is the only documents that match with the query. <code>The faster Harry got to the store, the faster Harry, the faster, would get home</code>.</p>
+<p>What an interesting algorithm to search for relevant documents. This searching algorithm had to evaluate the entire corpus. That O(N) algorithm. Not bad isn't it?</p>
+<h2 id="tools">4. Tools</h2>
+<p>Let simpler our implementation by using tools.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"></span><br><span class="line">corpus = docs</span><br><span class="line">vectorizer = TfidfVectorizer(min_df=<span class="number">1</span>)</span><br><span class="line">model = vectorizer.fit_transform(corpus)</span><br><span class="line"></span><br><span class="line">print(model.todense().<span class="built_in">round</span>(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>[[0.16 0. 0.48 0.21 0.21 0. 0.25 0.21 0. 0. 0. 0.21 0. 0.64 0.21 0.21]<br/> [0.37 0. 0.37 0. 0. 0.37 0.29 0. 0.37 0.37 0. 0. 0.49 0. 0. 0. ]<br/> [0. 0.75 0. 0. 0. 0.29 0.22 0. 0.29 0.29 0.38 0. 0. 0. 0. 0. ]]</p>
+</div>
+]]></content>
+      <categories>
+        <category>Natural Language Processing</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>TF-IDF</tag>
+        <tag>NLP</tag>
+        <tag>Search Engine</tag>
+        <tag>Bag of Words</tag>
+        <tag>BOW</tag>
+        <tag>Information Retrieval</tag>
+        <tag>Scikit-Learn</tag>
       </tags>
   </entry>
   <entry>
@@ -1502,134 +1638,6 @@ Why Vagrant?
         <tag>MobileNet-V2</tag>
         <tag>Pretrain</tag>
         <tag>Fully Convolution Network</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Build a Search Engine with TF-IDF</title>
-    <url>/2020/11/22/Build-a-Search-Engine-with-TF-IDF/</url>
-    <content><![CDATA[<blockquote><p>TF-IDF short for term frequency – inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in searches of information retrieval, text mining, and user modeling. The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general. tf–idf is one of the most popular term-weighting schemes today.</p>
-<footer><strong>Wikipedia</strong><cite><a href="https://en.wikipedia.org/wiki/Tf–idf">en.wikipedia.org/wiki/Tf–idf</a></cite></footer></blockquote>
-<h2 id="bag-of-words">1. Bag of words</h2>
-<h3 id="tokenize-a-sentence">Tokenize a sentence</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> TreebankWordTokenizer</span><br><span class="line"></span><br><span class="line">sentence = <span class="string">&quot;The faster Harry got to the store, the faster Harry, the faster, would get home.&quot;</span></span><br><span class="line">tokenizer = TreebankWordTokenizer()</span><br><span class="line">token_sequence = tokenizer.tokenize(sentence.lower())</span><br><span class="line">print(token_sequence)</span><br></pre></td></tr></table></figure>
-<div style="font-size:14px">
-['the', 'faster', 'harry', 'got', 'to', 'the', 'store', ',', 'the', 'faster', 'harry', ',', 'the', 'faster', ',', 'would', 'get', 'home', '.']
-</div>
-<h3 id="tokens-counter">Tokens counter</h3>
-<p>We only care about the unique words and how many times a word occurs in the sentence.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line">bag_of_words = Counter(token_sequence)</span><br><span class="line">print(bag_of_words)</span><br></pre></td></tr></table></figure>
-<div style="font-size:14px">
-Counter({'the': 4, 'faster': 3, ',': 3, 'harry': 2, 'got': 1, 'to': 1, 'store': 1, 'would': 1, 'get': 1, 'home': 1, '.': 1})
-</div>
-<p>What is the most common words?</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">word_list = bag_of_words.most_common()</span><br><span class="line">print(word_list)</span><br></pre></td></tr></table></figure>
-<div style="font-size:14px">
-[('the', 4), ('faster', 3), (',', 3), ('harry', 2), ('got', 1), ('to', 1), ('store', 1), ('would', 1), ('get', 1), ('home', 1), ('.', 1)]
-</div>
-<p>The number of times a word occurs in a document is called <em>term frequency</em> or <em>TF</em>. Let compute one example.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">harry_count = bag_of_words[<span class="string">&#x27;harry&#x27;</span>]</span><br><span class="line">unique_words = <span class="built_in">len</span>(bag_of_words)</span><br><span class="line"></span><br><span class="line">print(<span class="built_in">round</span>(harry_count / unique_words, <span class="number">4</span>))</span><br></pre></td></tr></table></figure>
-<div style="font-size:14px">
-<p>0.1818</p>
-</div>
-<p>Let compute with another example. Take a look at below document.</p>
-<div style="font-size: 14px;font-family:tahoma">
-<p>
-A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of the kite at the correct angle so the wind can lift it. A kite’s wing also may be so designed so a bridle is not needed; when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, a wing in the system is still often called the kite.
-</p>
-<p>
-The lift that sustains the kite in flight is generated when air flows around the kite’s surface, producing low pressure above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (such as the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or vehicle).
-</p>
-<p>
-The same principles of fluid flow apply in liquids and kites are also used under water. A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon.
-</p>
-<p>
-Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. Even Man-lifting kites have been made.
-</p>
-</div>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kite_text = <span class="string">&quot;A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of the kite at the correct angle so the wind can lift it. A kite&#x27;s wing also may be so designed so a bridle is not needed; when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, a wing in the system is still often called the kite. The lift that sustains the kite in flight is generated when air flows around the kite&#x27;s surface, producing low pressure above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (e.g., the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or vehicle). The same principles of fluid flow apply in liquids and kites are also used under water. A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon. Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. Even Man-lifting kites have been made.&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> TreebankWordTokenizer</span><br><span class="line">tokenizer = TreebankWordTokenizer()</span><br><span class="line">tokens = tokenizer.tokenize(kite_text.lower())</span><br><span class="line">token_count = Counter(tokens)</span><br><span class="line">print(token_count)</span><br></pre></td></tr></table></figure>
-<div style="font-size:12px;">
-<p>Counter({'the': 26, 'a': 20, 'kite': 16, ',': 15, 'and': 10, 'of': 10, 'kites': 8, 'is': 7, 'in': 7, 'or': 6, 'wing': 5, 'to': 5, 'be': 5, 'as': 5, 'lift': 4, 'have': 4, 'may': 4, 'at': 3, 'so': 3, 'can': 3, 'also': 3, 'kiting': 3, 'are': 3, 'flown': 3, 'tethered': 2, 'craft': 2, 'with': 2, 'that': 2, 'air': 2, 'consists': 2, 'tethers': 2, 'anchors.': 2, 'often': 2, 'bridle': 2, 'wind': 2, "'s": 2, 'designed': 2, ';': 2, 'when': 2, 'for': 2, 'moving': 2, 'technical': 2, 'even': 2, 'called': 2, 'surface': 2, 'pressure': 2, 'drag': 2, 'force': 2, 'by': 2, 'which': 2, '.': 2, 'used': 2, 'power': 2, 'traditionally': 1, 'heavier-than-air': 1, 'surfaces': 1, 'react': 1, 'against': 1, 'create': 1, 'drag.': 1, 'wings': 1, 'guide': 1, 'face': 1, 'correct': 1, 'angle': 1, 'it.': 1, 'not': 1, 'needed': 1, 'sailplane': 1, 'launch': 1, 'tether': 1, 'meets': 1, 'single': 1, 'point.': 1, 'fixed': 1, 'untraditionally': 1, 'tether-set-coupled': 1, 'sets': 1, 'though': 1, 'system': 1, 'still': 1, 'kite.': 1, 'sustains': 1, 'flight': 1, 'generated': 1, 'flows': 1, 'around': 1, 'producing': 1, 'low': 1, 'above': 1, 'high': 1, 'below': 1, 'wings.': 1, 'interaction': 1, 'generates': 1, 'horizontal': 1, 'along': 1, 'direction': 1, 'wind.': 1, 'resultant': 1, 'vector': 1, 'from': 1, 'components': 1, 'opposed': 1, 'tension': 1, 'one': 1, 'more': 1, 'lines': 1, 'attached.': 1, 'anchor': 1, 'point': 1, 'line': 1, 'static': 1, '(': 1, 'e.g.': 1, 'towing': 1, 'running': 1, 'person': 1, 'boat': 1, 'free-falling': 1, 'anchors': 1, 'paragliders': 1, 'fugitive': 1, 'parakites': 1, 'vehicle': 1, ')': 1, 'same': 1, 'principles': 1, 'fluid': 1, 'flow': 1, 'apply': 1, 'liquids': 1, 'under': 1, 'water.': 1, 'hybrid': 1, 'comprising': 1, 'both': 1, 'lighter-than-air': 1, 'balloon': 1, 'well': 1, 'lifting': 1, 'kytoon.': 1, 'long': 1, 'varied': 1, 'history': 1, 'many': 1, 'different': 1, 'types': 1, 'individually': 1, 'festivals': 1, 'worldwide.': 1, 'recreation': 1, 'art': 1, 'other': 1, 'practical': 1, 'uses.': 1, 'sport': 1, 'aerial': 1, 'ballet': 1, 'sometimes': 1, 'part': 1, 'competition.': 1, 'multi-line': 1, 'steerable': 1, 'generate': 1, 'large': 1, 'forces': 1, 'activities': 1, 'such': 1, 'surfing': 1, 'landboarding': 1, 'fishing': 1, 'buggying': 1, 'new': 1, 'trend': 1, 'snow': 1, 'kiting.': 1, 'man-lifting': 1, 'been': 1, 'made': 1})</p>
-</div>
-<p>Hmm, you can see that <code>the</code>, <code>a</code>, <code>and</code> and many other stop-words occurs too much. How about apply stopwords clean up.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line"></span><br><span class="line">nltk.download(<span class="string">&#x27;stopwords&#x27;</span>, quiet=<span class="literal">True</span>)</span><br><span class="line">stopwords = nltk.corpus.stopwords.words(<span class="string">&#x27;english&#x27;</span>)</span><br><span class="line">tokens = [x <span class="keyword">for</span> x <span class="keyword">in</span> tokens <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> stopwords]</span><br><span class="line">kite_counts = Counter(tokens)</span><br><span class="line">print(kite_counts)</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px;font-family:tahoma">
-<p>Counter({'kite': 16, ',': 15, 'kites': 8, 'wing': 5, 'lift': 4, 'may': 4, 'also': 3, 'kiting': 3, 'flown': 3, 'tethered': 2, 'craft': 2, 'air': 2, 'consists': 2, 'tethers': 2, 'anchors.': 2, 'often': 2, 'bridle': 2, 'wind': 2, "'s": 2, 'designed': 2, ';': 2, 'moving': 2, 'technical': 2, 'even': 2, 'called': 2, 'surface': 2, 'pressure': 2, 'drag': 2, 'force': 2, '.': 2, 'used': 2, 'power': 2, 'traditionally': 1, 'heavier-than-air': 1, 'surfaces': 1, 'react': 1, 'create': 1, 'drag.': 1, 'wings': 1, 'guide': 1, 'face': 1, 'correct': 1, 'angle': 1, 'it.': 1, 'needed': 1, 'sailplane': 1, 'launch': 1, 'tether': 1, 'meets': 1, 'single': 1, 'point.': 1, 'fixed': 1, 'untraditionally': 1, 'tether-set-coupled': 1, 'sets': 1, 'though': 1, 'system': 1, 'still': 1, 'kite.': 1, 'sustains': 1, 'flight': 1, 'generated': 1, 'flows': 1, 'around': 1, 'producing': 1, 'low': 1, 'high': 1, 'wings.': 1, 'interaction': 1, 'generates': 1, 'horizontal': 1, 'along': 1, 'direction': 1, 'wind.': 1, 'resultant': 1, 'vector': 1, 'components': 1, 'opposed': 1, 'tension': 1, 'one': 1, 'lines': 1, 'attached.': 1, 'anchor': 1, 'point': 1, 'line': 1, 'static': 1, '(': 1, 'e.g.': 1, 'towing': 1, 'running': 1, 'person': 1, 'boat': 1, 'free-falling': 1, 'anchors': 1, 'paragliders': 1, 'fugitive': 1, 'parakites': 1, 'vehicle': 1, ')': 1, 'principles': 1, 'fluid': 1, 'flow': 1, 'apply': 1, 'liquids': 1, 'water.': 1, 'hybrid': 1, 'comprising': 1, 'lighter-than-air': 1, 'balloon': 1, 'well': 1, 'lifting': 1, 'kytoon.': 1, 'long': 1, 'varied': 1, 'history': 1, 'many': 1, 'different': 1, 'types': 1, 'individually': 1, 'festivals': 1, 'worldwide.': 1, 'recreation': 1, 'art': 1, 'practical': 1, 'uses.': 1, 'sport': 1, 'aerial': 1, 'ballet': 1, 'sometimes': 1, 'part': 1, 'competition.': 1, 'multi-line': 1, 'steerable': 1, 'generate': 1, 'large': 1, 'forces': 1, 'activities': 1, 'surfing': 1, 'landboarding': 1, 'fishing': 1, 'buggying': 1, 'new': 1, 'trend': 1, 'snow': 1, 'kiting.': 1, 'man-lifting': 1, 'made': 1})</p>
-</div>
-<p>Look better, you can easily see that there are some importance terms <code>kite</code>, <code>kites</code>, <code>wing</code>, <code>lift</code>. Just by looking purely at this, you will learn something about this document.</p>
-<h2 id="vectorizing">2. Vectorizing</h2>
-<h3 id="how-to-compute-document-vector">How to compute document vector?</h3>
-<p>Document vector on the kite example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">document_vector = []</span><br><span class="line">doc_length = <span class="built_in">len</span>(tokens)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> kite_counts.most_common():</span><br><span class="line">    document_vector.append(value / doc_length)</span><br><span class="line"></span><br><span class="line">document_vector</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px">
-<p>[0.07207207207207207,<br/> 0.06756756756756757,<br/> 0.036036036036036036,<br/> ...<br/> 0.0045045045045045045,<br/> 0.0045045045045045045,<br/> 0.0045045045045045045]</p>
-</div>
-<p>Hmm, interesting. This is one vector of a document. We might need more than one document to do math on. Let build another simple example. Let's say I have this three documents.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc_0 = <span class="string">&quot;The faster Harry got to the store, the faster Harry, the faster, would get home.&quot;</span></span><br><span class="line">doc_1 = <span class="string">&quot;Harry is hairy and faster than Jill.&quot;</span></span><br><span class="line">doc_2 = <span class="string">&quot;Jill is not as hairy as Harry.&quot;</span></span><br></pre></td></tr></table></figure>
-<p>Now, convert those docs to tokens</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tokens_0 = tokenizer.tokenize(doc_0.lower())</span><br><span class="line">tokens_1 = tokenizer.tokenize(doc_1.lower())</span><br><span class="line">tokens_2 = tokenizer.tokenize(doc_2.lower())</span><br><span class="line">lexicon = <span class="built_in">set</span>(tokens_0 + tokens_1 + tokens_2)</span><br><span class="line"></span><br><span class="line">print(lexicon)</span><br><span class="line">print(<span class="built_in">len</span>(lexicon))</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px">
-<p>{'hairy', 'jill', 'harry', 'faster', 'the', 'would', 'get', 'is', 'got', 'and', 'than', ',', '.', 'not', 'as', 'store', 'home', 'to'}<br/> 18</p>
-</div>
-<p>All of this three documents must have the same length, that is <code>18</code>.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"><span class="comment"># I create a zero vector as a template for all the vectors in this example</span></span><br><span class="line">zero_vector = OrderedDict((token, <span class="number">0</span>) <span class="keyword">for</span> token <span class="keyword">in</span> lexicon)</span><br><span class="line">zero_vector</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px">
-<p>OrderedDict([('hairy', 0), ('jill', 0), ('harry', 0), ('faster', 0), ('the', 0), ('would', 0), ('get', 0), ('is', 0), ('got', 0), ('and', 0), ('than', 0), (',', 0), ('.', 0), ('not', 0), ('as', 0), ('store', 0), ('home', 0), ('to', 0)])</p>
-</div>
-<p>Here a how three document vectors created <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">document_vectors = []</span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> [doc_0, doc_1, doc_2]:</span><br><span class="line">    <span class="comment"># Don&#x27;t edit directly on the template, just clone one for new vector</span></span><br><span class="line">    vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">    tokens = tokenizer.tokenize(doc.lower())</span><br><span class="line">    token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">        <span class="comment"># compute TF</span></span><br><span class="line">        vec[key] = value / <span class="built_in">len</span>(lexicon)</span><br><span class="line">    document_vectors.append(vec)</span><br></pre></td></tr></table></figure></p>
-<h3 id="what-is-vector">What is vector?</h3>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/fNk_zzaMoSs" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<h3 id="cosine-similarity-implementation">Cosine Similarity Implementation</h3>
-<p><span class="math display">\[\begin{align*}
-\cos \theta &amp;= \frac{A \cdot B}{|A| |B|}
-\end{align*}\]</span></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cosine_sim</span>(<span class="params">vec1, vec2</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Since our vectors are dictionaries, lets convert them to lists for easier mathing.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    vec1 = [val <span class="keyword">for</span> val <span class="keyword">in</span> vec1.values()]</span><br><span class="line">    vec2 = [val <span class="keyword">for</span> val <span class="keyword">in</span> vec2.values()]</span><br><span class="line">    </span><br><span class="line">    dot_prod = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(vec1):</span><br><span class="line">        dot_prod += v * vec2[i]</span><br><span class="line">        </span><br><span class="line">    mag_1 = math.sqrt(<span class="built_in">sum</span>([x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> vec1]))</span><br><span class="line">    mag_2 = math.sqrt(<span class="built_in">sum</span>([x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> vec2]))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dot_prod / (mag_1 * mag_2)</span><br></pre></td></tr></table></figure>
-<p>A consine similarity of <strong>1</strong> represents vectors that point in the exactly same direction. In NLP, that mean two documents have the same meaning.</p>
-<p>A cosine similarity of <strong>0</strong> represent two vectors share no components. They are orthogonal.</p>
-<p>A consine similarty of <strong>-1</strong> represents two vectors that are anti-similar, they are pointing in the opposite. Or NLP, two documents talking about the opposite things. But, we never see the opposite direction in TF vectors, because counting words can never be negative.</p>
-<p>So, let go to verify the above three vectors</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(cosine_sim(document_vectors[<span class="number">0</span>], document_vectors[<span class="number">1</span>]))</span><br><span class="line">print(cosine_sim(document_vectors[<span class="number">0</span>], document_vectors[<span class="number">2</span>]))</span><br><span class="line">print(cosine_sim(document_vectors[<span class="number">1</span>], document_vectors[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px">
-<p>0.3162277660168379<br/> 0.14142135623730948<br/> 0.5590169943749475</p>
-</div>
-<p>We can easily see that, doc1 and doc2 have much similar score. They are talking something similar.</p>
-<h2 id="topic-modeling">3. Topic Modeling</h2>
-<p>Word counts are useful, but it doesn't tell much more information and the relative with all other documents in the corpus. Inverse Document Frequency (IDF), compute on documents count in the entire corpus.</p>
-<p><span class="math display">\[\begin{align*}
-tf(t, d) &amp;= \frac{count(t)}{count(d)}
-\end{align*}\]</span></p>
-<p><span class="math display">\[\begin{align*}
-idf(t, D) &amp;= \log \frac{count(D)}{count(D_t)}
-\end{align*}\]</span></p>
-<p><span class="math display">\[\begin{align*}
-tfidf(t, d, D) &amp;= tf(t, d) * idf(t, D)
-\end{align*}\]</span></p>
-<p>The more time a word appear in a document, the important it is in a document. On the other hand, the number of documents contains a word, the less important it is in the entire corpus.</p>
-<p>Compute the tfidf on the above example <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">document_tfidf_vectors = []</span><br><span class="line">documents = [doc_0, doc_1, doc_2]</span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> documents:</span><br><span class="line"></span><br><span class="line">    vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">    tokens = tokenizer.tokenize(doc.lower())</span><br><span class="line">    token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">        docs_containing_key = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> _doc <span class="keyword">in</span> documents:</span><br><span class="line">            <span class="keyword">if</span> key <span class="keyword">in</span> _doc:</span><br><span class="line">                docs_containing_key += <span class="number">1</span></span><br><span class="line">        tf = value / <span class="built_in">len</span>(lexicon)</span><br><span class="line">        <span class="keyword">if</span> docs_containing_key:</span><br><span class="line">            idf = <span class="built_in">len</span>(documents) / docs_containing_key</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            idf = <span class="number">0</span></span><br><span class="line">        vec[key] = tf * idf </span><br><span class="line">    document_tfidf_vectors.append(vec)</span><br></pre></td></tr></table></figure></p>
-Let try with a simple query <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">documents = [doc_0, doc_1, doc_2]</span><br><span class="line">query = <span class="string">&quot;How long does it take to get to the store?&quot;</span></span><br><span class="line">query_vec = copy.copy(vector_template) </span><br><span class="line"></span><br><span class="line">query_vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">tokens = tokenizer.tokenize(query.lower())</span><br><span class="line">token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">    docs_containing_key = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _doc <span class="keyword">in</span> documents:</span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> _doc.lower():</span><br><span class="line">            docs_containing_key += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> docs_containing_key == <span class="number">0</span>:  <span class="comment"># We didn&#x27;t find that token in the lexicon go to next key</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    tf = value / <span class="built_in">len</span>(tokens)</span><br><span class="line">    idf = <span class="built_in">len</span>(documents) / docs_containing_key </span><br><span class="line">    query_vec[key] = tf * idf </span><br><span class="line"></span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">0</span>]))</span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">1</span>]))</span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px">
-<p>0.5235048549676834<br/> 0.0<br/> 0.0</p>
-</div>
-<p>This is clearly that, the <code>doc0</code> is the only documents that match with the query. <code>The faster Harry got to the store, the faster Harry, the faster, would get home</code>.</p>
-<p>What an interesting algorithm to search for relevant documents. This searching algorithm had to evaluate the entire corpus. That O(N) algorithm. Not bad isn't it?</p>
-<h2 id="tools">4. Tools</h2>
-<p>Let simpler our implementation by using tools.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"></span><br><span class="line">corpus = docs</span><br><span class="line">vectorizer = TfidfVectorizer(min_df=<span class="number">1</span>)</span><br><span class="line">model = vectorizer.fit_transform(corpus)</span><br><span class="line"></span><br><span class="line">print(model.todense().<span class="built_in">round</span>(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-<div style="font-size:13px">
-<p>[[0.16 0. 0.48 0.21 0.21 0. 0.25 0.21 0. 0. 0. 0.21 0. 0.64 0.21 0.21]<br/> [0.37 0. 0.37 0. 0. 0.37 0.29 0. 0.37 0.37 0. 0. 0.49 0. 0. 0. ]<br/> [0. 0.75 0. 0. 0. 0.29 0.22 0. 0.29 0.29 0.38 0. 0. 0. 0. 0. ]]</p>
-</div>
-]]></content>
-      <categories>
-        <category>Natural Language Processing</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>TF-IDF</tag>
-        <tag>NLP</tag>
-        <tag>Search Engine</tag>
-        <tag>Bag of Words</tag>
-        <tag>BOW</tag>
-        <tag>Information Retrieval</tag>
-        <tag>Scikit-Learn</tag>
       </tags>
   </entry>
 </search>
