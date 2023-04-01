@@ -21,13 +21,13 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hienhoang.ml","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="What is Pub&#x2F;Sub? Pub&#x2F;Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub&#x2F;Sub as messaging-oriented middleware or eve">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Distributed Tasks Processing With Google Pub&#x2F;Sub">
-<meta property="og:url" content="https://hienhoang.ml/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/index.html">
+<meta property="og:url" content="https://hien.dev/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="What is Pub&#x2F;Sub? Pub&#x2F;Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub&#x2F;Sub as messaging-oriented middleware or eve">
 <meta property="og:locale" content="en_US">
@@ -35,16 +35,16 @@
 <meta property="article:modified_time" content="2021-01-19T13:17:51.071Z">
 <meta property="article:author" content="Hien Hoang">
 <meta property="article:tag" content="DevOps">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Pub&#x2F;Sub">
 <meta property="article:tag" content="GCP">
 <meta property="article:tag" content="Google Cloud">
-<meta property="article:tag" content="Pub&#x2F;Sub">
 <meta property="article:tag" content="Distributed Processing">
 <meta property="article:tag" content="Minibatch Processing">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://hienhoang.ml/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/">
+<link rel="canonical" href="https://hien.dev/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/">
 
 
 <script class="page-configurations">
@@ -101,7 +101,7 @@
 </noscript>
 
 
-  <link rel="canonical" href="https://hienhoang.ml/2020/12/12/distributed-tasks-processing-with-google-pub-sub/"/>
+  <link rel="canonical" href="https://hien.dev/2020/12/12/distributed-tasks-processing-with-google-pub-sub/"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
@@ -244,20 +244,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-count">111</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -267,7 +267,7 @@
         <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:hoangchunghien@gmail.com" title="E-Mail → mailto:hoangchunghien@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
         <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
@@ -310,7 +310,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -378,13 +378,13 @@
 <li><strong>Message attribute</strong>: A key-value pair that a publisher can define for a message. For example, key iana.org/language_tag and value en could be added to messages to mark them as readable by an English-speaking subscriber.</li>
 </ul>
 <h1 id="install">Install</h1>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
 <h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
 <p>In this example, the publisher will act as a task distributer.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
 <h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
 <p>Multiple workers will subscribe to a same subscriptions to receive difference tasks from a same publisher.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -395,12 +395,12 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/DevOps/" rel="tag"># DevOps</a>
-              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Pub-Sub/" rel="tag"># Pub/Sub</a>
               <a href="/tags/GCP/" rel="tag"># GCP</a>
               <a href="/tags/Google-Cloud/" rel="tag"># Google Cloud</a>
-              <a href="/tags/Pub-Sub/" rel="tag"># Pub/Sub</a>
               <a href="/tags/Distributed-Processing/" rel="tag"># Distributed Processing</a>
               <a href="/tags/Minibatch-Processing/" rel="tag"># Minibatch Processing</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
           </div>
 
         
@@ -462,7 +462,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

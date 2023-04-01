@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Azure Administrator Associate achievement</title>
+    <url>/2021/06/12/Azure-Administrator-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
+<a id="more"></a>
+<p>After getting the first <code>Azure Fundamentals Certificate</code>, I went on studying the higher level to achieve this one as an Administrator Associate. I spent most of my free time to learn <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft learning website</a> and to do the exercises for about a week, as soon as having full knowledge of the course.</p>
+<p>Then I officially took an online exam at home due to the spreading of Covid-19 in the city. The exam lasted for 2 hours in a private quiet room, but to me, I just finished the test in within 1 hour. A check-in progress was required before the exam started (about 30 minutes), including capturing angles of the room, making sure that no sounds happened to disturb the exam, or else candidates could be considered to be fail.</p>
+<p>The feeling of taking the online exam at home was pretty awesome and safe. I was confident to pass the test because I had had practiced many many times and learned from them, and you know what, I did it. I passed the exam! The result was announced as soon as the test was submitted, the certification was released in about 30 minutes later. I couldn't wait to publish it on muy Linkedin page! It showed that my studying method was right and useful, which could help me get the certification.</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Administrator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure Fundamentals Achievement</title>
+    <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
+<a id="more"></a>
+<p>Great engineers always keep on learning and improving knowledge, skills as well as new technologies. Recently, I have just achieved the Microsoft Certified Azure Fundamentals after one-month learning, which provides me the basic understanding of how to work with Microsoft Azure cloud-based solutions and services.</p>
+<p>This achievement can open a new opportunity for my career as an software engineer, because nowadays, cloud service has been played the highly important role in digital age. That now everything is on the cloud leads to the demand of human resouces having experiences to build and operate the cloud systems, including networking, storage, compute, application support, and application development. Therefore, to me, the Microsoft Certified Azure Fundamentals is really vital and achieving it can attract more clients.</p>
+<p>I started learning the course from 22 Mar 2021 on Microsoft Learn Center Website. After finishing 6 parts in the learning path section, candidates can get the certification once passing an exam registered online at Pearson VUE. It takes $55.00 for candidates in Vietnam. Then, I went to Pearson VUE center in District 1, Ho Chi Minh City, where I took the exam. The result was announced right after submiting the test. And, I passed :)</p>
+<p>Last but not least, I would like to show my gratefullness to the company <a href="https://www.tpptechnology.com">TP&amp;P Technology</a> for big supporting, which provided me good studying conditions to achieve the goal. Keep on learning!!!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Azure Fundamentals</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Azure DevOps Engineering Expert achievement</title>
     <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
@@ -19,12 +58,47 @@
       </tags>
   </entry>
   <entry>
-    <title>Azure Administrator Associate achievement</title>
-    <url>/2021/06/12/Azure-Administrator-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
-<p>After getting the first <code>Azure Fundamentals Certificate</code>, I went on studying the higher level to achieve this one as an Administrator Associate. I spent most of my free time to learn <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft learning website</a> and to do the exercises for about a week, as soon as having full knowledge of the course.</p>
-<p>Then I officially took an online exam at home due to the spreading of Covid-19 in the city. The exam lasted for 2 hours in a private quiet room, but to me, I just finished the test in within 1 hour. A check-in progress was required before the exam started (about 30 minutes), including capturing angles of the room, making sure that no sounds happened to disturb the exam, or else candidates could be considered to be fail.</p>
-<p>The feeling of taking the online exam at home was pretty awesome and safe. I was confident to pass the test because I had had practiced many many times and learned from them, and you know what, I did it. I passed the exam! The result was announced as soon as the test was submitted, the certification was released in about 30 minutes later. I couldn't wait to publish it on muy Linkedin page! It showed that my studying method was right and useful, which could help me get the certification.</p>
+    <title>Distributed Tasks Processing With Google Pub/Sub</title>
+    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
+    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
+<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub/Sub as messaging-oriented middleware or event ingestion and delivery for streaming analytics pipelines. Pub/Sub offers durable message storage and real-time message delivery with high availability and consistent performance at scale. Pub/Sub servers run in all Google Cloud regions around the world.</p>
+<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
+<h1 id="core-concepts">Core concepts</h1>
+<ul>
+<li><strong>Topic</strong>: A named resource to which messages are sent by publishers.</li>
+<li><strong>Subscription</strong>: A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</li>
+<li><strong>Message</strong>: The combination of data and (optional) attributes that a publisher sends to a topic and is eventually delivered to subscribers.</li>
+<li><strong>Message attribute</strong>: A key-value pair that a publisher can define for a message. For example, key iana.org/language_tag and value en could be added to messages to mark them as readable by an English-speaking subscriber.</li>
+</ul>
+<h1 id="install">Install</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
+<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
+<p>In this example, the publisher will act as a task distributer.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
+<p>Multiple workers will subscribe to a same subscriptions to receive difference tasks from a same publisher.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Google Cloud</category>
+        <category>Pub/Sub</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Pub/Sub</tag>
+        <tag>GCP</tag>
+        <tag>Google Cloud</tag>
+        <tag>Distributed Processing</tag>
+        <tag>Minibatch Processing</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure Solution Architect Achievement</title>
+    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
+<p>Finally got it, after many days of learning from <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft Learning</a>.</p>
+<p>To be able to earn this certification you should have advanced experience and knowledge of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platform, budgeting, and governance. In addition, you should have expert-level skills in Azure administration and have experience with development and DevOps processes.</p>
 ]]></content>
       <categories>
         <category>Certification</category>
@@ -33,13 +107,58 @@
         <tag>Microsoft</tag>
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
-        <tag>Administrator</tag>
+        <tag>DevOps</tag>
+        <tag>Solution Architect</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chia Sẻ Về Làm Việc Remote tại Đà Lạt</title>
+    <url>/2022/06/12/Chia-Se-Ve-Lam-Viec-Remote/</url>
+    <content><![CDATA[<p>Sự kiện Covid-19 đã góp phần tạo điều kiện cho giới văn phòng công sở tiếp cận đến hình thức làm việc remote, nghĩa là làm việc online từ xa, có thể ở tại nhà cùng với chiếc máy tính kết nối internet là có thể vi vu, trong thời điểm cách ly xã hội. Tuy nhiên, giai đoạn cách ly đã qua, và hiện tại mọi người chung tay xây dựng lại nền kinh tế, giới văn phòng cũng quay trở lại trụ sở công ty để làm việc. Nhiều anh em chia sẻ rằng, thời gian làm remote ở nhà cũng có cái hay và cái bất cập của nó, nhưng nếu biết chủ động thì sẽ không thành vấn đề.</p>
+<p>Trước khi cả nước chính thức mở cửa sau giãn cách, gia đình tôi đã chuyển về quê sống. Vậy nên, trong khi bây giờ các anh chị em đồng nghiệp yêu quý đã lên văn phòng ngồi với nhau, chỉ có tôi lẻ loi ngồi làm remote ở quê và ngóng chờ văn phòng ở Đà Lạt mở cửa vào một ngày không xa. Thành ra tôi đã và đang làm remote hơn 1 năm nay rồi, và tôi sẽ chia sẻ cho các bạn về trải nghiệm làm việc remote tại nhà của tôi ở gần thành phố Đà Lạt như thế nào nhé.</p>
+<a id="more"></a>
+<p><strong>Điều kiện, Trang Thiết bị làm việc remote</strong></p>
+<p>Để làm việc online tại nhà, đầu tiên không thể thiếu được chính là chiếc máy tính, có thể là PC hoặc là laptop, hoặc cả hai. Nếu dụng PC thì cần trang bị thêm tai nghe, loa ngoài, camera để có thể tham gia trao đổi, họp hành cùng đồng nghiệp và đối tác.</p>
+<p>Tiếp theo không kém quan trọng chính là kết nối mạng Wifi/Internet siêu mạnh, giúp cho quá trình làm việc diễn ra trôi chảy. Đặc biệt là khi phải tham gia các cuộc họp hay trao đổi với đội nhóm, bạn sẽ không bị gián đoạn giữa chừng làm phiền và mất thời gian của tập thể.</p>
+<p>Còn một cái nữa tôi đảm bảo các bạn sẽ không nghĩ tới, chỉ có người về vùng quê như chỗ tôi thì mới gặp. Đó chính là điện. Đúng, là điện. Chuyện gì sẽ xảy ra nếu ngày làm việc lại bị cúp điện cả ngày? Chấp nhận bị trừ lương oan ư? Không, không, tôi phải luôn trong "tư thế chuẩn bị" nhỡ một mai thức dậy điện bỗng đi vắng. Laptop, điện thoại, ipad tôi luôn sạc đầy pin, ngoài ra còn có sạc dự phòng, sim 4G hoặc gói cước 4G dung lượng cao. Ở thành phố, dường như chưa khi nào cúp điện vào ngày làm việc, trừ khi có sự cố điện bất ngờ nhưng cũng sẽ được xử lý nhanh chóng trong một vài tiếng. Nhưng ở quê nơi tôi đang ở thì một tháng cúp điện 1-2 lần là bình thường, mà toàn cúp vào ngày làm việc trong tuần, một lần cúp kéo dài 6-12 tiếng. Thế mới ghê. Mà nhà đâu có điều kiện mua chạy máy phát điện. Chưa kể hiện tại giá xăng tăng cao, dùng máy phát điện cũng xót túi lắm.</p>
+<p>Không gian ngồi làm việc thoải mái, yên tĩnh cũng là điều cần thiết.</p>
+<p>Nếu nhà có con nhỏ chưa gửi nhà trẻ thì nên nhờ người chăm để tập trung làm việc. Vào thời điểm giãn cách xã hội lần 2 năm ngoái, tôi phụ trách ngồi ở nhà làm việc kiếm tiền, còn vợ tôi phụ trách nội trợ, chăm chồng chăm con.</p>
+<p><strong>Niềm Vui khi làm việc Remote</strong></p>
+<p>Tôi không biết người khác làm việc remote sẽ như thế nào, với tôi thì tôi thấy thoải mái lắm. Sự thoải mái được thể hiện qua việc:</p>
+<p>Ăn mặc: áo thun, quần đùi, có khi ngày hè nóng nực chả cần mặc áo hahaha.</p>
+<p>Ăn uống: cơm nhà vợ nấu bao no bao ngon và dinh dưỡng; cà phê tự pha vô cùng tiết kiệm.</p>
+<p>Đi vệ sinh: đang họp mà Tào Tháo dí thì bưng cả cái laptop vào toilet, chả ai biết gì đâu nè.</p>
+<p>Chill: mở nhạc loa ngoài tùy ý thích để push tinh thần cày cuốc thêm high, không sợ làm phiền ai.</p>
+<p>Nghỉ trưa: được nằm thẳng lưng trên giường êm chăn ấm, yên tĩnh chợp mắt mà không bị làm ồn bởi môi trường nhộn nhịp công sở.</p>
+<p>Riêng tư: không có ai vô tình hay cố ý lướt nhìn màn hình hay bàn làm việc của nhau.</p>
+<p><strong>Giới hạn của làm việc remote</strong></p>
+<p>Tuy nói làm việc remote tại nhà là thoải mái nhưng không tự do như nhiều người lầm tưởng. Bản thân người làm remote phải có trách nhiệm, tự giác, ý thức trong công việc, vì mục tiêu chung cuối cùng là kết quả làm việc đạt hiệu quả tốt.</p>
+<ol type="1">
+<li><p>Làm remote không phải là muốn làm giờ nào thì làm đâu nhé, mà vẫn theo giờ làm việc hành chính của công ty, hoặc theo múi giờ hành chính ở địa phương mình với công ty nước ngoài. Mà có khi hết giờ làm rồi, việc chưa xong thì vẫn phải cày tiếp thôi để kịp tiến độ chung của dự án.</p></li>
+<li><p>Chủ động báo cáo công việc hàng ngày cho người quản lý để họ nắm được khối lượng công việc, tiến độ, khó khăn… mà mình đang làm. Từ đó mới làm cơ sở để chấm công, tính thưởng, tăng lương trong tương lai.</p></li>
+</ol>
+<p>Vợ tôi từng làm remote thời vụ cho một công ty Singapore, họ yêu cầu cài một chương trình vào máy tính để nó vừa đếm giờ làm và auto chụp lại màn hình làm việc của vợ tôi và lưu lên cloud để bên đó họ quản lý mình làm gì. Bạn nghĩ sao về cách giám sát nhân viên làm việc remote như thế này?</p>
+<ol start="3" type="1">
+<li><p>Tăng cường tương tác, giao tiếp, trao đổi để đồng nghiệp và quản lý biết mình đang có mặt, và không "quên" sự tồn tại của một người đồng nghiệp đã lâu không gặp. Dĩ nhiên không phải là tám phét càng nhiều càng tốt nha, tránh làm phiền đồng nghiệp với những vấn đề ngoài công việc. Nói chứ dev cày sấp mặt luôn, không có rãnh để tám chuyện luôn ak. Cái tôi muốn nhấn mạnh đó là sự chủ động giao tiếp đúng việc, đúng lúc, đúng đối tượng, như vậy sẽ tạo được sự tin cậy cho ban quản lý công ty.</p></li>
+<li><p>Hỗ trợ online tốn nhiều thời gian hơn là hỗ trợ trực tiếp, nhất là vấn đề liên quan đến mặt kỹ thuật.</p></li>
+<li><p>Ngồi làm remote ở nhà sẽ không có điều kiện để trò chuyện và tương tác trực tiếp với đồng nghiệp các bộ phận khác nhau, nên đôi khi bản thân sẽ cảm thấy thiếu vắng bạn bè. Tôi nhớ vào mùa giãn cách năm ngoái, có lần tôi đã đề xuất "Nhậu Online" với nhóm của mình. Kết quả cũng có tổng cộng 4 người tham gia nhóm video call nhìn nhau cười nói qua màn hình nho nhỏ mà cụng ly, ăn mồi.</p></li>
+</ol>
+<p>Nếu được hỏi giữa làm remote và làm tại văn phòng, tôi sẽ thiên về cái nào hơn. Thì có lẽ 50-50. Mỗi hình thức làm việc đều có mặt hay và giá trị của riêng của nó. Hơn hết thảy, làm việc remote không giới hạn chúng ta về mặt không gian và thời gian, chúng ta có thể làm việc remote với đối tác ở cách ta nửa vòng địa cầu, hoặc vừa du lịch vừa làm việc.</p>
+<p>Còn bạn, bạn có mong muốn một công việc remote không? ;)</p>
+]]></content>
+      <categories>
+        <category>Career</category>
+      </categories>
+      <tags>
+        <tag>remote job</tag>
+        <tag>viec lam remote</tag>
       </tags>
   </entry>
   <entry>
     <title>Django Object Level Permission Template</title>
     <url>/2021/01/21/Django-Object-Level-Permission-Templage/</url>
     <content><![CDATA[<p>A template to guide you how to setup a Django Project with Object Level Permission.</p>
+<a id="more"></a>
 <h2 id="authentication">1. Authentication</h2>
 <h3 id="packages">1.1. Packages</h3>
 <ul>
@@ -188,114 +307,13 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Azure Solution Architect Achievement</title>
-    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
-<p>Finally got it, after many days of learning from <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft Learning</a>.</p>
-<p>To be able to earn this certification you should have advanced experience and knowledge of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platform, budgeting, and governance. In addition, you should have expert-level skills in Azure administration and have experience with development and DevOps processes.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
-        <tag>Solution Architect</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure Fundamentals Achievement</title>
-    <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
-<p>Great engineers always keep on learning and improving knowledge, skills as well as new technologies. Recently, I have just achieved the Microsoft Certified Azure Fundamentals after one-month learning, which provides me the basic understanding of how to work with Microsoft Azure cloud-based solutions and services.</p>
-<p>This achievement can open a new opportunity for my career as an software engineer, because nowadays, cloud service has been played the highly important role in digital age. That now everything is on the cloud leads to the demand of human resouces having experiences to build and operate the cloud systems, including networking, storage, compute, application support, and application development. Therefore, to me, the Microsoft Certified Azure Fundamentals is really vital and achieving it can attract more clients.</p>
-<p>I started learning the course from 22 Mar 2021 on Microsoft Learn Center Website. After finishing 6 parts in the learning path section, candidates can get the certification once passing an exam registered online at Pearson VUE. It takes $55.00 for candidates in Vietnam. Then, I went to Pearson VUE center in District 1, Ho Chi Minh City, where I took the exam. The result was announced right after submiting the test. And, I passed :)</p>
-<p>Last but not least, I would like to show my gratefullness to the company <a href="https://www.tpptechnology.com">TP&amp;P Technology</a> for big supporting, which provided me good studying conditions to achieve the goal. Keep on learning!!!</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>Azure Fundamentals</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to clone an GCP instance to machine-image and restore it</title>
-    <url>/2020/11/10/How-to-clone-an-GCP-instance-to-machine-image-and-restore-it/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<ol type="1">
-<li>Download gcloud private key on google cloud console</li>
-</ol>
-<p><code>IAM &amp; Admin</code> -&gt; <code>Service Accounts</code> -&gt; <em>Your account name</em> -&gt; <code>Add key</code> -&gt; <code>Create New Key</code></p>
-<ol start="2" type="1">
-<li>Install <code>google cloud sdk</code></li>
-</ol>
-<ul>
-<li>Download</li>
-</ul>
-<p><code>curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-317.0.0-linux-x86_64.tar.gz</code></p>
-<ul>
-<li>Untar</li>
-</ul>
-<p><code>tar -xf google-cloud-sdk-317.0.0-linux-x86_64.tar.gz</code></p>
-<ul>
-<li>Install</li>
-</ul>
-<p><code>./google-cloud-sdk/install.sh</code></p>
-<ol start="3" type="1">
-<li>Authorizing gcloud</li>
-</ol>
-<p>Follow the gcloud official <a href="https://cloud.google.com/sdk/docs/authorizing">document</a></p>
-<h1 id="list-running-instance">List running instance</h1>
-<ul>
-<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NAME                  ZONE           MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS</span><br><span class="line">c****01               us-central1-a  f1-micro                    xx.xxx.x.x   xxx.xxx.xx.xxx  RUNNING</span><br><span class="line">c****02               us-central1-a  f1-micro                    xx.xxx.x.x   xx.xxx.xx.xxx   RUNNING</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Using Python <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_running_instances</span>(<span class="params">status=<span class="string">&#x27;RUNNING&#x27;</span></span>):</span></span><br><span class="line">    <span class="comment"># Here I will use the instances client to list all running instance</span></span><br><span class="line">    items = instances.<span class="built_in">list</span>(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE,</span><br><span class="line">        <span class="built_in">filter</span>=<span class="string">f&#x27;status=<span class="subst">&#123;status&#125;</span>&#x27;</span></span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Let display few information of those instance</span></span><br><span class="line">    items = items.get(<span class="string">&#x27;items&#x27;</span>)</span><br><span class="line">    formated_items = [(item.get(<span class="string">&#x27;name&#x27;</span>), item.get(<span class="string">&#x27;status&#x27;</span>)) <span class="keyword">for</span> item <span class="keyword">in</span> items]</span><br><span class="line">    print(<span class="string">&#x27;\n&#x27;</span>.join([<span class="built_in">str</span>(item) <span class="keyword">for</span> item <span class="keyword">in</span> formated_items]))</span><br><span class="line"></span><br><span class="line">show_running_instances()</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="take-image-of-a-running-instance">Take image of a running instance</h1>
-<p>This command will take about 40-60 seconds</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute machine-images create my-image-v01 --source-instance c****01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/global/machineImages/my-image-v01].</span><br><span class="line">NAME               STATUS</span><br><span class="line">my-image-v01  READY</span><br></pre></td></tr></table></figure>
-<h1 id="create-new-instance-of-the-my-image-v01">Create new instance of the <code>my-image-v01</code></h1>
-<p>This command will take about 10s to spin up an instance</p>
-<ul>
-<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances create c****03 --source-machine-image my-image-v01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/zones/us-central1-a/instances/c****03].</span><br><span class="line">NAME       ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS</span><br><span class="line">c****03    us-central1-a  f1-micro                   xx.xxx.x.xx  xx.xxx.xxx.xxx  RUNNING</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Using Python Api <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_instance</span>(<span class="params">name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> instances.insert(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE, </span><br><span class="line">        body=&#123; <span class="string">&#x27;sourceMachineImage&#x27;</span>: <span class="string">&#x27;global/machineImages/my-image-v01&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: name &#125;</span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">create_instance(<span class="string">&#x27;test001&#x27;</span>)</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<p>To create an instance and run the startup script after running. <a href="https://cloud.google.com/compute/docs/tutorials/python-guide#addinganinstance">Read more</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># You can also upload a script to make the instance automatically run it after created.</span></span><br><span class="line">startup_script = <span class="built_in">open</span>(<span class="string">&#x27;./startup-script.sh&#x27;</span>, <span class="string">&#x27;r&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line">instances.insert(</span><br><span class="line">    project=PROJECT,</span><br><span class="line">    zone=ZONE,</span><br><span class="line">    body=&#123;</span><br><span class="line">        <span class="string">&#x27;sourceMachineImage&#x27;</span>: <span class="string">&#x27;global/machineImages/my-image-v01&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;test001&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;metadata&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;items&#x27;</span>: [&#123;</span><br><span class="line">                <span class="string">&#x27;key&#x27;</span>: <span class="string">&#x27;startup-script&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;value&#x27;</span>: startup_script</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">).execute()</span><br></pre></td></tr></table></figure>
-<h1 id="delete-running-instance">Delete running instance</h1>
-<ul>
-<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances delete c****03</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following instances will be deleted. Any attached disks configured</span><br><span class="line"> to be auto-deleted will be deleted unless they are attached to any </span><br><span class="line">other instances or the `--keep-disks` flag is given and specifies them</span><br><span class="line"> for keeping. Deleting a disk is irreversible and any data on the disk</span><br><span class="line"> will be lost.</span><br><span class="line"> - [c****03] in [us-central1-a]</span><br><span class="line"></span><br><span class="line">Do you want to continue (Y/n)?  y</span><br><span class="line"></span><br><span class="line">Deleted [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/zones/us-central1-a/instances/c****03].</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Using python api <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">delete</span>(<span class="params">name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> instances.delete(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE,</span><br><span class="line">        instance=name</span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">delete(<span class="string">&#x27;test001&#x27;</span>)</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="delete-the-machine-image">Delete the machine-image</h1>
-<ul>
-<li>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute machine-images delete my-image-v01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following machine images will be deleted:</span><br><span class="line"> - [my-image-v01]</span><br><span class="line"></span><br><span class="line">Do you want to continue (Y/n)?  y</span><br><span class="line"></span><br><span class="line">Deleted [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/global/machineImages/my-image-v01].</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GCP</tag>
-        <tag>Google Cloud</tag>
-        <tag>Compute Engine</tag>
-        <tag>Backup</tag>
-        <tag>Machine Image</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Encode image using Autoencoders</title>
     <url>/2021/04/17/Encode-your-image-using-Autoencoders/</url>
     <content><![CDATA[<h1 id="overview">1. Overview</h1>
 <blockquote><p>An autoencoder is a type of artificial neural network used to learn efficient data codings in an unsupervised manner. The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for dimensionality reduction, by training the network to ignore signal “noise”. Along with the reduction side, a reconstructing side is learned, where the autoencoder tries to generate from the reduced encoding a representation as close as possible to its original input, hence its name.</p>
 <footer><strong>Wiki</strong><cite><a href="https://en.wikipedia.org/wiki/Autoencoder">en.wikipedia.org/wiki/Autoencoder</a></cite></footer></blockquote>
 <p><img height="320" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Autoencoder_structure.png"></p>
+<a id="more"></a>
 <h1 id="create-a-simple-autoencoder">2. Create a simple autoencoder</h1>
 <h2 id="dataset">2.1. Dataset</h2>
 <p>In this simple example, I will use <a href="https://www.kaggle.com/zalando-research/fashionmnist">Fashion-MNIST</a> dataset. <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.datasets <span class="keyword">import</span> fashion_mnist</span><br></pre></td></tr></table></figure></p>
@@ -481,6 +499,7 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
     <content><![CDATA[<p>CloudFlare provides high security for the target website to hide their real server IP address. Make it harder for the hacker to attack the website real server. But it doesn't mean it is impossible. Let's find it out on one website - <code>https://www.g2.com</code> - use CloudFlare to hide it IP address.</p>
 <h2 id="find-dns-history-records">1. Find DNS history records</h2>
 <p>I use <a href="https://securitytrails.com/">SecurityTrails</a> to find the domain DNS history. <img src="/images/2020-12-26/001.png"></p>
+<a id="more"></a>
 <h2 id="digging-deeper">2. Digging deeper</h2>
 <p>Now use the <code>dig</code> command to reveal the DNS history on <code>ns4.ogilvy.com</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"> dig @ns4.ogilvy.com www.g2.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.16.1-Ubuntu &lt;&lt;&gt;&gt; @ns4.ogilvy.com www.g2.com                                                                </span><br><span class="line">; (1 server found)                                                                                                      </span><br><span class="line">;; global options: +cmd                                                                                                 </span><br><span class="line">;; Got answer:                                                                                                          </span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 24883                                                               </span><br><span class="line">;; flags: qr aa rd; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1                                                    </span><br><span class="line">;; WARNING: recursion requested but not available                                                                                                                                                                                               </span><br><span class="line">;; OPT PSEUDOSECTION:                                                                                                   </span><br><span class="line">; EDNS: version: 0, flags:; udp: 1220                                                                                   </span><br><span class="line">; COOKIE: a7c6382d3646792f30fe538c5fe6e580eb39a7455513923d (good)                                                       </span><br><span class="line">;; QUESTION SECTION:                                                                                                    </span><br><span class="line">;www.g2.com.                    IN      A                                                                                                                                                                                                       </span><br><span class="line">;; ANSWER SECTION:                                                                                                      </span><br><span class="line">www.g2.com.             3600    IN      CNAME   www.geometry.com.                                                       </span><br><span class="line">www.geometry.com.       600     IN      CNAME   awseb-AWSEB-PZBDPV2T34UN-1188684902.eu-west-1.elb.amazonaws.com.                                                                                                                                </span><br><span class="line">;; Query time: 254 msec                                                                                                 </span><br><span class="line">;; SERVER: 199.20.46.10#53(199.20.46.10)                                                                                </span><br><span class="line">;; WHEN: Sat Dec 26 14:25:53 +07 2020                                                                                   </span><br><span class="line">;; MSG SIZE  rcvd: 168   </span><br></pre></td></tr></table></figure>
@@ -506,10 +525,153 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Hijack your computer http request with Fiddler</title>
+    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
+<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
+<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
+<p>On my laptop, I use the linux version. You can download here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
+<h1 id="configuration">Configuration</h1>
+<p>This is the main view of the tool</p>
+<p><img src="/images/2020-12-23/001.png"></p>
+<ol type="1">
+<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
+</ol>
+<p><img src="/images/2020-12-23/005.png"></p>
+<ol start="2" type="1">
+<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
+</ol>
+<p><img src="/images/2020-12-23/003.png"></p>
+<ol start="3" type="1">
+<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
+</ol>
+<p><img src="/images/2020-12-23/004.png"></p>
+<h1 id="experiement">Experiement</h1>
+<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
+<p><img src="/images/2020-12-23/002.png"></p>
+]]></content>
+      <categories>
+        <category>Networking</category>
+      </categories>
+      <tags>
+        <tag>Networking</tag>
+        <tag>Tool</tag>
+        <tag>HTTP</tag>
+        <tag>Debugging</tag>
+        <tag>Snipping</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to clone an GCP instance to machine-image and restore it</title>
+    <url>/2020/11/10/How-to-clone-an-GCP-instance-to-machine-image-and-restore-it/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<ol type="1">
+<li>Download gcloud private key on google cloud console</li>
+</ol>
+<p><code>IAM &amp; Admin</code> -&gt; <code>Service Accounts</code> -&gt; <em>Your account name</em> -&gt; <code>Add key</code> -&gt; <code>Create New Key</code></p>
+<ol start="2" type="1">
+<li>Install <code>google cloud sdk</code></li>
+</ol>
+<ul>
+<li>Download</li>
+</ul>
+<p><code>curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-317.0.0-linux-x86_64.tar.gz</code></p>
+<ul>
+<li>Untar</li>
+</ul>
+<p><code>tar -xf google-cloud-sdk-317.0.0-linux-x86_64.tar.gz</code></p>
+<ul>
+<li>Install</li>
+</ul>
+<p><code>./google-cloud-sdk/install.sh</code></p>
+<ol start="3" type="1">
+<li>Authorizing gcloud</li>
+</ol>
+<p>Follow the gcloud official <a href="https://cloud.google.com/sdk/docs/authorizing">document</a></p>
+<h1 id="list-running-instance">List running instance</h1>
+<ul>
+<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NAME                  ZONE           MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS</span><br><span class="line">c****01               us-central1-a  f1-micro                    xx.xxx.x.x   xxx.xxx.xx.xxx  RUNNING</span><br><span class="line">c****02               us-central1-a  f1-micro                    xx.xxx.x.x   xx.xxx.xx.xxx   RUNNING</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Using Python <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_running_instances</span>(<span class="params">status=<span class="string">&#x27;RUNNING&#x27;</span></span>):</span></span><br><span class="line">    <span class="comment"># Here I will use the instances client to list all running instance</span></span><br><span class="line">    items = instances.<span class="built_in">list</span>(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE,</span><br><span class="line">        <span class="built_in">filter</span>=<span class="string">f&#x27;status=<span class="subst">&#123;status&#125;</span>&#x27;</span></span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Let display few information of those instance</span></span><br><span class="line">    items = items.get(<span class="string">&#x27;items&#x27;</span>)</span><br><span class="line">    formated_items = [(item.get(<span class="string">&#x27;name&#x27;</span>), item.get(<span class="string">&#x27;status&#x27;</span>)) <span class="keyword">for</span> item <span class="keyword">in</span> items]</span><br><span class="line">    print(<span class="string">&#x27;\n&#x27;</span>.join([<span class="built_in">str</span>(item) <span class="keyword">for</span> item <span class="keyword">in</span> formated_items]))</span><br><span class="line"></span><br><span class="line">show_running_instances()</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="take-image-of-a-running-instance">Take image of a running instance</h1>
+<p>This command will take about 40-60 seconds</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute machine-images create my-image-v01 --source-instance c****01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/global/machineImages/my-image-v01].</span><br><span class="line">NAME               STATUS</span><br><span class="line">my-image-v01  READY</span><br></pre></td></tr></table></figure>
+<h1 id="create-new-instance-of-the-my-image-v01">Create new instance of the <code>my-image-v01</code></h1>
+<p>This command will take about 10s to spin up an instance</p>
+<ul>
+<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances create c****03 --source-machine-image my-image-v01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/zones/us-central1-a/instances/c****03].</span><br><span class="line">NAME       ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS</span><br><span class="line">c****03    us-central1-a  f1-micro                   xx.xxx.x.xx  xx.xxx.xxx.xxx  RUNNING</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Using Python Api <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_instance</span>(<span class="params">name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> instances.insert(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE, </span><br><span class="line">        body=&#123; <span class="string">&#x27;sourceMachineImage&#x27;</span>: <span class="string">&#x27;global/machineImages/my-image-v01&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: name &#125;</span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">create_instance(<span class="string">&#x27;test001&#x27;</span>)</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<p>To create an instance and run the startup script after running. <a href="https://cloud.google.com/compute/docs/tutorials/python-guide#addinganinstance">Read more</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># You can also upload a script to make the instance automatically run it after created.</span></span><br><span class="line">startup_script = <span class="built_in">open</span>(<span class="string">&#x27;./startup-script.sh&#x27;</span>, <span class="string">&#x27;r&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line">instances.insert(</span><br><span class="line">    project=PROJECT,</span><br><span class="line">    zone=ZONE,</span><br><span class="line">    body=&#123;</span><br><span class="line">        <span class="string">&#x27;sourceMachineImage&#x27;</span>: <span class="string">&#x27;global/machineImages/my-image-v01&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;test001&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;metadata&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;items&#x27;</span>: [&#123;</span><br><span class="line">                <span class="string">&#x27;key&#x27;</span>: <span class="string">&#x27;startup-script&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;value&#x27;</span>: startup_script</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">).execute()</span><br></pre></td></tr></table></figure>
+<h1 id="delete-running-instance">Delete running instance</h1>
+<ul>
+<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances delete c****03</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following instances will be deleted. Any attached disks configured</span><br><span class="line"> to be auto-deleted will be deleted unless they are attached to any </span><br><span class="line">other instances or the `--keep-disks` flag is given and specifies them</span><br><span class="line"> for keeping. Deleting a disk is irreversible and any data on the disk</span><br><span class="line"> will be lost.</span><br><span class="line"> - [c****03] in [us-central1-a]</span><br><span class="line"></span><br><span class="line">Do you want to continue (Y/n)?  y</span><br><span class="line"></span><br><span class="line">Deleted [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/zones/us-central1-a/instances/c****03].</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Using python api <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">delete</span>(<span class="params">name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> instances.delete(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE,</span><br><span class="line">        instance=name</span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">delete(<span class="string">&#x27;test001&#x27;</span>)</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="delete-the-machine-image">Delete the machine-image</h1>
+<ul>
+<li>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute machine-images delete my-image-v01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following machine images will be deleted:</span><br><span class="line"> - [my-image-v01]</span><br><span class="line"></span><br><span class="line">Do you want to continue (Y/n)?  y</span><br><span class="line"></span><br><span class="line">Deleted [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/global/machineImages/my-image-v01].</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GCP</tag>
+        <tag>Google Cloud</tag>
+        <tag>Compute Engine</tag>
+        <tag>Backup</tag>
+        <tag>Machine Image</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
+    <url>/2020/11/23/Manage-ssh-keys/</url>
+    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>for example, I have 2 keys in my laptop</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>Next, add the new key you just created</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>You can check your added keys</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-the-connection">3. Test the connection</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
+<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add public key to your source control profile setting</h1>
+<p>Copy the public key to clipboard</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
+<p>Paste the key to gitlab ssh setting</p>
+<p><img src="/images/2020-11-23/001.png"></p>
+<p>Paste the key to github ssh setting</p>
+<p><img src="/images/2020-11-23/002.png"></p>
+<h1 id="clone-the-source-code-using-different-user">5. Clone the source code using different user</h1>
+<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
+<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
+<p>That's all! Good luck!</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GitLab</tag>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How to teach computer to play Tictactoe</title>
     <url>/2021/03/14/How-to-tech-computer-to-play-Tictactoe/</url>
-    <content><![CDATA[<p>What make people become good game players? They get the game instruction, start practicing and then learn from failure. How about a computer? Can we train it to play a game? The answer is absolutely! And the process of teaching or training the computer to play game is super interesting. This post is written to guide you, step by step, to create your own Game AI that is able to learn to play this game without any hardcoded rules. Let's try teaching the computer yourself, after about a hundred thousands episodes, it can become expert that you can hardly win. In addition, if you would like to know more how it actually works, keep scrolling down to read further til the end of the post.</p>
-<iframe src="https://tictactoe.kodelike.art/" width="100%" height="920px" style="border:1px dashed black;">
+    <content><![CDATA[<p>What make people become good game players? They get the game instruction, start practicing and then learn from failure. How about a computer? Can we train it to play a game? The answer is absolutely! And the process of teaching or training the computer to play game is super interesting. This post is written to guide you, step by step, to create your own Game AI that is able to learn to play this game without any hardcoded rules. <a id="more"></a> Let's try teaching the computer yourself, after about a hundred thousands episodes, it can become expert that you can hardly win. In addition, if you would like to know more how it actually works, keep scrolling down to read further til the end of the post.</p>
+<iframe src="https://tictactoe.hien.dev/" width="100%" height="920px" style="border:1px dashed black;">
 </iframe>
 <h1 id="how-is-it-working">1. How is it working?</h1>
 <p>The computer learns by interacting with the game enviroment. Then it observes how the game environment changes, leading to its reward. By playing many many times, it gets the idea of receiving as many good rewards as possible. This type of learning is called <a href="https://en.wikipedia.org/wiki/Reinforcement_learning">Reinforcement Learning</a>.</p>
@@ -553,123 +715,10 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Hijack your computer http request with Fiddler</title>
-    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
-<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
-<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
-<p>On my laptop, I use the linux version. You can download here</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
-<h1 id="configuration">Configuration</h1>
-<p>This is the main view of the tool</p>
-<p><img src="/images/2020-12-23/001.png"></p>
-<ol type="1">
-<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
-</ol>
-<p><img src="/images/2020-12-23/005.png"></p>
-<ol start="2" type="1">
-<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
-</ol>
-<p><img src="/images/2020-12-23/003.png"></p>
-<ol start="3" type="1">
-<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
-</ol>
-<p><img src="/images/2020-12-23/004.png"></p>
-<h1 id="experiement">Experiement</h1>
-<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
-<p><img src="/images/2020-12-23/002.png"></p>
-]]></content>
-      <categories>
-        <category>Networking</category>
-      </categories>
-      <tags>
-        <tag>Networking</tag>
-        <tag>Tool</tag>
-        <tag>HTTP</tag>
-        <tag>Debugging</tag>
-        <tag>Snipping</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Distributed Tasks Processing With Google Pub/Sub</title>
-    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
-    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
-<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub/Sub as messaging-oriented middleware or event ingestion and delivery for streaming analytics pipelines. Pub/Sub offers durable message storage and real-time message delivery with high availability and consistent performance at scale. Pub/Sub servers run in all Google Cloud regions around the world.</p>
-<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
-<h1 id="core-concepts">Core concepts</h1>
-<ul>
-<li><strong>Topic</strong>: A named resource to which messages are sent by publishers.</li>
-<li><strong>Subscription</strong>: A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</li>
-<li><strong>Message</strong>: The combination of data and (optional) attributes that a publisher sends to a topic and is eventually delivered to subscribers.</li>
-<li><strong>Message attribute</strong>: A key-value pair that a publisher can define for a message. For example, key iana.org/language_tag and value en could be added to messages to mark them as readable by an English-speaking subscriber.</li>
-</ul>
-<h1 id="install">Install</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
-<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
-<p>In this example, the publisher will act as a task distributer.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
-<p>Multiple workers will subscribe to a same subscriptions to receive difference tasks from a same publisher.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Google Cloud</category>
-        <category>Pub/Sub</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Python</tag>
-        <tag>GCP</tag>
-        <tag>Google Cloud</tag>
-        <tag>Pub/Sub</tag>
-        <tag>Distributed Processing</tag>
-        <tag>Minibatch Processing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
-    <url>/2020/11/23/Manage-ssh-keys/</url>
-    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>for example, I have 2 keys in my laptop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>Next, add the new key you just created</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>You can check your added keys</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-the-connection">3. Test the connection</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
-<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add public key to your source control profile setting</h1>
-<p>Copy the public key to clipboard</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
-<p>Paste the key to gitlab ssh setting</p>
-<p><img src="/images/2020-11-23/001.png"></p>
-<p>Paste the key to github ssh setting</p>
-<p><img src="/images/2020-11-23/002.png"></p>
-<h1 id="clone-the-source-code-using-different-user">5. Clone the source code using different user</h1>
-<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
-<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
-<p>That's all! Good luck!</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GitLab</tag>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ngày giãn cách ở Sài Gòn</title>
     <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
     <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
+<a id="more"></a>
 <p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
 <p><img src="/images/2021-07-18/001.jpg"></p>
 <p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
@@ -691,6 +740,7 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
     <title>Pandas Efficient Data Storage Benchmark</title>
     <url>/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/</url>
     <content><![CDATA[<p>Do you agree that dealing with large data file is such a painful task? If yes, then you shouldn't ignore this post! In this post, I'll show you which is the best storage format to work with if you are using <code>Pandas</code>. Is it <code>csv</code>, <code>hdf5</code> or <code>parquet</code>? Let's find out.</p>
+<a id="more"></a>
 <p>First of all, we import some python packages that we will use in this benchmark</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment"># Store the result</span></span><br><span class="line">resutls = &#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>Let's define this function to generate random data</p>
@@ -822,6 +872,93 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Rời Phố Về Núi, Ta Chill (P1)</title>
+    <url>/2021/11/24/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P1/</url>
+    <content><![CDATA[<p>11 giờ đêm. Ngày 19.11.21.</p>
+<p>Hôm nay là ngày cuối cùng tôi và gia đình nhỏ ở trọ Sài Gòn, và chúng tôi cũng không biết lần gặp lại miền đất náo nhiệt này là khi nào nữa. Có thể là vài năm sau, hoặc hơn.</p>
+<a id="more"></a>
+<p>Rời phố về quê… Đây là một bước ngoặt khá lớn đối với gia đình nhỏ chúng tôi. Người khác rời quê lên phố với một quả tim nóng, tìm kiếm những cơ hội đổi vận và có một cuộc sống tốt hơn. Chúng tôi cũng vậy, cũng có một quả tim nóng, xây đắp một cuộc sống hạnh phúc, đủ đầy, thoái mái, nhưng chúng tôi đủ điều kiện để chọn lựa rời phố về quê và… chill.</p>
+<p>Chúng tôi đã trải qua khoảng thời gian dài tính bằng nhiều năm ở thành phố này, để rồi đi đến quyết định thực hiện bước ngoặt như này. Về quê, không phải là từ bỏ gì cả, thậm chí còn là một “điểm cộng”. Chúng tôi vẫn có công việc ổn định, có thu nhập, chỉ là thay đổi một không gian khác bình yên hơn, không nơi nào khác là quê cha đất tổ. Hơn nữa, tình trạng Covid-19 ở thành phố vẫn còn phức tạp, chúng ta chưa thể nào yên tâm ra đường và sinh hoạt cởi mở bình thường như trước. Sau khi đóng gói đồ đạc và đưa lên xe tải, chúng tôi lên đường về quê, chặng đường cỡ 300 cây số về miền núi cao. Trên xe là những bài hát nhạc hoa gắn bó một thời với tuổi thơ của tôi, cảm giác đúng là về nhà.</p>
+<p>3 giờ sáng.</p>
+<p>Những lần trước về quê, chúng tôi luôn di chuyển bằng xe giường nằm, một khi lên xe là nhắm mắt ngủ nghỉ tới khi đến nơi. Còn lần này có lẽ vì điều kiện xe không giống nên chúng tôi chỉ chập chờn những giấc ngắn ngủi. Nhờ vậy mà chúng tôi được lần đầu chứng kiến cảnh sương khói mịt mù dày đặc che mờ cả đoạn đường đi lên đồi. Sương mù che phủ mọi vật trên và xung quanh con đường, những chiếc xe không chiếc nào dám manh động rồ ga chạy vi vu nữa, mà chậm rãi xê dịch từng li từng tí. Khung cảnh quả thật kinh hồn, như lạc vào thế giới liêu trai chí dị vậy, ở giữa nơi sương mù vây kín lối không biết xung quanh là gì, cảm giác vừa sợ vừa kích thích. Bác tài xế dù đã nhiều năm lái xe khách, nhưng đây cũng là lần đầu bác đi gặp cảnh sương thế này. Phía trước chỉ có những ánh đèn xe mập mờ không rõ gần xa, hay chiều hướng di chuyển, xe chúng tôi đi thật chậm theo sát xe phía trước, cẩn thận xem bản đồ để đảm bảo lộ trình đúng hướng. Vượt qua hai ba đoạn đường sương khói dày đặc như vậy, chúng tôi đã có thể di chuyển bình thường thẳng về đến nhà.</p>
+<p>Đi qua đoạn đường sương mù đó, tôi chợt liên tưởng đến trong cuộc sống của con người mình lắm lúc cũng gặp phải những tình cảnh tương tự, mờ mịt không biết phương hướng, không biết những gì đang đợi chờ mình ở phía trước. Ta bị bủa vây bởi những câu hỏi nghi ngờ, lo sợ về một tương lai không biết trước, có nên đi tiếp không, có nên rẽ hướng này không, vân vân mây mây… Thế nhưng, cuộc sống là sự vận hành liên tục, dù ta có hoài nghi và sợ hãi phía trước, ta cũng không thể khiến nó ngừng lại, vậy nên hãy cứ mạnh dạn lựa chọn bước tiếp từng bước chậm mà chắc bạn ạ. Hãy tin rằng, sương mù rồi sẽ tan, ta sẽ thấy được ánh bình minh rực rỡ nhất, và con đường, phương hướng ta đi sẽ cho ta một bài học mới.</p>
+<p>5 giờ 30 phút sáng.</p>
+<p>Gia đình nhỏ chúng tôi đã đến nơi an toàn. Mặt trời đang ló dạng trong cái không khí se lạnh vào đông ở miền núi. Tôi hít thở và tận hưởng không gian trong lành này, một chương mới của chúng tôi sẽ được viết tiếp từ đây.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>My Life Story</tag>
+        <tag>chill</tag>
+        <tag>roi pho ve nui</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rau Yêu Thương</title>
+    <url>/2021/08/23/Rau-Yeu-Thuong/</url>
+    <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một phần quà tiếp sức vượt qua mùa dịch.</p>
+<a id="more"></a>
+<p><img src="/images/2021-08-23/001.jpg"></p>
+<p>Thú thật là tôi cảm thấy rất ấm áp khi nhận được món quà "Rau Yêu Thương" từ công ty, bởi tôi cảm nhận được tình cảm, sự quan tâm dành cho mình qua những túi rau, đậu, quả, trái, đủ dùng trong nhiều ngày. Gia đình tôi không thuộc diện khó khăn, nhưng trong thời buổi dịch bệnh hoành hành với những chính sách hạn chế khiến cho việc mua đồ ăn trở nên chật vật hơn, ví dụ như, một là hôm nay không có món này món kia, hai là xếp hàng chờ mua thật lâu, tới lượt mình liền hết hàng. Bây giờ bất kể là thực phẩm tươi sống gì cũng đều rất quý giá, vậy nên nhận được một bó rau thôi cũng là một điều vô cùng đáng trân trọng.</p>
+<p>Người Việt có câu "Lá lành đùm lá rách", trong một tập thể, chúng ta hãy luôn sẵn lòng đưa tay ra giúp đỡ lẫn nhau những lúc khó khăn. Tôi tin rằng, với tinh thần này, chúng ta sẽ cùng nhau vượt qua được đại dịch Covid, và tôi mong sẽ sớm được gặp lại các bạn đồng nghiệp thân thương của mình.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rời Phố Về Núi, Ta Chill (P2)</title>
+    <url>/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/</url>
+    <content><![CDATA[<p>Rời phố về quê<br/> Sống với núi rừng<br/> Sương trời gió lộng<br/> Lòng này vẫn ấm.<br/></p>
+<p>Ai nói quê hương<br/> Một nghèo hai nhỏ<br/> Về rồi mới tỏ<br/> Hoa cỏ trầm hương.<br/></p>
+<p>Nắm tay người thương<br/> Nương tựa sớm tối<br/> Đông qua xuân tới<br/> Cười một đời hoa.<br/></p>
+<p>-- Thơ con cóc tự viết, các bạn đừng cười nha!--</p>
+<p>Từ khi rời phố về quê, cảm giác thật khác hẳn. Hoàn cảnh sống khác nên sẽ có những thú vui khác. Phần là xa cách phố phường huyên náo, không còn những nơi giải trí đa dạng, đồng thời bản thân bắt đầu gắn kết với thiên nhiên nhiều hơn, thấy mình cũng sống chậm lại hơn.</p>
+<a id="more"></a>
+<p>Công việc thì vẫn vậy, làm việc từ xa như hồi giãn cách vì dịch. Nhưng khi xong việc, đóng lại màn hình nhỏ, mình nghỉ ngơi và tìm niềm vui qua những việc chăm sóc nhà cửa và cây cảnh. Như là tưới cây, bón phân, dọn cỏ quanh vườn… Cuối tuần mình hay đèo vợ đi mua một vài chậu cây hoa về trang trí sân nhà. Không gian sân nhà bỗng bừng sinh khí hơn hẳn. Lúc nghỉ ngơi mà ra sân sau hóng gió, nhìn ngắm cây xanh hoa tươi thì con người mình thấy thư thái, thấy dễ chịu lắm. Nhiều ý tưởng hay ho cũng xuất hiện từ đây, trong đó có cả việc bày trí lại không gian sống như là khoan lắp thêm kệ sao cho khoa học, tiện lợi trong sinh hoạt.</p>
+<p>Ngoài việc chăm sóc cây cảnh thì mình còn một thú vui nữa là chạy xe phượt vài chục cây số lên Thành Phố Đà Lạt dạo, có thể nhấm nháp tý café rồi chạy về nhà. Hì hì, thật ra thì ở Sài Gòn ấy, bước ra đường là có quán café, hàng quán đồ gì cũng nhiều, thậm chí mở app (ứng dụng) lên đặt hàng là giao liền tận nơi luôn. Còn ở quê mình thì khác, gần nhà cũng có quán café chứ không phải không có, chỉ là phong cách của quán dành cho đối tượng cô dì chú bác từ U40 trở lên. Thêm nữa là mùi vị café cũng không phải gu của mình. Gu cafe của mình á là cafe Arabica phải rang nguyên chất, không trộn lẫn các phụ liệu hay gia vị khác như bơ, đậu... Những quán café trên thành phố Đà Lạt thì khác hẳn chỗ mình, từ phong cách quán đến hương vị pha chế thu hút giới trẻ như mình nhiều hơn. Thành ra thi thoảng tụi mình phóng xe lên đó thưởng thức cảnh đẹp và café cũng là một niềm vui thích và ý nghĩa. Gọi là thiên về trải nghiệm hành trình nhiều hơn là có được kết quả tiện lợi trong tích tắc.</p>
+<p>Nhiều người than phiền rằng cuộc sống sao mà nhàm chán quá, có lẽ các bạn ấy nên thử làm điều gì đó mới và khác đi, như là tận hưởng quá trình thay vì chú trọng kết quả. Ví như đi phượt đến nơi nào đó cùng bạn bè, hay tự tay làm ra một cái gì đó để tặng, để chia sẻ, hay chỉ đơn giản dành cho người thân thương của mình những giây phút chuyện trò kết nối. Rời xa những chiếc màn hình điện tử sẽ giúp bạn thoải mái hơn nhiều. Thế giới này rất rộng lớn, vẫn luôn đợi bạn ngẩng cao đầu, lao vào khám phá.</p>
+<p>Mình sẽ tiếp tục chia sẻ những trải nghiệm sống chất của một developer phía sau màn hình vào bài tiếp theo nhé!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>My Life Story</tag>
+        <tag>chill</tag>
+        <tag>roi pho ve nui</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLAlchemy for Python ORM Mapping</title>
+    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
+<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
+<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="table-define">Table Define</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="example">Example</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>SQLAlchemy</tag>
+        <tag>ORM</tag>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Schedule Task Runner with Celery</title>
     <url>/2020/11/27/Schedule-Task-Runner-with-Celery/</url>
     <content><![CDATA[<blockquote><p>Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so that your product can scale and integrate with other languages, and it comes with the tools and support you need to run such a system in production.</p>
@@ -857,47 +994,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>SQLAlchemy for Python ORM Mapping</title>
-    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
-<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
-<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
-<h1 id="table-define">Table Define</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="example">Example</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>SQLAlchemy</tag>
-        <tag>ORM</tag>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The First Birthday of Donnie</title>
-    <url>/2021/05/14/The-First-Birthday-of-Donnie/</url>
-    <content><![CDATA[<p><img src="/images/2021-05-14/001.jpg"></p>
-<p>That was a day of summer, our son turned one and enjoyed his very first birthday from when his new journey began. He also got a new nickname - Donnie, actually the nickname came from his previous one, Dino (Dinosaur). He's growing as fast as the waterfall of time, just a glance and now he can walk by his own, he can say "papa", "mama", "mum mum"... Sooner or later, Donnie will attend the preschool program. I'm writing this blog to save the date Donnie had his first birthday.</p>
-<p>The first birthday of every baby is an important occasion, marking a new period of its life has just begun. In Vietnamese, this ceremony is called "Lễ Thôi Nôi" or "Lễ Đầy Năm", originally come from Chinese culture since Chinese people immigrated to Vietnam. However, the ceremony can be different depending on each family's tradition and origins. For example, the first birthday ceremony of my family members is very simple, some other families even don't celebrate it until their babies turn two or three years old. For my son's ceremony, we decided to celebrate fully as Vietnamese culture. The purpose of the ceremony is expressing gratefulness to Twelve Goddesses (12 Bà Mụ) and Three Gods (3 Đức Thầy), who have been blessing our son's growth and future career, then we all pray the best wishes for him. There is an interesting part of the ceremony, every baby will pick or choose one of many different items that can predict his or her future career, which is considered to be pretty accurate.</p>
-<p>Due to the complicated situation of Covid-19, we couldn't set up a big party and invite relatives and friends to join us. We preparing everything for the ceremony, including food, fruits, offerings, decoration and birthday cake. Food includes boiled chicken, pork, rice soup, white cow-bean sweet gruel, 4-color sticky rice. For decorating, she purchased many lovely blue and grey balloons, blowing them all, then hanging on the wall to form cloud of balloons, which created a stunning background for shooting photos. My wife got up early and displayed the food and offerings on a table, lighting up candles and incense for the ceremony to start. We pray to Goddesses and Gods with respect to bless our little Donnie. The ceremony finished as soon as the incense fired to the end. Donnie started stepping forward to pick up one item that represents the future career. In front of him, there were a laptop, a notebook, a pen, a ruler, a box of English flashcards, etc. Can you guess Which one he would choose? Surprisingly, he picked up the pen! The pen can represent for creative jobs, such as writer, author, novelist, journalist, composer, script writer, etc. or even artist! There were 13 dishes of sticky rice, 13 bowls of sweet bean gruel, and 13 bowls of rice soup. My wife shared the sticky rice and sweet bean gruel to our neighbors as special gifts. We took some photos of Donnie with the balloons background, and that was all.</p>
-<p>You see how time flies no matter what happens. Looking at Donnie growing day by day, it reminds me the song "Slipping through my fingers" by ABBA. Let's take some times to listen to this song, you will know what I mean ;) It's great song, and you can feel it when you have children too. Oh believe me, I'm not a cheesy person, but the older we grow, the deeper we think and feel. Finally to our son, be strong and happy, Donnie! We're always by your side and always love you more than 3000 times!</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/lQj_DtAwmeM" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-        <tag>My Life Story</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Setup Apache Airflow Using Docker Compose</title>
     <url>/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/</url>
     <content><![CDATA[<p><img width="480" src="/images/2021-05-08/001.png" /></p>
@@ -909,6 +1005,7 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 </ul>
 <h1 id="download-docker-compose.yml">Download <code>docker-compose.yml</code></h1>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -LfO &#x27;https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml&#x27;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>The <code>docker-compose.yml</code> file will look like this</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Licensed to the Apache Software Foundation (ASF) under one</span></span><br><span class="line"><span class="comment"># or more contributor license agreements.  See the NOTICE file</span></span><br><span class="line"><span class="comment"># distributed with this work for additional information</span></span><br><span class="line"><span class="comment"># regarding copyright ownership.  The ASF licenses this file</span></span><br><span class="line"><span class="comment"># to you under the Apache License, Version 2.0 (the</span></span><br><span class="line"><span class="comment"># &quot;License&quot;); you may not use this file except in compliance</span></span><br><span class="line"><span class="comment"># with the License.  You may obtain a copy of the License at</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Unless required by applicable law or agreed to in writing,</span></span><br><span class="line"><span class="comment"># software distributed under the License is distributed on an</span></span><br><span class="line"><span class="comment"># &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</span></span><br><span class="line"><span class="comment"># KIND, either express or implied.  See the License for the</span></span><br><span class="line"><span class="comment"># specific language governing permissions and limitations</span></span><br><span class="line"><span class="comment"># under the License.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Basic Airflow cluster configuration for CeleryExecutor with Redis and PostgreSQL.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># WARNING: This configuration is for local development. Do not use it in a production deployment.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This configuration supports basic configuration using environment variables or an .env file</span></span><br><span class="line"><span class="comment"># The following variables are supported:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># AIRFLOW_IMAGE_NAME         - Docker image name used to run Airflow.</span></span><br><span class="line"><span class="comment">#                              Default: apache/airflow:master-python3.8</span></span><br><span class="line"><span class="comment"># AIRFLOW_UID                - User ID in Airflow containers</span></span><br><span class="line"><span class="comment">#                              Default: 50000</span></span><br><span class="line"><span class="comment"># AIRFLOW_GID                - Group ID in Airflow containers</span></span><br><span class="line"><span class="comment">#                              Default: 50000</span></span><br><span class="line"><span class="comment"># _AIRFLOW_WWW_USER_USERNAME - Username for the administrator account.</span></span><br><span class="line"><span class="comment">#                              Default: airflow</span></span><br><span class="line"><span class="comment"># _AIRFLOW_WWW_USER_PASSWORD - Password for the administrator account.</span></span><br><span class="line"><span class="comment">#                              Default: airflow</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Feel free to modify this file to suit your needs.</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">x-airflow-common:</span></span><br><span class="line">  <span class="string">&amp;airflow-common</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">$&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="string">&amp;airflow-common-env</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__EXECUTOR:</span> <span class="string">CeleryExecutor</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__SQL_ALCHEMY_CONN:</span> <span class="string">postgresql+psycopg2://airflow:airflow@postgres/airflow</span></span><br><span class="line">    <span class="attr">AIRFLOW__CELERY__RESULT_BACKEND:</span> <span class="string">db+postgresql://airflow:airflow@postgres/airflow</span></span><br><span class="line">    <span class="attr">AIRFLOW__CELERY__BROKER_URL:</span> <span class="string">redis://:@redis:6379/0</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__FERNET_KEY:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__LOAD_EXAMPLES:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__API__AUTH_BACKEND:</span> <span class="string">&#x27;airflow.api.auth.backend.basic_auth&#x27;</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./dags:/opt/airflow/dags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./logs:/opt/airflow/logs</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./plugins:/opt/airflow/plugins</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&quot;$&#123;AIRFLOW_UID:-50000&#125;:$&#123;AIRFLOW_GID:-50000&#125;&quot;</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="attr">redis:</span></span><br><span class="line">      <span class="attr">condition:</span> <span class="string">service_healthy</span></span><br><span class="line">    <span class="attr">postgres:</span></span><br><span class="line">      <span class="attr">condition:</span> <span class="string">service_healthy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:13</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">airflow</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">airflow</span></span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">airflow</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">postgres-db-volume:/var/lib/postgresql/data</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;pg_isready&quot;</span>, <span class="string">&quot;-U&quot;</span>, <span class="string">&quot;airflow&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">5s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis:latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;redis-cli&quot;</span>, <span class="string">&quot;ping&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">5s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">30s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">50</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-webserver:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">webserver</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:8080</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;--fail&quot;</span>, <span class="string">&quot;http://localhost:8080/health&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-scheduler:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">scheduler</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-worker:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-init:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">version</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common-env</span></span><br><span class="line">      <span class="attr">_AIRFLOW_DB_UPGRADE:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_CREATE:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_USERNAME:</span> <span class="string">$&#123;_AIRFLOW_WWW_USER_USERNAME:-airflow&#125;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_PASSWORD:</span> <span class="string">$&#123;_AIRFLOW_WWW_USER_PASSWORD:-airflow&#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">flower:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">flower</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5555</span><span class="string">:5555</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;--fail&quot;</span>, <span class="string">&quot;http://localhost:5555/&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">postgres-db-volume:</span></span><br></pre></td></tr></table></figure>
 <h1 id="initialize-the-environment">Initialize the environment</h1>
@@ -961,12 +1058,149 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Rau Yêu Thương</title>
-    <url>/2021/08/23/Rau-Yeu-Thuong/</url>
-    <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một phần quà tiếp sức vượt qua mùa dịch.</p>
-<p><img src="/images/2021-08-23/001.jpg"></p>
-<p>Thú thật là tôi cảm thấy rất ấm áp khi nhận được món quà "Rau Yêu Thương" từ công ty, bởi tôi cảm nhận được tình cảm, sự quan tâm dành cho mình qua những túi rau, đậu, quả, trái, đủ dùng trong nhiều ngày. Gia đình tôi không thuộc diện khó khăn, nhưng trong thời buổi dịch bệnh hoành hành với những chính sách hạn chế khiến cho việc mua đồ ăn trở nên chật vật hơn, ví dụ như, một là hôm nay không có món này món kia, hai là xếp hàng chờ mua thật lâu, tới lượt mình liền hết hàng. Bây giờ bất kể là thực phẩm tươi sống gì cũng đều rất quý giá, vậy nên nhận được một bó rau thôi cũng là một điều vô cùng đáng trân trọng.</p>
-<p>Người Việt có câu "Lá lành đùm lá rách", trong một tập thể, chúng ta hãy luôn sẵn lòng đưa tay ra giúp đỡ lẫn nhau những lúc khó khăn. Tôi tin rằng, với tinh thần này, chúng ta sẽ cùng nhau vượt qua được đại dịch Covid, và tôi mong sẽ sớm được gặp lại các bạn đồng nghiệp thân thương của mình.</p>
+    <title>Setup On Premise Kubernetes Cluster</title>
+    <url>/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/</url>
+    <content><![CDATA[<h1 id="overview">Overview</h1>
+<p>I'll setup a k8s cluster with 3 nodes (1 control, 2 workers).</p>
+<ul>
+<li><code>k8s-control</code></li>
+<li><code>k8s-worker01</code></li>
+<li><code>k8s-worker02</code></li>
+</ul>
+<a id="more"></a>
+<h1 id="setup">Setup</h1>
+<h2 id="install-packages-on-all-nodes">1. Install Packages on all nodes</h2>
+<ul>
+<li><p>Create configuration file for containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;<span class="string">EOF | sudo tee /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Load modules</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo modprobe overlay</span><br><span class="line">sudo modprobe br_netfilter</span><br></pre></td></tr></table></figure></li>
+<li><p>Set system configuration for k8s networking</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;<span class="string">EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf</span></span><br><span class="line"><span class="string">net.bridge.bridge-nf-call-iptables = 1</span></span><br><span class="line"><span class="string">net.ipv4.ip_forward = 1</span></span><br><span class="line"><span class="string">net.bridge.bridge-nf-call-ip6tables = 1</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Applying new settings</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sysctl --system</span><br></pre></td></tr></table></figure></li>
+<li><p>Install containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install -y containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Create default configuration file for containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Generate default containerd configuration and save to the newly created default file</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo containerd config default | sudo tee /etc/containerd/config.toml</span><br></pre></td></tr></table></figure></li>
+<li><p>Restart containerd to ensure new configuration file usage</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Verify that containerd is running</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl status containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Disable swap</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo swapoff -a</span><br></pre></td></tr></table></figure></li>
+<li><p>Install dependencies</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install -y apt-transport-https curl</span><br></pre></td></tr></table></figure></li>
+<li><p>Download and add GPG key</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure></li>
+<li><p>Add Kubernetes to repository list</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;<span class="string">EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list</span></span><br><span class="line"><span class="string">deb https://apt.kubernetes.io/ kubernetes-xenial main</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Update package listings</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></li>
+<li><p>Install Kubernetes packages</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install -y kubelet=1.24.0-00 kubeadm=1.24.0-00 kubectl=1.24.0-00</span><br></pre></td></tr></table></figure></li>
+<li><p>Turn off automatic updates</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-mark hold kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="initialize-the-cluster">2. Initialize the Cluster</h2>
+<p>In the <code>k8s-control</code> host:</p>
+<ul>
+<li><p>Initialize the Kubernetes cluster</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.24.0</span><br></pre></td></tr></table></figure></li>
+<li><p>Set <code>kubectl</code> access</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) <span class="variable">$HOME</span>/.kube/config</span><br></pre></td></tr></table></figure></li>
+<li><p>Test access to cluster</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="install-the-calico-network-add-on">3. Install the Calico Network Add-On</h2>
+<p>In the <code>k8s-control</code> host:</p>
+<ul>
+<li><p>Install Calico Networking <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Check status of the control plane node <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="join-the-worker-nodes-to-the-cluster">4. Join the Worker Nodes to the Cluster</h2>
+<p>In the <code>k8s-control</code>:</p>
+<ul>
+<li>Print the join command <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubeadm token create --print-join-command</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>In the <code>k8s-worker01</code> and <code>k8s-worker02</code> host:</p>
+<ul>
+<li>Use the join command printed above <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo kubeadm join ...</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Kubernetes</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Kubernetes</tag>
+        <tag>K8S</tag>
+        <tag>On-premise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Setup your own Docker Private Registry</title>
+    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
+    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
+<ol type="1">
+<li>Create an <code>htpasswd</code> file containing the login credentials for the initial account.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Create a directory to hold the certs for the registry server</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Create a self-signed certificate for the registry.</li>
+</ol>
+<p>NOTE: For the <code>Common Name</code> field, enter the hostname of the registry server. Here I will use <code>registry.internal</code></p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>Create a container to run the registry.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
+<ol start="5" type="1">
+<li>Once the registry starts up, verify that it is responsive. It's OK if this command returns nothing, just make sure it does not fail.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
+<h1 id="in-the-docker-client">In the Docker Client</h1>
+<ol type="1">
+<li>Add the registry's public self-signed certificate to <code>/etc/docker/certs.d</code>. The scp command is copying the file from the registry server to the client.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Log in to the private registry. The credentials should be username <code>hienhoang</code> and password <code>SupP3rS3cureP@ssW0rd</code>.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Test the setup by push a image to the registry</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Registry</tag>
+        <tag>Openssl</tag>
+        <tag>Self-signed Certificate</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The First Birthday of Donnie</title>
+    <url>/2021/05/14/The-First-Birthday-of-Donnie/</url>
+    <content><![CDATA[<p><img src="/images/2021-05-14/001.jpg"></p>
+<p>That was a day of summer, our son turned one and enjoyed his very first birthday from when his new journey began. He also got a new nickname - Donnie, actually the nickname came from his previous one, Dino (Dinosaur). He's growing as fast as the waterfall of time, just a glance and now he can walk by his own, he can say "papa", "mama", "mum mum"... Sooner or later, Donnie will attend the preschool program. I'm writing this blog to save the date Donnie had his first birthday.</p>
+<a id="more"></a>
+<p>The first birthday of every baby is an important occasion, marking a new period of its life has just begun. In Vietnamese, this ceremony is called "Lễ Thôi Nôi" or "Lễ Đầy Năm", originally come from Chinese culture since Chinese people immigrated to Vietnam. However, the ceremony can be different depending on each family's tradition and origins. For example, the first birthday ceremony of my family members is very simple, some other families even don't celebrate it until their babies turn two or three years old. For my son's ceremony, we decided to celebrate fully as Vietnamese culture. The purpose of the ceremony is expressing gratefulness to Twelve Goddesses (12 Bà Mụ) and Three Gods (3 Đức Thầy), who have been blessing our son's growth and future career, then we all pray the best wishes for him. There is an interesting part of the ceremony, every baby will pick or choose one of many different items that can predict his or her future career, which is considered to be pretty accurate.</p>
+<p>Due to the complicated situation of Covid-19, we couldn't set up a big party and invite relatives and friends to join us. We preparing everything for the ceremony, including food, fruits, offerings, decoration and birthday cake. Food includes boiled chicken, pork, rice soup, white cow-bean sweet gruel, 4-color sticky rice. For decorating, she purchased many lovely blue and grey balloons, blowing them all, then hanging on the wall to form cloud of balloons, which created a stunning background for shooting photos. My wife got up early and displayed the food and offerings on a table, lighting up candles and incense for the ceremony to start. We pray to Goddesses and Gods with respect to bless our little Donnie. The ceremony finished as soon as the incense fired to the end. Donnie started stepping forward to pick up one item that represents the future career. In front of him, there were a laptop, a notebook, a pen, a ruler, a box of English flashcards, etc. Can you guess Which one he would choose? Surprisingly, he picked up the pen! The pen can represent for creative jobs, such as writer, author, novelist, journalist, composer, script writer, etc. or even artist! There were 13 dishes of sticky rice, 13 bowls of sweet bean gruel, and 13 bowls of rice soup. My wife shared the sticky rice and sweet bean gruel to our neighbors as special gifts. We took some photos of Donnie with the balloons background, and that was all.</p>
+<p>You see how time flies no matter what happens. Looking at Donnie growing day by day, it reminds me the song "Slipping through my fingers" by ABBA. Let's take some times to listen to this song, you will know what I mean ;) It's great song, and you can feel it when you have children too. Oh believe me, I'm not a cheesy person, but the older we grow, the deeper we think and feel. Finally to our son, be strong and happy, Donnie! We're always by your side and always love you more than 3000 times!</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lQj_DtAwmeM" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 ]]></content>
       <categories>
         <category>Living</category>
@@ -995,6 +1229,7 @@ Why Vagrant?
 <li><a href="https://www.vagrantup.com/downloads">Download</a> and install Vagrant</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install virtualbox</span><br><span class="line"></span><br><span class="line">curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb</span><br><span class="line">sudo apt install ./vagrant_2.2.9_x86_64.deb</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="init-environment">Init environment</h1>
 <p>Run the command to init a new vagrant development environment using <code>ubuntu 20.04</code>.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant init bento/ubuntu-20.04</span><br></pre></td></tr></table></figure>
@@ -1030,69 +1265,24 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
-    <title>How to replace environment variables in a file</title>
-    <url>/2021/01/28/how-to-replace-environment-variables-in-a-file/</url>
-    <content><![CDATA[<h1 id="load-environment-from-.env-file">1. Load environment from <code>.env</code> file</h1>
-<ul>
-<li><p>Let say we have a <code>.env</code> file: <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">WEBSITE_URL=https://hienhoang.ml</span><br><span class="line">USERNAME=hienhoang</span><br><span class="line">PASSWORD=p@ssword</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Then run this script will load all environment variables to current shell terminal <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export $(grep -v &#x27;^#&#x27; .env | xargs)</span><br></pre></td></tr></table></figure></p></li>
-<li><p>You can also unset variables using below script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unset $(grep -v &#x27;^#&#x27; .env | sed -E &#x27;s/(.*)=.*/\1/&#x27; | xargs)</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="substitute-all-environment-variables-in-a-file">2. Substitute all environment variables in a file</h1>
-<ul>
-<li><p><code>template.yml</code> <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="symbol">website:</span> $&#123;WEBSITE_URL&#125;</span><br><span class="line"><span class="symbol">username:</span> $&#123;USERNAME&#125;</span><br><span class="line"><span class="symbol">password:</span> $&#123;PASSWORD&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Run this script to substitute variable in the <code>template.yml</code> file and output to <code>config.yml</code> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">envsubst &lt; template.yml &gt; config.yml</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Result is the <code>config.yml</code> <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="symbol">website:</span> <span class="symbol">https:</span>/<span class="regexp">/hienhoang.ml</span></span><br><span class="line"><span class="regexp">username: hienhoang</span></span><br><span class="line"><span class="regexp">password: p@ssword</span></span><br></pre></td></tr></table></figure></p></li>
-</ul>
+    <title>Pray For Peace</title>
+    <url>/2022/02/28/peace/</url>
+    <content><![CDATA[<p>Dear friends, today I just want to share some words about my feelings towards the event between Ukraine and Russia, not related to the political issue or something similar. I have considered it as proof that life changes unexpectedly, no matter what.</p>
+<a id="more"></a>
+<p>We never know what will come tomorrow, and anything can happen for a reason.</p>
+<p>It’s like what has happened to Ukraine and Russia recently. We don’t expect war to come, but it is happening in front of the world’s observation. I don’t know how others have felt about that, to me, I have been shocked and cannot say a word. From my heart, I have wondered if that war can really solve the problem between those countries or if there will be more and more innocent people suffering.</p>
+<p>I cannot imagine that it came so suddenly. I have been worried for Ukrainian partners who had worked closely with me before the war occurred. We were working and talking to each other online as usual, then one day they were all offline and uncontactable. Then, I read in the news that all Ukrainian males, from 18 to 60, must take part in the campaign fighting against Russian. Nothing I can do, but praying for them all to be fine, then they can return home alive, safe and sound.</p>
+<p>I think that you may experience that kind of feeling sometimes in your lives. Today, we still saw our friends in front of our eyes, worked and laughed. One day later, they were away, fighting to protect their countries, no promises when war was over that we could see each other again. I really really want to see our Ukrainian friends again and we can work together as before.</p>
+<p>Changes, although we don’t know where or what those changes lead us to, are inevitable. And whether we are ready for it or not, there is nothing we can do to stop it, but come over it by one way or another. I’m keeping praying for it to end in peace with the least suffering.</p>
+<p>From VN we pray.</p>
 ]]></content>
       <categories>
-        <category>Shell</category>
+        <category>Living</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>Shell</tag>
-        <tag>Script</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Run Headless Chrome Browser Inside a Docker Container</title>
-    <url>/2020/11/20/run-headless-chrome-inside-a-docker-container/</url>
-    <content><![CDATA[<h1 id="overview">1. Overview</h1>
-<p>This is a simple example of how to config your own headless chrome browser inside a docker container. Then use a simple Python web application to say hello world with python selenium.</p>
-<p>Project structure: - app.py - Dockerfile - bin/ + chromedriver + google-chrome-87_amd64.deb</p>
-<p>Source code on <a href="https://github.com/hoangchunghien/headless-browser-docker-example">GitHub</a></p>
-<h1 id="coding">2. Coding</h1>
-<ul>
-<li><code>Dockerfile</code></li>
-</ul>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>app.py</code></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, send_file</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">options = Options()</span><br><span class="line">options.add_argument(<span class="string">&#x27;--headless&#x27;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-gpu&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-dev-shm-usage&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--no-sandbox&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span>():</span></span><br><span class="line">    driver = webdriver.Chrome(chrome_options=options)</span><br><span class="line">    driver.get(<span class="string">&#x27;https://www.google.com&#x27;</span>)</span><br><span class="line">    driver.save_screenshot(<span class="string">&quot;screenshot.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> send_file(<span class="string">&quot;screenshot.png&quot;</span>, mimetype=<span class="string">&#x27;image/png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="built_in">int</span>(os.environ.get(<span class="string">&#x27;PORT&#x27;</span>, <span class="number">5000</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-it">3. Test it</h1>
-<ul>
-<li>Build the docker image</li>
-</ul>
-<p><code>docker build -t headless .</code></p>
-<ul>
-<li>Run the docker container</li>
-</ul>
-<p><code>docker run -it -p 5000:5000 headless</code></p>
-<ul>
-<li>Open the link <a href="http://localhost:5000">http://localhost:5000</a></li>
-</ul>
-<p><img src="/images/2020-11-20/001.png"></p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Python</tag>
-        <tag>Docker</tag>
-        <tag>Selenium</tag>
-        <tag>Headless Browser</tag>
+        <tag>My Life Story</tag>
+        <tag>Ukraine</tag>
+        <tag>War</tag>
       </tags>
   </entry>
   <entry>
@@ -1139,93 +1329,44 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
-    <title>When I become Daddy</title>
-    <url>/2020/11/14/when-i-become-father/</url>
-    <content><![CDATA[<p>Hello there, how are you today? My answer is <strong>"Better than good"</strong> if you ask :) Today I would like to tell you about how I have changed since I knew I was going to be called <em>Daddy</em>. That is one of the most beautiful stories in my life. After 5 years together, we finally have a baby. At this time last year, I spent a trip to Dalat City in Lam Dong, for my wife as her birthday gift, when we had no idea that our baby was about 2 months old. Until we came back to work, she got a health check, then the baby turned 3 months. WOW, yeah, she texted me that amazing good news when I was working in the office. I knew, from that moment, my life - our lives - started changing to be better and happier with the new beloved member.</p>
-<p><img src="/images/2020-12-15/001.jpg"></p>
-<p>My wife got a warning from a doctor because she missed the previous health checks for the baby, which made her worried for a while. She likes drinking chill beers and some kinds of alcohol, but don't get me wrong, she enjoys its tastes, not a kind of alcoholic. When we were in Dalat City, we had a night in a bar, drinking some cocktail. Therefore, she was worried for the baby's development. As the result, after a full health check, our baby was fine. I realized that I must have changed to be stronger than ever, in both financial as well as emotional aspects, in order to take care of her and our baby better.</p>
-<p>That the night my wife gave birth to our baby was also so unforgetable to us. Two days before the surgery date, after the midnight, she was unexpectedly in travail, rupture of amniotic fluid. We rushed to the international hospital that was 14km in distance, where she had registered to get surgery. It was 3:00 am, luckily, the street was empty throughout the way we went. We sat in the taxi and prayed. I prayed everything would be fine, my wife and our baby could come over this situation without hurt. At 5:18am, our baby was born, safe and sound!</p>
-<p>"Oh Congratulation! Here you are, a football player!", the doctor said with a smile.</p>
-<p>It was funny that we hadn't known our baby's gender until that moment came. We had a son! His crying sound was lovely and special to me! He was laying on his mother's chest and crying out loud gently. I was so happy that almost forgot to take pictures, a nurse kindly reminded me. After 9 months, we finally met each other, son! 15 minutes later, our son was brought to warming room. When I hold him im my arms, I felt amazing, unbelievable, sweet and complete. He was strong, healthy, sleeping like an angel. Since then, our lives routine changed quite much to take care of him.</p>
-<p><img src="/images/2020-12-15/002.jpg"></p>
-<p>I would like to share top things I have changed since my wife got pregnant.</p>
-<ol type="1">
-<li>Doing houseworks in smart way</li>
-</ol>
-<p>After knowing my wife got pregnant, I started looking for a bigger and more convenient apartment for her to live. The one we chose was 63m2 with kitchen and two private rooms. My wife enjoyed cooking quite much so when there was the kitchen there, she could cooked healthy fresh dishes for us, espcially for the baby as well. I wasn't good at cooking but I could support her in washing dishes after meals, cleaning the floors, carrying heavy stuffs, etc. Doing lots of houseworks made me realize that how incredible my wife got through all everyday while she was still going to work. Unexpectedly, there was a big changes in human resource in my wife's company, because of her pregnancy, she had to leave the position according to the new company policy. Then my wife stayed at home alone and relaxed, while I was still working during the Covid-19. I bought her a washing dishes machine, a portable vacuum cleaner, and a pressure cooker to help things done faster and easier. Shortly after that, due to the growth of Covid-19, the government asked people to work from home, I could stay with my wife. It was a very good news to my wife, because she had someone to talk and take care of her.</p>
-<ol start="2" type="1">
-<li>Being a better listener</li>
-</ol>
-<p>I admit that I am not a good listener, but for my wife, I am trying to learn how to be her listener. Pregnant women are usually sensitive, grumpy and have a lot of thoughts. Fortunately, although my wife is open-minded and she seemed to be happier after having the baby, she still had some negative thoughts and fears inside. So I needed to be her mental support, reading her emotions and listening to her thoughts without any judgment. Especially after she gave birth to our baby, she faced huge changes in both physical and mental. I have been always by her side to help easing her bad feelings, together taking care of the baby.</p>
-<ol start="3" type="1">
-<li>Leanring to become richer. Being more mature and responsible</li>
-</ol>
-<p>Small renting rooms are not suitable for us anymore. Now we have a child, he needs a better environemnt for living and growing, for example, better educations, better neighbors, better health care etc. Therefore, we become more serious about the future with bigger houses and greater amount of assets. I began watching videos from rich successful people, learning their mindsets and taking their advices, then improving our values to get better chances in lives. Having baby motivates us so much to do harder to get richer and richer. And we strongly believe that we will soon have a beautiful villa and high standard living conditions.</p>
-<p>Some of my friends told me that I have looked more mature or older after having baby. I consider it as a praise. I want to be a great and responsible dad to guide our child to become an excellent person too.</p>
-<ol start="4" type="1">
-<li>Habbits &amp; Hobbies</li>
-</ol>
-<p>There are some new habits approaching me after our son was born. For instance, shooting photos of my litlle family to save the simple beautiful moments of our daily life with our son. He is super cute and growing so fast that we want to keep those sweet memories forever. I bought a new camera and we are saving budget to travel together and capture beautiful scenes. I didnot have that habit before.</p>
-<p>Now, everyday I have felt more excited when coming back home from work. I never knew that becoming father brings many positive feelings and thinking like that - a complete family. Love you all, my wife and little son.</p>
-<p><img src="/images/2020-12-15/003.jpg"></p>
+    <title>Run Headless Chrome Browser Inside a Docker Container</title>
+    <url>/2020/11/20/run-headless-chrome-inside-a-docker-container/</url>
+    <content><![CDATA[<h1 id="overview">1. Overview</h1>
+<p>This is a simple example of how to config your own headless chrome browser inside a docker container. Then use a simple Python web application to say hello world with python selenium.</p>
+<p>Project structure: - app.py - Dockerfile - bin/ + chromedriver + google-chrome-87_amd64.deb</p>
+<p>Source code on <a href="https://github.com/hoangchunghien/headless-browser-docker-example">GitHub</a></p>
+<h1 id="coding">2. Coding</h1>
+<ul>
+<li><code>Dockerfile</code></li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>app.py</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, send_file</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">options = Options()</span><br><span class="line">options.add_argument(<span class="string">&#x27;--headless&#x27;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-gpu&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-dev-shm-usage&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--no-sandbox&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span>():</span></span><br><span class="line">    driver = webdriver.Chrome(chrome_options=options)</span><br><span class="line">    driver.get(<span class="string">&#x27;https://www.google.com&#x27;</span>)</span><br><span class="line">    driver.save_screenshot(<span class="string">&quot;screenshot.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> send_file(<span class="string">&quot;screenshot.png&quot;</span>, mimetype=<span class="string">&#x27;image/png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="built_in">int</span>(os.environ.get(<span class="string">&#x27;PORT&#x27;</span>, <span class="number">5000</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-it">3. Test it</h1>
+<ul>
+<li>Build the docker image</li>
+</ul>
+<p><code>docker build -t headless .</code></p>
+<ul>
+<li>Run the docker container</li>
+</ul>
+<p><code>docker run -it -p 5000:5000 headless</code></p>
+<ul>
+<li>Open the link <a href="http://localhost:5000">http://localhost:5000</a></li>
+</ul>
+<p><img src="/images/2020-11-20/001.png"></p>
 ]]></content>
       <categories>
-        <category>Living</category>
+        <category>DevOps</category>
       </categories>
       <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-        <tag>My Life Story</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Chinese Double Ninth Festival</title>
-    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
-<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
-<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
-<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
-<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
-<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
-<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>My Life Story</tag>
-        <tag>Chung Yeung</tag>
-        <tag>Anniversary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Year End 2020</title>
-    <url>/2021/02/01/year-end-2020/</url>
-    <content><![CDATA[<p>Hey, how do you do? Hope you had a good time in 2020.</p>
-<p><img src="/images/2021-02-01/004.jpg"></p>
-<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
-<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
-<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
-<p><img src="/images/2021-02-01/001.jpeg"></p>
-<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
-<p><img src="/images/2021-02-01/002.jpeg"></p>
-<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
-<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
-<p><img src="/images/2021-02-01/003.jpeg"></p>
-<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
-<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
-<p>Thanks for reading up to this line!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-        <tag>My Life Story</tag>
+        <tag>DevOps</tag>
+        <tag>Python</tag>
+        <tag>Docker</tag>
+        <tag>Selenium</tag>
+        <tag>Headless Browser</tag>
       </tags>
   </entry>
   <entry>
@@ -1261,6 +1402,61 @@ Why Vagrant?
         <tag>Docker</tag>
         <tag>VPN</tag>
         <tag>DIY</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to replace environment variables in a file</title>
+    <url>/2021/01/28/how-to-replace-environment-variables-in-a-file/</url>
+    <content><![CDATA[<h1 id="load-environment-from-.env-file">1. Load environment from <code>.env</code> file</h1>
+<ul>
+<li><p>Let say we have a <code>.env</code> file: <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">WEBSITE_URL=https://hienhoang.ml</span><br><span class="line">USERNAME=hienhoang</span><br><span class="line">PASSWORD=p@ssword</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Then run this script will load all environment variables to current shell terminal <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export $(grep -v &#x27;^#&#x27; .env | xargs)</span><br></pre></td></tr></table></figure></p></li>
+<li><p>You can also unset variables using below script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unset $(grep -v &#x27;^#&#x27; .env | sed -E &#x27;s/(.*)=.*/\1/&#x27; | xargs)</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="substitute-all-environment-variables-in-a-file">2. Substitute all environment variables in a file</h1>
+<ul>
+<li><p><code>template.yml</code> <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="symbol">website:</span> $&#123;WEBSITE_URL&#125;</span><br><span class="line"><span class="symbol">username:</span> $&#123;USERNAME&#125;</span><br><span class="line"><span class="symbol">password:</span> $&#123;PASSWORD&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Run this script to substitute variable in the <code>template.yml</code> file and output to <code>config.yml</code> <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">envsubst &lt; template.yml &gt; config.yml</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Result is the <code>config.yml</code> <figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="symbol">website:</span> <span class="symbol">https:</span>/<span class="regexp">/hienhoang.ml</span></span><br><span class="line"><span class="regexp">username: hienhoang</span></span><br><span class="line"><span class="regexp">password: p@ssword</span></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Shell</tag>
+        <tag>Script</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Year End 2020</title>
+    <url>/2021/02/01/year-end-2020/</url>
+    <content><![CDATA[<p>Hey, how do you do? Hope you had a good time in 2020.</p>
+<p><img src="/images/2021-02-01/004.jpg"></p>
+<a id="more"></a>
+<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
+<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
+<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
+<p><img src="/images/2021-02-01/001.jpeg"></p>
+<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
+<p><img src="/images/2021-02-01/002.jpeg"></p>
+<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
+<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
+<p><img src="/images/2021-02-01/003.jpeg"></p>
+<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
+<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
+<p>Thanks for reading up to this line!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
       </tags>
   </entry>
   <entry>
@@ -1392,11 +1588,33 @@ Let try with a simple query <figure class="highlight python"><table><tr><td clas
       </tags>
   </entry>
   <entry>
+    <title>The Chinese Double Ninth Festival</title>
+    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
+<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
+<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
+<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
+<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
+<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
+<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>My Life Story</tag>
+        <tag>Chung Yeung</tag>
+        <tag>Anniversary</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Image Semantic Segmentation</title>
     <url>/2021/04/21/Image-Semantic-Segmentation/</url>
     <content><![CDATA[<h1 id="overview">1. Overview</h1>
 <p><img src="https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg"></p>
 <p>Source: https://www.robots.ox.ac.uk/~vgg/data/pets/</p>
+<a id="more"></a>
 <h1 id="fully-convolution-network-fcn">2. Fully Convolution Network (FCN)</h1>
 <h2 id="dataset">2.1. Dataset</h2>
 <p>In this example, I will use <code>Oxford-IIIT Pet</code> dataset. We can access it by using <code>tensorflow-datasets</code> package.</p>
@@ -1638,6 +1856,46 @@ Let try with a simple query <figure class="highlight python"><table><tr><td clas
         <tag>MobileNet-V2</tag>
         <tag>Pretrain</tag>
         <tag>Fully Convolution Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>When I become Daddy</title>
+    <url>/2020/11/14/when-i-become-father/</url>
+    <content><![CDATA[<p>Hello there, how are you today? My answer is <strong>"Better than good"</strong> if you ask :) Today I would like to tell you about how I have changed since I knew I was going to be called <em>Daddy</em>. That is one of the most beautiful stories in my life. After 5 years together, we finally have a baby. At this time last year, I spent a trip to Dalat City in Lam Dong, for my wife as her birthday gift, when we had no idea that our baby was about 2 months old. Until we came back to work, she got a health check, then the baby turned 3 months. WOW, yeah, she texted me that amazing good news when I was working in the office. I knew, from that moment, my life - our lives - started changing to be better and happier with the new beloved member.</p>
+<p><img src="/images/2020-12-15/001.jpg"></p>
+<p>My wife got a warning from a doctor because she missed the previous health checks for the baby, which made her worried for a while. She likes drinking chill beers and some kinds of alcohol, but don't get me wrong, she enjoys its tastes, not a kind of alcoholic. When we were in Dalat City, we had a night in a bar, drinking some cocktail. Therefore, she was worried for the baby's development. As the result, after a full health check, our baby was fine. I realized that I must have changed to be stronger than ever, in both financial as well as emotional aspects, in order to take care of her and our baby better.</p>
+<p>That the night my wife gave birth to our baby was also so unforgetable to us. Two days before the surgery date, after the midnight, she was unexpectedly in travail, rupture of amniotic fluid. We rushed to the international hospital that was 14km in distance, where she had registered to get surgery. It was 3:00 am, luckily, the street was empty throughout the way we went. We sat in the taxi and prayed. I prayed everything would be fine, my wife and our baby could come over this situation without hurt. At 5:18am, our baby was born, safe and sound!</p>
+<p>"Oh Congratulation! Here you are, a football player!", the doctor said with a smile.</p>
+<p>It was funny that we hadn't known our baby's gender until that moment came. We had a son! His crying sound was lovely and special to me! He was laying on his mother's chest and crying out loud gently. I was so happy that almost forgot to take pictures, a nurse kindly reminded me. After 9 months, we finally met each other, son! 15 minutes later, our son was brought to warming room. When I hold him im my arms, I felt amazing, unbelievable, sweet and complete. He was strong, healthy, sleeping like an angel. Since then, our lives routine changed quite much to take care of him.</p>
+<p><img src="/images/2020-12-15/002.jpg"></p>
+<p>I would like to share top things I have changed since my wife got pregnant.</p>
+<ol type="1">
+<li>Doing houseworks in smart way</li>
+</ol>
+<p>After knowing my wife got pregnant, I started looking for a bigger and more convenient apartment for her to live. The one we chose was 63m2 with kitchen and two private rooms. My wife enjoyed cooking quite much so when there was the kitchen there, she could cooked healthy fresh dishes for us, espcially for the baby as well. I wasn't good at cooking but I could support her in washing dishes after meals, cleaning the floors, carrying heavy stuffs, etc. Doing lots of houseworks made me realize that how incredible my wife got through all everyday while she was still going to work. Unexpectedly, there was a big changes in human resource in my wife's company, because of her pregnancy, she had to leave the position according to the new company policy. Then my wife stayed at home alone and relaxed, while I was still working during the Covid-19. I bought her a washing dishes machine, a portable vacuum cleaner, and a pressure cooker to help things done faster and easier. Shortly after that, due to the growth of Covid-19, the government asked people to work from home, I could stay with my wife. It was a very good news to my wife, because she had someone to talk and take care of her.</p>
+<ol start="2" type="1">
+<li>Being a better listener</li>
+</ol>
+<p>I admit that I am not a good listener, but for my wife, I am trying to learn how to be her listener. Pregnant women are usually sensitive, grumpy and have a lot of thoughts. Fortunately, although my wife is open-minded and she seemed to be happier after having the baby, she still had some negative thoughts and fears inside. So I needed to be her mental support, reading her emotions and listening to her thoughts without any judgment. Especially after she gave birth to our baby, she faced huge changes in both physical and mental. I have been always by her side to help easing her bad feelings, together taking care of the baby.</p>
+<ol start="3" type="1">
+<li>Leanring to become richer. Being more mature and responsible</li>
+</ol>
+<p>Small renting rooms are not suitable for us anymore. Now we have a child, he needs a better environemnt for living and growing, for example, better educations, better neighbors, better health care etc. Therefore, we become more serious about the future with bigger houses and greater amount of assets. I began watching videos from rich successful people, learning their mindsets and taking their advices, then improving our values to get better chances in lives. Having baby motivates us so much to do harder to get richer and richer. And we strongly believe that we will soon have a beautiful villa and high standard living conditions.</p>
+<p>Some of my friends told me that I have looked more mature or older after having baby. I consider it as a praise. I want to be a great and responsible dad to guide our child to become an excellent person too.</p>
+<ol start="4" type="1">
+<li>Habbits &amp; Hobbies</li>
+</ol>
+<p>There are some new habits approaching me after our son was born. For instance, shooting photos of my litlle family to save the simple beautiful moments of our daily life with our son. He is super cute and growing so fast that we want to keep those sweet memories forever. I bought a new camera and we are saving budget to travel together and capture beautiful scenes. I didnot have that habit before.</p>
+<p>Now, everyday I have felt more excited when coming back home from work. I never knew that becoming father brings many positive feelings and thinking like that - a complete family. Love you all, my wife and little son.</p>
+<p><img src="/images/2020-12-15/003.jpg"></p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
+        <tag>My Life Story</tag>
       </tags>
   </entry>
 </search>

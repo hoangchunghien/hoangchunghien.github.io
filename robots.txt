@@ -13,4 +13,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://hienhoang.ml/sitemap.xml
+Sitemap: https://hien.dev/sitemap.xml

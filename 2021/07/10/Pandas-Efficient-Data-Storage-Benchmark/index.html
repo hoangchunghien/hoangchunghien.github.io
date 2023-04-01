@@ -21,21 +21,21 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hienhoang.ml","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="Do you agree that dealing with large data file is such a painful task? If yes, then you shouldn&#39;t ignore this post! In this post, I&#39;ll show you which is the best storage format to work with if you are">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pandas Efficient Data Storage Benchmark">
-<meta property="og:url" content="https://hienhoang.ml/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/index.html">
+<meta property="og:url" content="https://hien.dev/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="Do you agree that dealing with large data file is such a painful task? If yes, then you shouldn&#39;t ignore this post! In this post, I&#39;ll show you which is the best storage format to work with if you are">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://hienhoang.ml/images/2021-07-10/001.png">
-<meta property="og:image" content="https://hienhoang.ml/images/2021-07-10/002.png">
-<meta property="og:image" content="https://hienhoang.ml/images/2021-07-10/003.png">
+<meta property="og:image" content="https://hien.dev/images/2021-07-10/001.png">
+<meta property="og:image" content="https://hien.dev/images/2021-07-10/002.png">
+<meta property="og:image" content="https://hien.dev/images/2021-07-10/003.png">
 <meta property="article:published_time" content="2021-07-10T09:36:30.000Z">
-<meta property="article:modified_time" content="2021-07-10T16:46:28.428Z">
+<meta property="article:modified_time" content="2023-04-01T14:38:46.464Z">
 <meta property="article:author" content="Hien Hoang">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Pandas">
@@ -44,10 +44,10 @@
 <meta property="article:tag" content="CSV">
 <meta property="article:tag" content="Benchmark">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hienhoang.ml/images/2021-07-10/001.png">
+<meta name="twitter:image" content="https://hien.dev/images/2021-07-10/001.png">
 
 
-<link rel="canonical" href="https://hienhoang.ml/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/">
+<link rel="canonical" href="https://hien.dev/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/">
 
 
 <script class="page-configurations">
@@ -104,7 +104,7 @@
 </noscript>
 
 
-  <link rel="canonical" href="https://hienhoang.ml/2021/07/10/pandas-efficient-data-storage-benchmark/"/>
+  <link rel="canonical" href="https://hien.dev/2021/07/10/pandas-efficient-data-storage-benchmark/"/>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
@@ -247,20 +247,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-count">111</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -270,7 +270,7 @@
         <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:hoangchunghien@gmail.com" title="E-Mail → mailto:hoangchunghien@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
       </span>
       <span class="links-of-author-item">
         <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
@@ -313,7 +313,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hienhoang.ml/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -336,10 +336,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-07-10 16:36:30 / Modified: 23:46:28" itemprop="dateCreated datePublished" datetime="2021-07-10T16:36:30+07:00">2021-07-10</time>
+      <time title="Created: 2021-07-10 16:36:30" itemprop="dateCreated datePublished" datetime="2021-07-10T16:36:30+07:00">2021-07-10</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2023-04-01 21:38:46" itemprop="dateModified" datetime="2023-04-01T21:38:46+07:00">2023-04-01</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -361,85 +367,86 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>Do you agree that dealing with large data file is such a painful task? If yes, then you shouldn't ignore this post! In this post, I'll show you which is the best storage format to work with if you are using <code>Pandas</code>. Is it <code>csv</code>, <code>hdf5</code> or <code>parquet</code>? Let's find out.</p>
+<a id="more"></a>
 <p>First of all, we import some python packages that we will use in this benchmark</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment"># Store the result</span></span><br><span class="line">resutls = &#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"><span class="comment"># Store the result</span></span><br><span class="line">resutls = &#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>Let's define this function to generate random data</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_test_data</span>(<span class="params">nrows=<span class="number">10000</span>, numerical_cols=<span class="number">2000</span>, text_cols=<span class="number">0</span>, text_length=<span class="number">10</span></span>):</span></span><br><span class="line">    s = <span class="string">&quot;&quot;</span>.join([random.choice(string.ascii_letters)</span><br><span class="line">                 <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(text_length)])</span><br><span class="line">    data = pd.concat([pd.DataFrame(np.random.random(size=(nrows, numerical_cols))),</span><br><span class="line">                      pd.DataFrame(np.full(shape=(nrows, text_cols), fill_value=s))],</span><br><span class="line">                     axis=<span class="number">1</span>, ignore_index=<span class="literal">True</span>)</span><br><span class="line">    data.columns = [<span class="built_in">str</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> data.columns]</span><br><span class="line">    <span class="keyword">return</span> data</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_test_data</span>(<span class="params">nrows=<span class="number">10000</span>, numerical_cols=<span class="number">2000</span>, text_cols=<span class="number">0</span>, text_length=<span class="number">10</span></span>):</span></span><br><span class="line">    s = <span class="string">&quot;&quot;</span>.join([random.choice(string.ascii_letters)</span><br><span class="line">                 <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(text_length)])</span><br><span class="line">    data = pd.concat([pd.DataFrame(np.random.random(size=(nrows, numerical_cols))),</span><br><span class="line">                      pd.DataFrame(np.full(shape=(nrows, text_cols), fill_value=s))],</span><br><span class="line">                     axis=<span class="number">1</span>, ignore_index=<span class="literal">True</span>)</span><br><span class="line">    data.columns = [<span class="built_in">str</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> data.columns]</span><br><span class="line">    <span class="keyword">return</span> data</span><br></pre></td></tr></table></figure>
 <h1 id="mixed-data-type">1. Mixed Data Type</h1>
 <p>The first benchmark uses data that contains both text and numeric values.</p>
 <h2 id="generate-test-data">1.1. Generate test data</h2>
 <p>Now generate 50,000 rows, 1000 cols (500 is numerical, 500 is text)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;  df = generate_test_data(nrows=<span class="number">50000</span>, numerical_cols=<span class="number">500</span>, text_cols=<span class="number">500</span>)</span><br><span class="line">&gt;  df.info()</span><br><span class="line"></span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> &#x27;<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">frame</span>.<span class="title">DataFrame</span>&#x27;&gt;</span></span><br><span class="line"><span class="class"><span class="title">RangeIndex</span>:</span> <span class="number">50000</span> entries, <span class="number">0</span> to <span class="number">49999</span></span><br><span class="line">Columns: <span class="number">1000</span> entries, <span class="number">0</span> to <span class="number">999</span></span><br><span class="line">dtypes: float64(<span class="number">500</span>), <span class="built_in">object</span>(<span class="number">500</span>)</span><br><span class="line">memory usage: <span class="number">381.5</span>+ MB</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;  df = generate_test_data(nrows=<span class="number">50000</span>, numerical_cols=<span class="number">500</span>, text_cols=<span class="number">500</span>)</span><br><span class="line">&gt;  df.info()</span><br><span class="line"></span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> &#x27;<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">frame</span>.<span class="title">DataFrame</span>&#x27;&gt;</span></span><br><span class="line"><span class="class"><span class="title">RangeIndex</span>:</span> <span class="number">50000</span> entries, <span class="number">0</span> to <span class="number">49999</span></span><br><span class="line">Columns: <span class="number">1000</span> entries, <span class="number">0</span> to <span class="number">999</span></span><br><span class="line">dtypes: float64(<span class="number">500</span>), <span class="built_in">object</span>(<span class="number">500</span>)</span><br><span class="line">memory usage: <span class="number">381.5</span>+ MB</span><br></pre></td></tr></table></figure>
 <h2 id="parquet">1.2. Parquet</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parquet_file = Path(<span class="string">&#x27;test.parquet&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">parquet_file = Path(<span class="string">&#x27;test.parquet&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="file-size">File Size</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.to_parquet(parquet_file)</span><br><span class="line">size = parquet_file.stat().st_size</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df.to_parquet(parquet_file)</span><br><span class="line">size = parquet_file.stat().st_size</span><br></pre></td></tr></table></figure>
 <h3 id="read">Read</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line">df = pd.read_parquet(parquet_file)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line">df = pd.read_parquet(parquet_file)</span><br></pre></td></tr></table></figure>
 <p><em>2.54 s ± 137 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Record the read result</span></span><br><span class="line">read = _</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the test file</span></span><br><span class="line">parquet_file.unlink()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Record the read result</span></span><br><span class="line">read = _</span><br><span class="line"></span><br><span class="line"><span class="comment"># Delete the test file</span></span><br><span class="line">parquet_file.unlink()</span><br></pre></td></tr></table></figure>
 <h3 id="write">Write</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line"></span><br><span class="line">df.to_parquet(parquet_file)</span><br><span class="line">parquet_file.unlink()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line"></span><br><span class="line">df.to_parquet(parquet_file)</span><br><span class="line">parquet_file.unlink()</span><br></pre></td></tr></table></figure>
 <p><em>11.1 s ± 154 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Record the write result</span></span><br><span class="line">write = _</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Record the write result</span></span><br><span class="line">write = _</span><br></pre></td></tr></table></figure>
 <h3 id="results">Results</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">results[<span class="string">&#x27;Parquet&#x27;</span>] = &#123;</span><br><span class="line">    <span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), </span><br><span class="line">    <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), </span><br><span class="line">    <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">results[<span class="string">&#x27;Parquet&#x27;</span>] = &#123;</span><br><span class="line">    <span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), </span><br><span class="line">    <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), </span><br><span class="line">    <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;Parquet&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">2.5449909000002924</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">11.076020042857376</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">250677616</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="hdf5">1.3. HDF5</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_store = Path(<span class="string">&#x27;index.h5&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">test_store = Path(<span class="string">&#x27;index.h5&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="fixed-format">1.3.1. Fixed Format</h3>
 <p>Support fast writing/reading. Not-appendable, nor searchable.</p>
 <h4 id="file-size-1">File Size</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.put(<span class="string">&#x27;file&#x27;</span>, df)</span><br><span class="line">size = test_store.stat().st_size</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.put(<span class="string">&#x27;file&#x27;</span>, df)</span><br><span class="line">size = test_store.stat().st_size</span><br></pre></td></tr></table></figure>
 <h4 id="read-1">Read</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.get(<span class="string">&#x27;file&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.get(<span class="string">&#x27;file&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p><em>2min 6s ± 1.41 s per loop (mean ± std. dev. of 7 runs, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">read = _</span><br><span class="line">test_store.unlink()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">read = _</span><br><span class="line">test_store.unlink()</span><br></pre></td></tr></table></figure>
 <h4 id="write-1">Write</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -r <span class="number">1</span> -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.put(<span class="string">&#x27;file&#x27;</span>, df)</span><br><span class="line">test_store.unlink()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -r <span class="number">1</span> -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.put(<span class="string">&#x27;file&#x27;</span>, df)</span><br><span class="line">test_store.unlink()</span><br></pre></td></tr></table></figure>
 <p><em>18.1 s ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">write = _</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">write = _</span><br></pre></td></tr></table></figure>
 <h4 id="results-1">Results</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">results[<span class="string">&#x27;HDF Fixed&#x27;</span>] = &#123;</span><br><span class="line">    <span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), </span><br><span class="line">    <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), </span><br><span class="line">    <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">results[<span class="string">&#x27;HDF Fixed&#x27;</span>] = &#123;</span><br><span class="line">    <span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), </span><br><span class="line">    <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), </span><br><span class="line">    <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;Parquet&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">2.5449909000002924</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">11.076020042857376</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">250677616</span>&#125;,</span><br><span class="line"> <span class="string">&#x27;HDF Fixed&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">126.0261167285714</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">18.103147300000273</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">526559612</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="table-format">1.3.2 Table Format</h3>
 <p>Write as a PyTables Table structure which may perform worse but allow more flexible operations like searching / selecting subsets of the data.</p>
 <h4 id="file-size-2">File Size</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.append(<span class="string">&#x27;file&#x27;</span>, df, <span class="built_in">format</span>=<span class="string">&#x27;t&#x27;</span>)</span><br><span class="line">size = test_store.stat().st_size  </span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.append(<span class="string">&#x27;file&#x27;</span>, df, <span class="built_in">format</span>=<span class="string">&#x27;t&#x27;</span>)</span><br><span class="line">size = test_store.stat().st_size  </span><br></pre></td></tr></table></figure>
 <h4 id="read-2">Read</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    df = store.get(<span class="string">&#x27;file&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    df = store.get(<span class="string">&#x27;file&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p><em>36.9 s ± 174 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">read = _</span><br><span class="line">test_store.unlink()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">read = _</span><br><span class="line">test_store.unlink()</span><br></pre></td></tr></table></figure>
 <h4 id="write-2">Write</h4>
 <p>Note that <code>write</code> in table format does not work with text data.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -r <span class="number">1</span> -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.append(<span class="string">&#x27;file&#x27;</span>, df, <span class="built_in">format</span>=<span class="string">&#x27;t&#x27;</span>)</span><br><span class="line">test_store.unlink() </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -r <span class="number">1</span> -o</span><br><span class="line"><span class="keyword">with</span> pd.HDFStore(test_store) <span class="keyword">as</span> store:</span><br><span class="line">    store.append(<span class="string">&#x27;file&#x27;</span>, df, <span class="built_in">format</span>=<span class="string">&#x27;t&#x27;</span>)</span><br><span class="line">test_store.unlink() </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><em>50.7 s ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">write = _</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">write = _</span><br></pre></td></tr></table></figure>
 <h4 id="results-2">Results</h4>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results[<span class="string">&#x27;HDF Table&#x27;</span>] = &#123;<span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">results[<span class="string">&#x27;HDF Table&#x27;</span>] = &#123;<span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;Parquet&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">2.5449909000002924</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">11.076020042857376</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">250677616</span>&#125;,</span><br><span class="line"> <span class="string">&#x27;HDF Fixed&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">126.0261167285714</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">18.103147300000273</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">526559612</span>&#125;,</span><br><span class="line"> <span class="string">&#x27;HDF Table&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">36.89537138571411</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">50.74519110000074</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">450753287</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="csv">1.4. CSV</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_csv = Path(<span class="string">&#x27;test.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">test_csv = Path(<span class="string">&#x27;test.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="file-size-3">File Size</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.to_csv(test_csv)</span><br><span class="line">test_csv.stat().st_size</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df.to_csv(test_csv)</span><br><span class="line">test_csv.stat().st_size</span><br></pre></td></tr></table></figure>
 <h3 id="read-3">Read</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line">df = pd.read_csv(test_csv)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line">df = pd.read_csv(test_csv)</span><br></pre></td></tr></table></figure>
 <p><em>19.2 s ± 642 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">read = _</span><br><span class="line">test_csv.unlink()  </span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">read = _</span><br><span class="line">test_csv.unlink()  </span><br></pre></td></tr></table></figure>
 <h3 id="write-3">Write</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line">df.to_csv(test_csv)</span><br><span class="line">test_csv.unlink()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%%timeit -o</span><br><span class="line">df.to_csv(test_csv)</span><br><span class="line">test_csv.unlink()</span><br></pre></td></tr></table></figure>
 <p><em>1min 25s ± 307 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</em></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">write = _</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">write = _</span><br></pre></td></tr></table></figure>
 <h3 id="results-3">Results</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">results[<span class="string">&#x27;CSV&#x27;</span>] = &#123;<span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">results[<span class="string">&#x27;CSV&#x27;</span>] = &#123;<span class="string">&#x27;read&#x27;</span>: np.mean(read.all_runs), <span class="string">&#x27;write&#x27;</span>: np.mean(write.all_runs), <span class="string">&#x27;size&#x27;</span>: size&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;Parquet&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">2.5449909000002924</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">11.076020042857376</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">250677616</span>&#125;,</span><br><span class="line"> <span class="string">&#x27;HDF Fixed&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">126.0261167285714</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">18.103147300000273</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">526559612</span>&#125;,</span><br><span class="line"> <span class="string">&#x27;HDF Table&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">36.89537138571411</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">50.74519110000074</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">450753287</span>&#125;,</span><br><span class="line"> <span class="string">&#x27;CSV&#x27;</span>: &#123;<span class="string">&#x27;read&#x27;</span>: <span class="number">19.198365685714375</span>,</span><br><span class="line">  <span class="string">&#x27;write&#x27;</span>: <span class="number">85.28064355714274</span>,</span><br><span class="line">  <span class="string">&#x27;size&#x27;</span>: <span class="number">757038275</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="save-the-results">1.5. Save the results</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(results).assign(Data=<span class="string">&#x27;Mixed&#x27;</span>).to_csv(<span class="string">f&#x27;Mixed.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.DataFrame(results).assign(Data=<span class="string">&#x27;Mixed&#x27;</span>).to_csv(<span class="string">f&#x27;Mixed.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h1 id="numeric-data-type">2. Numeric Data Type</h1>
 <p>The second benchmark uses only numeric data types.</p>
 <h2 id="generate-test-data-1">2.1. Generate test data</h2>
 <p>Now generate 50,000 rows, 1000 numeric cols</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;  df = generate_test_data(nrows=<span class="number">50000</span>, numerical_cols=<span class="number">1000</span>, text_cols=<span class="number">0</span>)</span><br><span class="line">&gt;  df.info()</span><br><span class="line"></span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> &#x27;<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">frame</span>.<span class="title">DataFrame</span>&#x27;&gt;</span></span><br><span class="line"><span class="class"><span class="title">RangeIndex</span>:</span> <span class="number">50000</span> entries, <span class="number">0</span> to <span class="number">49999</span></span><br><span class="line">Columns: <span class="number">1000</span> entries, <span class="number">0</span> to <span class="number">999</span></span><br><span class="line">dtypes: float64(<span class="number">1000</span>)</span><br><span class="line">memory usage: <span class="number">381.5</span> MB</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;  df = generate_test_data(nrows=<span class="number">50000</span>, numerical_cols=<span class="number">1000</span>, text_cols=<span class="number">0</span>)</span><br><span class="line">&gt;  df.info()</span><br><span class="line"></span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> &#x27;<span class="title">pandas</span>.<span class="title">core</span>.<span class="title">frame</span>.<span class="title">DataFrame</span>&#x27;&gt;</span></span><br><span class="line"><span class="class"><span class="title">RangeIndex</span>:</span> <span class="number">50000</span> entries, <span class="number">0</span> to <span class="number">49999</span></span><br><span class="line">Columns: <span class="number">1000</span> entries, <span class="number">0</span> to <span class="number">999</span></span><br><span class="line">dtypes: float64(<span class="number">1000</span>)</span><br><span class="line">memory usage: <span class="number">381.5</span> MB</span><br></pre></td></tr></table></figure>
 <h2 id="parquet-1">2.2. Parquet</h2>
 <blockquote>
 <p>Similar to 1.2</p>
@@ -554,7 +561,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

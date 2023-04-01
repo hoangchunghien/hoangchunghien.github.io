@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Overview I&#39;ll setup a k8s cluster with 3 nodes (1 control, 2 workers).  k8s-control k8s-worker01 k8s-worker02">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setup On Premise Kubernetes Cluster">
+<meta property="og:url" content="https://hien.dev/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Overview I&#39;ll setup a k8s cluster with 3 nodes (1 control, 2 workers).  k8s-control k8s-worker01 k8s-worker02">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-31T19:16:47.000Z">
+<meta property="article:modified_time" content="2023-04-01T14:38:46.466Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="DevOps">
+<meta property="article:tag" content="Kubernetes">
+<meta property="article:tag" content="K8S">
+<meta property="article:tag" content="On-premise">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://hien.dev/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Setup On Premise Kubernetes Cluster | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2022/08/01/setup-on-premise-kubernetes-cluster/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#overview"><span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#setup"><span class="nav-text">Setup</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install-packages-on-all-nodes"><span class="nav-text">1. Install Packages on all nodes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#initialize-the-cluster"><span class="nav-text">2. Initialize the Cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-the-calico-network-add-on"><span class="nav-text">3. Install the Calico Network Add-On</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#join-the-worker-nodes-to-the-cluster"><span class="nav-text">4. Join the Worker Nodes to the Cluster</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">111</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Setup On Premise Kubernetes Cluster
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-08-01 02:16:47" itemprop="dateCreated datePublished" datetime="2022-08-01T02:16:47+07:00">2022-08-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2023-04-01 21:38:46" itemprop="dateModified" datetime="2023-04-01T21:38:46+07:00">2023-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Kubernetes/" itemprop="url" rel="index"><span itemprop="name">Kubernetes</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="overview">Overview</h1>
+<p>I'll setup a k8s cluster with 3 nodes (1 control, 2 workers).</p>
+<ul>
+<li><code>k8s-control</code></li>
+<li><code>k8s-worker01</code></li>
+<li><code>k8s-worker02</code></li>
+</ul>
+<a id="more"></a>
+<h1 id="setup">Setup</h1>
+<h2 id="install-packages-on-all-nodes">1. Install Packages on all nodes</h2>
+<ul>
+<li><p>Create configuration file for containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;<span class="string">EOF | sudo tee /etc/modules-load.d/containerd.conf</span></span><br><span class="line"><span class="string">overlay</span></span><br><span class="line"><span class="string">br_netfilter</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Load modules</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo modprobe overlay</span><br><span class="line">sudo modprobe br_netfilter</span><br></pre></td></tr></table></figure></li>
+<li><p>Set system configuration for k8s networking</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;<span class="string">EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf</span></span><br><span class="line"><span class="string">net.bridge.bridge-nf-call-iptables = 1</span></span><br><span class="line"><span class="string">net.ipv4.ip_forward = 1</span></span><br><span class="line"><span class="string">net.bridge.bridge-nf-call-ip6tables = 1</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Applying new settings</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sysctl --system</span><br></pre></td></tr></table></figure></li>
+<li><p>Install containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install -y containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Create default configuration file for containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Generate default containerd configuration and save to the newly created default file</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo containerd config default | sudo tee /etc/containerd/config.toml</span><br></pre></td></tr></table></figure></li>
+<li><p>Restart containerd to ensure new configuration file usage</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Verify that containerd is running</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl status containerd</span><br></pre></td></tr></table></figure></li>
+<li><p>Disable swap</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo swapoff -a</span><br></pre></td></tr></table></figure></li>
+<li><p>Install dependencies</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get install -y apt-transport-https curl</span><br></pre></td></tr></table></figure></li>
+<li><p>Download and add GPG key</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure></li>
+<li><p>Add Kubernetes to repository list</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;<span class="string">EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list</span></span><br><span class="line"><span class="string">deb https://apt.kubernetes.io/ kubernetes-xenial main</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Update package listings</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></li>
+<li><p>Install Kubernetes packages</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install -y kubelet=1.24.0-00 kubeadm=1.24.0-00 kubectl=1.24.0-00</span><br></pre></td></tr></table></figure></li>
+<li><p>Turn off automatic updates</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-mark hold kubelet kubeadm kubectl</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="initialize-the-cluster">2. Initialize the Cluster</h2>
+<p>In the <code>k8s-control</code> host:</p>
+<ul>
+<li><p>Initialize the Kubernetes cluster</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.24.0</span><br></pre></td></tr></table></figure></li>
+<li><p>Set <code>kubectl</code> access</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) <span class="variable">$HOME</span>/.kube/config</span><br></pre></td></tr></table></figure></li>
+<li><p>Test access to cluster</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="install-the-calico-network-add-on">3. Install the Calico Network Add-On</h2>
+<p>In the <code>k8s-control</code> host:</p>
+<ul>
+<li><p>Install Calico Networking <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Check status of the control plane node <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="join-the-worker-nodes-to-the-cluster">4. Join the Worker Nodes to the Cluster</h2>
+<p>In the <code>k8s-control</code>:</p>
+<ul>
+<li>Print the join command <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">kubeadm token create --print-join-command</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>In the <code>k8s-worker01</code> and <code>k8s-worker02</code> host:</p>
+<ul>
+<li>Use the join command printed above <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo kubeadm join ...</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/DevOps/" rel="tag"># DevOps</a>
+              <a href="/tags/Kubernetes/" rel="tag"># Kubernetes</a>
+              <a href="/tags/K8S/" rel="tag"># K8S</a>
+              <a href="/tags/On-premise/" rel="tag"># On-premise</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/07/18/Setup-your-own-Docker-Private-Registry/" rel="prev" title="Setup your own Docker Private Registry">
+                  <i class="fa fa-chevron-left"></i> Setup your own Docker Private Registry
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
