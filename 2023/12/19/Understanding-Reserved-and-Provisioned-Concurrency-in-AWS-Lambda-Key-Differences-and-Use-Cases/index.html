@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Introduction In the realm of serverless computing, AWS Lambda stands out as a powerful service that allows developers to run code without managing servers. An important aspect of Lambda is managing ho">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Reserved and Provisioned Concurrency in AWS Lambda: Key Differences and Use Cases">
+<meta property="og:url" content="https://hien.dev/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Introduction In the realm of serverless computing, AWS Lambda stands out as a powerful service that allows developers to run code without managing servers. An important aspect of Lambda is managing ho">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hien.dev/images/2023-12-19/infographic2.png">
+<meta property="article:published_time" content="2023-12-19T11:54:48.000Z">
+<meta property="article:modified_time" content="2023-12-19T12:11:18.173Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="Serverless Architecture">
+<meta property="article:tag" content="Cloud Computing">
+<meta property="article:tag" content="Cloud Infrastructure">
+<meta property="article:tag" content="AWS Lambda">
+<meta property="article:tag" content="Serverless Computing">
+<meta property="article:tag" content="Reserved Concurrency">
+<meta property="article:tag" content="Provisioned Concurrency">
+<meta property="article:tag" content="AWS Cloud Services">
+<meta property="article:tag" content="Function Scaling">
+<meta property="article:tag" content="Lambda Performance">
+<meta property="article:tag" content="AWS Serverless">
+<meta property="article:tag" content="Lambda Concurrency Management">
+<meta property="article:tag" content="Low Latency Computing">
+<meta property="article:tag" content="AWS Performance Optimization">
+<meta property="article:tag" content="AWS Cost Management">
+<meta property="article:tag" content="AWS Development">
+<meta property="article:tag" content="Lambda Cold Starts">
+<meta property="article:tag" content="Cloud Application Scaling">
+<meta property="article:tag" content="AWS Best Practices">
+<meta property="article:tag" content="Serverless Function Management">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hien.dev/images/2023-12-19/infographic2.png">
+
+
+<link rel="canonical" href="https://hien.dev/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Understanding Reserved and Provisioned Concurrency in AWS Lambda: Key Differences and Use Cases | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2023/12/19/understanding-reserved-and-provisioned-concurrency-in-aws-lambda-key-differences-and-use-cases/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#what-is-reserved-concurrency"><span class="nav-text">What is Reserved Concurrency?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-does-reserved-concurrency-work"><span class="nav-text">How Does Reserved Concurrency Work?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#use-cases-for-reserved-concurrency"><span class="nav-text">Use Cases for Reserved Concurrency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#what-is-provisioned-concurrency"><span class="nav-text">What is Provisioned Concurrency?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#functioning-of-provisioned-concurrency"><span class="nav-text">Functioning of Provisioned Concurrency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#use-cases-for-provisioned-concurrency"><span class="nav-text">Use Cases for Provisioned Concurrency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#key-differences"><span class="nav-text">Key Differences</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conclusion"><span class="nav-text">Conclusion</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">186</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Understanding Reserved and Provisioned Concurrency in AWS Lambda: Key Differences and Use Cases
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-19 18:54:48 / Modified: 19:11:18" itemprop="dateCreated datePublished" datetime="2023-12-19T18:54:48+07:00">2023-12-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/" itemprop="url" rel="index"><span itemprop="name">Cloud Computing and Services</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/" itemprop="url" rel="index"><span itemprop="name">Serverless Architecture</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/" itemprop="url" rel="index"><span itemprop="name">Performance Optimization</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/" itemprop="url" rel="index"><span itemprop="name">AWS Lambda and Serverless Development</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/" itemprop="url" rel="index"><span itemprop="name">Cost Management in the Cloud</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/DevOps-and-Automation/" itemprop="url" rel="index"><span itemprop="name">DevOps and Automation</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/DevOps-and-Automation/Technology-Tutorials-and-Guides/" itemprop="url" rel="index"><span itemprop="name">Technology Tutorials and Guides</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/DevOps-and-Automation/Technology-Tutorials-and-Guides/Scalability-and-High-Availability/" itemprop="url" rel="index"><span itemprop="name">Scalability and High Availability</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="introduction">Introduction</h1>
+<p>In the realm of serverless computing, AWS Lambda stands out as a powerful service that allows developers to run code without managing servers. An important aspect of Lambda is managing how many concurrent instances of your functions can run. Two critical features in this context are Reserved Concurrency and Provisioned Concurrency. Though they sound similar, they serve distinct purposes and work differently. This post aims to demystify these concepts, highlighting their differences and use cases.</p>
+<p><img src="/images/2023-12-19/infographic2.png" style="max-height: 540px;"></p>
+<h1 id="what-is-reserved-concurrency">What is Reserved Concurrency?</h1>
+<p>Reserved Concurrency is a feature in AWS Lambda that lets you allocate a specific portion of your AWS account's total concurrency limit to a particular Lambda function.</p>
+<h1 id="how-does-reserved-concurrency-work">How Does Reserved Concurrency Work?</h1>
+<p>When you set Reserved Concurrency for a function, you are ensuring that this function can always use up to the specified number of concurrent executions. This allocation means that the specified concurrency is reserved solely for that function and cannot be used by other functions in your account. It's important to note that Reserved Concurrency is also a tool for limiting a function's maximum concurrency, which can be crucial for managing costs and ensuring that a Lambda function doesn't overwhelm downstream resources.</p>
+<a id="more"></a>
+<h1 id="use-cases-for-reserved-concurrency">Use Cases for Reserved Concurrency</h1>
+<p>Reserved Concurrency is particularly useful for:</p>
+<ul>
+<li><p>Ensuring critical functions have the necessary resources available, especially during traffic spikes.</p></li>
+<li><p>Controlling costs by limiting the maximum number of instances that a function can spawn.</p></li>
+<li><p>Managing resource usage when interacting with systems that have strict rate limits.</p></li>
+</ul>
+<h1 id="what-is-provisioned-concurrency">What is Provisioned Concurrency?</h1>
+<p>Provisioned Concurrency is a feature designed to eliminate cold starts and ensure low latency for your Lambda functions.</p>
+<h1 id="functioning-of-provisioned-concurrency">Functioning of Provisioned Concurrency</h1>
+<ul>
+<li><p>With Provisioned Concurrency, AWS Lambda maintains a specified number of pre-initialized function instances. These instances are immediately ready to respond to function invocations.</p></li>
+<li><p>This pre-warming of functions eradicates the initialization latency (cold starts), providing consistent and fast response times.</p></li>
+<li><p>Unlike Reserved Concurrency, which just allocates a part of the concurrency pool, Provisioned Concurrency actively keeps function instances in an initialized state.</p></li>
+</ul>
+<h1 id="use-cases-for-provisioned-concurrency">Use Cases for Provisioned Concurrency</h1>
+<p>Provisioned Concurrency is essential for:</p>
+<ul>
+<li><p>Functions where low latency is a critical requirement.</p></li>
+<li><p>Applications that experience irregular traffic patterns, ensuring quick responses even after long idle periods.</p></li>
+<li><p>Scenarios where predictable and consistent performance is more important than cost optimization.</p></li>
+</ul>
+<h1 id="key-differences">Key Differences</h1>
+<ul>
+<li><p><strong>Purpose:</strong> Reserved Concurrency is about allocation and limitation, while Provisioned Concurrency is about maintaining readiness and eliminating cold starts.</p></li>
+<li><p><strong>Billing:</strong> There are no additional charges for setting Reserved Concurrency limits, whereas with Provisioned Concurrency, you pay for the pre-warmed instances regardless of whether they are used.</p></li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>Understanding Reserved and Provisioned Concurrency in AWS Lambda is crucial for optimizing performance and cost. Reserved Concurrency is ideal for managing resource allocation and limiting costs, while Provisioned Concurrency is the go-to feature for ensuring low latency and eliminating cold starts. By strategically implementing these features, you can significantly enhance the efficiency and reliability of your serverless applications.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Serverless-Architecture/" rel="tag"># Serverless Architecture</a>
+              <a href="/tags/Cloud-Computing/" rel="tag"># Cloud Computing</a>
+              <a href="/tags/Cloud-Infrastructure/" rel="tag"># Cloud Infrastructure</a>
+              <a href="/tags/AWS-Lambda/" rel="tag"># AWS Lambda</a>
+              <a href="/tags/Serverless-Computing/" rel="tag"># Serverless Computing</a>
+              <a href="/tags/Reserved-Concurrency/" rel="tag"># Reserved Concurrency</a>
+              <a href="/tags/Provisioned-Concurrency/" rel="tag"># Provisioned Concurrency</a>
+              <a href="/tags/AWS-Cloud-Services/" rel="tag"># AWS Cloud Services</a>
+              <a href="/tags/Function-Scaling/" rel="tag"># Function Scaling</a>
+              <a href="/tags/Lambda-Performance/" rel="tag"># Lambda Performance</a>
+              <a href="/tags/AWS-Serverless/" rel="tag"># AWS Serverless</a>
+              <a href="/tags/Lambda-Concurrency-Management/" rel="tag"># Lambda Concurrency Management</a>
+              <a href="/tags/Low-Latency-Computing/" rel="tag"># Low Latency Computing</a>
+              <a href="/tags/AWS-Performance-Optimization/" rel="tag"># AWS Performance Optimization</a>
+              <a href="/tags/AWS-Cost-Management/" rel="tag"># AWS Cost Management</a>
+              <a href="/tags/AWS-Development/" rel="tag"># AWS Development</a>
+              <a href="/tags/Lambda-Cold-Starts/" rel="tag"># Lambda Cold Starts</a>
+              <a href="/tags/Cloud-Application-Scaling/" rel="tag"># Cloud Application Scaling</a>
+              <a href="/tags/AWS-Best-Practices/" rel="tag"># AWS Best Practices</a>
+              <a href="/tags/Serverless-Function-Management/" rel="tag"># Serverless Function Management</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/" rel="prev" title="Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration">
+                  <i class="fa fa-chevron-left"></i> Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

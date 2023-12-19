@@ -232,20 +232,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-count">60</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-count">186</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -289,6 +289,122 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/" class="post-title-link" itemprop="url">Understanding Reserved and Provisioned Concurrency in AWS Lambda: Key Differences and Use Cases</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-19 18:54:48 / Modified: 19:11:18" itemprop="dateCreated datePublished" datetime="2023-12-19T18:54:48+07:00">2023-12-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/" itemprop="url" rel="index"><span itemprop="name">Cloud Computing and Services</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/" itemprop="url" rel="index"><span itemprop="name">Serverless Architecture</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/" itemprop="url" rel="index"><span itemprop="name">Performance Optimization</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/" itemprop="url" rel="index"><span itemprop="name">AWS Lambda and Serverless Development</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/" itemprop="url" rel="index"><span itemprop="name">Cost Management in the Cloud</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/DevOps-and-Automation/" itemprop="url" rel="index"><span itemprop="name">DevOps and Automation</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/DevOps-and-Automation/Technology-Tutorials-and-Guides/" itemprop="url" rel="index"><span itemprop="name">Technology Tutorials and Guides</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Computing-and-Services/Serverless-Architecture/Performance-Optimization/AWS-Lambda-and-Serverless-Development/Cost-Management-in-the-Cloud/DevOps-and-Automation/Technology-Tutorials-and-Guides/Scalability-and-High-Availability/" itemprop="url" rel="index"><span itemprop="name">Scalability and High Availability</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="introduction">Introduction</h1>
+<p>In the realm of serverless computing, AWS Lambda stands out as a powerful service that allows developers to run code without managing servers. An important aspect of Lambda is managing how many concurrent instances of your functions can run. Two critical features in this context are Reserved Concurrency and Provisioned Concurrency. Though they sound similar, they serve distinct purposes and work differently. This post aims to demystify these concepts, highlighting their differences and use cases.</p>
+<p><img src="/images/2023-12-19/infographic2.png" style="max-height: 540px;"></p>
+<h1 id="what-is-reserved-concurrency">What is Reserved Concurrency?</h1>
+<p>Reserved Concurrency is a feature in AWS Lambda that lets you allocate a specific portion of your AWS account's total concurrency limit to a particular Lambda function.</p>
+<h1 id="how-does-reserved-concurrency-work">How Does Reserved Concurrency Work?</h1>
+<p>When you set Reserved Concurrency for a function, you are ensuring that this function can always use up to the specified number of concurrent executions. This allocation means that the specified concurrency is reserved solely for that function and cannot be used by other functions in your account. It's important to note that Reserved Concurrency is also a tool for limiting a function's maximum concurrency, which can be crucial for managing costs and ensuring that a Lambda function doesn't overwhelm downstream resources.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -720,106 +836,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hien.dev/2022/07/18/Setup-your-own-Docker-Private-Registry/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hien Hoang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/07/18/Setup-your-own-Docker-Private-Registry/" class="post-title-link" itemprop="url">Setup your own Docker Private Registry</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-07-18 02:27:57" itemprop="dateCreated datePublished" datetime="2022-07-18T02:27:57+07:00">2022-07-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2023-04-01 21:38:46" itemprop="dateModified" datetime="2023-04-01T21:38:46+07:00">2023-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="in-the-registry-server">In the Registry Server</h1>
-<ol type="1">
-<li>Create an <code>htpasswd</code> file containing the login credentials for the initial account.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Create a directory to hold the certs for the registry server</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Create a self-signed certificate for the registry.</li>
-</ol>
-<p>NOTE: For the <code>Common Name</code> field, enter the hostname of the registry server. Here I will use <code>registry.internal</code></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/07/18/Setup-your-own-Docker-Private-Registry/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
