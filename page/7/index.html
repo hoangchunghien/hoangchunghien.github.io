@@ -232,20 +232,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">126</span>
+        <span class="site-state-item-count">140</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -289,6 +289,196 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/11/22/Build-a-Search-Engine-with-TF-IDF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/22/Build-a-Search-Engine-with-TF-IDF/" class="post-title-link" itemprop="url">Build a Search Engine with TF-IDF</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-11-22 00:03:09" itemprop="dateCreated datePublished" datetime="2020-11-22T00:03:09+07:00">2020-11-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Natural-Language-Processing/" itemprop="url" rel="index"><span itemprop="name">Natural Language Processing</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote><p>TF-IDF short for term frequency – inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in searches of information retrieval, text mining, and user modeling. The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general. tf–idf is one of the most popular term-weighting schemes today.</p>
+<footer><strong>Wikipedia</strong><cite><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Tf–idf">en.wikipedia.org/wiki/Tf–idf</a></cite></footer></blockquote>
+<h2 id="bag-of-words">1. Bag of words</h2>
+<h3 id="tokenize-a-sentence">Tokenize a sentence</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> TreebankWordTokenizer</span><br><span class="line"></span><br><span class="line">sentence = <span class="string">&quot;The faster Harry got to the store, the faster Harry, the faster, would get home.&quot;</span></span><br><span class="line">tokenizer = TreebankWordTokenizer()</span><br><span class="line">token_sequence = tokenizer.tokenize(sentence.lower())</span><br><span class="line">print(token_sequence)</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+['the', 'faster', 'harry', 'got', 'to', 'the', 'store', ',', 'the', 'faster', 'harry', ',', 'the', 'faster', ',', 'would', 'get', 'home', '.']
+</div>
+<h3 id="tokens-counter">Tokens counter</h3>
+<p>We only care about the unique words and how many times a word occurs in the sentence.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line">bag_of_words = Counter(token_sequence)</span><br><span class="line">print(bag_of_words)</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+Counter({'the': 4, 'faster': 3, ',': 3, 'harry': 2, 'got': 1, 'to': 1, 'store': 1, 'would': 1, 'get': 1, 'home': 1, '.': 1})
+</div>
+<p>What is the most common words?</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">word_list = bag_of_words.most_common()</span><br><span class="line">print(word_list)</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+[('the', 4), ('faster', 3), (',', 3), ('harry', 2), ('got', 1), ('to', 1), ('store', 1), ('would', 1), ('get', 1), ('home', 1), ('.', 1)]
+</div>
+<p>The number of times a word occurs in a document is called <em>term frequency</em> or <em>TF</em>. Let compute one example.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">harry_count = bag_of_words[<span class="string">&#x27;harry&#x27;</span>]</span><br><span class="line">unique_words = <span class="built_in">len</span>(bag_of_words)</span><br><span class="line"></span><br><span class="line">print(<span class="built_in">round</span>(harry_count / unique_words, <span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+<div style="font-size:14px">
+<p>0.1818</p>
+</div>
+<p>Let compute with another example. Take a look at below document.</p>
+<div style="font-size: 14px;font-family:tahoma">
+<p>
+A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of the kite at the correct angle so the wind can lift it. A kite’s wing also may be so designed so a bridle is not needed; when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, a wing in the system is still often called the kite.
+</p>
+<p>
+The lift that sustains the kite in flight is generated when air flows around the kite’s surface, producing low pressure above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (such as the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or vehicle).
+</p>
+<p>
+The same principles of fluid flow apply in liquids and kites are also used under water. A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon.
+</p>
+<p>
+Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. Even Man-lifting kites have been made.
+</p>
+</div>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">kite_text = <span class="string">&quot;A kite is traditionally a tethered heavier-than-air craft with wing surfaces that react against the air to create lift and drag. A kite consists of wings, tethers, and anchors. Kites often have a bridle to guide the face of the kite at the correct angle so the wind can lift it. A kite&#x27;s wing also may be so designed so a bridle is not needed; when kiting a sailplane for launch, the tether meets the wing at a single point. A kite may have fixed or moving anchors. Untraditionally in technical kiting, a kite consists of tether-set-coupled wing sets; even in technical kiting, though, a wing in the system is still often called the kite. The lift that sustains the kite in flight is generated when air flows around the kite&#x27;s surface, producing low pressure above and high pressure below the wings. The interaction with the wind also generates horizontal drag along the direction of the wind. The resultant force vector from the lift and drag force components is opposed by the tension of one or more of the lines or tethers to which the kite is attached. The anchor point of the kite line may be static or moving (e.g., the towing of a kite by a running person, boat, free-falling anchors as in paragliders and fugitive parakites or vehicle). The same principles of fluid flow apply in liquids and kites are also used under water. A hybrid tethered craft comprising both a lighter-than-air balloon as well as a kite lifting surface is called a kytoon. Kites have a long and varied history and many different types are flown individually and at festivals worldwide. Kites may be flown for recreation, art or other practical uses. Sport kites can be flown in aerial ballet, sometimes as part of a competition. Power kites are multi-line steerable kites designed to generate large forces which can be used to power activities such as kite surfing, kite landboarding, kite fishing, kite buggying and a new trend snow kiting. Even Man-lifting kites have been made.&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">from</span> nltk.tokenize <span class="keyword">import</span> TreebankWordTokenizer</span><br><span class="line">tokenizer = TreebankWordTokenizer()</span><br><span class="line">tokens = tokenizer.tokenize(kite_text.lower())</span><br><span class="line">token_count = Counter(tokens)</span><br><span class="line">print(token_count)</span><br></pre></td></tr></table></figure>
+<div style="font-size:12px;">
+<p>Counter({'the': 26, 'a': 20, 'kite': 16, ',': 15, 'and': 10, 'of': 10, 'kites': 8, 'is': 7, 'in': 7, 'or': 6, 'wing': 5, 'to': 5, 'be': 5, 'as': 5, 'lift': 4, 'have': 4, 'may': 4, 'at': 3, 'so': 3, 'can': 3, 'also': 3, 'kiting': 3, 'are': 3, 'flown': 3, 'tethered': 2, 'craft': 2, 'with': 2, 'that': 2, 'air': 2, 'consists': 2, 'tethers': 2, 'anchors.': 2, 'often': 2, 'bridle': 2, 'wind': 2, "'s": 2, 'designed': 2, ';': 2, 'when': 2, 'for': 2, 'moving': 2, 'technical': 2, 'even': 2, 'called': 2, 'surface': 2, 'pressure': 2, 'drag': 2, 'force': 2, 'by': 2, 'which': 2, '.': 2, 'used': 2, 'power': 2, 'traditionally': 1, 'heavier-than-air': 1, 'surfaces': 1, 'react': 1, 'against': 1, 'create': 1, 'drag.': 1, 'wings': 1, 'guide': 1, 'face': 1, 'correct': 1, 'angle': 1, 'it.': 1, 'not': 1, 'needed': 1, 'sailplane': 1, 'launch': 1, 'tether': 1, 'meets': 1, 'single': 1, 'point.': 1, 'fixed': 1, 'untraditionally': 1, 'tether-set-coupled': 1, 'sets': 1, 'though': 1, 'system': 1, 'still': 1, 'kite.': 1, 'sustains': 1, 'flight': 1, 'generated': 1, 'flows': 1, 'around': 1, 'producing': 1, 'low': 1, 'above': 1, 'high': 1, 'below': 1, 'wings.': 1, 'interaction': 1, 'generates': 1, 'horizontal': 1, 'along': 1, 'direction': 1, 'wind.': 1, 'resultant': 1, 'vector': 1, 'from': 1, 'components': 1, 'opposed': 1, 'tension': 1, 'one': 1, 'more': 1, 'lines': 1, 'attached.': 1, 'anchor': 1, 'point': 1, 'line': 1, 'static': 1, '(': 1, 'e.g.': 1, 'towing': 1, 'running': 1, 'person': 1, 'boat': 1, 'free-falling': 1, 'anchors': 1, 'paragliders': 1, 'fugitive': 1, 'parakites': 1, 'vehicle': 1, ')': 1, 'same': 1, 'principles': 1, 'fluid': 1, 'flow': 1, 'apply': 1, 'liquids': 1, 'under': 1, 'water.': 1, 'hybrid': 1, 'comprising': 1, 'both': 1, 'lighter-than-air': 1, 'balloon': 1, 'well': 1, 'lifting': 1, 'kytoon.': 1, 'long': 1, 'varied': 1, 'history': 1, 'many': 1, 'different': 1, 'types': 1, 'individually': 1, 'festivals': 1, 'worldwide.': 1, 'recreation': 1, 'art': 1, 'other': 1, 'practical': 1, 'uses.': 1, 'sport': 1, 'aerial': 1, 'ballet': 1, 'sometimes': 1, 'part': 1, 'competition.': 1, 'multi-line': 1, 'steerable': 1, 'generate': 1, 'large': 1, 'forces': 1, 'activities': 1, 'such': 1, 'surfing': 1, 'landboarding': 1, 'fishing': 1, 'buggying': 1, 'new': 1, 'trend': 1, 'snow': 1, 'kiting.': 1, 'man-lifting': 1, 'been': 1, 'made': 1})</p>
+</div>
+<p>Hmm, you can see that <code>the</code>, <code>a</code>, <code>and</code> and many other stop-words occurs too much. How about apply stopwords clean up.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line"></span><br><span class="line">nltk.download(<span class="string">&#x27;stopwords&#x27;</span>, quiet=<span class="literal">True</span>)</span><br><span class="line">stopwords = nltk.corpus.stopwords.words(<span class="string">&#x27;english&#x27;</span>)</span><br><span class="line">tokens = [x <span class="keyword">for</span> x <span class="keyword">in</span> tokens <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> stopwords]</span><br><span class="line">kite_counts = Counter(tokens)</span><br><span class="line">print(kite_counts)</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px;font-family:tahoma">
+<p>Counter({'kite': 16, ',': 15, 'kites': 8, 'wing': 5, 'lift': 4, 'may': 4, 'also': 3, 'kiting': 3, 'flown': 3, 'tethered': 2, 'craft': 2, 'air': 2, 'consists': 2, 'tethers': 2, 'anchors.': 2, 'often': 2, 'bridle': 2, 'wind': 2, "'s": 2, 'designed': 2, ';': 2, 'moving': 2, 'technical': 2, 'even': 2, 'called': 2, 'surface': 2, 'pressure': 2, 'drag': 2, 'force': 2, '.': 2, 'used': 2, 'power': 2, 'traditionally': 1, 'heavier-than-air': 1, 'surfaces': 1, 'react': 1, 'create': 1, 'drag.': 1, 'wings': 1, 'guide': 1, 'face': 1, 'correct': 1, 'angle': 1, 'it.': 1, 'needed': 1, 'sailplane': 1, 'launch': 1, 'tether': 1, 'meets': 1, 'single': 1, 'point.': 1, 'fixed': 1, 'untraditionally': 1, 'tether-set-coupled': 1, 'sets': 1, 'though': 1, 'system': 1, 'still': 1, 'kite.': 1, 'sustains': 1, 'flight': 1, 'generated': 1, 'flows': 1, 'around': 1, 'producing': 1, 'low': 1, 'high': 1, 'wings.': 1, 'interaction': 1, 'generates': 1, 'horizontal': 1, 'along': 1, 'direction': 1, 'wind.': 1, 'resultant': 1, 'vector': 1, 'components': 1, 'opposed': 1, 'tension': 1, 'one': 1, 'lines': 1, 'attached.': 1, 'anchor': 1, 'point': 1, 'line': 1, 'static': 1, '(': 1, 'e.g.': 1, 'towing': 1, 'running': 1, 'person': 1, 'boat': 1, 'free-falling': 1, 'anchors': 1, 'paragliders': 1, 'fugitive': 1, 'parakites': 1, 'vehicle': 1, ')': 1, 'principles': 1, 'fluid': 1, 'flow': 1, 'apply': 1, 'liquids': 1, 'water.': 1, 'hybrid': 1, 'comprising': 1, 'lighter-than-air': 1, 'balloon': 1, 'well': 1, 'lifting': 1, 'kytoon.': 1, 'long': 1, 'varied': 1, 'history': 1, 'many': 1, 'different': 1, 'types': 1, 'individually': 1, 'festivals': 1, 'worldwide.': 1, 'recreation': 1, 'art': 1, 'practical': 1, 'uses.': 1, 'sport': 1, 'aerial': 1, 'ballet': 1, 'sometimes': 1, 'part': 1, 'competition.': 1, 'multi-line': 1, 'steerable': 1, 'generate': 1, 'large': 1, 'forces': 1, 'activities': 1, 'surfing': 1, 'landboarding': 1, 'fishing': 1, 'buggying': 1, 'new': 1, 'trend': 1, 'snow': 1, 'kiting.': 1, 'man-lifting': 1, 'made': 1})</p>
+</div>
+<p>Look better, you can easily see that there are some importance terms <code>kite</code>, <code>kites</code>, <code>wing</code>, <code>lift</code>. Just by looking purely at this, you will learn something about this document.</p>
+<h2 id="vectorizing">2. Vectorizing</h2>
+<h3 id="how-to-compute-document-vector">How to compute document vector?</h3>
+<p>Document vector on the kite example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">document_vector = []</span><br><span class="line">doc_length = <span class="built_in">len</span>(tokens)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> kite_counts.most_common():</span><br><span class="line">    document_vector.append(value / doc_length)</span><br><span class="line"></span><br><span class="line">document_vector</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>[0.07207207207207207,<br/> 0.06756756756756757,<br/> 0.036036036036036036,<br/> ...<br/> 0.0045045045045045045,<br/> 0.0045045045045045045,<br/> 0.0045045045045045045]</p>
+</div>
+<p>Hmm, interesting. This is one vector of a document. We might need more than one document to do math on. Let build another simple example. Let's say I have this three documents.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">doc_0 = <span class="string">&quot;The faster Harry got to the store, the faster Harry, the faster, would get home.&quot;</span></span><br><span class="line">doc_1 = <span class="string">&quot;Harry is hairy and faster than Jill.&quot;</span></span><br><span class="line">doc_2 = <span class="string">&quot;Jill is not as hairy as Harry.&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Now, convert those docs to tokens</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tokens_0 = tokenizer.tokenize(doc_0.lower())</span><br><span class="line">tokens_1 = tokenizer.tokenize(doc_1.lower())</span><br><span class="line">tokens_2 = tokenizer.tokenize(doc_2.lower())</span><br><span class="line">lexicon = <span class="built_in">set</span>(tokens_0 + tokens_1 + tokens_2)</span><br><span class="line"></span><br><span class="line">print(lexicon)</span><br><span class="line">print(<span class="built_in">len</span>(lexicon))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>{'hairy', 'jill', 'harry', 'faster', 'the', 'would', 'get', 'is', 'got', 'and', 'than', ',', '.', 'not', 'as', 'store', 'home', 'to'}<br/> 18</p>
+</div>
+<p>All of this three documents must have the same length, that is <code>18</code>.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"><span class="comment"># I create a zero vector as a template for all the vectors in this example</span></span><br><span class="line">zero_vector = OrderedDict((token, <span class="number">0</span>) <span class="keyword">for</span> token <span class="keyword">in</span> lexicon)</span><br><span class="line">zero_vector</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>OrderedDict([('hairy', 0), ('jill', 0), ('harry', 0), ('faster', 0), ('the', 0), ('would', 0), ('get', 0), ('is', 0), ('got', 0), ('and', 0), ('than', 0), (',', 0), ('.', 0), ('not', 0), ('as', 0), ('store', 0), ('home', 0), ('to', 0)])</p>
+</div>
+<p>Here a how three document vectors created <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">document_vectors = []</span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> [doc_0, doc_1, doc_2]:</span><br><span class="line">    <span class="comment"># Don&#x27;t edit directly on the template, just clone one for new vector</span></span><br><span class="line">    vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">    tokens = tokenizer.tokenize(doc.lower())</span><br><span class="line">    token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">        <span class="comment"># compute TF</span></span><br><span class="line">        vec[key] = value / <span class="built_in">len</span>(lexicon)</span><br><span class="line">    document_vectors.append(vec)</span><br></pre></td></tr></table></figure></p>
+<h3 id="what-is-vector">What is vector?</h3>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/fNk_zzaMoSs" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="cosine-similarity-implementation">Cosine Similarity Implementation</h3>
+<p><span class="math display">\[\begin{align*}
+\cos \theta &amp;= \frac{A \cdot B}{|A| |B|}
+\end{align*}\]</span></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cosine_sim</span>(<span class="params">vec1, vec2</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Since our vectors are dictionaries, lets convert them to lists for easier mathing.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    vec1 = [val <span class="keyword">for</span> val <span class="keyword">in</span> vec1.values()]</span><br><span class="line">    vec2 = [val <span class="keyword">for</span> val <span class="keyword">in</span> vec2.values()]</span><br><span class="line">    </span><br><span class="line">    dot_prod = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(vec1):</span><br><span class="line">        dot_prod += v * vec2[i]</span><br><span class="line">        </span><br><span class="line">    mag_1 = math.sqrt(<span class="built_in">sum</span>([x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> vec1]))</span><br><span class="line">    mag_2 = math.sqrt(<span class="built_in">sum</span>([x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> vec2]))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dot_prod / (mag_1 * mag_2)</span><br></pre></td></tr></table></figure>
+<p>A consine similarity of <strong>1</strong> represents vectors that point in the exactly same direction. In NLP, that mean two documents have the same meaning.</p>
+<p>A cosine similarity of <strong>0</strong> represent two vectors share no components. They are orthogonal.</p>
+<p>A consine similarty of <strong>-1</strong> represents two vectors that are anti-similar, they are pointing in the opposite. Or NLP, two documents talking about the opposite things. But, we never see the opposite direction in TF vectors, because counting words can never be negative.</p>
+<p>So, let go to verify the above three vectors</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(cosine_sim(document_vectors[<span class="number">0</span>], document_vectors[<span class="number">1</span>]))</span><br><span class="line">print(cosine_sim(document_vectors[<span class="number">0</span>], document_vectors[<span class="number">2</span>]))</span><br><span class="line">print(cosine_sim(document_vectors[<span class="number">1</span>], document_vectors[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>0.3162277660168379<br/> 0.14142135623730948<br/> 0.5590169943749475</p>
+</div>
+<p>We can easily see that, doc1 and doc2 have much similar score. They are talking something similar.</p>
+<h2 id="topic-modeling">3. Topic Modeling</h2>
+<p>Word counts are useful, but it doesn't tell much more information and the relative with all other documents in the corpus. Inverse Document Frequency (IDF), compute on documents count in the entire corpus.</p>
+<p><span class="math display">\[\begin{align*}
+tf(t, d) &amp;= \frac{count(t)}{count(d)}
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+idf(t, D) &amp;= \log \frac{count(D)}{count(D_t)}
+\end{align*}\]</span></p>
+<p><span class="math display">\[\begin{align*}
+tfidf(t, d, D) &amp;= tf(t, d) * idf(t, D)
+\end{align*}\]</span></p>
+<p>The more time a word appear in a document, the important it is in a document. On the other hand, the number of documents contains a word, the less important it is in the entire corpus.</p>
+<p>Compute the tfidf on the above example <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">document_tfidf_vectors = []</span><br><span class="line">documents = [doc_0, doc_1, doc_2]</span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> documents:</span><br><span class="line"></span><br><span class="line">    vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">    tokens = tokenizer.tokenize(doc.lower())</span><br><span class="line">    token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">        docs_containing_key = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> _doc <span class="keyword">in</span> documents:</span><br><span class="line">            <span class="keyword">if</span> key <span class="keyword">in</span> _doc:</span><br><span class="line">                docs_containing_key += <span class="number">1</span></span><br><span class="line">        tf = value / <span class="built_in">len</span>(lexicon)</span><br><span class="line">        <span class="keyword">if</span> docs_containing_key:</span><br><span class="line">            idf = <span class="built_in">len</span>(documents) / docs_containing_key</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            idf = <span class="number">0</span></span><br><span class="line">        vec[key] = tf * idf </span><br><span class="line">    document_tfidf_vectors.append(vec)</span><br></pre></td></tr></table></figure></p>
+Let try with a simple query <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">documents = [doc_0, doc_1, doc_2]</span><br><span class="line">query = <span class="string">&quot;How long does it take to get to the store?&quot;</span></span><br><span class="line">query_vec = copy.copy(vector_template) </span><br><span class="line"></span><br><span class="line">query_vec = copy.copy(vector_template)</span><br><span class="line"></span><br><span class="line">tokens = tokenizer.tokenize(query.lower())</span><br><span class="line">token_counts = Counter(tokens)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> token_counts.items():</span><br><span class="line">    docs_containing_key = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _doc <span class="keyword">in</span> documents:</span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> _doc.lower():</span><br><span class="line">            docs_containing_key += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> docs_containing_key == <span class="number">0</span>:  <span class="comment"># We didn&#x27;t find that token in the lexicon go to next key</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    tf = value / <span class="built_in">len</span>(tokens)</span><br><span class="line">    idf = <span class="built_in">len</span>(documents) / docs_containing_key </span><br><span class="line">    query_vec[key] = tf * idf </span><br><span class="line"></span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">0</span>]))</span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">1</span>]))</span><br><span class="line">print(cosine_sim(query_vec, document_tfidf_vectors[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>0.5235048549676834<br/> 0.0<br/> 0.0</p>
+</div>
+<p>This is clearly that, the <code>doc0</code> is the only documents that match with the query. <code>The faster Harry got to the store, the faster Harry, the faster, would get home</code>.</p>
+<p>What an interesting algorithm to search for relevant documents. This searching algorithm had to evaluate the entire corpus. That O(N) algorithm. Not bad isn't it?</p>
+<h2 id="tools">4. Tools</h2>
+<p>Let simpler our implementation by using tools.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"></span><br><span class="line">corpus = docs</span><br><span class="line">vectorizer = TfidfVectorizer(min_df=<span class="number">1</span>)</span><br><span class="line">model = vectorizer.fit_transform(corpus)</span><br><span class="line"></span><br><span class="line">print(model.todense().<span class="built_in">round</span>(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<div style="font-size:13px">
+<p>[[0.16 0. 0.48 0.21 0.21 0. 0.25 0.21 0. 0. 0. 0.21 0. 0.64 0.21 0.21]<br/> [0.37 0. 0.37 0. 0. 0.37 0.29 0. 0.37 0.37 0. 0. 0.49 0. 0. 0. ]<br/> [0. 0.75 0. 0. 0. 0.29 0.22 0. 0.29 0.29 0.38 0. 0. 0. 0. 0. ]]</p>
+</div>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -726,93 +916,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/10/26/the-chinese-double-ninth-festival/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hien Hoang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/10/26/the-chinese-double-ninth-festival/" class="post-title-link" itemprop="url">The Chinese Double Ninth Festival</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-10-26 23:16:01" itemprop="dateCreated datePublished" datetime="2020-10-26T23:16:01+07:00">2020-10-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-01 22:58:05" itemprop="dateModified" datetime="2021-02-01T22:58:05+07:00">2021-02-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Living/" itemprop="url" rel="index"><span itemprop="name">Living</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="/images/2020-10-26/001.jpg" /></p>
-<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
-<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
-<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
-<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
-<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
-<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
   
   <nav class="pagination">
@@ -904,6 +1007,50 @@
   
 
   
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
