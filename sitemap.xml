@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hien.dev/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</loc>
+    
+    <lastmod>2023-12-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hien.dev/2021/02/01/year-end-2020/</loc>
     
     <lastmod>2023-04-01</lastmod>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/</loc>
+    <loc>https://hien.dev/2022/07/18/Setup-your-own-Docker-Private-Registry/</loc>
     
     <lastmod>2023-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hien.dev/2022/07/18/Setup-your-own-Docker-Private-Registry/</loc>
+    <loc>https://hien.dev/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -58,20 +65,6 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/</loc>
-    
-    <lastmod>2023-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/2021/11/24/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P1/</loc>
-    
-    <lastmod>2023-04-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hien.dev/2021/08/23/Rau-Yeu-Thuong/</loc>
     
     <lastmod>2023-04-01</lastmod>
@@ -79,7 +72,21 @@
   </url>
   
   <url>
+    <loc>https://hien.dev/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/</loc>
+    
+    <lastmod>2023-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hien.dev/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/</loc>
+    
+    <lastmod>2023-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/2021/11/24/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P1/</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -128,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/2021/04/24/Azure-Fundamentals-achievement/</loc>
+    <loc>https://hien.dev/2022/06/12/Chia-Se-Ve-Lam-Viec-Remote/</loc>
     
     <lastmod>2023-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hien.dev/2022/06/12/Chia-Se-Ve-Lam-Viec-Remote/</loc>
+    <loc>https://hien.dev/2021/04/24/Azure-Fundamentals-achievement/</loc>
     
     <lastmod>2023-04-01</lastmod>
     
@@ -212,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/2020/11/20/run-headless-chrome-inside-a-docker-container/</loc>
+    <loc>https://hien.dev/2020/10/30/setup-self-openvpn-server/</loc>
     
     <lastmod>2021-01-19</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hien.dev/2020/10/30/setup-self-openvpn-server/</loc>
+    <loc>https://hien.dev/2020/11/20/run-headless-chrome-inside-a-docker-container/</loc>
     
     <lastmod>2021-01-19</lastmod>
     
@@ -270,7 +277,7 @@
 
   <url>
     <loc>https://hien.dev/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -278,777 +285,882 @@
   
   <url>
     <loc>https://hien.dev/tags/Microsoft/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Azure/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Microsoft-Certified/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Administrator/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Azure-Fundamentals/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/DevOps/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Pub-Sub/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/GCP/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Google-Cloud/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Distributed-Processing/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Minibatch-Processing/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Python/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Solution-Architect/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/remote-job/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/viec-lam-remote/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Python/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Django/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Template/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Django-Guardian/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Djoser/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Object-Level-Permission/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Docker-Buildx/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Containerization-Technology/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Multi-Platform-Docker-Builds/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Docker-Buildx-Tutorial/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/BuildKit-Backend/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/CI-CD-with-Docker/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Cross-Platform-Docker-Images/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Docker-Caching-Mechanisms/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Remote-Docker-Builds/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Docker-CLI-Plugin/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Efficient-Docker-Builds/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Docker-Buildx-Features/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/DevOps-Tools/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Docker-Build-Optimization/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Software-Development/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Solution-Architect/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Pub-Sub/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/GCP/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Google-Cloud/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Distributed-Processing/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Minibatch-Processing/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Autoencoders/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/CNN/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Computer-Vision/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Deep-Learning/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Tensorflow/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Keras/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/CINIC/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Fashion-MNIST/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Machine-Learning/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Convolution-Neural-Network/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Security/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Hacking/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Networking/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Tool/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/HTTP/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Debugging/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Snipping/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Compute-Engine/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/Security/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Backup/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/Hacking/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Machine-Image/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/GitLab/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/GitHub/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/SSH/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Git/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/Azure-Fundamentals/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Reinforcement-Learning/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Artificial-Intelligent/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/AI/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Tictactoe/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Game/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Javascript/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Living/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Family/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/My-Life-Story/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/GitLab/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/GitHub/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/SSH/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Git/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Pandas/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/HDF5/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Parquet/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/CSV/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Benchmark/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Compute-Engine/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Backup/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Machine-Image/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/chill/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/roi-pho-ve-nui/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/SQLAlchemy/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/ORM/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/SQL/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Celery/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Cronjob/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Docker/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/RabbitMQ/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Airflow/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/docker-compose/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Kubernetes/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/K8S/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/On-premise/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Docker-Registry/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Openssl/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Self-signed-Certificate/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Productivity/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/VirtualBox/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Ukraine/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/War/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Data-visualization/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Chart/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Decomposition/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/t-SNE/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Jupyter-Notebook/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/MNIST/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Matplotlib/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Seaborn/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Selenium/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/Productivity/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Headless-Browser/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/VirtualBox/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/VPN/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/Ukraine/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/DIY/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/War/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Linux/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Shell/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Script/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/TF-IDF/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/VPN/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/NLP/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Search-Engine/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Bag-of-Words/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/BOW/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Information-Retrieval/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Scikit-Learn/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/tags/DIY/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Chung-Yeung/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Anniversary/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Selenium/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Headless-Browser/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Kubernetes/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/K8S/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/On-premise/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/TF-IDF/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/NLP/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Search-Engine/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Bag-of-Words/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/BOW/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Information-Retrieval/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Scikit-Learn/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Image-Segmentation/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Oxford-IIIT-Pet/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/FCN/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/U-Net/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Mask-RCNN/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/MobileNet-V2/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Pretrain/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/tags/Fully-Convolution-Network/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1057,126 +1169,182 @@
   
   <url>
     <loc>https://hien.dev/categories/Certification/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/categories/Google-Cloud/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Career/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Python/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/categories/Machine-Learning/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/categories/Security/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/categories/Networking/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/categories/Google-Cloud/Pub-Sub/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/DevOps/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Reinforcement-Learning/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/categories/Google-Cloud/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Living/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/categories/Machine-Learning/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Benchmark/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/categories/Networking/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Security/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Python/Django/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Reinforcement-Learning/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Living/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Google-Cloud/Pub-Sub/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Benchmark/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Machine-Learning/Deep-Learning/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Kubernetes/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/Cloud-Computing/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/Cloud-Computing/Technology-Tutorials/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/Cloud-Computing/Technology-Tutorials/Programming-Tools/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/Cloud-Computing/Technology-Tutorials/Programming-Tools/Cross-Platform-Development/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/Cloud-Computing/Technology-Tutorials/Programming-Tools/Cross-Platform-Development/Performance-Optimization/</loc>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/DevOps/Software-Development/Containerization/Cloud-Computing/Technology-Tutorials/Programming-Tools/Cross-Platform-Development/Performance-Optimization/Tech-Innovations/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Analytics/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Shell/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Kubernetes/</loc>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hien.dev/categories/Natural-Language-Processing/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-12-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
