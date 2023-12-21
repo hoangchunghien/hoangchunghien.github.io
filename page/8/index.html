@@ -232,20 +232,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">86</span>
+        <span class="site-state-item-count">70</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">255</span>
+        <span class="site-state-item-count">262</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -297,6 +297,106 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/11/27/Schedule-Task-Runner-with-Celery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/27/Schedule-Task-Runner-with-Celery/" class="post-title-link" itemprop="url">Schedule Task Runner with Celery</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-11-27 10:20:51" itemprop="dateCreated datePublished" datetime="2020-11-27T10:20:51+07:00">2020-11-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote><p>Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so that your product can scale and integrate with other languages, and it comes with the tools and support you need to run such a system in production.</p>
+<footer><strong>Celery</strong><cite><a target="_blank" rel="noopener" href="https://docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html">docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install celery</span><br></pre></td></tr></table></figure>
+<h1 id="choosing-a-broker">Choosing a Broker</h1>
+<p>Celery requires a solution to send and receive messages; usually this comes in the form of a separate service called a message broker. In this example, I use RabbitMQ on docker for the most simple experiment.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 5672:5672 rabbitmq</span><br></pre></td></tr></table></figure>
+<h1 id="the-application">The Application</h1>
+<ul>
+<li><p>Python code to define the task to run <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>
+<li><p>Run the worker <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">celery -A tasks worker -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-------------- celery@Lap-012 v5.0.2 (singularity)</span><br><span class="line">--- ***** ----- </span><br><span class="line">-- ******* ---- Linux-5.4.0-54-generic-x86_64-with-debian-bullseye-sid 2020-11-27 10:13:21</span><br><span class="line">- *** --- * --- </span><br><span class="line">- ** ---------- [config]</span><br><span class="line">- ** ---------- .&gt; app:         tasks:0x7f5b26a11750</span><br><span class="line">- ** ---------- .&gt; transport:   amqp://guest:**@localhost:5672//</span><br><span class="line">- ** ---------- .&gt; results:     disabled://</span><br><span class="line">- *** --- * --- .&gt; concurrency: 8 (prefork)</span><br><span class="line">-- ******* ---- .&gt; task events: OFF (enable -E to monitor tasks in this worker)</span><br><span class="line">--- ***** ----- </span><br><span class="line"> -------------- [queues]</span><br><span class="line">                .&gt; celery           exchange=celery(direct) key=celery</span><br><span class="line">                </span><br><span class="line">[tasks]</span><br><span class="line">  . tasks.add</span><br><span class="line"></span><br><span class="line">[2020-11-27 10:13:21,496: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//</span><br><span class="line">[2020-11-27 10:13:21,506: INFO/MainProcess] mingle: searching for neighbors</span><br><span class="line">[2020-11-27 10:13:22,528: INFO/MainProcess] mingle: all alone</span><br><span class="line">[2020-11-27 10:13:22,568: INFO/MainProcess] celery@Lap-012 ready.</span><br></pre></td></tr></table></figure></p></li>
+<li><p>The Scheduler, let add few more code to config schedule task <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>Run the scheduler, open new terminal and run <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">celery -A tasks beat -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">celery beat v5.0.2 (singularity) is starting.</span><br><span class="line">__    -    ... __   -        _</span><br><span class="line">LocalTime -&gt; 2020-11-27 10:18:19</span><br><span class="line">Configuration -&gt;</span><br><span class="line">    . broker -&gt; amqp://guest:**@localhost:5672//</span><br><span class="line">    . loader -&gt; celery.loaders.app.AppLoader</span><br><span class="line">    . scheduler -&gt; celery.beat.PersistentScheduler</span><br><span class="line">    . db -&gt; celerybeat-schedule</span><br><span class="line">    . logfile -&gt; [stderr]@%INFO</span><br><span class="line">    . maxinterval -&gt; 5.00 minutes (300s)</span><br><span class="line">[2020-11-27 10:18:19,508: INFO/MainProcess] beat: Starting...</span><br><span class="line">[2020-11-27 10:18:49,552: INFO/MainProcess] Scheduler: Sending due task add-every-30-seconds (tasks.add)</span><br></pre></td></tr></table></figure></p></li>
+<li><p>You can check whether the worker is running on the terminal log <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[2020-11-27 10:19:19,546: INFO/MainProcess] Received task: tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4]  </span><br><span class="line">[2020-11-27 10:19:19,549: INFO/ForkPoolWorker-5] Task tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4] succeeded in 0.00027026102179661393s: 32</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="organize-all-together-using-docker-compose">Organize all together using docker-compose</h1>
+<ul>
+<li><p>./Dockerfile <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install celery</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . .</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>./docker-compose.yml <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rabbitmq:3.7</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">worker:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">worker</span> <span class="string">-l</span> <span class="string">info</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">sched:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">beat</span> <span class="string">-l</span> <span class="string">info</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>./tasks.py <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">MQ_HOST = os.environ.get(<span class="string">&#x27;MQ_HOST&#x27;</span>, <span class="string">&#x27;localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">f&#x27;amqp://<span class="subst">&#123;MQ_HOST&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -329,7 +429,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2023-04-01 21:38:46" itemprop="dateModified" datetime="2023-04-01T21:38:46+07:00">2023-04-01</time>
+        <time title="Modified: 2023-12-21 17:29:00" itemprop="dateModified" datetime="2023-12-21T17:29:00+07:00">2023-12-21</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -775,113 +875,6 @@ Let try with a simple query <figure class="highlight python"><table><tr><td clas
 <li>Open the link <a target="_blank" rel="noopener" href="http://localhost:5000">http://localhost:5000</a></li>
 </ul>
 <p><img src="/images/2020-11-20/001.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/11/14/when-i-become-father/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Hien Hoang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/14/when-i-become-father/" class="post-title-link" itemprop="url">When I become Daddy</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-11-14 16:42:32" itemprop="dateCreated datePublished" datetime="2020-11-14T16:42:32+07:00">2020-11-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-01 23:00:56" itemprop="dateModified" datetime="2021-02-01T23:00:56+07:00">2021-02-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Living/" itemprop="url" rel="index"><span itemprop="name">Living</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Hello there, how are you today? My answer is <strong>"Better than good"</strong> if you ask :) Today I would like to tell you about how I have changed since I knew I was going to be called <em>Daddy</em>. That is one of the most beautiful stories in my life. After 5 years together, we finally have a baby. At this time last year, I spent a trip to Dalat City in Lam Dong, for my wife as her birthday gift, when we had no idea that our baby was about 2 months old. Until we came back to work, she got a health check, then the baby turned 3 months. WOW, yeah, she texted me that amazing good news when I was working in the office. I knew, from that moment, my life - our lives - started changing to be better and happier with the new beloved member.</p>
-<p><img src="/images/2020-12-15/001.jpg"></p>
-<p>My wife got a warning from a doctor because she missed the previous health checks for the baby, which made her worried for a while. She likes drinking chill beers and some kinds of alcohol, but don't get me wrong, she enjoys its tastes, not a kind of alcoholic. When we were in Dalat City, we had a night in a bar, drinking some cocktail. Therefore, she was worried for the baby's development. As the result, after a full health check, our baby was fine. I realized that I must have changed to be stronger than ever, in both financial as well as emotional aspects, in order to take care of her and our baby better.</p>
-<p>That the night my wife gave birth to our baby was also so unforgetable to us. Two days before the surgery date, after the midnight, she was unexpectedly in travail, rupture of amniotic fluid. We rushed to the international hospital that was 14km in distance, where she had registered to get surgery. It was 3:00 am, luckily, the street was empty throughout the way we went. We sat in the taxi and prayed. I prayed everything would be fine, my wife and our baby could come over this situation without hurt. At 5:18am, our baby was born, safe and sound!</p>
-<p>"Oh Congratulation! Here you are, a football player!", the doctor said with a smile.</p>
-<p>It was funny that we hadn't known our baby's gender until that moment came. We had a son! His crying sound was lovely and special to me! He was laying on his mother's chest and crying out loud gently. I was so happy that almost forgot to take pictures, a nurse kindly reminded me. After 9 months, we finally met each other, son! 15 minutes later, our son was brought to warming room. When I hold him im my arms, I felt amazing, unbelievable, sweet and complete. He was strong, healthy, sleeping like an angel. Since then, our lives routine changed quite much to take care of him.</p>
-<p><img src="/images/2020-12-15/002.jpg"></p>
-<p>I would like to share top things I have changed since my wife got pregnant.</p>
-<ol type="1">
-<li>Doing houseworks in smart way</li>
-</ol>
-<p>After knowing my wife got pregnant, I started looking for a bigger and more convenient apartment for her to live. The one we chose was 63m2 with kitchen and two private rooms. My wife enjoyed cooking quite much so when there was the kitchen there, she could cooked healthy fresh dishes for us, espcially for the baby as well. I wasn't good at cooking but I could support her in washing dishes after meals, cleaning the floors, carrying heavy stuffs, etc. Doing lots of houseworks made me realize that how incredible my wife got through all everyday while she was still going to work. Unexpectedly, there was a big changes in human resource in my wife's company, because of her pregnancy, she had to leave the position according to the new company policy. Then my wife stayed at home alone and relaxed, while I was still working during the Covid-19. I bought her a washing dishes machine, a portable vacuum cleaner, and a pressure cooker to help things done faster and easier. Shortly after that, due to the growth of Covid-19, the government asked people to work from home, I could stay with my wife. It was a very good news to my wife, because she had someone to talk and take care of her.</p>
-<ol start="2" type="1">
-<li>Being a better listener</li>
-</ol>
-<p>I admit that I am not a good listener, but for my wife, I am trying to learn how to be her listener. Pregnant women are usually sensitive, grumpy and have a lot of thoughts. Fortunately, although my wife is open-minded and she seemed to be happier after having the baby, she still had some negative thoughts and fears inside. So I needed to be her mental support, reading her emotions and listening to her thoughts without any judgment. Especially after she gave birth to our baby, she faced huge changes in both physical and mental. I have been always by her side to help easing her bad feelings, together taking care of the baby.</p>
-<ol start="3" type="1">
-<li>Leanring to become richer. Being more mature and responsible</li>
-</ol>
-<p>Small renting rooms are not suitable for us anymore. Now we have a child, he needs a better environemnt for living and growing, for example, better educations, better neighbors, better health care etc. Therefore, we become more serious about the future with bigger houses and greater amount of assets. I began watching videos from rich successful people, learning their mindsets and taking their advices, then improving our values to get better chances in lives. Having baby motivates us so much to do harder to get richer and richer. And we strongly believe that we will soon have a beautiful villa and high standard living conditions.</p>
-<p>Some of my friends told me that I have looked more mature or older after having baby. I consider it as a praise. I want to be a great and responsible dad to guide our child to become an excellent person too.</p>
-<ol start="4" type="1">
-<li>Habbits &amp; Hobbies</li>
-</ol>
-<p>There are some new habits approaching me after our son was born. For instance, shooting photos of my litlle family to save the simple beautiful moments of our daily life with our son. He is super cute and growing so fast that we want to keep those sweet memories forever. I bought a new camera and we are saving budget to travel together and capture beautiful scenes. I didnot have that habit before.</p>
-<p>Now, everyday I have felt more excited when coming back home from work. I never knew that becoming father brings many positive feelings and thinking like that - a complete family. Love you all, my wife and little son.</p>
-<p><img src="/images/2020-12-15/003.jpg"></p>
 
       
     </div>
