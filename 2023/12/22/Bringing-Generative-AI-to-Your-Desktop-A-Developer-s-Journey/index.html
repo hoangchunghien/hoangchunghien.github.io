@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Hey there, fellow devs and tech enthusiasts! 🧑‍💻 Today, I&#39;m diving into something super exciting: running generative AI, like the famous ChatGPT and Google Bard, right from our own computers. Yep, y">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bringing Generative AI to Your Desktop: A Developer&#39;s Journey 🚀">
+<meta property="og:url" content="https://hien.dev/2023/12/22/Bringing-Generative-AI-to-Your-Desktop-A-Developer-s-Journey/index.html">
+<meta property="og:site_name" content="Hien Hoang">
+<meta property="og:description" content="Hey there, fellow devs and tech enthusiasts! 🧑‍💻 Today, I&#39;m diving into something super exciting: running generative AI, like the famous ChatGPT and Google Bard, right from our own computers. Yep, y">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hien.dev/images/2023-12-22/001.png">
+<meta property="og:image" content="https://hien.dev/images/2023-12-22/002.gif">
+<meta property="article:published_time" content="2023-12-22T07:29:11.000Z">
+<meta property="article:modified_time" content="2023-12-22T07:47:38.091Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="Generative AI">
+<meta property="article:tag" content="LMStudio">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="Technology Tutorial">
+<meta property="article:tag" content="ChatGPT">
+<meta property="article:tag" content="GPT-4">
+<meta property="article:tag" content="Gemini">
+<meta property="article:tag" content="Google Bard">
+<meta property="article:tag" content="Tech DIY">
+<meta property="article:tag" content="LLaMa">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hien.dev/images/2023-12-22/001.png">
+
+
+<link rel="canonical" href="https://hien.dev/2023/12/22/Bringing-Generative-AI-to-Your-Desktop-A-Developer-s-Journey/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Bringing Generative AI to Your Desktop: A Developer's Journey 🚀 | Hien Hoang</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2023/12/22/bringing-generative-ai-to-your-desktop-a-developer-s-journey/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hien Hoang</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-essentials-what-you-need-for-local-ai-magic"><span class="nav-text">The Essentials: What You Need for Local AI Magic ✨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-cool-stuff-llms-you-can-install-locally"><span class="nav-text">The Cool Stuff: LLMs You Can Install Locally 🏡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#my-tool-of-choice-lm-studio"><span class="nav-text">My Tool of Choice: LM Studio 🛠️</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-real-fun-prompting-and-tweaking"><span class="nav-text">The Real Fun: Prompting and Tweaking 🎮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wrapping-up-your-personal-ai-playground"><span class="nav-text">Wrapping Up: Your Personal AI Playground 🌐</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">71</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">272</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2023/12/22/Bringing-Generative-AI-to-Your-Desktop-A-Developer-s-Journey/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hien Hoang">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Bringing Generative AI to Your Desktop: A Developer's Journey 🚀
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-12-22 14:29:11 / Modified: 14:47:38" itemprop="dateCreated datePublished" datetime="2023-12-22T14:29:11+07:00">2023-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Artificial-Intelligence/" itemprop="url" rel="index"><span itemprop="name">Artificial Intelligence</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software-Development/" itemprop="url" rel="index"><span itemprop="name">Software Development</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software-Development/Software-Tutorials/" itemprop="url" rel="index"><span itemprop="name">Software Tutorials</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Hey there, fellow devs and tech enthusiasts! 🧑‍💻 Today, I'm diving into something super exciting: running generative AI, like the famous ChatGPT and Google Bard, right from our own computers. Yep, you heard that right – we're moving beyond the cloud and bringing the power of AI straight to our personal machines. And, let me tell you, it's not just about the cool factor (which, admittedly, is pretty high); it's about privacy 🛡️, dodging those annoying 'AI is at capacity' messages, and, of course, the sheer joy of tinkering with cutting-edge tech.</p>
+<h2 id="the-essentials-what-you-need-for-local-ai-magic">The Essentials: What You Need for Local AI Magic ✨</h2>
+<p>So, what's the secret sauce for getting this up and running? Two things: a reliable program to run the AI and a robust Large Language Model (LLM). If you've been around the AI block, you've probably heard about LLMs. They're the brains behind AI text generators. GPT-4, powering ChatGPT, and Gemini, used by Google Bard, are some of the big players.</p>
+<p>In simpler terms, LLMs are like the superheroes of autocorrect – trained on tons of data, they excel at figuring out which words go best together to make sentences sound natural and human-like 🤖.</p>
+<h2 id="the-cool-stuff-llms-you-can-install-locally">The Cool Stuff: LLMs You Can Install Locally 🏡</h2>
+<a id="more"></a>
+<p>This is where it gets exciting! We're not limited to the big tech offerings; there's a variety of AI models out there ripe for the picking. Meta’s LLaMa is one such example, but there's a whole world of models developed by researchers and open-source heroes. The idea? To drive innovation and transparency in the AI field.</p>
+<p><img src="/images/2023-12-22/001.png" style="max-height: 540px;"></p>
+<h2 id="my-tool-of-choice-lm-studio">My Tool of Choice: LM Studio 🛠️</h2>
+<p>For this adventure, I'm picking LM Studio – a top-notch, free option compatible with Windows, macOS, and Linux. It’s like the Swiss Army knife for local AI - versatile and user-friendly. You can get it right <a target="_blank" rel="noopener" href="https://lmstudio.ai/">here</a>.</p>
+<p><strong>Setting Up Your AI Lab</strong></p>
+<p>First off, grab LM Studio from <a target="_blank" rel="noopener" href="https://lmstudio.ai/">their official site</a>. But, a word of caution: running LLMs is like feeding a beast – it needs power 💪. Think newer PCs with AVX2 support or Apple Silicon Macs, and at least 16GB RAM. And for my fellow PC users, aim for 6GB VRAM at least.</p>
+<p>Once you're set up, it's time to choose your LLM. LM Studio makes it a breeze by showcasing 'new and noteworthy' models right on the home screen. It's like being a kid in a candy store – so many options, each with its own flavor and style.</p>
+<h2 id="the-real-fun-prompting-and-tweaking">The Real Fun: Prompting and Tweaking 🎮</h2>
+<p>With your chosen LLM downloaded, jump into the AI Chat panel. Here’s where your developer instincts kick in. Choose your model, type in your prompt, and hit Enter. Watching the AI respond is like witnessing a magic trick – every single time 🎩.</p>
+<p>LM Studio offers a bunch of knobs and dials to play with. Adjust response lengths, offload work to your GPU, and even set a 'pre-prompt' for a consistent AI personality.</p>
+<p><img src="/images/2023-12-22/002.gif" style="max-height: 540px;"></p>
+<h2 id="wrapping-up-your-personal-ai-playground">Wrapping Up: Your Personal AI Playground 🌐</h2>
+<p>And that’s it! You’ve now got a powerful AI right at your fingertips. Start fresh conversations, revisit old chats, and experiment to your heart's content. Whether you’re looking to dive deeper into AI development or just have some nerdy fun, LM Studio makes it all incredibly accessible.</p>
+<p>So, there you have it, my fellow code wizards and tech enthusiasts 🧙‍♂️👩‍💻. The world of local AI is not just fascinating; it's right within our reach. Happy coding, and let's see what amazing things we can create with our new AI buddies!</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Generative-AI/" rel="tag"># Generative AI</a>
+              <a href="/tags/LMStudio/" rel="tag"># LMStudio</a>
+              <a href="/tags/LLM/" rel="tag"># LLM</a>
+              <a href="/tags/Technology-Tutorial/" rel="tag"># Technology Tutorial</a>
+              <a href="/tags/ChatGPT/" rel="tag"># ChatGPT</a>
+              <a href="/tags/GPT-4/" rel="tag"># GPT-4</a>
+              <a href="/tags/Gemini/" rel="tag"># Gemini</a>
+              <a href="/tags/Google-Bard/" rel="tag"># Google Bard</a>
+              <a href="/tags/Tech-DIY/" rel="tag"># Tech DIY</a>
+              <a href="/tags/LLaMa/" rel="tag"># LLaMa</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/12/21/Mastering-GitHub-Copilot-10-Tips-for-Writing-Effective-Comments/" rel="prev" title="Mastering GitHub Copilot: 10 Tips for Writing Effective Comments">
+                  <i class="fa fa-chevron-left"></i> Mastering GitHub Copilot: 10 Tips for Writing Effective Comments
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
