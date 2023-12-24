@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Azure DevOps Engineering Expert achievement</title>
+    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
+<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
+<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
+<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>DevOps</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Azure Administrator Associate achievement</title>
     <url>/2021/06/12/Azure-Administrator-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
@@ -17,24 +35,6 @@
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
         <tag>Administrator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure DevOps Engineering Expert achievement</title>
-    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
-<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
-<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
-<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -1014,73 +1014,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Mastering GitHub Copilot: 10 Tips for Writing Effective Comments</title>
-    <url>/2023/12/21/Mastering-GitHub-Copilot-10-Tips-for-Writing-Effective-Comments/</url>
-    <content><![CDATA[<p>Hey there, fellow coders! 👋 Welcome to my cozy corner where I talk all things code, with a special spotlight on our AI buddy, GitHub Copilot. Today, I'm excited to share some super cool tips on how to chat with Copilot through comments. Yes, you read that right! We're gonna learn how to make this AI tool our best coding companion yet. So, let's dive into these tips, complete with examples and what to expect from Copilot’s magical code generation.</p>
-<h2 id="clearly-define-functionality">1. Clearly Define Functionality</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Function to calculate the factorial of a number</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (n === <span class="number">0</span> || n === <span class="number">1</span>) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>Result: A simple factorial function - concise and to the point.</em></p>
-<h2 id="specify-api-requests">2. Specify API Requests</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Function to make a GET request to &#x27;https://api.example.com/data&#x27; and return the JSON response</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong></p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span>():</span></span><br><span class="line">    response = requests.get(<span class="string">&#x27;https://api.example.com/data&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> response.json()</span><br></pre></td></tr></table></figure>
-<p><em>Result: A Python function for making a GET request and parsing the JSON response.</em></p>
-<h2 id="outline-error-handling">3. Outline Error Handling</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Try-catch block to handle SQLException in a database query</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// database query code</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>Result: A template for a try-catch block, ready to be filled with specific query code.</em></p>
-<h2 id="guide-data-parsing">4. Guide Data Parsing</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the following JSON string into a JavaScript object: &#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> parsedObject = <span class="built_in">JSON</span>.parse(jsonString);</span><br><span class="line"><span class="built_in">console</span>.log(parsedObject);</span><br></pre></td></tr></table></figure> <em>Result: A straightforward JSON parsing example in JavaScript.</em></p>
-<h2 id="regular-expressions">5. Regular Expressions</h2>
-<p><strong>Example:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Regular expression to validate an email address format</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">email_regex = <span class="string">r&#x27;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]&#123;2,&#125;\b&#x27;</span></span><br></pre></td></tr></table></figure> <em>Result: A Python regex pattern for email validation.</em></p>
-<h2 id="request-algorithms">6. Request Algorithms</h2>
-<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Implement a binary search algorithm for a sorted array of integers</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">arr, x, start, end</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (start &gt; end) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   <span class="keyword">let</span> mid=<span class="built_in">Math</span>.floor((start + end)/<span class="number">2</span>);</span><br><span class="line">   <span class="keyword">if</span> (arr[mid]===x) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   <span class="keyword">if</span>(arr[mid] &gt; x) <span class="keyword">return</span> binarySearch(arr, x, start, mid-<span class="number">1</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">return</span> binarySearch(arr, x, mid+<span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A binary search function, encapsulating the classic algorithm.</em></p>
-<h2 id="validate-user-input">7. Validate User Input</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Validate user input to ensure it&#x27;s an integer between 1 and 100</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (userInput &gt;= <span class="number">1</span> &amp;&amp; userInput &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">   <span class="comment">// valid input</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">// invalid input</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A basic Java condition to check the range of user input.</em></p>
-<h2 id="css-for-responsiveness">8. CSS for Responsiveness</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS to make an image responsive with a max-width of 100% and height auto */</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">   <span class="attribute">height</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A CSS snippet to make images responsive.</em></p>
-<h2 id="database-queries">9. Database Queries</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- SQL query to select name, age from users table where age is greater than 20</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, age <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> age &gt; <span class="number">20</span>;</span><br></pre></td></tr></table></figure> <em>Result: A straightforward SQL query for user data filtering.</em></p>
-<h2 id="react-state-management">10. React State Management</h2>
-<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// React function component with useState hook for managing a &#x27;counter&#x27; state initialized at 0</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CounterComponent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">const</span> [counter, setCounter] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">// JSX for the counter</span></span><br><span class="line">   );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A React functional component template using the useState hook.</em></p>
-<h2 id="wrapping-it-up">Wrapping It Up!</h2>
-<p>Writing effective comments for GitHub Copilot is like providing clear instructions to a smart assistant. Remember, the trick is to be clear, be descriptive, and sometimes, just have a little fun with your comments. With these tips, you're all set to make Copilot your trusty coding sidekick. Happy coding, and may your bugs be few and your coffee strong! ☕🚀👩‍💻👨‍💻</p>
-]]></content>
-      <categories>
-        <category>Artificial Intelligence</category>
-        <category>Software Development</category>
-        <category>Developer Tools and Resources</category>
-        <category>Programming Best Practices</category>
-      </categories>
-      <tags>
-        <tag>Software Development</tag>
-        <tag>Developer Tools</tag>
-        <tag>GitHub Copilot</tag>
-        <tag>AI Coding</tag>
-        <tag>Copilot Tips</tag>
-        <tag>AI Programming</tag>
-        <tag>Code Automation</tag>
-        <tag>Coding Efficiency</tag>
-        <tag>Programming Tips</tag>
-        <tag>Tech Blogging</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mastering DAGs in Apache Airflow: The Key to Efficient Workflow Automation</title>
     <url>/2023/12/18/Mastering-DAGs-in-Apache-Airflow-The-Key-to-Efficient-Workflow-Automation/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -1155,6 +1088,73 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Mastering GitHub Copilot: 10 Tips for Writing Effective Comments</title>
+    <url>/2023/12/21/Mastering-GitHub-Copilot-10-Tips-for-Writing-Effective-Comments/</url>
+    <content><![CDATA[<p>Hey there, fellow coders! 👋 Welcome to my cozy corner where I talk all things code, with a special spotlight on our AI buddy, GitHub Copilot. Today, I'm excited to share some super cool tips on how to chat with Copilot through comments. Yes, you read that right! We're gonna learn how to make this AI tool our best coding companion yet. So, let's dive into these tips, complete with examples and what to expect from Copilot’s magical code generation.</p>
+<h2 id="clearly-define-functionality">1. Clearly Define Functionality</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Function to calculate the factorial of a number</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (n === <span class="number">0</span> || n === <span class="number">1</span>) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>Result: A simple factorial function - concise and to the point.</em></p>
+<h2 id="specify-api-requests">2. Specify API Requests</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Function to make a GET request to &#x27;https://api.example.com/data&#x27; and return the JSON response</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong></p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span>():</span></span><br><span class="line">    response = requests.get(<span class="string">&#x27;https://api.example.com/data&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> response.json()</span><br></pre></td></tr></table></figure>
+<p><em>Result: A Python function for making a GET request and parsing the JSON response.</em></p>
+<h2 id="outline-error-handling">3. Outline Error Handling</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Try-catch block to handle SQLException in a database query</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// database query code</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>Result: A template for a try-catch block, ready to be filled with specific query code.</em></p>
+<h2 id="guide-data-parsing">4. Guide Data Parsing</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the following JSON string into a JavaScript object: &#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> parsedObject = <span class="built_in">JSON</span>.parse(jsonString);</span><br><span class="line"><span class="built_in">console</span>.log(parsedObject);</span><br></pre></td></tr></table></figure> <em>Result: A straightforward JSON parsing example in JavaScript.</em></p>
+<h2 id="regular-expressions">5. Regular Expressions</h2>
+<p><strong>Example:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Regular expression to validate an email address format</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">email_regex = <span class="string">r&#x27;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]&#123;2,&#125;\b&#x27;</span></span><br></pre></td></tr></table></figure> <em>Result: A Python regex pattern for email validation.</em></p>
+<h2 id="request-algorithms">6. Request Algorithms</h2>
+<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Implement a binary search algorithm for a sorted array of integers</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">arr, x, start, end</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (start &gt; end) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   <span class="keyword">let</span> mid=<span class="built_in">Math</span>.floor((start + end)/<span class="number">2</span>);</span><br><span class="line">   <span class="keyword">if</span> (arr[mid]===x) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   <span class="keyword">if</span>(arr[mid] &gt; x) <span class="keyword">return</span> binarySearch(arr, x, start, mid-<span class="number">1</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">return</span> binarySearch(arr, x, mid+<span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A binary search function, encapsulating the classic algorithm.</em></p>
+<h2 id="validate-user-input">7. Validate User Input</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Validate user input to ensure it&#x27;s an integer between 1 and 100</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (userInput &gt;= <span class="number">1</span> &amp;&amp; userInput &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">   <span class="comment">// valid input</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">// invalid input</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A basic Java condition to check the range of user input.</em></p>
+<h2 id="css-for-responsiveness">8. CSS for Responsiveness</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS to make an image responsive with a max-width of 100% and height auto */</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">   <span class="attribute">height</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A CSS snippet to make images responsive.</em></p>
+<h2 id="database-queries">9. Database Queries</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- SQL query to select name, age from users table where age is greater than 20</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, age <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> age &gt; <span class="number">20</span>;</span><br></pre></td></tr></table></figure> <em>Result: A straightforward SQL query for user data filtering.</em></p>
+<h2 id="react-state-management">10. React State Management</h2>
+<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// React function component with useState hook for managing a &#x27;counter&#x27; state initialized at 0</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CounterComponent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">const</span> [counter, setCounter] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">// JSX for the counter</span></span><br><span class="line">   );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A React functional component template using the useState hook.</em></p>
+<h2 id="wrapping-it-up">Wrapping It Up!</h2>
+<p>Writing effective comments for GitHub Copilot is like providing clear instructions to a smart assistant. Remember, the trick is to be clear, be descriptive, and sometimes, just have a little fun with your comments. With these tips, you're all set to make Copilot your trusty coding sidekick. Happy coding, and may your bugs be few and your coffee strong! ☕🚀👩‍💻👨‍💻</p>
+]]></content>
+      <categories>
+        <category>Artificial Intelligence</category>
+        <category>Software Development</category>
+        <category>Developer Tools and Resources</category>
+        <category>Programming Best Practices</category>
+      </categories>
+      <tags>
+        <tag>Software Development</tag>
+        <tag>Developer Tools</tag>
+        <tag>GitHub Copilot</tag>
+        <tag>AI Coding</tag>
+        <tag>Copilot Tips</tag>
+        <tag>AI Programming</tag>
+        <tag>Code Automation</tag>
+        <tag>Coding Efficiency</tag>
+        <tag>Programming Tips</tag>
+        <tag>Tech Blogging</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Maximizing Efficiency with GitHub Copilot: A Python Developer&#39;s Guide</title>
     <url>/2023/12/20/Maximizing-Efficiency-with-GitHub-Copilot-A-Python-Developer-s-Guide/</url>
     <content><![CDATA[<p>As a technical architect deeply engaged in the evolving landscape of development tools, I've been exploring GitHub Copilot's capabilities. This AI-powered coding assistant from GitHub and OpenAI has offered both intriguing advantages and notable challenges. Below, I share my perspectives, enriched with a Python coding example to illustrate Copilot's practical application.</p>
@@ -1208,27 +1208,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>GitHub Copilot Features</tag>
         <tag>Coding Best Practices</tag>
         <tag>Technology Innovation</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ngày giãn cách ở Sài Gòn</title>
-    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
-    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
-<a id="more"></a>
-<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
-<p><img src="/images/2021-07-18/001.jpg"></p>
-<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
-<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng, nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ, hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè, nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã già?!</p>
-<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau 21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị; ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn (tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
-<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ, một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu phải đi cách ly, vì Donnie còn quá nhỏ.</p>
-<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách lúc này.</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -1406,26 +1385,24 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>SQLAlchemy for Python ORM Mapping</title>
-    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
-<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
-<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+    <title>Ngày giãn cách ở Sài Gòn</title>
+    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
+    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
 <a id="more"></a>
-<h1 id="table-define">Table Define</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="example">Example</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
+<p><img src="/images/2021-07-18/001.jpg"></p>
+<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
+<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng, nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ, hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè, nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã già?!</p>
+<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau 21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị; ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn (tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
+<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ, một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu phải đi cách ly, vì Donnie còn quá nhỏ.</p>
+<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách lúc này.</p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>Living</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>SQLAlchemy</tag>
-        <tag>ORM</tag>
-        <tag>SQL</tag>
+        <tag>Living</tag>
+        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -1448,6 +1425,29 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       <tags>
         <tag>chill</tag>
         <tag>roi pho ve nui</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLAlchemy for Python ORM Mapping</title>
+    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
+<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
+<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="table-define">Table Define</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="example">Example</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>SQLAlchemy</tag>
+        <tag>ORM</tag>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -1760,6 +1760,59 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Use Vagrant for cross environment development</title>
+    <url>/2020/12/28/Use-Vagrant-for-cross-environment-development/</url>
+    <content><![CDATA[<blockquote><h4>
+What's Vagrant?
+</h4>
+<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.</p>
+<h4>
+Why Vagrant?
+</h4>
+<p>Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.</p>
+<footer><strong>Vagrant</strong><cite><a href="https://www.vagrantup.com/intro">www.vagrantup.com/intro</a></cite></footer></blockquote>
+<h1 id="getting-started">Getting Started</h1>
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">Download</a> VirtualBox for virtualization</li>
+<li><a href="https://www.vagrantup.com/downloads">Download</a> and install Vagrant</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install virtualbox</span><br><span class="line"></span><br><span class="line">curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb</span><br><span class="line">sudo apt install ./vagrant_2.2.9_x86_64.deb</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="init-environment">Init environment</h1>
+<p>Run the command to init a new vagrant development environment using <code>ubuntu 20.04</code>.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant init bento/ubuntu-20.04</span><br></pre></td></tr></table></figure>
+<p>The script will generate a initial <code>Vagrantfile</code>.</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line">Vagrant.configure(<span class="string">&quot;2&quot;</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># The most common configuration options are documented and commented below.</span></span><br><span class="line">  <span class="comment"># For a complete reference, please see the online documentation at</span></span><br><span class="line">  <span class="comment"># https://docs.vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line">  <span class="comment"># boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  config.vm.box = <span class="string">&quot;bento/ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Disable automatic box update checking. If you disable this, then</span></span><br><span class="line">  <span class="comment"># boxes will only be checked for updates when the user runs</span></span><br><span class="line">  <span class="comment"># `vagrant box outdated`. This is not recommended.</span></span><br><span class="line">  <span class="comment"># config.vm.box_check_update = false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine and only allow access</span></span><br><span class="line">  <span class="comment"># via 127.0.0.1 to disable public access</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;public_network&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line">  <span class="comment">#   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line">  <span class="comment">#   vb.gui = true</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # Customize the amount of memory on the VM:</span></span><br><span class="line">  <span class="comment">#   vb.memory = &quot;1024&quot;</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you are using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line">  <span class="comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span></span><br><span class="line">  <span class="comment"># documentation for more information about their specific syntax and use.</span></span><br><span class="line">  <span class="comment"># config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line">  <span class="comment">#   apt-get update</span></span><br><span class="line">  <span class="comment">#   apt-get install -y apache2</span></span><br><span class="line">  <span class="comment"># SHELL</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Enable <code>config.vm.synced_folder "./", "/vagrant_data"</code> to share folder with the virtual machine.</li>
+<li>Enable <code>config.vm.network "forwarded_port", guest: 80, host: 8080</code> to expose virtual machine port <code>80</code> to <code>localhost:8080</code></li>
+<li>To install required packages on init. Enable:</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">config.vm.provision <span class="string">&quot;shell&quot;</span>, <span class="symbol">inline:</span> &lt;&lt;-SHELL</span><br><span class="line">  apt-get update</span><br><span class="line">  apt-get install url -y </span><br><span class="line">  curl <span class="symbol">https:</span>/<span class="regexp">/raw.githubusercontent.com/creationix</span><span class="regexp">/nvm/master</span><span class="regexp">/install.sh | bash</span></span><br><span class="line"><span class="regexp">SHELL</span></span><br></pre></td></tr></table></figure>
+<h1 id="up-and-run">Up and run</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant up</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Bringing machine &#x27;default&#x27; up with &#x27;virtualbox&#x27; provider...</span><br><span class="line">==&gt; default: Box &#x27;bento/ubuntu-20.04&#x27; could not be found. Attempting to find and install...</span><br><span class="line">    default: Box Provider: virtualbox</span><br><span class="line">    default: Box Version: &gt;= 0</span><br><span class="line">==&gt; default: Loading metadata for box &#x27;bento/ubuntu-20.04&#x27;</span><br><span class="line">    default: URL: https://vagrantcloud.com/bento/ubuntu-20.04</span><br><span class="line">==&gt; default: Adding box &#x27;bento/ubuntu-20.04&#x27; (v202012.23.0) for provider: virtualbox</span><br><span class="line">    default: Downloading: https://vagrantcloud.com/bento/boxes/ubuntu-20.04/versions/202012.23.0/providers/virtualbox.box</span><br><span class="line">==&gt; default: Box download is resuming from prior download progress</span><br><span class="line">Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com</span><br><span class="line">Progress: 0% (Rate: 215k/s, Estimated time remaining: 0:34:56)</span><br></pre></td></tr></table></figure>
+<h1 id="connect-to-the-vm">Connect to the VM</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure>
+<h1 id="stop-the-vm">Stop the VM</h1>
+<ul>
+<li>Stop without destroy the VM</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant halt</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Stop and destroy the VM</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant destroy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Productivity</tag>
+        <tag>VirtualBox</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Understanding the Key Differences: AWS DynamoDB vs MongoDB</title>
     <url>/2023/12/20/Understanding-the-Key-Differences-AWS-DynamoDB-vs-MongoDB/</url>
     <content><![CDATA[<p>In the realm of NoSQL databases, AWS DynamoDB and MongoDB stand out as two of the most popular choices. Both databases offer unique features and capabilities, making them suitable for a variety of applications. However, understanding their differences is crucial for developers and businesses to make an informed decision. Let’s dive into a detailed comparison.</p>
@@ -1827,59 +1880,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Use Vagrant for cross environment development</title>
-    <url>/2020/12/28/Use-Vagrant-for-cross-environment-development/</url>
-    <content><![CDATA[<blockquote><h4>
-What's Vagrant?
-</h4>
-<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.</p>
-<h4>
-Why Vagrant?
-</h4>
-<p>Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.</p>
-<footer><strong>Vagrant</strong><cite><a href="https://www.vagrantup.com/intro">www.vagrantup.com/intro</a></cite></footer></blockquote>
-<h1 id="getting-started">Getting Started</h1>
-<ul>
-<li><a href="https://www.virtualbox.org/wiki/Downloads">Download</a> VirtualBox for virtualization</li>
-<li><a href="https://www.vagrantup.com/downloads">Download</a> and install Vagrant</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install virtualbox</span><br><span class="line"></span><br><span class="line">curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb</span><br><span class="line">sudo apt install ./vagrant_2.2.9_x86_64.deb</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="init-environment">Init environment</h1>
-<p>Run the command to init a new vagrant development environment using <code>ubuntu 20.04</code>.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant init bento/ubuntu-20.04</span><br></pre></td></tr></table></figure>
-<p>The script will generate a initial <code>Vagrantfile</code>.</p>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line">Vagrant.configure(<span class="string">&quot;2&quot;</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># The most common configuration options are documented and commented below.</span></span><br><span class="line">  <span class="comment"># For a complete reference, please see the online documentation at</span></span><br><span class="line">  <span class="comment"># https://docs.vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line">  <span class="comment"># boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  config.vm.box = <span class="string">&quot;bento/ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Disable automatic box update checking. If you disable this, then</span></span><br><span class="line">  <span class="comment"># boxes will only be checked for updates when the user runs</span></span><br><span class="line">  <span class="comment"># `vagrant box outdated`. This is not recommended.</span></span><br><span class="line">  <span class="comment"># config.vm.box_check_update = false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine and only allow access</span></span><br><span class="line">  <span class="comment"># via 127.0.0.1 to disable public access</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;public_network&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line">  <span class="comment">#   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line">  <span class="comment">#   vb.gui = true</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # Customize the amount of memory on the VM:</span></span><br><span class="line">  <span class="comment">#   vb.memory = &quot;1024&quot;</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you are using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line">  <span class="comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span></span><br><span class="line">  <span class="comment"># documentation for more information about their specific syntax and use.</span></span><br><span class="line">  <span class="comment"># config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line">  <span class="comment">#   apt-get update</span></span><br><span class="line">  <span class="comment">#   apt-get install -y apache2</span></span><br><span class="line">  <span class="comment"># SHELL</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Enable <code>config.vm.synced_folder "./", "/vagrant_data"</code> to share folder with the virtual machine.</li>
-<li>Enable <code>config.vm.network "forwarded_port", guest: 80, host: 8080</code> to expose virtual machine port <code>80</code> to <code>localhost:8080</code></li>
-<li>To install required packages on init. Enable:</li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">config.vm.provision <span class="string">&quot;shell&quot;</span>, <span class="symbol">inline:</span> &lt;&lt;-SHELL</span><br><span class="line">  apt-get update</span><br><span class="line">  apt-get install url -y </span><br><span class="line">  curl <span class="symbol">https:</span>/<span class="regexp">/raw.githubusercontent.com/creationix</span><span class="regexp">/nvm/master</span><span class="regexp">/install.sh | bash</span></span><br><span class="line"><span class="regexp">SHELL</span></span><br></pre></td></tr></table></figure>
-<h1 id="up-and-run">Up and run</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant up</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Bringing machine &#x27;default&#x27; up with &#x27;virtualbox&#x27; provider...</span><br><span class="line">==&gt; default: Box &#x27;bento/ubuntu-20.04&#x27; could not be found. Attempting to find and install...</span><br><span class="line">    default: Box Provider: virtualbox</span><br><span class="line">    default: Box Version: &gt;= 0</span><br><span class="line">==&gt; default: Loading metadata for box &#x27;bento/ubuntu-20.04&#x27;</span><br><span class="line">    default: URL: https://vagrantcloud.com/bento/ubuntu-20.04</span><br><span class="line">==&gt; default: Adding box &#x27;bento/ubuntu-20.04&#x27; (v202012.23.0) for provider: virtualbox</span><br><span class="line">    default: Downloading: https://vagrantcloud.com/bento/boxes/ubuntu-20.04/versions/202012.23.0/providers/virtualbox.box</span><br><span class="line">==&gt; default: Box download is resuming from prior download progress</span><br><span class="line">Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com</span><br><span class="line">Progress: 0% (Rate: 215k/s, Estimated time remaining: 0:34:56)</span><br></pre></td></tr></table></figure>
-<h1 id="connect-to-the-vm">Connect to the VM</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure>
-<h1 id="stop-the-vm">Stop the VM</h1>
-<ul>
-<li>Stop without destroy the VM</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant halt</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Stop and destroy the VM</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant destroy</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Productivity</tag>
-        <tag>VirtualBox</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
     <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
     <content><![CDATA[<p>Hey code warriors!</p>
@@ -1933,6 +1933,38 @@ Why Vagrant?
         <tag>Life as a Coder</tag>
         <tag>Cultural Traditions</tag>
         <tag>Child Development</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Decoding Relaxation: My Year-End Company Trip to Ho Tram Beach</title>
+    <url>/2021/02/01/decoding-relaxation-my-year-end-company-trip-to-ho-tram-beach/</url>
+    <content><![CDATA[<p>Hey tech enthusiasts!</p>
+<p>Ever thought of a year-end company trip as a system reboot? That's exactly what my getaway to Ho Coc - Ho Tram in Ba Ria - Vung Tau felt like – a perfect blend of team spirit and sea breeze.</p>
+<p><strong>The Epic Year-End Logout:</strong></p>
+<p>Our journey began not with code pushes but with packed bags, as nearly 100 of us, myself and my family included, set off for a year-end company trip. It was time to exchange our usual digital tools for some real-world team building and family bonding.</p>
+<a id="more"></a>
+<p><strong>The Journey:</strong></p>
+<p>Our adventure started at the crack of dawn (yes, 5 AM!). The youngest team member on board? My 8-month-old son, prepped and ready for his first 'debugging' session with the ocean waves. As a developer, I couldn't have been more excited to introduce him to the vast, unexplored world of nature.</p>
+<p><strong>Team Building: The Real-Life Multiplayer Game:</strong></p>
+<p>Before we could dive into relaxation mode, there were team-building activities waiting for us. Think of it as a real-life cooperative multiplayer game, but with more sand and less screen time. It was a series of challenges that reminded us that even in the digital world, teamwork makes the dream work.</p>
+<p><strong>A Developer's Day Off:</strong></p>
+<p>Post-games, I took my family to the beach. Watching my son's first encounter with the waves was like witnessing a user experience their first bug-free app – pure joy! As we built sandcastles (without any architectural planning), I realized that sometimes, the best moments are the ones without a single line of code.</p>
+<p><img src="/images/2021-02-01/002.jpeg"></p>
+<p><strong>An Unexpected Commit:</strong></p>
+<p>The highlight of the trip? At the Year End Party, I was recognized as <strong>The Best Trainer</strong> and promoted to <strong>Principal Software Engineer</strong>. Talk about a surprise feature release at the end of the year!</p>
+<p><img src="/images/2021-02-01/003.jpeg"></p>
+<hr />
+<p>This short but sweet trip reminded me that life, much like coding, is full of unexpected joys. As we gear up for the Tet holiday, I'm ready to embrace the new adventures, both on and off the screen.</p>
+<p>Thanks for reading, fellow devs! Can't wait to share more of my ‘out of office’ escapades with you soon.</p>
+]]></content>
+      <categories>
+        <category>Tech Life Balance</category>
+      </categories>
+      <tags>
+        <tag>Developer Lifestyle</tag>
+        <tag>Year-End Celebration</tag>
+        <tag>Work Achievement</tag>
+        <tag>Family and Work</tag>
       </tags>
   </entry>
   <entry>
@@ -2036,26 +2068,6 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
-    <title>The Chinese Double Ninth Festival</title>
-    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
-<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
-<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
-<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
-<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
-<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
-<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Chung Yeung</tag>
-        <tag>Anniversary</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Reflecting on Unexpected Changes: A Developer&#39;s Perspective on the Ukraine-Russia Situation</title>
     <url>/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/</url>
     <content><![CDATA[<p>Hey fellow developers,</p>
@@ -2081,70 +2093,6 @@ Why Vagrant?
         <tag>Global Events</tag>
         <tag>Developer Community</tag>
         <tag>Tech and Society</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Setup your VPN server the easy way using docker</title>
-    <url>/2020/10/30/setup-self-openvpn-server/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-30/004.png" /></p>
-<p>In this post, I will show you how to setup your own VPN server in a few simple steps.</p>
-<h2 id="setup">## 1. Setup</h2>
-<h3 id="step-1---create-a-docker-volume-to-save-configuration">Step 1 - Create a docker volume to save configuration</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker volume create --name ovpn-data</span></span><br></pre></td></tr></table></figure>
-<h3 id="step-2---generate-config">Step 2 - Generate config</h3>
-<p>This step will pull the docker image <code>kylemanna/openvpn:2.3</code> and run command <code>ovpn_genconfig</code>. The <strong>IP_ADDRESS</strong> or <strong>DOMAIN</strong> is your public ip address, eg <code>udp://vpn.hienhoang.ml</code></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_genconfig -u udp://&#123;&#123;IP_ADDRESS | DOMAIN&#125;&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="step-3---generate-public-private-key">Step 3 - Generate public private key</h3>
-<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key. <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure></p>
-<p>Next command is to generate client key <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn:2.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 easyrsa build-client-full my_vpn nopass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ...................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ........+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/my_vpn.key.XXXXpkifIk&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> -----</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="step-4---export-the-ovpn-file">Step 4 - Export the ovpn file</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_getclient my_vpn &gt; my_vpn.ovpn</span></span><br></pre></td></tr></table></figure>
-<p>That's it. <code>my_vpn.ovpn</code> is what you need to connect to this VPN server.</p>
-<h2 id="usage">## 2. Usage</h2>
-<h3 id="check-your-vpn-server-running">Check your VPN server running</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker ps</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS              PORTS                    NAMES</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 04002f98ff76        kylemanna/openvpn:2.3   <span class="string">&quot;ovpn_run&quot;</span>          4 minutes ago       Up 4 minutes        0.0.0.0:1194-&gt;1194/udp   strange_wilbur</span></span><br></pre></td></tr></table></figure>
-<h3 id="import-the-.ovpn-file-using-openvpn-client">Import the .ovpn file using openvpn client</h3>
-<p><code>Import profile</code> -&gt; <code>FILE</code> <img src="/images/2020-10-30/001.png" /></p>
-<p>Open the <code>.ovpn</code> file you generated above. <img src="/images/2020-10-30/002.png" /></p>
-<p>Then click <code>Add</code> and Connect <img src="/images/2020-10-30/003.png" /></p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>VPN</tag>
-        <tag>DIY</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Year End 2020</title>
-    <url>/2021/02/01/year-end-2020/</url>
-    <content><![CDATA[<p>Hey, how do you do? Hope you had a good time in 2020.</p>
-<p><img src="/images/2021-02-01/004.jpg"></p>
-<a id="more"></a>
-<p>I’ve spent two days and one night at last weekend for the company trip to Ho Coc - Ho Tram in Ba Ria - Vung Tau, where I had a great time with my family and colleagues by attending many team building activities and the happy year end party. That was the occasion for us to release the stress, laugh and play, then to look back what we experienced and achieved through out the difficult year 2020 due to Covid-19.</p>
-<p>The trip started early on Sat 30 Jan 2021, at 5am, with nearly 100 attendees, including me and my family. I wanted to introduce the sunshine as well as the ocean waves on the long beach to my little son, so I brought my wife and him along the trip. He just turned 8 months old and he had been so curious about everything in this world. I had also felt excited and looked forward to going there. That was the first time I came to Ho Tram beach.</p>
-<p>After about 3 hours, we finally got there. YAY~ ..... BUT! We had to complete the team building activities designed by the tour company before we were free to do whatever we liked. Team building activities were action games on the beach that required the team players’ unity spirit, strength and strategy. I found those games interesting but they took lots of efforts to win. Everyone felt tired but satisfied after the games. Then we went to stay at a resort nearby, waiting for the Year End Party in the evening.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/ZuCm-tahGbM?t=58" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<p>In the afternoon, I took my wife and little son to the beach to play on the sand under the warm sun. It was windy and the waves were big and strong, the water was cool, which seemed not to be an ideal condition for swimming or soaking. That was my son’s first time putting his little feet in the sea waves coming in and seeing the sand moving when the waves coming out.</p>
-<p><img src="/images/2021-02-01/001.jpeg"></p>
-<p>Like any other babies, he liked to play with water a lot. When the waves turned bigger, we moved to the dry place and built the sand castle. I was surprised that he didn’t put the sand in his mouth, such a smart guy haha. After a while, he fell asleep in his mommy’s arms. Looking my wife hugging him, laying on the chair under the beautiful golden sunshine, listening to the endless ocean waves, I found the peaceful and happiness from the bottom of my heart.</p>
-<p><img src="/images/2021-02-01/002.jpeg"></p>
-<p>At that time I understood what it meant by saying the time seemed to pause for a moment. We went back to our room as the sun started setting to the west, preparing for the Year End Party.</p>
-<p>The purpose of the party was to flashback what happened in last year 2020, honoring those who contributed great values to the company, and cheer up with the music shows and delicious food at the same time. Unexpectedly, I was called to the stage and received two awards, which were <strong>The Best Trainer</strong> and The Promotion from a Senior Software Engineer to <strong>Principal Software Engineer</strong>. What a big surprised to me.</p>
-<p><img src="/images/2021-02-01/003.jpeg"></p>
-<p>What a meaningful company trip! My wife said that she had been very happy as well as proud of me. The party went on in the warm atmosphere that people sang, danced, laughed and drunk beers. My little son fell asleep in his mommy’s arms again. He seemed to prefer sleeping in the noisy places haha. So, as soon as we finished the meal, we went back to the room and rested. That were all for the first day of the trip, also the important one. Next day, we had breakfast at the resort’s restaurant. Then we checked out at 11:30am. Our trip ended.</p>
-<p>To me, although that trip was short but it brought to me many unforgettable moments with family and friends. Life is full of unexpectation, and I’m happy with it. After the trip, Tet holiday is coming to town! I will update our new journeys and share to you guys soon~!</p>
-<p>Thanks for reading up to this line!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -2187,8 +2135,8 @@ Why Vagrant?
       </categories>
       <tags>
         <tag>Cloud Computing</tag>
-        <tag>Programming Tips</tag>
         <tag>DevOps Tools</tag>
+        <tag>Programming Tips</tag>
         <tag>Headless Chrome</tag>
         <tag>Docker Containers</tag>
         <tag>Web Automation</tag>
@@ -2206,6 +2154,61 @@ Why Vagrant?
         <tag>Web Development</tag>
         <tag>Tech How-To</tag>
         <tag>Docker Deployment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Setup your VPN server the easy way using docker</title>
+    <url>/2020/10/30/setup-self-openvpn-server/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-30/004.png" /></p>
+<p>In this post, I will show you how to setup your own VPN server in a few simple steps.</p>
+<h2 id="setup">## 1. Setup</h2>
+<h3 id="step-1---create-a-docker-volume-to-save-configuration">Step 1 - Create a docker volume to save configuration</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker volume create --name ovpn-data</span></span><br></pre></td></tr></table></figure>
+<h3 id="step-2---generate-config">Step 2 - Generate config</h3>
+<p>This step will pull the docker image <code>kylemanna/openvpn:2.3</code> and run command <code>ovpn_genconfig</code>. The <strong>IP_ADDRESS</strong> or <strong>DOMAIN</strong> is your public ip address, eg <code>udp://vpn.hienhoang.ml</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_genconfig -u udp://&#123;&#123;IP_ADDRESS | DOMAIN&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="step-3---generate-public-private-key">Step 3 - Generate public private key</h3>
+<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key. <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure></p>
+<p>Next command is to generate client key <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn:2.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 easyrsa build-client-full my_vpn nopass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ...................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ........+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/my_vpn.key.XXXXpkifIk&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> -----</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="step-4---export-the-ovpn-file">Step 4 - Export the ovpn file</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_getclient my_vpn &gt; my_vpn.ovpn</span></span><br></pre></td></tr></table></figure>
+<p>That's it. <code>my_vpn.ovpn</code> is what you need to connect to this VPN server.</p>
+<h2 id="usage">## 2. Usage</h2>
+<h3 id="check-your-vpn-server-running">Check your VPN server running</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker ps</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS              PORTS                    NAMES</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 04002f98ff76        kylemanna/openvpn:2.3   <span class="string">&quot;ovpn_run&quot;</span>          4 minutes ago       Up 4 minutes        0.0.0.0:1194-&gt;1194/udp   strange_wilbur</span></span><br></pre></td></tr></table></figure>
+<h3 id="import-the-.ovpn-file-using-openvpn-client">Import the .ovpn file using openvpn client</h3>
+<p><code>Import profile</code> -&gt; <code>FILE</code> <img src="/images/2020-10-30/001.png" /></p>
+<p>Open the <code>.ovpn</code> file you generated above. <img src="/images/2020-10-30/002.png" /></p>
+<p>Then click <code>Add</code> and Connect <img src="/images/2020-10-30/003.png" /></p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>VPN</tag>
+        <tag>DIY</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Chinese Double Ninth Festival</title>
+    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
+<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
+<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
+<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
+<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
+<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
+<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Chung Yeung</tag>
+        <tag>Anniversary</tag>
       </tags>
   </entry>
   <entry>
