@@ -32,7 +32,7 @@
 <meta property="og:description" content="Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so tha">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-27T03:20:51.000Z">
-<meta property="article:modified_time" content="2021-01-19T13:17:51.072Z">
+<meta property="article:modified_time" content="2023-12-24T04:12:28.291Z">
 <meta property="article:author" content="Hien Hoang">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Docker">
@@ -249,13 +249,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-count">75</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">284</span>
+        <span class="site-state-item-count">287</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -339,7 +339,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+        <time title="Modified: 2023-12-24 11:12:28" itemprop="dateModified" datetime="2023-12-24T11:12:28+07:00">2023-12-24</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -367,6 +367,7 @@
 <h1 id="choosing-a-broker">Choosing a Broker</h1>
 <p>Celery requires a solution to send and receive messages; usually this comes in the form of a separate service called a message broker. In this example, I use RabbitMQ on docker for the most simple experiment.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 5672:5672 rabbitmq</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="the-application">The Application</h1>
 <ul>
 <li><p>Python code to define the task to run <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>

@@ -239,13 +239,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-count">75</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">284</span>
+        <span class="site-state-item-count">287</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -329,7 +329,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+        <time title="Modified: 2023-12-24 11:27:58" itemprop="dateModified" datetime="2023-12-24T11:27:58+07:00">2023-12-24</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -355,27 +355,14 @@
 <h4 id="first-import-the-libraries-we-are-going-to-use.">First, import the libraries we are going to use.</h4>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
 <p>I'm using <code>matplotlib</code> and <code>seaborn</code> for visualization. <code>numpy</code> and <code>pandas</code> to handle numerical arrays and dataframe. I'm also use <code>scikit-learn</code> to get the data and perform <code>t-SNE</code>.</p>
-<h4 id="download-the-dataset">Download the dataset</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data</span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">print(pixel_values.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>(70000, 784)</strong></p>
-<p>The dataset downloaded has 70,000 records, each record has 784 columns.</p>
-<h4 id="lets-plot-an-image-to-see-what-does-it-look-like">Let's plot an image to see what does it look like</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">image = pixel_values[<span class="number">0</span>, :].reshape(<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">plt.imshow(image, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<div style="display:flex;align-items:start"><img src="/images/2020-10-23/002.png" /></div>
-
-<p>The image in the dataset has size <code>768</code>, so I need convert it to <code>28x28</code>.</p>
-<h4 id="now-the-importance-part-compute-t-sne">Now the importance part, compute t-SNE</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne = manifold.TSNE(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line">transformed_data = tsne.fit_transform(pixel_values[:<span class="number">6000</span>, :])</span><br><span class="line"></span><br><span class="line">print(transformed_data.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>(6000, 2)</strong></p>
-<p>In this example, I using only <code>6000</code> rows, and reduce the columns from <code>768</code> to <code>2</code>. Enough for plotting the data to 2D chart.</p>
-<h4 id="lets-visualize-the-transformed-dataset">Let's visualize the transformed dataset</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne_df = pd.DataFrame(np.column_stack((transformed_data, targets[:<span class="number">6000</span>])), columns=[<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;targets&#x27;</span>])</span><br><span class="line">tsne_df.loc[:, <span class="string">&#x27;targets&#x27;</span>] = tsne_df.targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">grid = sns.FacetGrid(tsne_df, hue=<span class="string">&#x27;targets&#x27;</span>, height=<span class="number">8</span>)</span><br><span class="line">grid.<span class="built_in">map</span>(plt.scatter, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>).add_legend()</span><br></pre></td></tr></table></figure>
-
-<div style="display:flex;align-items:start"><img src="/images/2020-10-23/003.png" /></div>
-
-<p>This is one way to visualize dataset. By plotting the dataset in the chart, we can see that, the number <code>0</code> and <code>6</code> are distinguishable easily. The number <code>4</code> and <code>9</code> are harder to distinguish.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/23/how-to-visualize-your-dataset-in-a-2d-or-3d-chart/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

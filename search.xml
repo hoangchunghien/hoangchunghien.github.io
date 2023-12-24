@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Azure DevOps Engineering Expert achievement</title>
-    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
-<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
-<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
-<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Azure Administrator Associate achievement</title>
     <url>/2021/06/12/Azure-Administrator-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
@@ -35,6 +17,24 @@
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
         <tag>Administrator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure DevOps Engineering Expert achievement</title>
+    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
+<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
+<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
+<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -118,6 +118,38 @@
       </tags>
   </entry>
   <entry>
+    <title>Coding in the Clouds: My Digital Detox at The Double Ninth Festival</title>
+    <url>/2020/10/26/Coding-in-the-Clouds-My-Digital-Detox-at-The-Double-Ninth-Festival/</url>
+    <content><![CDATA[<p>Hey fellow programmers!</p>
+<p>Taking a break from the digital world, I recently ventured into the heart of tradition, attending the <strong>Double Ninth Festival</strong>. It's like hitting 'pause' on our daily coding routine and rebooting into a world of family, memories, and cultural heritage.</p>
+<p><img src="/images/2020-10-26/001.jpg" /></p>
+<p><em>The Journey Begins</em></p>
+<p>Swapping my usual coding marathons for a real marathon, I embarked on an 8-hour bus journey from the bustling city to the serene Lam Dong Province. The mission? To reconnect with my roots at the <strong>Double Ninth Festival</strong>, a day dedicated to honoring ancestors in Chinese culture.</p>
+<a id="more"></a>
+<p><em>A Developer’s Homage</em></p>
+<p>Arriving at my ancestral home, the nostalgia hit me harder than a forgotten semicolon in my code. The agenda was simple yet profound: visit the cemetery, pay respects, and remember the good times. As a Guangdong native, this festival holds a special place in my heart, reminding me of the values and stories that shaped me.</p>
+<p><em>Connection to the Past</em></p>
+<p>The day unfolded like a well-scripted program. My mom and I, armed with traditional offerings, made our way to the cemetery. The path, rugged and untamed, felt like navigating through legacy code – familiar yet challenging. Clearing weeds and setting up the ritual space, I couldn't help but draw parallels between tidying up graves and refactoring code.</p>
+<p><em>Emotional Compile Time</em></p>
+<p>Standing by my ancestors' graves, memories flooded back. I recalled my grandpa's gentle demeanor and his love for coffee – a trait I proudly inherited. It was a moment of reflection, a realization that life, much like coding, is a blend of simplicity and complexity.</p>
+<p><em>Wrapping Up the Ritual</em></p>
+<p>As the incense smoke swirled upwards, blending with the midday breeze, I felt a connection to my heritage stronger than any Wi-Fi signal. It was a reminder that in our fast-paced tech life, slowing down to cherish these moments is crucial.</p>
+<hr />
+<p>Returning to the city, my heart was full, and my mind refreshed. The <strong>Double Ninth Festival</strong> was more than just a traditional observance; it was a journey back to my roots, a reminder to cherish every moment before it becomes a memory. Here's to balancing our tech-driven lives with the richness of our traditions!</p>
+<p>Thanks for scrolling through my story, devs. Until next byte!</p>
+]]></content>
+      <categories>
+        <category>Cultural Reflections</category>
+      </categories>
+      <tags>
+        <tag>Double Ninth Festival</tag>
+        <tag>Cultural Heritage</tag>
+        <tag>Family Memories</tag>
+        <tag>Traditional Celebrations</tag>
+        <tag>Life Reflections</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Distributed Tasks Processing With Google Pub/Sub</title>
     <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
     <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
@@ -130,6 +162,7 @@
 <li><strong>Message</strong>: The combination of data and (optional) attributes that a publisher sends to a topic and is eventually delivered to subscribers.</li>
 <li><strong>Message attribute</strong>: A key-value pair that a publisher can define for a message. For example, key iana.org/language_tag and value en could be added to messages to mark them as readable by an English-speaking subscriber.</li>
 </ul>
+<a id="more"></a>
 <h1 id="install">Install</h1>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
 <h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
@@ -713,8 +746,8 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <category>DevOps</category>
         <category>Cloud Computing</category>
         <category>Software Development</category>
-        <category>CI/CD</category>
         <category>Data Engineering</category>
+        <category>CI/CD</category>
         <category>Workflow Automation</category>
         <category>Serverless Computing</category>
         <category>Big Data</category>
@@ -746,45 +779,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Hijack your computer http request with Fiddler</title>
-    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
-<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
-<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
-<p>On my laptop, I use the linux version. You can download here</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
-<h1 id="configuration">Configuration</h1>
-<p>This is the main view of the tool</p>
-<p><img src="/images/2020-12-23/001.png"></p>
-<ol type="1">
-<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
-</ol>
-<p><img src="/images/2020-12-23/005.png"></p>
-<ol start="2" type="1">
-<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
-</ol>
-<p><img src="/images/2020-12-23/003.png"></p>
-<ol start="3" type="1">
-<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
-</ol>
-<p><img src="/images/2020-12-23/004.png"></p>
-<h1 id="experiement">Experiement</h1>
-<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
-<p><img src="/images/2020-12-23/002.png"></p>
-]]></content>
-      <categories>
-        <category>Networking</category>
-      </categories>
-      <tags>
-        <tag>Networking</tag>
-        <tag>Tool</tag>
-        <tag>HTTP</tag>
-        <tag>Debugging</tag>
-        <tag>Snipping</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>How to clone an GCP instance to machine-image and restore it</title>
     <url>/2020/11/10/How-to-clone-an-GCP-instance-to-machine-image-and-restore-it/</url>
     <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
@@ -807,6 +801,7 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 <li>Install</li>
 </ul>
 <p><code>./google-cloud-sdk/install.sh</code></p>
+<a id="more"></a>
 <ol start="3" type="1">
 <li>Authorizing gcloud</li>
 </ol>
@@ -847,6 +842,45 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Compute Engine</tag>
         <tag>Backup</tag>
         <tag>Machine Image</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hijack your computer http request with Fiddler</title>
+    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
+<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
+<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
+<p>On my laptop, I use the linux version. You can download here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
+<h1 id="configuration">Configuration</h1>
+<p>This is the main view of the tool</p>
+<p><img src="/images/2020-12-23/001.png"></p>
+<ol type="1">
+<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
+</ol>
+<p><img src="/images/2020-12-23/005.png"></p>
+<ol start="2" type="1">
+<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
+</ol>
+<p><img src="/images/2020-12-23/003.png"></p>
+<ol start="3" type="1">
+<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
+</ol>
+<p><img src="/images/2020-12-23/004.png"></p>
+<h1 id="experiement">Experiement</h1>
+<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
+<p><img src="/images/2020-12-23/002.png"></p>
+]]></content>
+      <categories>
+        <category>Networking</category>
+      </categories>
+      <tags>
+        <tag>Networking</tag>
+        <tag>Tool</tag>
+        <tag>HTTP</tag>
+        <tag>Debugging</tag>
+        <tag>Snipping</tag>
       </tags>
   </entry>
   <entry>
@@ -987,6 +1021,7 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
 <h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h1 id="test-the-connection">3. Test the connection</h1>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
@@ -1060,11 +1095,11 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <category>DevOps</category>
         <category>Cloud Computing</category>
         <category>Software Development</category>
-        <category>CI/CD</category>
         <category>Data Engineering</category>
+        <category>CI/CD</category>
         <category>Workflow Automation</category>
-        <category>Technology Tutorials</category>
         <category>Python Programming</category>
+        <category>Technology Tutorials</category>
         <category>Big Data</category>
         <category>ETL</category>
         <category>IT Operations</category>
@@ -1208,6 +1243,27 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>GitHub Copilot Features</tag>
         <tag>Coding Best Practices</tag>
         <tag>Technology Innovation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ngày giãn cách ở Sài Gòn</title>
+    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
+    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
+<a id="more"></a>
+<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
+<p><img src="/images/2021-07-18/001.jpg"></p>
+<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
+<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng, nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ, hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè, nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã già?!</p>
+<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau 21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị; ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn (tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
+<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ, một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu phải đi cách ly, vì Donnie còn quá nhỏ.</p>
+<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách lúc này.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -1385,27 +1441,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Ngày giãn cách ở Sài Gòn</title>
-    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
-    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi người "Work From Home".</p>
-<a id="more"></a>
-<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
-<p><img src="/images/2021-07-18/001.jpg"></p>
-<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể tả.</p>
-<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng, nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ, hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè, nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã già?!</p>
-<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau 21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị; ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn (tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
-<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ, một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu phải đi cách ly, vì Donnie còn quá nhỏ.</p>
-<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách lúc này.</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rời Phố Về Núi, Ta Chill (P2)</title>
     <url>/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/</url>
     <content><![CDATA[<p>Rời phố về quê<br/> Sống với núi rừng<br/> Sương trời gió lộng<br/> Lòng này vẫn ấm.<br/></p>
@@ -1459,6 +1494,7 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 <h1 id="choosing-a-broker">Choosing a Broker</h1>
 <p>Celery requires a solution to send and receive messages; usually this comes in the form of a separate service called a message broker. In this example, I use RabbitMQ on docker for the most simple experiment.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 5672:5672 rabbitmq</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="the-application">The Application</h1>
 <ul>
 <li><p>Python code to define the task to run <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>
@@ -1760,59 +1796,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Use Vagrant for cross environment development</title>
-    <url>/2020/12/28/Use-Vagrant-for-cross-environment-development/</url>
-    <content><![CDATA[<blockquote><h4>
-What's Vagrant?
-</h4>
-<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.</p>
-<h4>
-Why Vagrant?
-</h4>
-<p>Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.</p>
-<footer><strong>Vagrant</strong><cite><a href="https://www.vagrantup.com/intro">www.vagrantup.com/intro</a></cite></footer></blockquote>
-<h1 id="getting-started">Getting Started</h1>
-<ul>
-<li><a href="https://www.virtualbox.org/wiki/Downloads">Download</a> VirtualBox for virtualization</li>
-<li><a href="https://www.vagrantup.com/downloads">Download</a> and install Vagrant</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install virtualbox</span><br><span class="line"></span><br><span class="line">curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb</span><br><span class="line">sudo apt install ./vagrant_2.2.9_x86_64.deb</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="init-environment">Init environment</h1>
-<p>Run the command to init a new vagrant development environment using <code>ubuntu 20.04</code>.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant init bento/ubuntu-20.04</span><br></pre></td></tr></table></figure>
-<p>The script will generate a initial <code>Vagrantfile</code>.</p>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line">Vagrant.configure(<span class="string">&quot;2&quot;</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># The most common configuration options are documented and commented below.</span></span><br><span class="line">  <span class="comment"># For a complete reference, please see the online documentation at</span></span><br><span class="line">  <span class="comment"># https://docs.vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line">  <span class="comment"># boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  config.vm.box = <span class="string">&quot;bento/ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Disable automatic box update checking. If you disable this, then</span></span><br><span class="line">  <span class="comment"># boxes will only be checked for updates when the user runs</span></span><br><span class="line">  <span class="comment"># `vagrant box outdated`. This is not recommended.</span></span><br><span class="line">  <span class="comment"># config.vm.box_check_update = false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine and only allow access</span></span><br><span class="line">  <span class="comment"># via 127.0.0.1 to disable public access</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;public_network&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line">  <span class="comment">#   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line">  <span class="comment">#   vb.gui = true</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # Customize the amount of memory on the VM:</span></span><br><span class="line">  <span class="comment">#   vb.memory = &quot;1024&quot;</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you are using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line">  <span class="comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span></span><br><span class="line">  <span class="comment"># documentation for more information about their specific syntax and use.</span></span><br><span class="line">  <span class="comment"># config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line">  <span class="comment">#   apt-get update</span></span><br><span class="line">  <span class="comment">#   apt-get install -y apache2</span></span><br><span class="line">  <span class="comment"># SHELL</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Enable <code>config.vm.synced_folder "./", "/vagrant_data"</code> to share folder with the virtual machine.</li>
-<li>Enable <code>config.vm.network "forwarded_port", guest: 80, host: 8080</code> to expose virtual machine port <code>80</code> to <code>localhost:8080</code></li>
-<li>To install required packages on init. Enable:</li>
-</ul>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">config.vm.provision <span class="string">&quot;shell&quot;</span>, <span class="symbol">inline:</span> &lt;&lt;-SHELL</span><br><span class="line">  apt-get update</span><br><span class="line">  apt-get install url -y </span><br><span class="line">  curl <span class="symbol">https:</span>/<span class="regexp">/raw.githubusercontent.com/creationix</span><span class="regexp">/nvm/master</span><span class="regexp">/install.sh | bash</span></span><br><span class="line"><span class="regexp">SHELL</span></span><br></pre></td></tr></table></figure>
-<h1 id="up-and-run">Up and run</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant up</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Bringing machine &#x27;default&#x27; up with &#x27;virtualbox&#x27; provider...</span><br><span class="line">==&gt; default: Box &#x27;bento/ubuntu-20.04&#x27; could not be found. Attempting to find and install...</span><br><span class="line">    default: Box Provider: virtualbox</span><br><span class="line">    default: Box Version: &gt;= 0</span><br><span class="line">==&gt; default: Loading metadata for box &#x27;bento/ubuntu-20.04&#x27;</span><br><span class="line">    default: URL: https://vagrantcloud.com/bento/ubuntu-20.04</span><br><span class="line">==&gt; default: Adding box &#x27;bento/ubuntu-20.04&#x27; (v202012.23.0) for provider: virtualbox</span><br><span class="line">    default: Downloading: https://vagrantcloud.com/bento/boxes/ubuntu-20.04/versions/202012.23.0/providers/virtualbox.box</span><br><span class="line">==&gt; default: Box download is resuming from prior download progress</span><br><span class="line">Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com</span><br><span class="line">Progress: 0% (Rate: 215k/s, Estimated time remaining: 0:34:56)</span><br></pre></td></tr></table></figure>
-<h1 id="connect-to-the-vm">Connect to the VM</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure>
-<h1 id="stop-the-vm">Stop the VM</h1>
-<ul>
-<li>Stop without destroy the VM</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant halt</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Stop and destroy the VM</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant destroy</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Productivity</tag>
-        <tag>VirtualBox</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Understanding the Key Differences: AWS DynamoDB vs MongoDB</title>
     <url>/2023/12/20/Understanding-the-Key-Differences-AWS-DynamoDB-vs-MongoDB/</url>
     <content><![CDATA[<p>In the realm of NoSQL databases, AWS DynamoDB and MongoDB stand out as two of the most popular choices. Both databases offer unique features and capabilities, making them suitable for a variety of applications. However, understanding their differences is crucial for developers and businesses to make an informed decision. Let’s dive into a detailed comparison.</p>
@@ -1877,6 +1860,59 @@ Why Vagrant?
         <tag>DynamoDB vs MongoDB</tag>
         <tag>Data Storage Solutions</tag>
         <tag>Key-Value Store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Use Vagrant for cross environment development</title>
+    <url>/2020/12/28/Use-Vagrant-for-cross-environment-development/</url>
+    <content><![CDATA[<blockquote><h4>
+What's Vagrant?
+</h4>
+<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development environment setup time, increases production parity, and makes the "works on my machine" excuse a relic of the past.</p>
+<h4>
+Why Vagrant?
+</h4>
+<p>Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.</p>
+<footer><strong>Vagrant</strong><cite><a href="https://www.vagrantup.com/intro">www.vagrantup.com/intro</a></cite></footer></blockquote>
+<h1 id="getting-started">Getting Started</h1>
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">Download</a> VirtualBox for virtualization</li>
+<li><a href="https://www.vagrantup.com/downloads">Download</a> and install Vagrant</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install virtualbox</span><br><span class="line"></span><br><span class="line">curl -O https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb</span><br><span class="line">sudo apt install ./vagrant_2.2.9_x86_64.deb</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="init-environment">Init environment</h1>
+<p>Run the command to init a new vagrant development environment using <code>ubuntu 20.04</code>.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant init bento/ubuntu-20.04</span><br></pre></td></tr></table></figure>
+<p>The script will generate a initial <code>Vagrantfile</code>.</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line">Vagrant.configure(<span class="string">&quot;2&quot;</span>) <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">  <span class="comment"># The most common configuration options are documented and commented below.</span></span><br><span class="line">  <span class="comment"># For a complete reference, please see the online documentation at</span></span><br><span class="line">  <span class="comment"># https://docs.vagrantup.com.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line">  <span class="comment"># boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  config.vm.box = <span class="string">&quot;bento/ubuntu-20.04&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Disable automatic box update checking. If you disable this, then</span></span><br><span class="line">  <span class="comment"># boxes will only be checked for updates when the user runs</span></span><br><span class="line">  <span class="comment"># `vagrant box outdated`. This is not recommended.</span></span><br><span class="line">  <span class="comment"># config.vm.box_check_update = false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine. In the example below,</span></span><br><span class="line">  <span class="comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line">  <span class="comment"># <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line">  <span class="comment"># within the machine from a port on the host machine and only allow access</span></span><br><span class="line">  <span class="comment"># via 127.0.0.1 to disable public access</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a private network, which allows host-only access to the machine</span></span><br><span class="line">  <span class="comment"># using a specific IP.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a public network, which generally matched to bridged network.</span></span><br><span class="line">  <span class="comment"># Bridged networks make the machine appear as another physical device on</span></span><br><span class="line">  <span class="comment"># your network.</span></span><br><span class="line">  <span class="comment"># config.vm.network &quot;public_network&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line">  <span class="comment"># the path on the host to the actual folder. The second argument is</span></span><br><span class="line">  <span class="comment"># the path on the guest to mount the folder. And the optional third</span></span><br><span class="line">  <span class="comment"># argument is a set of non-required options.</span></span><br><span class="line">  <span class="comment"># config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Provider-specific configuration so you can fine-tune various</span></span><br><span class="line">  <span class="comment"># backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line">  <span class="comment"># Example for VirtualBox:</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line">  <span class="comment">#   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line">  <span class="comment">#   vb.gui = true</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment">#   # Customize the amount of memory on the VM:</span></span><br><span class="line">  <span class="comment">#   vb.memory = &quot;1024&quot;</span></span><br><span class="line">  <span class="comment"># end</span></span><br><span class="line">  <span class="comment">#</span></span><br><span class="line">  <span class="comment"># View the documentation for the provider you are using for more</span></span><br><span class="line">  <span class="comment"># information on available options.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line">  <span class="comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span></span><br><span class="line">  <span class="comment"># documentation for more information about their specific syntax and use.</span></span><br><span class="line">  <span class="comment"># config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line">  <span class="comment">#   apt-get update</span></span><br><span class="line">  <span class="comment">#   apt-get install -y apache2</span></span><br><span class="line">  <span class="comment"># SHELL</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Enable <code>config.vm.synced_folder "./", "/vagrant_data"</code> to share folder with the virtual machine.</li>
+<li>Enable <code>config.vm.network "forwarded_port", guest: 80, host: 8080</code> to expose virtual machine port <code>80</code> to <code>localhost:8080</code></li>
+<li>To install required packages on init. Enable:</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">config.vm.provision <span class="string">&quot;shell&quot;</span>, <span class="symbol">inline:</span> &lt;&lt;-SHELL</span><br><span class="line">  apt-get update</span><br><span class="line">  apt-get install url -y </span><br><span class="line">  curl <span class="symbol">https:</span>/<span class="regexp">/raw.githubusercontent.com/creationix</span><span class="regexp">/nvm/master</span><span class="regexp">/install.sh | bash</span></span><br><span class="line"><span class="regexp">SHELL</span></span><br></pre></td></tr></table></figure>
+<h1 id="up-and-run">Up and run</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant up</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Bringing machine &#x27;default&#x27; up with &#x27;virtualbox&#x27; provider...</span><br><span class="line">==&gt; default: Box &#x27;bento/ubuntu-20.04&#x27; could not be found. Attempting to find and install...</span><br><span class="line">    default: Box Provider: virtualbox</span><br><span class="line">    default: Box Version: &gt;= 0</span><br><span class="line">==&gt; default: Loading metadata for box &#x27;bento/ubuntu-20.04&#x27;</span><br><span class="line">    default: URL: https://vagrantcloud.com/bento/ubuntu-20.04</span><br><span class="line">==&gt; default: Adding box &#x27;bento/ubuntu-20.04&#x27; (v202012.23.0) for provider: virtualbox</span><br><span class="line">    default: Downloading: https://vagrantcloud.com/bento/boxes/ubuntu-20.04/versions/202012.23.0/providers/virtualbox.box</span><br><span class="line">==&gt; default: Box download is resuming from prior download progress</span><br><span class="line">Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com</span><br><span class="line">Progress: 0% (Rate: 215k/s, Estimated time remaining: 0:34:56)</span><br></pre></td></tr></table></figure>
+<h1 id="connect-to-the-vm">Connect to the VM</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure>
+<h1 id="stop-the-vm">Stop the VM</h1>
+<ul>
+<li>Stop without destroy the VM</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant halt</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Stop and destroy the VM</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vagrant destroy</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Productivity</tag>
+        <tag>VirtualBox</tag>
       </tags>
   </entry>
   <entry>
@@ -1976,6 +2012,7 @@ Why Vagrant?
 <p><strong>Health Check Commit</strong></p>
 <p>We faced our first 'bug' early on due to missed health checks. My wife, a fellow enthusiast of chill beers and algorithms, had her concerns. Thankfully, our little 'program' was error-free and running smoothly.</p>
 <p><strong>The Deployment Day</strong></p>
+<a id="more"></a>
 <p>Our son's arrival was like a product launch under tight deadlines. Rushing to the hospital at 3:00 am, praying for zero downtime. And in the early hours of the morning, our latest 'version' was successfully deployed - a healthy baby boy!</p>
 <p><img src="/images/2020-12-15/003.jpg" style="max-height: 540px;"></p>
 <p><strong>Refactoring Life</strong></p>
@@ -2031,6 +2068,7 @@ Why Vagrant?
 <h4 id="first-import-the-libraries-we-are-going-to-use.">First, import the libraries we are going to use.</h4>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
 <p>I'm using <code>matplotlib</code> and <code>seaborn</code> for visualization. <code>numpy</code> and <code>pandas</code> to handle numerical arrays and dataframe. I'm also use <code>scikit-learn</code> to get the data and perform <code>t-SNE</code>.</p>
+<a id="more"></a>
 <h4 id="download-the-dataset">Download the dataset</h4>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data</span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">print(pixel_values.shape)</span><br></pre></td></tr></table></figure>
 <p><strong>(70000, 784)</strong></p>
@@ -2106,6 +2144,7 @@ Why Vagrant?
 <ul>
 <li><code>Dockerfile</code></li>
 </ul>
+<a id="more"></a>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>app.py</code></li>
@@ -2168,7 +2207,9 @@ Why Vagrant?
 <p>This step will pull the docker image <code>kylemanna/openvpn:2.3</code> and run command <code>ovpn_genconfig</code>. The <strong>IP_ADDRESS</strong> or <strong>DOMAIN</strong> is your public ip address, eg <code>udp://vpn.hienhoang.ml</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_genconfig -u udp://&#123;&#123;IP_ADDRESS | DOMAIN&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="step-3---generate-public-private-key">Step 3 - Generate public private key</h3>
-<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key. <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure></p>
+<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key.</p>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure>
 <p>Next command is to generate client key <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn:2.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 easyrsa build-client-full my_vpn nopass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ...................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ........+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/my_vpn.key.XXXXpkifIk&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> -----</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="step-4---export-the-ovpn-file">Step 4 - Export the ovpn file</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_getclient my_vpn &gt; my_vpn.ovpn</span></span><br></pre></td></tr></table></figure>
@@ -2189,26 +2230,6 @@ Why Vagrant?
         <tag>Docker</tag>
         <tag>VPN</tag>
         <tag>DIY</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The Chinese Double Ninth Festival</title>
-    <url>/2020/10/26/the-chinese-double-ninth-festival/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-26/001.jpg" /></p>
-<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
-<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
-<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
-<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
-<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
-<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Chung Yeung</tag>
-        <tag>Anniversary</tag>
       </tags>
   </entry>
   <entry>
@@ -2855,6 +2876,7 @@ Why Vagrant?
 <div style="font-size:14px">
 ['the', 'faster', 'harry', 'got', 'to', 'the', 'store', ',', 'the', 'faster', 'harry', ',', 'the', 'faster', ',', 'would', 'get', 'home', '.']
 </div>
+<a id="more"></a>
 <h3 id="tokens-counter">Tokens counter</h3>
 <p>We only care about the unique words and how many times a word occurs in the sentence.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line">bag_of_words = Counter(token_sequence)</span><br><span class="line">print(bag_of_words)</span><br></pre></td></tr></table></figure>

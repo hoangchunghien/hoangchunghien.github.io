@@ -266,13 +266,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-count">75</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">284</span>
+        <span class="site-state-item-count">287</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -399,6 +399,7 @@
 <ul>
 <li><code>Dockerfile</code></li>
 </ul>
+<a id="more"></a>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>app.py</code></li>

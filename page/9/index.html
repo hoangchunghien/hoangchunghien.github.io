@@ -239,13 +239,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-count">75</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">284</span>
+        <span class="site-state-item-count">287</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -372,25 +372,14 @@
 <ul>
 <li><code>Dockerfile</code></li>
 </ul>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install manually all the missing libraries</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get update</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install -y gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> apt-get install libgbm1 -y</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Chrome</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/chromedriver /usr/bin/chromedriver</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> bin/google-chrome-87_amd64.deb .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> dpkg -i google-chrome-87_amd64.deb; apt-get -fy install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Allow statements and log messages to immediately appear in the Knative logs</span></span><br><span class="line"><span class="keyword">ENV</span> PYTHONUNBUFFERED True</span><br><span class="line"><span class="keyword">ENV</span> PORT <span class="number">5000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install gunicorn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Python dependencies.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy local code to the container image.</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> app.py /app/app.py</span></span><br><span class="line"><span class="keyword">ENV</span> APP_HOME /app</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> <span class="variable">$APP_HOME</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Run the web service on container startup.</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> <span class="built_in">exec</span> gunicorn --<span class="built_in">bind</span> :<span class="variable">$PORT</span> --workers 1 --threads 8 --timeout 0 app:app</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>app.py</code></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, send_file</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.options <span class="keyword">import</span> Options</span><br><span class="line"></span><br><span class="line">options = Options()</span><br><span class="line">options.add_argument(<span class="string">&#x27;--headless&#x27;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-gpu&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--disable-dev-shm-usage&quot;</span>)</span><br><span class="line">options.add_argument(<span class="string">&quot;--no-sandbox&quot;</span>)</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;, methods=[&#x27;GET&#x27;])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">home</span>():</span></span><br><span class="line">    driver = webdriver.Chrome(chrome_options=options)</span><br><span class="line">    driver.get(<span class="string">&#x27;https://www.google.com&#x27;</span>)</span><br><span class="line">    driver.save_screenshot(<span class="string">&quot;screenshot.png&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> send_file(<span class="string">&quot;screenshot.png&quot;</span>, mimetype=<span class="string">&#x27;image/png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="built_in">int</span>(os.environ.get(<span class="string">&#x27;PORT&#x27;</span>, <span class="number">5000</span>)))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-it">3. Test it</h1>
-<ul>
-<li>Build the docker image</li>
-</ul>
-<p><code>docker build -t headless .</code></p>
-<ul>
-<li>Run the docker container</li>
-</ul>
-<p><code>docker run -it -p 5000:5000 headless</code></p>
-<ul>
-<li>Open the link <a target="_blank" rel="noopener" href="http://localhost:5000">http://localhost:5000</a></li>
-</ul>
-<p><img src="/images/2020-11-20/001.png"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/20/run-headless-chrome-inside-a-docker-container/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -473,19 +462,14 @@
 <p><strong>Health Check Commit</strong></p>
 <p>We faced our first 'bug' early on due to missed health checks. My wife, a fellow enthusiast of chill beers and algorithms, had her concerns. Thankfully, our little 'program' was error-free and running smoothly.</p>
 <p><strong>The Deployment Day</strong></p>
-<p>Our son's arrival was like a product launch under tight deadlines. Rushing to the hospital at 3:00 am, praying for zero downtime. And in the early hours of the morning, our latest 'version' was successfully deployed - a healthy baby boy!</p>
-<p><img src="/images/2020-12-15/003.jpg" style="max-height: 540px;"></p>
-<p><strong>Refactoring Life</strong></p>
-<p>After navigating through the initial challenges and excitement of our new arrival, just like in a development project, it was time to enter the 'Refactoring Life' phase. This is where I applied some essential updates and optimizations to our family's daily routine.</p>
-<ol type="1">
-<li><p><strong>Home Setup</strong>: Just like optimizing our work environment for productivity, I revamped our living space for the new family member.</p></li>
-<li><p><strong>Listening to User Feedback</strong>: Pregnancy and postpartum are like customer feedback sessions. I've been tuning into my wife's needs and emotions, debugging together to ensure a smooth run.</p></li>
-<li><p><strong>Financial and Career Scaling</strong>: With a new member in our 'dev team', I started consuming more content on financial algorithms and career scaling to provide a robust framework for our family's future.</p></li>
-<li><p><strong>New Features and Hobbies</strong>: Fatherhood introduced new hobbies, like photography - capturing our little 'project's milestones. It's like keeping a visual log of our family's development process.</p></li>
-</ol>
-<p><strong>Conclusion</strong></p>
-<p>Becoming a father is a bit like diving into a new programming language - daunting at first but immensely rewarding as you learn. I hope my story resonates with you, fellow devs, as we navigate the incredible journey of parenthood in the tech world.</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/14/hello-world-my-coding-journey-into-fatherhood/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -579,36 +563,14 @@
 <li>Install</li>
 </ul>
 <p><code>./google-cloud-sdk/install.sh</code></p>
-<ol start="3" type="1">
-<li>Authorizing gcloud</li>
-</ol>
-<p>Follow the gcloud official <a target="_blank" rel="noopener" href="https://cloud.google.com/sdk/docs/authorizing">document</a></p>
-<h1 id="list-running-instance">List running instance</h1>
-<ul>
-<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NAME                  ZONE           MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS</span><br><span class="line">c****01               us-central1-a  f1-micro                    xx.xxx.x.x   xxx.xxx.xx.xxx  RUNNING</span><br><span class="line">c****02               us-central1-a  f1-micro                    xx.xxx.x.x   xx.xxx.xx.xxx   RUNNING</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Using Python <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_running_instances</span>(<span class="params">status=<span class="string">&#x27;RUNNING&#x27;</span></span>):</span></span><br><span class="line">    <span class="comment"># Here I will use the instances client to list all running instance</span></span><br><span class="line">    items = instances.<span class="built_in">list</span>(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE,</span><br><span class="line">        <span class="built_in">filter</span>=<span class="string">f&#x27;status=<span class="subst">&#123;status&#125;</span>&#x27;</span></span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Let display few information of those instance</span></span><br><span class="line">    items = items.get(<span class="string">&#x27;items&#x27;</span>)</span><br><span class="line">    formated_items = [(item.get(<span class="string">&#x27;name&#x27;</span>), item.get(<span class="string">&#x27;status&#x27;</span>)) <span class="keyword">for</span> item <span class="keyword">in</span> items]</span><br><span class="line">    print(<span class="string">&#x27;\n&#x27;</span>.join([<span class="built_in">str</span>(item) <span class="keyword">for</span> item <span class="keyword">in</span> formated_items]))</span><br><span class="line"></span><br><span class="line">show_running_instances()</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="take-image-of-a-running-instance">Take image of a running instance</h1>
-<p>This command will take about 40-60 seconds</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute machine-images create my-image-v01 --source-instance c****01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/global/machineImages/my-image-v01].</span><br><span class="line">NAME               STATUS</span><br><span class="line">my-image-v01  READY</span><br></pre></td></tr></table></figure>
-<h1 id="create-new-instance-of-the-my-image-v01">Create new instance of the <code>my-image-v01</code></h1>
-<p>This command will take about 10s to spin up an instance</p>
-<ul>
-<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances create c****03 --source-machine-image my-image-v01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Created [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/zones/us-central1-a/instances/c****03].</span><br><span class="line">NAME       ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS</span><br><span class="line">c****03    us-central1-a  f1-micro                   xx.xxx.x.xx  xx.xxx.xxx.xxx  RUNNING</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Using Python Api <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_instance</span>(<span class="params">name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> instances.insert(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE, </span><br><span class="line">        body=&#123; <span class="string">&#x27;sourceMachineImage&#x27;</span>: <span class="string">&#x27;global/machineImages/my-image-v01&#x27;</span>, <span class="string">&#x27;name&#x27;</span>: name &#125;</span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">create_instance(<span class="string">&#x27;test001&#x27;</span>)</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<p>To create an instance and run the startup script after running. <a target="_blank" rel="noopener" href="https://cloud.google.com/compute/docs/tutorials/python-guide#addinganinstance">Read more</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># You can also upload a script to make the instance automatically run it after created.</span></span><br><span class="line">startup_script = <span class="built_in">open</span>(<span class="string">&#x27;./startup-script.sh&#x27;</span>, <span class="string">&#x27;r&#x27;</span>).read()</span><br><span class="line"></span><br><span class="line">instances.insert(</span><br><span class="line">    project=PROJECT,</span><br><span class="line">    zone=ZONE,</span><br><span class="line">    body=&#123;</span><br><span class="line">        <span class="string">&#x27;sourceMachineImage&#x27;</span>: <span class="string">&#x27;global/machineImages/my-image-v01&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;test001&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;metadata&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;items&#x27;</span>: [&#123;</span><br><span class="line">                <span class="string">&#x27;key&#x27;</span>: <span class="string">&#x27;startup-script&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;value&#x27;</span>: startup_script</span><br><span class="line">            &#125;]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">).execute()</span><br></pre></td></tr></table></figure>
-<h1 id="delete-running-instance">Delete running instance</h1>
-<ul>
-<li><p>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute instances delete c****03</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following instances will be deleted. Any attached disks configured</span><br><span class="line"> to be auto-deleted will be deleted unless they are attached to any </span><br><span class="line">other instances or the `--keep-disks` flag is given and specifies them</span><br><span class="line"> for keeping. Deleting a disk is irreversible and any data on the disk</span><br><span class="line"> will be lost.</span><br><span class="line"> - [c****03] in [us-central1-a]</span><br><span class="line"></span><br><span class="line">Do you want to continue (Y/n)?  y</span><br><span class="line"></span><br><span class="line">Deleted [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/zones/us-central1-a/instances/c****03].</span><br></pre></td></tr></table></figure></p></li>
-<li><p>Using python api <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> googleapiclient.discovery <span class="keyword">import</span> build</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here I use beta version because it support create instance from machine image</span></span><br><span class="line">compute = build(<span class="string">&#x27;compute&#x27;</span>, <span class="string">&#x27;beta&#x27;</span>)</span><br><span class="line">instances = compute.instances()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">delete</span>(<span class="params">name=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> instances.delete(</span><br><span class="line">        project=PROJECT, </span><br><span class="line">        zone=ZONE,</span><br><span class="line">        instance=name</span><br><span class="line">    ).execute()</span><br><span class="line"></span><br><span class="line">delete(<span class="string">&#x27;test001&#x27;</span>)</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="delete-the-machine-image">Delete the machine-image</h1>
-<ul>
-<li>Using shell script <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">gcloud beta compute machine-images delete my-image-v01</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following machine images will be deleted:</span><br><span class="line"> - [my-image-v01]</span><br><span class="line"></span><br><span class="line">Do you want to continue (Y/n)?  y</span><br><span class="line"></span><br><span class="line">Deleted [https://www.googleapis.com/compute/beta/projects/xxx-xxx-2xxxxx5/global/machineImages/my-image-v01].</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/11/10/How-to-clone-an-GCP-instance-to-machine-image-and-restore-it/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -666,7 +628,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 20:17:51" itemprop="dateModified" datetime="2021-01-19T20:17:51+07:00">2021-01-19</time>
+        <time title="Modified: 2023-12-24 11:15:11" itemprop="dateModified" datetime="2023-12-24T11:15:11+07:00">2023-12-24</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -697,19 +659,15 @@
 <p>This step will pull the docker image <code>kylemanna/openvpn:2.3</code> and run command <code>ovpn_genconfig</code>. The <strong>IP_ADDRESS</strong> or <strong>DOMAIN</strong> is your public ip address, eg <code>udp://vpn.hienhoang.ml</code></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_genconfig -u udp://&#123;&#123;IP_ADDRESS | DOMAIN&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 <h3 id="step-3---generate-public-private-key">Step 3 - Generate public private key</h3>
-<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key. <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 ovpn_initpki</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> init-pki complete; you may now create a CA or requests.</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Your newly created PKI dir is: /etc/openvpn/pki</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> </span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .......................................................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> .....................................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/ca.key.XXXXlNLGLn&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Enter PEM pass phrase:</span></span><br></pre></td></tr></table></figure></p>
-<p>Next command is to generate client key <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn:2.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm -it kylemanna/openvpn:2.3 easyrsa build-client-full my_vpn nopass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Generating a 2048 bit RSA private key</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ...................+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> ........+++</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> writing new private key to <span class="string">&#x27;/etc/openvpn/pki/private/my_vpn.key.XXXXpkifIk&#x27;</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> -----</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="step-4---export-the-ovpn-file">Step 4 - Export the ovpn file</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker run -v ovpn-data:/etc/openvpn --log-driver=none --rm kylemanna/openvpn:2.3 ovpn_getclient my_vpn &gt; my_vpn.ovpn</span></span><br></pre></td></tr></table></figure>
-<p>That's it. <code>my_vpn.ovpn</code> is what you need to connect to this VPN server.</p>
-<h2 id="usage">## 2. Usage</h2>
-<h3 id="check-your-vpn-server-running">Check your VPN server running</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> docker ps</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS              PORTS                    NAMES</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> 04002f98ff76        kylemanna/openvpn:2.3   <span class="string">&quot;ovpn_run&quot;</span>          4 minutes ago       Up 4 minutes        0.0.0.0:1194-&gt;1194/udp   strange_wilbur</span></span><br></pre></td></tr></table></figure>
-<h3 id="import-the-.ovpn-file-using-openvpn-client">Import the .ovpn file using openvpn client</h3>
-<p><code>Import profile</code> -&gt; <code>FILE</code> <img src="/images/2020-10-30/001.png" /></p>
-<p>Open the <code>.ovpn</code> file you generated above. <img src="/images/2020-10-30/002.png" /></p>
-<p>Then click <code>Add</code> and Connect <img src="/images/2020-10-30/003.png" /></p>
-
+<p>This step will generate public private key. You must type in 4 to 1023 characters when ask for PEM pass phrase. This will take a few minutes to generate a strong private key.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/30/setup-self-openvpn-server/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -735,7 +693,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/10/26/the-chinese-double-ninth-festival/">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2020/10/26/Coding-in-the-Clouds-My-Digital-Detox-at-The-Double-Ninth-Festival/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -749,7 +707,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/26/the-chinese-double-ninth-festival/" class="post-title-link" itemprop="url">The Chinese Double Ninth Festival</a>
+            <a href="/2020/10/26/Coding-in-the-Clouds-My-Digital-Detox-at-The-Double-Ninth-Festival/" class="post-title-link" itemprop="url">Coding in the Clouds: My Digital Detox at The Double Ninth Festival</a>
         </h2>
 
         <div class="post-meta-container">
@@ -768,7 +726,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Living/" itemprop="url" rel="index"><span itemprop="name">Living</span></a>
+          <a href="/categories/Cultural-Reflections/" itemprop="url" rel="index"><span itemprop="name">Cultural Reflections</span></a>
         </span>
     </span>
 
@@ -782,14 +740,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="/images/2020-10-26/001.jpg" /></p>
-<p>Hey, how do you do? Today I'm going to tell you about one of many traditional Chinese festival, which is called The Double Ninth Festival (<strong>Chong Yang</strong> Festival or <strong>Chung Yeung</strong> Festival in China, Hong Kong, Macao and Taiwan, Vietnamese: <strong>Tết Trùng Cửu</strong> or <strong>Tết Trùng Dương</strong>), as it occurs on the ninth day of the ninth month of the Chinese calendar. I possess the Guangdong origin, so to me and many other Guangdong people, it's a special occasion to visit our ancestors, tidy up their graves and express our respects and gratefulness. It happens every year with the same ceremony, but my feelings change every time I experience the festival. Last Saturday, I caught the bus that took me almost 8 hours, for about 300km from Ho Chi Minh City to my home town in Lam Dong Province, to attend The Double Ninth Festival on Sunday. This time brought to me some emotional moments that I wanted to share to you guys as soon as I went back to the city. So, are you ready for what I'm going to tell you now? Ok, scroll down to read more!</p>
-<p>After 8 hours on the bus, I finally arrived home in the late evening, about 7:30pm. I made a video call to my wife to say I was safe and sound at home already. This time I went back to my hometown without her, as she needs to take care our 5-month-old baby. So, I just felt a little empty there, but after the festival, I would see her on Monday.</p>
-<p>Waking up in the Sunday morning embraced by the cool atmosphere, I felt relax and time seemed to fly slowly. I made myself a cup of coffee, oh I really miss the taste of coffee that my wife preopares for me every morning. I have never found anyone making coffee more stunning than she does, even including me. She usually says the secret recipe is her love for me that make the coffee's flavor more beautiful. You see, I totally completely agree!</p>
-<p>After breakfast, my mom and I were ready to go to the cemetery for the Chinese ancestors. My mom had prepared all the worship things, such as boiled chicken &amp; pork, wine, cooked rice, bunch of incense, votive paper, etc., all for the ceremony. We would visit my grandpa's grave first, then my dad's as usual. The road led to the cemetary hadn't been upgraded yet so it was still rocky and wild. Luckily, it was sunny on that day so the road was easy for people to move. Weeds were almost everywhere in the cemetery, covering my grandpa's and dad's graves. As my grandpa's one were built with cement, under the changes of weather with rainy and sunny days, it became mossy and ancient. My cleared up the weeds while my mom setting up all the worship things in front of the grave. In the cemetery, there were not only us, but also other families. The smoke of burned incenses spreaded in the air, following the wind up to the sky, which made the whole scene there more magical and emotional. I remember many years ago, when I was little boy just started having memory, my grandpa was a gentle man who also love drinking coffee like me today. Once I watched him making a cup of coffee with glittering eyes, he turned and said to me with a smile on his face, "You are not old enough to drink coffee, kid." Such a lovely memory, right!</p>
-<p>About an hour later, we walked to my dad's grave. Unlike my grandpa's, his grave was smaller and hadn't been built with cement yet, just been covered with earth where weeds were overgrown. I used a hoe to tidy up those weeds, at the same time, my mom arranged worship things in front of the grave. The incense again spreaded in the air. It was nearly noon, hot but windy, I was standing there, looking at my dad's photo on the cold gravestone, I realized that I a little bit missed him. There was a farm next to the cemetery, which reminded me the moments when he had been with me. At that time, I was still a little boy, following him to our coffee farm on a hill by bikes. In order to get there, we had to came across a stream. That was my first time going there, he had told me to stop and go off the bike, then walk across the stream. However, it was a new adventure for a boy, I was so excited that I forgot what he had told. I came across the stream with all my wild heart and spirit, my bike cut through the stream without a second of hesitation, making water splashed on both sides, then bumping into my dad's bike. He was panic a little bit, while I was laughing out loud. Another hour passed, we packed the food and went home, left behind the incense smoke...</p>
-<p>Memory of childhood is something beautiful to me. Life is short, so treasure our present before it turns to memory that would make we smile when we getting old. One day of The Double Ninth Festival was over. We went home to have lunch and take a rest. I came back to Ho Chi Minh city on that night with lots of feelings. Maybe I have grown up a little bit. Maybe I learned something in my life. Finally, thank you all for reading up to this line. Bye and enjoy!</p>
-
+          <p>Hey fellow programmers!</p>
+<p>Taking a break from the digital world, I recently ventured into the heart of tradition, attending the <strong>Double Ninth Festival</strong>. It's like hitting 'pause' on our daily coding routine and rebooting into a world of family, memories, and cultural heritage.</p>
+<p><img src="/images/2020-10-26/001.jpg" /></p>
+<p><em>The Journey Begins</em></p>
+<p>Swapping my usual coding marathons for a real marathon, I embarked on an 8-hour bus journey from the bustling city to the serene Lam Dong Province. The mission? To reconnect with my roots at the <strong>Double Ninth Festival</strong>, a day dedicated to honoring ancestors in Chinese culture.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/26/Coding-in-the-Clouds-My-Digital-Detox-at-The-Double-Ninth-Festival/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
