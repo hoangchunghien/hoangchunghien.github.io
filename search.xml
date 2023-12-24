@@ -406,10 +406,10 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <category>Software Development</category>
         <category>CI/CD</category>
         <category>Containerization</category>
+        <category>Performance Optimization</category>
         <category>Technology Tutorials</category>
         <category>Programming &amp; Tools</category>
         <category>Cross-Platform Development</category>
-        <category>Performance Optimization</category>
         <category>Technology Innovations</category>
       </categories>
       <tags>
@@ -499,106 +499,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Key-Value Store Optimization</tag>
         <tag>Cost-Effective Database Operations</tag>
         <tag>DynamoDB Data Access Patterns</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration</title>
-    <url>/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/</url>
-    <content><![CDATA[<p>In the world of workflow orchestration, AWS Step Functions and Apache Airflow stand out as prominent tools, each with its unique features, purposes, and operational models. Understanding their differences is crucial for selecting the right tool for your specific needs. Here's a comparison:</p>
-<p><img src="/images/2023-12-19/infographic1.png"></p>
-<h1 id="aws-step-functions-a-managed-serverless-orchestrator">AWS Step Functions: A Managed, Serverless Orchestrator</h1>
-<ol type="1">
-<li><p><strong>Seamless Cloud Integration:</strong> AWS Step Functions is designed to integrate effortlessly with various AWS services. As a serverless orchestrator, it offers a fully managed service, taking the burden of infrastructure, scalability, and maintenance off your shoulders.</p></li>
-<li><p><strong>Visual Workflow Management:</strong> It provides a user-friendly graphical console, allowing you to visualize and manage complex workflows with ease. This visual approach simplifies the understanding of intricate processes.</p></li>
-</ol>
-<a id="more"></a>
-<ol start="3" type="1">
-<li><p><strong>State Management Prowess:</strong> Step Functions shine in managing the state of each workflow step. This feature is particularly beneficial for long-running processes and efficient error handling.</p></li>
-<li><p><strong>Serverless and Scalable:</strong> Being serverless, it automatically scales based on demand, eliminating the need for manual infrastructure management.</p></li>
-<li><p><strong>Cost-Effective Pricing:</strong> The pricing model is based on the number of state transitions, adopting a pay-as-you-go approach.</p></li>
-<li><p><strong>Ease of Use:</strong> Especially for those already using AWS services, Step Functions are straightforward to set up and operate.</p></li>
-</ol>
-<h1 id="apache-airflow-the-open-source-customizable-giant">Apache Airflow: The Open-Source, Customizable Giant</h1>
-<ol type="1">
-<li><p><strong>Flexibility and Open-Source:</strong> Airflow's open-source nature allows for extensive customization and integration with various platforms and tools.</p></li>
-<li><p><strong>Code-Based Workflow Definitions:</strong> Workflows in Airflow are defined using Python code, offering a programmable interface and access to Python's vast libraries.</p></li>
-<li><p><strong>Robust Community Support and Integrations:</strong> Its open-source status has cultivated a large community. Airflow boasts a wide range of integrations, especially beneficial in data processing and ETL tools.</p></li>
-<li><p><strong>Ideal for Complex Pipelines:</strong> Airflow is particularly adept at handling complex, large-scale data processing workflows, often used in data engineering and ETL processes.</p></li>
-<li><p><strong>User-Managed Infrastructure:</strong> Unlike Step Functions, Airflow requires you to manage its infrastructure, whether on-premises or in the cloud.</p></li>
-<li><p><strong>Advanced Scheduler and Executor Model:</strong> The use of a scheduler and multiple executors offers flexibility in task execution, catering to various operational needs.</p></li>
-</ol>
-<h1 id="key-differences-at-a-glance">Key Differences at a Glance</h1>
-<ul>
-<li><p><strong>Infrastructure Management:</strong> Step Functions is a managed service, while Airflow demands user involvement in infrastructure management.</p></li>
-<li><p><strong>Integration Capabilities:</strong> Step Functions offer smoother integration with AWS services, whereas Airflow champions in being platform-agnostic and highly customizable.</p></li>
-<li><p><strong>Workflow Definition:</strong> Step Functions utilize a JSON-based state machine, contrasting with Airflow's Python code approach.</p></li>
-<li><p><strong>Use Case Suitability:</strong> Step Functions are typically used for serverless applications, microservices orchestration, and straightforward ETL tasks. In contrast, Airflow excels in complex, large-scale data processing and ETL workflows.</p></li>
-</ul>
-<h1 id="triggering-methods-in-aws-step-functions-vs.-apache-airflow">Triggering Methods in AWS Step Functions vs. Apache Airflow</h1>
-<h2 id="aws-step-functions-diverse-and-integrated-triggering-options">AWS Step Functions: Diverse and Integrated Triggering Options</h2>
-<p>AWS Step Functions can be triggered in a variety of ways, each suited to different use cases within the AWS ecosystem:</p>
-<ol type="1">
-<li><p><strong>API Gateway:</strong> Ideal for HTTP endpoint-based workflows.</p></li>
-<li><p><strong>AWS Lambda:</strong> For event-driven architectures, responding to events like file uploads to S3.</p></li>
-<li><p><strong>CloudWatch Events/EventBridge:</strong> Schedule workflows or trigger them based on AWS service events.</p></li>
-<li><p><strong>Manual Invocation:</strong> Through AWS Management Console, SDKs, or CLI, suitable for testing or one-off tasks.</p></li>
-<li><p><strong>AWS S3:</strong> Indirect triggering via S3 event notifications to Lambda functions.</p></li>
-<li><p><strong>AWS IoT:</strong> For IoT device event-driven workflows.</p></li>
-<li><p><strong>AWS Batch:</strong> In batch processing scenarios.</p></li>
-<li><p><strong>Other AWS Services:</strong> Leveraging Lambda functions or CloudWatch Events for indirect triggering.</p></li>
-</ol>
-<h2 id="apache-airflow-flexible-and-customizable-triggering-mechanisms">Apache Airflow: Flexible and Customizable Triggering Mechanisms</h2>
-<p>Apache Airflow, being an open-source tool, offers different ways to trigger workflows, emphasizing flexibility and customization:</p>
-<ol type="1">
-<li><p><strong>Scheduler-Based Triggering:</strong> Airflow primarily uses a scheduler to trigger tasks based on time or external events. This includes simple schedules like daily or hourly, as well as more complex cron expressions.</p></li>
-<li><p><strong>External Triggers:</strong> Workflows can be triggered externally via Airflow's REST API, allowing integration with other services or custom applications.</p></li>
-<li><p><strong>Event-Driven Triggering:</strong> Although not as native as in AWS services, Airflow can be configured to respond to external events (like file drops in a storage system) through custom scripts or intermediary services.</p></li>
-<li><p><strong>Manual Triggering:</strong> Airflow allows manual triggering of workflows through its web-based UI, which is useful for ad-hoc tasks and testing.</p></li>
-<li><p><strong>Custom Plugins:</strong> Being open-source, Airflow supports the creation of custom plugins, allowing for unique triggering mechanisms tailored to specific needs.</p></li>
-</ol>
-<h1 id="comparative-analysis">Comparative Analysis</h1>
-<ul>
-<li><p><strong>Integration with AWS Services:</strong> AWS Step Functions has a more seamless integration with AWS services, making it a go-to for AWS-centric architectures. In contrast, Airflow, while capable of integrating with AWS, requires more configuration and does not offer as native an integration.</p></li>
-<li><p><strong>Customization and Flexibility:</strong> Airflow offers more flexibility in terms of customization, especially with the ability to create custom plugins and scripts for unique triggering scenarios.</p></li>
-<li><p><strong>User Interface:</strong> Airflow’s web-based UI for manual triggering is more user-friendly compared to the AWS Management Console or CLI.</p></li>
-<li><p><strong>Ease of Use:</strong> For users already embedded in the AWS ecosystem, Step Functions might offer a more straightforward approach to triggering workflows, whereas Airflow, with its customizable nature, might appeal more to users who require specific, tailored triggering mechanisms.</p></li>
-</ul>
-<p>In summary, choosing between AWS Step Functions and Apache Airflow for workflow orchestration also involves considering their triggering mechanisms, which reflects their operational models and integration capabilities. While Step Functions offer integrated, AWS-centric triggering options, Airflow provides a more customizable and flexible approach, albeit with a steeper learning curve for those not already familiar with its paradigm.</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-        <category>Cloud Computing</category>
-        <category>Software Development</category>
-        <category>Data Engineering</category>
-        <category>CI/CD</category>
-        <category>Workflow Automation</category>
-        <category>Serverless Computing</category>
-        <category>Big Data</category>
-        <category>Open Source Technologies</category>
-        <category>ETL</category>
-        <category>Technology Comparisons</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>AWS Step Functions</tag>
-        <tag>Apache Airflow</tag>
-        <tag>Workflow Orchestration</tag>
-        <tag>Serverless Architecture</tag>
-        <tag>Cloud Computing</tag>
-        <tag>Data Engineering</tag>
-        <tag>ETL</tag>
-        <tag>Workflow Automation</tag>
-        <tag>Cloud Services</tag>
-        <tag>AWS Integration</tag>
-        <tag>Open Source Software</tag>
-        <tag>Task Scheduling</tag>
-        <tag>Workflow Management</tag>
-        <tag>Data Pipeline</tag>
-        <tag>Cloud Infrastructure</tag>
-        <tag>Managed Services</tag>
-        <tag>Customizable Workflow</tag>
-        <tag>Big Data</tag>
-        <tag>Technology Comparison</tag>
       </tags>
   </entry>
   <entry>
@@ -786,6 +686,106 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Fashion MNIST</tag>
         <tag>Machine Learning</tag>
         <tag>Convolution Neural Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration</title>
+    <url>/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/</url>
+    <content><![CDATA[<p>In the world of workflow orchestration, AWS Step Functions and Apache Airflow stand out as prominent tools, each with its unique features, purposes, and operational models. Understanding their differences is crucial for selecting the right tool for your specific needs. Here's a comparison:</p>
+<p><img src="/images/2023-12-19/infographic1.png"></p>
+<h1 id="aws-step-functions-a-managed-serverless-orchestrator">AWS Step Functions: A Managed, Serverless Orchestrator</h1>
+<ol type="1">
+<li><p><strong>Seamless Cloud Integration:</strong> AWS Step Functions is designed to integrate effortlessly with various AWS services. As a serverless orchestrator, it offers a fully managed service, taking the burden of infrastructure, scalability, and maintenance off your shoulders.</p></li>
+<li><p><strong>Visual Workflow Management:</strong> It provides a user-friendly graphical console, allowing you to visualize and manage complex workflows with ease. This visual approach simplifies the understanding of intricate processes.</p></li>
+</ol>
+<a id="more"></a>
+<ol start="3" type="1">
+<li><p><strong>State Management Prowess:</strong> Step Functions shine in managing the state of each workflow step. This feature is particularly beneficial for long-running processes and efficient error handling.</p></li>
+<li><p><strong>Serverless and Scalable:</strong> Being serverless, it automatically scales based on demand, eliminating the need for manual infrastructure management.</p></li>
+<li><p><strong>Cost-Effective Pricing:</strong> The pricing model is based on the number of state transitions, adopting a pay-as-you-go approach.</p></li>
+<li><p><strong>Ease of Use:</strong> Especially for those already using AWS services, Step Functions are straightforward to set up and operate.</p></li>
+</ol>
+<h1 id="apache-airflow-the-open-source-customizable-giant">Apache Airflow: The Open-Source, Customizable Giant</h1>
+<ol type="1">
+<li><p><strong>Flexibility and Open-Source:</strong> Airflow's open-source nature allows for extensive customization and integration with various platforms and tools.</p></li>
+<li><p><strong>Code-Based Workflow Definitions:</strong> Workflows in Airflow are defined using Python code, offering a programmable interface and access to Python's vast libraries.</p></li>
+<li><p><strong>Robust Community Support and Integrations:</strong> Its open-source status has cultivated a large community. Airflow boasts a wide range of integrations, especially beneficial in data processing and ETL tools.</p></li>
+<li><p><strong>Ideal for Complex Pipelines:</strong> Airflow is particularly adept at handling complex, large-scale data processing workflows, often used in data engineering and ETL processes.</p></li>
+<li><p><strong>User-Managed Infrastructure:</strong> Unlike Step Functions, Airflow requires you to manage its infrastructure, whether on-premises or in the cloud.</p></li>
+<li><p><strong>Advanced Scheduler and Executor Model:</strong> The use of a scheduler and multiple executors offers flexibility in task execution, catering to various operational needs.</p></li>
+</ol>
+<h1 id="key-differences-at-a-glance">Key Differences at a Glance</h1>
+<ul>
+<li><p><strong>Infrastructure Management:</strong> Step Functions is a managed service, while Airflow demands user involvement in infrastructure management.</p></li>
+<li><p><strong>Integration Capabilities:</strong> Step Functions offer smoother integration with AWS services, whereas Airflow champions in being platform-agnostic and highly customizable.</p></li>
+<li><p><strong>Workflow Definition:</strong> Step Functions utilize a JSON-based state machine, contrasting with Airflow's Python code approach.</p></li>
+<li><p><strong>Use Case Suitability:</strong> Step Functions are typically used for serverless applications, microservices orchestration, and straightforward ETL tasks. In contrast, Airflow excels in complex, large-scale data processing and ETL workflows.</p></li>
+</ul>
+<h1 id="triggering-methods-in-aws-step-functions-vs.-apache-airflow">Triggering Methods in AWS Step Functions vs. Apache Airflow</h1>
+<h2 id="aws-step-functions-diverse-and-integrated-triggering-options">AWS Step Functions: Diverse and Integrated Triggering Options</h2>
+<p>AWS Step Functions can be triggered in a variety of ways, each suited to different use cases within the AWS ecosystem:</p>
+<ol type="1">
+<li><p><strong>API Gateway:</strong> Ideal for HTTP endpoint-based workflows.</p></li>
+<li><p><strong>AWS Lambda:</strong> For event-driven architectures, responding to events like file uploads to S3.</p></li>
+<li><p><strong>CloudWatch Events/EventBridge:</strong> Schedule workflows or trigger them based on AWS service events.</p></li>
+<li><p><strong>Manual Invocation:</strong> Through AWS Management Console, SDKs, or CLI, suitable for testing or one-off tasks.</p></li>
+<li><p><strong>AWS S3:</strong> Indirect triggering via S3 event notifications to Lambda functions.</p></li>
+<li><p><strong>AWS IoT:</strong> For IoT device event-driven workflows.</p></li>
+<li><p><strong>AWS Batch:</strong> In batch processing scenarios.</p></li>
+<li><p><strong>Other AWS Services:</strong> Leveraging Lambda functions or CloudWatch Events for indirect triggering.</p></li>
+</ol>
+<h2 id="apache-airflow-flexible-and-customizable-triggering-mechanisms">Apache Airflow: Flexible and Customizable Triggering Mechanisms</h2>
+<p>Apache Airflow, being an open-source tool, offers different ways to trigger workflows, emphasizing flexibility and customization:</p>
+<ol type="1">
+<li><p><strong>Scheduler-Based Triggering:</strong> Airflow primarily uses a scheduler to trigger tasks based on time or external events. This includes simple schedules like daily or hourly, as well as more complex cron expressions.</p></li>
+<li><p><strong>External Triggers:</strong> Workflows can be triggered externally via Airflow's REST API, allowing integration with other services or custom applications.</p></li>
+<li><p><strong>Event-Driven Triggering:</strong> Although not as native as in AWS services, Airflow can be configured to respond to external events (like file drops in a storage system) through custom scripts or intermediary services.</p></li>
+<li><p><strong>Manual Triggering:</strong> Airflow allows manual triggering of workflows through its web-based UI, which is useful for ad-hoc tasks and testing.</p></li>
+<li><p><strong>Custom Plugins:</strong> Being open-source, Airflow supports the creation of custom plugins, allowing for unique triggering mechanisms tailored to specific needs.</p></li>
+</ol>
+<h1 id="comparative-analysis">Comparative Analysis</h1>
+<ul>
+<li><p><strong>Integration with AWS Services:</strong> AWS Step Functions has a more seamless integration with AWS services, making it a go-to for AWS-centric architectures. In contrast, Airflow, while capable of integrating with AWS, requires more configuration and does not offer as native an integration.</p></li>
+<li><p><strong>Customization and Flexibility:</strong> Airflow offers more flexibility in terms of customization, especially with the ability to create custom plugins and scripts for unique triggering scenarios.</p></li>
+<li><p><strong>User Interface:</strong> Airflow’s web-based UI for manual triggering is more user-friendly compared to the AWS Management Console or CLI.</p></li>
+<li><p><strong>Ease of Use:</strong> For users already embedded in the AWS ecosystem, Step Functions might offer a more straightforward approach to triggering workflows, whereas Airflow, with its customizable nature, might appeal more to users who require specific, tailored triggering mechanisms.</p></li>
+</ul>
+<p>In summary, choosing between AWS Step Functions and Apache Airflow for workflow orchestration also involves considering their triggering mechanisms, which reflects their operational models and integration capabilities. While Step Functions offer integrated, AWS-centric triggering options, Airflow provides a more customizable and flexible approach, albeit with a steeper learning curve for those not already familiar with its paradigm.</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+        <category>Cloud Computing</category>
+        <category>Software Development</category>
+        <category>Data Engineering</category>
+        <category>CI/CD</category>
+        <category>Workflow Automation</category>
+        <category>Serverless Computing</category>
+        <category>Big Data</category>
+        <category>Open Source Technologies</category>
+        <category>ETL</category>
+        <category>Technology Comparisons</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>AWS Step Functions</tag>
+        <tag>Apache Airflow</tag>
+        <tag>Workflow Orchestration</tag>
+        <tag>Serverless Architecture</tag>
+        <tag>Cloud Computing</tag>
+        <tag>Data Engineering</tag>
+        <tag>ETL</tag>
+        <tag>Workflow Automation</tag>
+        <tag>Cloud Services</tag>
+        <tag>AWS Integration</tag>
+        <tag>Open Source Software</tag>
+        <tag>Task Scheduling</tag>
+        <tag>Workflow Management</tag>
+        <tag>Data Pipeline</tag>
+        <tag>Cloud Infrastructure</tag>
+        <tag>Managed Services</tag>
+        <tag>Customizable Workflow</tag>
+        <tag>Big Data</tag>
+        <tag>Technology Comparison</tag>
       </tags>
   </entry>
   <entry>
@@ -1529,6 +1529,70 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Setup Apache Airflow Using Docker Compose</title>
+    <url>/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/</url>
+    <content><![CDATA[<p><img width="480" src="/images/2021-05-08/001.png" /></p>
+<p>Do you find it so complicated to set up <a href="https://airflow.apache.org/">Apache Airflow</a> for using right away? Don't worry, I can show you a simple and fast way! Are you ready? Then please take a look the instruction below.</p>
+<h1 id="getting-started">Getting Started</h1>
+<ul>
+<li>Install <a href="https://docs.docker.com/engine/install/">docker</a> if you haven't.</li>
+<li>Install <a href="https://docs.docker.com/compose/install/">Docker Compose &gt;= v1.27.0</a></li>
+</ul>
+<h1 id="download-docker-compose.yml">Download <code>docker-compose.yml</code></h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -LfO &#x27;https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml&#x27;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>The <code>docker-compose.yml</code> file will look like this</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Licensed to the Apache Software Foundation (ASF) under one</span></span><br><span class="line"><span class="comment"># or more contributor license agreements.  See the NOTICE file</span></span><br><span class="line"><span class="comment"># distributed with this work for additional information</span></span><br><span class="line"><span class="comment"># regarding copyright ownership.  The ASF licenses this file</span></span><br><span class="line"><span class="comment"># to you under the Apache License, Version 2.0 (the</span></span><br><span class="line"><span class="comment"># &quot;License&quot;); you may not use this file except in compliance</span></span><br><span class="line"><span class="comment"># with the License.  You may obtain a copy of the License at</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Unless required by applicable law or agreed to in writing,</span></span><br><span class="line"><span class="comment"># software distributed under the License is distributed on an</span></span><br><span class="line"><span class="comment"># &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</span></span><br><span class="line"><span class="comment"># KIND, either express or implied.  See the License for the</span></span><br><span class="line"><span class="comment"># specific language governing permissions and limitations</span></span><br><span class="line"><span class="comment"># under the License.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Basic Airflow cluster configuration for CeleryExecutor with Redis and PostgreSQL.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># WARNING: This configuration is for local development. Do not use it in a production deployment.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This configuration supports basic configuration using environment variables or an .env file</span></span><br><span class="line"><span class="comment"># The following variables are supported:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># AIRFLOW_IMAGE_NAME         - Docker image name used to run Airflow.</span></span><br><span class="line"><span class="comment">#                              Default: apache/airflow:master-python3.8</span></span><br><span class="line"><span class="comment"># AIRFLOW_UID                - User ID in Airflow containers</span></span><br><span class="line"><span class="comment">#                              Default: 50000</span></span><br><span class="line"><span class="comment"># AIRFLOW_GID                - Group ID in Airflow containers</span></span><br><span class="line"><span class="comment">#                              Default: 50000</span></span><br><span class="line"><span class="comment"># _AIRFLOW_WWW_USER_USERNAME - Username for the administrator account.</span></span><br><span class="line"><span class="comment">#                              Default: airflow</span></span><br><span class="line"><span class="comment"># _AIRFLOW_WWW_USER_PASSWORD - Password for the administrator account.</span></span><br><span class="line"><span class="comment">#                              Default: airflow</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Feel free to modify this file to suit your needs.</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">x-airflow-common:</span></span><br><span class="line">  <span class="string">&amp;airflow-common</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">$&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="string">&amp;airflow-common-env</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__EXECUTOR:</span> <span class="string">CeleryExecutor</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__SQL_ALCHEMY_CONN:</span> <span class="string">postgresql+psycopg2://airflow:airflow@postgres/airflow</span></span><br><span class="line">    <span class="attr">AIRFLOW__CELERY__RESULT_BACKEND:</span> <span class="string">db+postgresql://airflow:airflow@postgres/airflow</span></span><br><span class="line">    <span class="attr">AIRFLOW__CELERY__BROKER_URL:</span> <span class="string">redis://:@redis:6379/0</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__FERNET_KEY:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__LOAD_EXAMPLES:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__API__AUTH_BACKEND:</span> <span class="string">&#x27;airflow.api.auth.backend.basic_auth&#x27;</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./dags:/opt/airflow/dags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./logs:/opt/airflow/logs</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./plugins:/opt/airflow/plugins</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&quot;$&#123;AIRFLOW_UID:-50000&#125;:$&#123;AIRFLOW_GID:-50000&#125;&quot;</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="attr">redis:</span></span><br><span class="line">      <span class="attr">condition:</span> <span class="string">service_healthy</span></span><br><span class="line">    <span class="attr">postgres:</span></span><br><span class="line">      <span class="attr">condition:</span> <span class="string">service_healthy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:13</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">airflow</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">airflow</span></span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">airflow</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">postgres-db-volume:/var/lib/postgresql/data</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;pg_isready&quot;</span>, <span class="string">&quot;-U&quot;</span>, <span class="string">&quot;airflow&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">5s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis:latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;redis-cli&quot;</span>, <span class="string">&quot;ping&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">5s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">30s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">50</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-webserver:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">webserver</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:8080</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;--fail&quot;</span>, <span class="string">&quot;http://localhost:8080/health&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-scheduler:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">scheduler</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-worker:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-init:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">version</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common-env</span></span><br><span class="line">      <span class="attr">_AIRFLOW_DB_UPGRADE:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_CREATE:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_USERNAME:</span> <span class="string">$&#123;_AIRFLOW_WWW_USER_USERNAME:-airflow&#125;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_PASSWORD:</span> <span class="string">$&#123;_AIRFLOW_WWW_USER_PASSWORD:-airflow&#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">flower:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">flower</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5555</span><span class="string">:5555</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;--fail&quot;</span>, <span class="string">&quot;http://localhost:5555/&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">postgres-db-volume:</span></span><br></pre></td></tr></table></figure>
+<h1 id="initialize-the-environment">Initialize the environment</h1>
+<ul>
+<li>Prepare some folders to store application data and script</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir ./dags ./logs ./plugins</span><br><span class="line"></span><br><span class="line">echo -e &quot;AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0&quot; &gt; .env</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Initialize database</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker-compose up airflow-init</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Use the login user <code>airflow</code> and the password <code>airflow</code>.</li>
+</ul>
+<h1 id="start-the-application">Start the application</h1>
+<ul>
+<li>Start all containers defined in the docker-compose.yml</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Access the web interface <code>http://localhost:8080</code></li>
+</ul>
+<h1 id="how-to-install-additional-python-packages">How to install additional python packages</h1>
+<ul>
+<li>Create new file <code>Dockerfile</code> to customize airflow image based on <code>apache/airflow:2.0.2</code></li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> apache/airflow:<span class="number">2.0</span>.<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Now install the pandas package</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install pandas</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Or install all packages from requirements.txt</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Update the <code>docker-compose.yml</code></li>
+</ul>
+<p>Change the line <code>image: $&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</code> to <code>build: .</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">x-airflow-common:</span></span><br><span class="line">  <span class="string">&amp;airflow-common</span></span><br><span class="line">  <span class="comment"># image: $&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</span></span><br><span class="line">  <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Build the image by run the command <code>docker-compose build</code></p></li>
+<li><p>Run the updated image <code>docker-compose up</code></p></li>
+</ul>
+<h1 id="reference">Reference</h1>
+<ul>
+<li><a href="https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html">Airflow Docs</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Airflow</tag>
+        <tag>docker-compose</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Setup On Premise Kubernetes Cluster</title>
     <url>/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/</url>
     <content><![CDATA[<h1 id="overview">Overview</h1>
@@ -1725,9 +1789,9 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       <categories>
         <category>DevOps</category>
         <category>Cloud Computing</category>
-        <category>Technology Tutorials</category>
-        <category>Performance Optimization</category>
         <category>Serverless Architecture</category>
+        <category>Performance Optimization</category>
+        <category>Technology Tutorials</category>
         <category>AWS Lambda</category>
         <category>Serverless Development</category>
         <category>Cost Management</category>
@@ -1799,11 +1863,11 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       <categories>
         <category>Cloud Computing</category>
         <category>Software Development</category>
-        <category>Big Data</category>
         <category>Technology</category>
-        <category>Database Technologies</category>
         <category>Web Development</category>
+        <category>Database Technologies</category>
         <category>IT Infrastructure</category>
+        <category>Big Data</category>
         <category>Data Management</category>
       </categories>
       <tags>
@@ -1878,46 +1942,35 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
-    <title>Visualize high-dimensional dataset in a 2D Chart.</title>
-    <url>/2020/10/23/how-to-visualize-your-dataset-in-a-2d-or-3d-chart/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-23/001.png" /> In this post, I'll use a well known dataset <a href="http://yann.lecun.com/exdb/mnist/">MINIST handwritten</a>. There are <code>70,000</code> images, each image in this dataset is of size <code>28x28</code>.</p>
-<h4 id="first-import-the-libraries-we-are-going-to-use.">First, import the libraries we are going to use.</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
-<p>I'm using <code>matplotlib</code> and <code>seaborn</code> for visualization. <code>numpy</code> and <code>pandas</code> to handle numerical arrays and dataframe. I'm also use <code>scikit-learn</code> to get the data and perform <code>t-SNE</code>.</p>
-<h4 id="download-the-dataset">Download the dataset</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data</span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">print(pixel_values.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>(70000, 784)</strong></p>
-<p>The dataset downloaded has 70,000 records, each record has 784 columns.</p>
-<h4 id="lets-plot-an-image-to-see-what-does-it-look-like">Let's plot an image to see what does it look like</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">image = pixel_values[<span class="number">0</span>, :].reshape(<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">plt.imshow(image, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<div style="display:flex;align-items:start"><img src="/images/2020-10-23/002.png" /></div>
-
-<p>The image in the dataset has size <code>768</code>, so I need convert it to <code>28x28</code>.</p>
-<h4 id="now-the-importance-part-compute-t-sne">Now the importance part, compute t-SNE</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne = manifold.TSNE(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line">transformed_data = tsne.fit_transform(pixel_values[:<span class="number">6000</span>, :])</span><br><span class="line"></span><br><span class="line">print(transformed_data.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>(6000, 2)</strong></p>
-<p>In this example, I using only <code>6000</code> rows, and reduce the columns from <code>768</code> to <code>2</code>. Enough for plotting the data to 2D chart.</p>
-<h4 id="lets-visualize-the-transformed-dataset">Let's visualize the transformed dataset</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne_df = pd.DataFrame(np.column_stack((transformed_data, targets[:<span class="number">6000</span>])), columns=[<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;targets&#x27;</span>])</span><br><span class="line">tsne_df.loc[:, <span class="string">&#x27;targets&#x27;</span>] = tsne_df.targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">grid = sns.FacetGrid(tsne_df, hue=<span class="string">&#x27;targets&#x27;</span>, height=<span class="number">8</span>)</span><br><span class="line">grid.<span class="built_in">map</span>(plt.scatter, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>).add_legend()</span><br></pre></td></tr></table></figure>
-
-<div style="display:flex;align-items:start"><img src="/images/2020-10-23/003.png" /></div>
-
-<p>This is one way to visualize dataset. By plotting the dataset in the chart, we can see that, the number <code>0</code> and <code>6</code> are distinguishable easily. The number <code>4</code> and <code>9</code> are harder to distinguish.</p>
+    <title>Hello World! My Coding Journey into Fatherhood</title>
+    <url>/2020/11/14/hello-world-my-coding-journey-into-fatherhood/</url>
+    <content><![CDATA[<p>Hey fellow coders! Let me share a personal fork in my life's repository - becoming a dad. It's like deploying a new life feature that brings unexpected joys and challenges.</p>
+<p><strong>The Big Reveal</strong></p>
+<p>Our journey began in Dalat City, not with debugging, but with discovering we were expecting. The moment I learned about our upcoming 'release' (our baby), it felt like a successful code compilation after countless errors.</p>
+<p><strong>Health Check Commit</strong></p>
+<p>We faced our first 'bug' early on due to missed health checks. My wife, a fellow enthusiast of chill beers and algorithms, had her concerns. Thankfully, our little 'program' was error-free and running smoothly.</p>
+<p><strong>The Deployment Day</strong></p>
+<p>Our son's arrival was like a product launch under tight deadlines. Rushing to the hospital at 3:00 am, praying for zero downtime. And in the early hours of the morning, our latest 'version' was successfully deployed - a healthy baby boy!</p>
+<p><img src="/images/2020-12-15/003.jpg" style="max-height: 540px;"></p>
+<p><strong>Refactoring Life</strong></p>
+<p>After navigating through the initial challenges and excitement of our new arrival, just like in a development project, it was time to enter the 'Refactoring Life' phase. This is where I applied some essential updates and optimizations to our family's daily routine.</p>
+<ol type="1">
+<li><p><strong>Home Setup</strong>: Just like optimizing our work environment for productivity, I revamped our living space for the new family member.</p></li>
+<li><p><strong>Listening to User Feedback</strong>: Pregnancy and postpartum are like customer feedback sessions. I've been tuning into my wife's needs and emotions, debugging together to ensure a smooth run.</p></li>
+<li><p><strong>Financial and Career Scaling</strong>: With a new member in our 'dev team', I started consuming more content on financial algorithms and career scaling to provide a robust framework for our family's future.</p></li>
+<li><p><strong>New Features and Hobbies</strong>: Fatherhood introduced new hobbies, like photography - capturing our little 'project's milestones. It's like keeping a visual log of our family's development process.</p></li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>Becoming a father is a bit like diving into a new programming language - daunting at first but immensely rewarding as you learn. I hope my story resonates with you, fellow devs, as we navigate the incredible journey of parenthood in the tech world.</p>
 ]]></content>
       <categories>
-        <category>Analytics</category>
+        <category>Developer Lifestyle</category>
+        <category>Parenting in Tech</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Data visualization</tag>
-        <tag>Chart</tag>
-        <tag>Decomposition</tag>
-        <tag>t-SNE</tag>
-        <tag>Jupyter Notebook</tag>
-        <tag>MNIST</tag>
-        <tag>Matplotlib</tag>
-        <tag>Seaborn</tag>
+        <tag>Developer Dad</tag>
+        <tag>Tech Family</tag>
+        <tag>Work-Life Balance</tag>
       </tags>
   </entry>
   <entry>
@@ -2027,6 +2080,49 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
+    <title>Visualize high-dimensional dataset in a 2D Chart.</title>
+    <url>/2020/10/23/how-to-visualize-your-dataset-in-a-2d-or-3d-chart/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-23/001.png" /> In this post, I'll use a well known dataset <a href="http://yann.lecun.com/exdb/mnist/">MINIST handwritten</a>. There are <code>70,000</code> images, each image in this dataset is of size <code>28x28</code>.</p>
+<h4 id="first-import-the-libraries-we-are-going-to-use.">First, import the libraries we are going to use.</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<p>I'm using <code>matplotlib</code> and <code>seaborn</code> for visualization. <code>numpy</code> and <code>pandas</code> to handle numerical arrays and dataframe. I'm also use <code>scikit-learn</code> to get the data and perform <code>t-SNE</code>.</p>
+<h4 id="download-the-dataset">Download the dataset</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data</span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">print(pixel_values.shape)</span><br></pre></td></tr></table></figure>
+<p><strong>(70000, 784)</strong></p>
+<p>The dataset downloaded has 70,000 records, each record has 784 columns.</p>
+<h4 id="lets-plot-an-image-to-see-what-does-it-look-like">Let's plot an image to see what does it look like</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">image = pixel_values[<span class="number">0</span>, :].reshape(<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">plt.imshow(image, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<div style="display:flex;align-items:start"><img src="/images/2020-10-23/002.png" /></div>
+
+<p>The image in the dataset has size <code>768</code>, so I need convert it to <code>28x28</code>.</p>
+<h4 id="now-the-importance-part-compute-t-sne">Now the importance part, compute t-SNE</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne = manifold.TSNE(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line">transformed_data = tsne.fit_transform(pixel_values[:<span class="number">6000</span>, :])</span><br><span class="line"></span><br><span class="line">print(transformed_data.shape)</span><br></pre></td></tr></table></figure>
+<p><strong>(6000, 2)</strong></p>
+<p>In this example, I using only <code>6000</code> rows, and reduce the columns from <code>768</code> to <code>2</code>. Enough for plotting the data to 2D chart.</p>
+<h4 id="lets-visualize-the-transformed-dataset">Let's visualize the transformed dataset</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne_df = pd.DataFrame(np.column_stack((transformed_data, targets[:<span class="number">6000</span>])), columns=[<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;targets&#x27;</span>])</span><br><span class="line">tsne_df.loc[:, <span class="string">&#x27;targets&#x27;</span>] = tsne_df.targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">grid = sns.FacetGrid(tsne_df, hue=<span class="string">&#x27;targets&#x27;</span>, height=<span class="number">8</span>)</span><br><span class="line">grid.<span class="built_in">map</span>(plt.scatter, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>).add_legend()</span><br></pre></td></tr></table></figure>
+
+<div style="display:flex;align-items:start"><img src="/images/2020-10-23/003.png" /></div>
+
+<p>This is one way to visualize dataset. By plotting the dataset in the chart, we can see that, the number <code>0</code> and <code>6</code> are distinguishable easily. The number <code>4</code> and <code>9</code> are harder to distinguish.</p>
+]]></content>
+      <categories>
+        <category>Analytics</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Data visualization</tag>
+        <tag>Chart</tag>
+        <tag>Decomposition</tag>
+        <tag>t-SNE</tag>
+        <tag>Jupyter Notebook</tag>
+        <tag>MNIST</tag>
+        <tag>Matplotlib</tag>
+        <tag>Seaborn</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Setup your VPN server the easy way using docker</title>
     <url>/2020/10/30/setup-self-openvpn-server/</url>
     <content><![CDATA[<p><img src="/images/2020-10-30/004.png" /></p>
@@ -2079,109 +2175,6 @@ Why Vagrant?
         <tag>Living</tag>
         <tag>Chung Yeung</tag>
         <tag>Anniversary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>When I become Daddy</title>
-    <url>/2020/11/14/when-i-become-father/</url>
-    <content><![CDATA[<p>Hello there, how are you today? My answer is <strong>"Better than good"</strong> if you ask :) Today I would like to tell you about how I have changed since I knew I was going to be called <em>Daddy</em>. That is one of the most beautiful stories in my life. After 5 years together, we finally have a baby. At this time last year, I spent a trip to Dalat City in Lam Dong, for my wife as her birthday gift, when we had no idea that our baby was about 2 months old. Until we came back to work, she got a health check, then the baby turned 3 months. WOW, yeah, she texted me that amazing good news when I was working in the office. I knew, from that moment, my life - our lives - started changing to be better and happier with the new beloved member.</p>
-<p><img src="/images/2020-12-15/001.jpg"></p>
-<p>My wife got a warning from a doctor because she missed the previous health checks for the baby, which made her worried for a while. She likes drinking chill beers and some kinds of alcohol, but don't get me wrong, she enjoys its tastes, not a kind of alcoholic. When we were in Dalat City, we had a night in a bar, drinking some cocktail. Therefore, she was worried for the baby's development. As the result, after a full health check, our baby was fine. I realized that I must have changed to be stronger than ever, in both financial as well as emotional aspects, in order to take care of her and our baby better.</p>
-<p>That the night my wife gave birth to our baby was also so unforgetable to us. Two days before the surgery date, after the midnight, she was unexpectedly in travail, rupture of amniotic fluid. We rushed to the international hospital that was 14km in distance, where she had registered to get surgery. It was 3:00 am, luckily, the street was empty throughout the way we went. We sat in the taxi and prayed. I prayed everything would be fine, my wife and our baby could come over this situation without hurt. At 5:18am, our baby was born, safe and sound!</p>
-<p>"Oh Congratulation! Here you are, a football player!", the doctor said with a smile.</p>
-<p>It was funny that we hadn't known our baby's gender until that moment came. We had a son! His crying sound was lovely and special to me! He was laying on his mother's chest and crying out loud gently. I was so happy that almost forgot to take pictures, a nurse kindly reminded me. After 9 months, we finally met each other, son! 15 minutes later, our son was brought to warming room. When I hold him im my arms, I felt amazing, unbelievable, sweet and complete. He was strong, healthy, sleeping like an angel. Since then, our lives routine changed quite much to take care of him.</p>
-<p><img src="/images/2020-12-15/002.jpg"></p>
-<p>I would like to share top things I have changed since my wife got pregnant.</p>
-<ol type="1">
-<li>Doing houseworks in smart way</li>
-</ol>
-<p>After knowing my wife got pregnant, I started looking for a bigger and more convenient apartment for her to live. The one we chose was 63m2 with kitchen and two private rooms. My wife enjoyed cooking quite much so when there was the kitchen there, she could cooked healthy fresh dishes for us, espcially for the baby as well. I wasn't good at cooking but I could support her in washing dishes after meals, cleaning the floors, carrying heavy stuffs, etc. Doing lots of houseworks made me realize that how incredible my wife got through all everyday while she was still going to work. Unexpectedly, there was a big changes in human resource in my wife's company, because of her pregnancy, she had to leave the position according to the new company policy. Then my wife stayed at home alone and relaxed, while I was still working during the Covid-19. I bought her a washing dishes machine, a portable vacuum cleaner, and a pressure cooker to help things done faster and easier. Shortly after that, due to the growth of Covid-19, the government asked people to work from home, I could stay with my wife. It was a very good news to my wife, because she had someone to talk and take care of her.</p>
-<ol start="2" type="1">
-<li>Being a better listener</li>
-</ol>
-<p>I admit that I am not a good listener, but for my wife, I am trying to learn how to be her listener. Pregnant women are usually sensitive, grumpy and have a lot of thoughts. Fortunately, although my wife is open-minded and she seemed to be happier after having the baby, she still had some negative thoughts and fears inside. So I needed to be her mental support, reading her emotions and listening to her thoughts without any judgment. Especially after she gave birth to our baby, she faced huge changes in both physical and mental. I have been always by her side to help easing her bad feelings, together taking care of the baby.</p>
-<ol start="3" type="1">
-<li>Leanring to become richer. Being more mature and responsible</li>
-</ol>
-<p>Small renting rooms are not suitable for us anymore. Now we have a child, he needs a better environemnt for living and growing, for example, better educations, better neighbors, better health care etc. Therefore, we become more serious about the future with bigger houses and greater amount of assets. I began watching videos from rich successful people, learning their mindsets and taking their advices, then improving our values to get better chances in lives. Having baby motivates us so much to do harder to get richer and richer. And we strongly believe that we will soon have a beautiful villa and high standard living conditions.</p>
-<p>Some of my friends told me that I have looked more mature or older after having baby. I consider it as a praise. I want to be a great and responsible dad to guide our child to become an excellent person too.</p>
-<ol start="4" type="1">
-<li>Habbits &amp; Hobbies</li>
-</ol>
-<p>There are some new habits approaching me after our son was born. For instance, shooting photos of my litlle family to save the simple beautiful moments of our daily life with our son. He is super cute and growing so fast that we want to keep those sweet memories forever. I bought a new camera and we are saving budget to travel together and capture beautiful scenes. I didnot have that habit before.</p>
-<p>Now, everyday I have felt more excited when coming back home from work. I never knew that becoming father brings many positive feelings and thinking like that - a complete family. Love you all, my wife and little son.</p>
-<p><img src="/images/2020-12-15/003.jpg"></p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Setup Apache Airflow Using Docker Compose</title>
-    <url>/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/</url>
-    <content><![CDATA[<p><img width="480" src="/images/2021-05-08/001.png" /></p>
-<p>Do you find it so complicated to set up <a href="https://airflow.apache.org/">Apache Airflow</a> for using right away? Don't worry, I can show you a simple and fast way! Are you ready? Then please take a look the instruction below.</p>
-<h1 id="getting-started">Getting Started</h1>
-<ul>
-<li>Install <a href="https://docs.docker.com/engine/install/">docker</a> if you haven't.</li>
-<li>Install <a href="https://docs.docker.com/compose/install/">Docker Compose &gt;= v1.27.0</a></li>
-</ul>
-<h1 id="download-docker-compose.yml">Download <code>docker-compose.yml</code></h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -LfO &#x27;https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml&#x27;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>The <code>docker-compose.yml</code> file will look like this</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Licensed to the Apache Software Foundation (ASF) under one</span></span><br><span class="line"><span class="comment"># or more contributor license agreements.  See the NOTICE file</span></span><br><span class="line"><span class="comment"># distributed with this work for additional information</span></span><br><span class="line"><span class="comment"># regarding copyright ownership.  The ASF licenses this file</span></span><br><span class="line"><span class="comment"># to you under the Apache License, Version 2.0 (the</span></span><br><span class="line"><span class="comment"># &quot;License&quot;); you may not use this file except in compliance</span></span><br><span class="line"><span class="comment"># with the License.  You may obtain a copy of the License at</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Unless required by applicable law or agreed to in writing,</span></span><br><span class="line"><span class="comment"># software distributed under the License is distributed on an</span></span><br><span class="line"><span class="comment"># &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</span></span><br><span class="line"><span class="comment"># KIND, either express or implied.  See the License for the</span></span><br><span class="line"><span class="comment"># specific language governing permissions and limitations</span></span><br><span class="line"><span class="comment"># under the License.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Basic Airflow cluster configuration for CeleryExecutor with Redis and PostgreSQL.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># WARNING: This configuration is for local development. Do not use it in a production deployment.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This configuration supports basic configuration using environment variables or an .env file</span></span><br><span class="line"><span class="comment"># The following variables are supported:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># AIRFLOW_IMAGE_NAME         - Docker image name used to run Airflow.</span></span><br><span class="line"><span class="comment">#                              Default: apache/airflow:master-python3.8</span></span><br><span class="line"><span class="comment"># AIRFLOW_UID                - User ID in Airflow containers</span></span><br><span class="line"><span class="comment">#                              Default: 50000</span></span><br><span class="line"><span class="comment"># AIRFLOW_GID                - Group ID in Airflow containers</span></span><br><span class="line"><span class="comment">#                              Default: 50000</span></span><br><span class="line"><span class="comment"># _AIRFLOW_WWW_USER_USERNAME - Username for the administrator account.</span></span><br><span class="line"><span class="comment">#                              Default: airflow</span></span><br><span class="line"><span class="comment"># _AIRFLOW_WWW_USER_PASSWORD - Password for the administrator account.</span></span><br><span class="line"><span class="comment">#                              Default: airflow</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Feel free to modify this file to suit your needs.</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">x-airflow-common:</span></span><br><span class="line">  <span class="string">&amp;airflow-common</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">$&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="string">&amp;airflow-common-env</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__EXECUTOR:</span> <span class="string">CeleryExecutor</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__SQL_ALCHEMY_CONN:</span> <span class="string">postgresql+psycopg2://airflow:airflow@postgres/airflow</span></span><br><span class="line">    <span class="attr">AIRFLOW__CELERY__RESULT_BACKEND:</span> <span class="string">db+postgresql://airflow:airflow@postgres/airflow</span></span><br><span class="line">    <span class="attr">AIRFLOW__CELERY__BROKER_URL:</span> <span class="string">redis://:@redis:6379/0</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__FERNET_KEY:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__CORE__LOAD_EXAMPLES:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">    <span class="attr">AIRFLOW__API__AUTH_BACKEND:</span> <span class="string">&#x27;airflow.api.auth.backend.basic_auth&#x27;</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./dags:/opt/airflow/dags</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./logs:/opt/airflow/logs</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">./plugins:/opt/airflow/plugins</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&quot;$&#123;AIRFLOW_UID:-50000&#125;:$&#123;AIRFLOW_GID:-50000&#125;&quot;</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="attr">redis:</span></span><br><span class="line">      <span class="attr">condition:</span> <span class="string">service_healthy</span></span><br><span class="line">    <span class="attr">postgres:</span></span><br><span class="line">      <span class="attr">condition:</span> <span class="string">service_healthy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">postgres:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:13</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">POSTGRES_USER:</span> <span class="string">airflow</span></span><br><span class="line">      <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">airflow</span></span><br><span class="line">      <span class="attr">POSTGRES_DB:</span> <span class="string">airflow</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">postgres-db-volume:/var/lib/postgresql/data</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;pg_isready&quot;</span>, <span class="string">&quot;-U&quot;</span>, <span class="string">&quot;airflow&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">5s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis:latest</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;redis-cli&quot;</span>, <span class="string">&quot;ping&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">5s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">30s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">50</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-webserver:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">webserver</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:8080</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;--fail&quot;</span>, <span class="string">&quot;http://localhost:8080/health&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-scheduler:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">scheduler</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-worker:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">airflow-init:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">version</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common-env</span></span><br><span class="line">      <span class="attr">_AIRFLOW_DB_UPGRADE:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_CREATE:</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_USERNAME:</span> <span class="string">$&#123;_AIRFLOW_WWW_USER_USERNAME:-airflow&#125;</span></span><br><span class="line">      <span class="attr">_AIRFLOW_WWW_USER_PASSWORD:</span> <span class="string">$&#123;_AIRFLOW_WWW_USER_PASSWORD:-airflow&#125;</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">flower:</span></span><br><span class="line">    <span class="string">&lt;&lt;:</span> <span class="string">*airflow-common</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">flower</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5555</span><span class="string">:5555</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD&quot;</span>, <span class="string">&quot;curl&quot;</span>, <span class="string">&quot;--fail&quot;</span>, <span class="string">&quot;http://localhost:5555/&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">postgres-db-volume:</span></span><br></pre></td></tr></table></figure>
-<h1 id="initialize-the-environment">Initialize the environment</h1>
-<ul>
-<li>Prepare some folders to store application data and script</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir ./dags ./logs ./plugins</span><br><span class="line"></span><br><span class="line">echo -e &quot;AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0&quot; &gt; .env</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Initialize database</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker-compose up airflow-init</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Use the login user <code>airflow</code> and the password <code>airflow</code>.</li>
-</ul>
-<h1 id="start-the-application">Start the application</h1>
-<ul>
-<li>Start all containers defined in the docker-compose.yml</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Access the web interface <code>http://localhost:8080</code></li>
-</ul>
-<h1 id="how-to-install-additional-python-packages">How to install additional python packages</h1>
-<ul>
-<li>Create new file <code>Dockerfile</code> to customize airflow image based on <code>apache/airflow:2.0.2</code></li>
-</ul>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> apache/airflow:<span class="number">2.0</span>.<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Now install the pandas package</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install pandas</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Or install all packages from requirements.txt</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install -r requirements.txt</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Update the <code>docker-compose.yml</code></li>
-</ul>
-<p>Change the line <code>image: $&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</code> to <code>build: .</code></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">x-airflow-common:</span></span><br><span class="line">  <span class="string">&amp;airflow-common</span></span><br><span class="line">  <span class="comment"># image: $&#123;AIRFLOW_IMAGE_NAME:-apache/airflow:2.0.2&#125;</span></span><br><span class="line">  <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>Build the image by run the command <code>docker-compose build</code></p></li>
-<li><p>Run the updated image <code>docker-compose up</code></p></li>
-</ul>
-<h1 id="reference">Reference</h1>
-<ul>
-<li><a href="https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html">Airflow Docs</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Airflow</tag>
-        <tag>docker-compose</tag>
       </tags>
   </entry>
   <entry>
