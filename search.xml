@@ -20,24 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Azure DevOps Engineering Expert achievement</title>
-    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
-<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
-<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
-<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Azure Fundamentals Achievement</title>
     <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
@@ -55,24 +37,6 @@
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
         <tag>Azure Fundamentals</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure Solution Architect Achievement</title>
-    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
-<p>Finally got it, after many days of learning from <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft Learning</a>.</p>
-<p>To be able to earn this certification you should have advanced experience and knowledge of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platform, budgeting, and governance. In addition, you should have expert-level skills in Azure administration and have experience with development and DevOps processes.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
-        <tag>Solution Architect</tag>
       </tags>
   </entry>
   <entry>
@@ -118,6 +82,78 @@
       </tags>
   </entry>
   <entry>
+    <title>Azure Solution Architect Achievement</title>
+    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
+<p>Finally got it, after many days of learning from <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft Learning</a>.</p>
+<p>To be able to earn this certification you should have advanced experience and knowledge of IT operations, including networking, virtualization, identity, security, business continuity, disaster recovery, data platform, budgeting, and governance. In addition, you should have expert-level skills in Azure administration and have experience with development and DevOps processes.</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>DevOps</tag>
+        <tag>Solution Architect</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure DevOps Engineering Expert achievement</title>
+    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
+<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
+<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
+<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>DevOps</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Distributed Tasks Processing With Google Pub/Sub</title>
+    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
+    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
+<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub/Sub as messaging-oriented middleware or event ingestion and delivery for streaming analytics pipelines. Pub/Sub offers durable message storage and real-time message delivery with high availability and consistent performance at scale. Pub/Sub servers run in all Google Cloud regions around the world.</p>
+<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
+<h1 id="core-concepts">Core concepts</h1>
+<ul>
+<li><strong>Topic</strong>: A named resource to which messages are sent by publishers.</li>
+<li><strong>Subscription</strong>: A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</li>
+<li><strong>Message</strong>: The combination of data and (optional) attributes that a publisher sends to a topic and is eventually delivered to subscribers.</li>
+<li><strong>Message attribute</strong>: A key-value pair that a publisher can define for a message. For example, key iana.org/language_tag and value en could be added to messages to mark them as readable by an English-speaking subscriber.</li>
+</ul>
+<h1 id="install">Install</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
+<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
+<p>In this example, the publisher will act as a task distributer.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
+<p>Multiple workers will subscribe to a same subscriptions to receive difference tasks from a same publisher.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Google Cloud</category>
+        <category>Pub/Sub</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Pub/Sub</tag>
+        <tag>GCP</tag>
+        <tag>Google Cloud</tag>
+        <tag>Distributed Processing</tag>
+        <tag>Minibatch Processing</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Chia Sẻ Về Làm Việc Remote tại Đà Lạt</title>
     <url>/2022/06/12/Chia-Se-Ve-Lam-Viec-Remote/</url>
     <content><![CDATA[<p>Sự kiện Covid-19 đã góp phần tạo điều kiện cho giới văn phòng công sở tiếp cận đến hình thức làm việc remote, nghĩa là làm việc online từ xa, có thể ở tại nhà cùng với chiếc máy tính kết nối internet là có thể vi vu, trong thời điểm cách ly xã hội. Tuy nhiên, giai đoạn cách ly đã qua, và hiện tại mọi người chung tay xây dựng lại nền kinh tế, giới văn phòng cũng quay trở lại trụ sở công ty để làm việc. Nhiều anh em chia sẻ rằng, thời gian làm remote ở nhà cũng có cái hay và cái bất cập của nó, nhưng nếu biết chủ động thì sẽ không thành vấn đề.</p>
@@ -158,42 +194,6 @@
       <tags>
         <tag>remote job</tag>
         <tag>viec lam remote</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Distributed Tasks Processing With Google Pub/Sub</title>
-    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
-    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
-<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub/Sub as messaging-oriented middleware or event ingestion and delivery for streaming analytics pipelines. Pub/Sub offers durable message storage and real-time message delivery with high availability and consistent performance at scale. Pub/Sub servers run in all Google Cloud regions around the world.</p>
-<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
-<h1 id="core-concepts">Core concepts</h1>
-<ul>
-<li><strong>Topic</strong>: A named resource to which messages are sent by publishers.</li>
-<li><strong>Subscription</strong>: A named resource representing the stream of messages from a single, specific topic, to be delivered to the subscribing application.</li>
-<li><strong>Message</strong>: The combination of data and (optional) attributes that a publisher sends to a topic and is eventually delivered to subscribers.</li>
-<li><strong>Message attribute</strong>: A key-value pair that a publisher can define for a message. For example, key iana.org/language_tag and value en could be added to messages to mark them as readable by an English-speaking subscriber.</li>
-</ul>
-<h1 id="install">Install</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
-<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
-<p>In this example, the publisher will act as a task distributer.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
-<p>Multiple workers will subscribe to a same subscriptions to receive difference tasks from a same publisher.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Google Cloud</category>
-        <category>Pub/Sub</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Pub/Sub</tag>
-        <tag>GCP</tag>
-        <tag>Google Cloud</tag>
-        <tag>Distributed Processing</tag>
-        <tag>Minibatch Processing</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -402,8 +402,8 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 ]]></content>
       <categories>
         <category>DevOps</category>
-        <category>Cloud Computing</category>
         <category>Software Development</category>
+        <category>Cloud Computing</category>
         <category>CI/CD</category>
         <category>Containerization</category>
         <category>Performance Optimization</category>
@@ -689,6 +689,45 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Hijack your computer http request with Fiddler</title>
+    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
+<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
+<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
+<p>On my laptop, I use the linux version. You can download here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
+<h1 id="configuration">Configuration</h1>
+<p>This is the main view of the tool</p>
+<p><img src="/images/2020-12-23/001.png"></p>
+<ol type="1">
+<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
+</ol>
+<p><img src="/images/2020-12-23/005.png"></p>
+<ol start="2" type="1">
+<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
+</ol>
+<p><img src="/images/2020-12-23/003.png"></p>
+<ol start="3" type="1">
+<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
+</ol>
+<p><img src="/images/2020-12-23/004.png"></p>
+<h1 id="experiement">Experiement</h1>
+<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
+<p><img src="/images/2020-12-23/002.png"></p>
+]]></content>
+      <categories>
+        <category>Networking</category>
+      </categories>
+      <tags>
+        <tag>Networking</tag>
+        <tag>Tool</tag>
+        <tag>HTTP</tag>
+        <tag>Debugging</tag>
+        <tag>Snipping</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration</title>
     <url>/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/</url>
     <content><![CDATA[<p>In the world of workflow orchestration, AWS Step Functions and Apache Airflow stand out as prominent tools, each with its unique features, purposes, and operational models. Understanding their differences is crucial for selecting the right tool for your specific needs. Here's a comparison:</p>
@@ -754,10 +793,10 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 ]]></content>
       <categories>
         <category>DevOps</category>
-        <category>Cloud Computing</category>
         <category>Software Development</category>
-        <category>Data Engineering</category>
+        <category>Cloud Computing</category>
         <category>CI/CD</category>
+        <category>Data Engineering</category>
         <category>Workflow Automation</category>
         <category>Serverless Computing</category>
         <category>Big Data</category>
@@ -786,45 +825,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Customizable Workflow</tag>
         <tag>Big Data</tag>
         <tag>Technology Comparison</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hijack your computer http request with Fiddler</title>
-    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
-<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
-<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
-<p>On my laptop, I use the linux version. You can download here</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
-<h1 id="configuration">Configuration</h1>
-<p>This is the main view of the tool</p>
-<p><img src="/images/2020-12-23/001.png"></p>
-<ol type="1">
-<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
-</ol>
-<p><img src="/images/2020-12-23/005.png"></p>
-<ol start="2" type="1">
-<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
-</ol>
-<p><img src="/images/2020-12-23/003.png"></p>
-<ol start="3" type="1">
-<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
-</ol>
-<p><img src="/images/2020-12-23/004.png"></p>
-<h1 id="experiement">Experiement</h1>
-<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
-<p><img src="/images/2020-12-23/002.png"></p>
-]]></content>
-      <categories>
-        <category>Networking</category>
-      </categories>
-      <tags>
-        <tag>Networking</tag>
-        <tag>Tool</tag>
-        <tag>HTTP</tag>
-        <tag>Debugging</tag>
-        <tag>Snipping</tag>
       </tags>
   </entry>
   <entry>
@@ -1018,45 +1018,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
-    <url>/2020/11/23/Manage-ssh-keys/</url>
-    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>for example, I have 2 keys in my laptop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>Next, add the new key you just created</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>You can check your added keys</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-the-connection">3. Test the connection</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
-<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add public key to your source control profile setting</h1>
-<p>Copy the public key to clipboard</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
-<p>Paste the key to gitlab ssh setting</p>
-<p><img src="/images/2020-11-23/001.png"></p>
-<p>Paste the key to github ssh setting</p>
-<p><img src="/images/2020-11-23/002.png"></p>
-<h1 id="clone-the-source-code-using-different-user">5. Clone the source code using different user</h1>
-<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
-<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
-<p>That's all! Good luck!</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GitLab</tag>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mastering DAGs in Apache Airflow: The Key to Efficient Workflow Automation</title>
     <url>/2023/12/18/Mastering-DAGs-in-Apache-Airflow-The-Key-to-Efficient-Workflow-Automation/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -1101,13 +1062,13 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 ]]></content>
       <categories>
         <category>DevOps</category>
-        <category>Cloud Computing</category>
         <category>Software Development</category>
-        <category>Data Engineering</category>
+        <category>Cloud Computing</category>
         <category>CI/CD</category>
+        <category>Data Engineering</category>
         <category>Workflow Automation</category>
-        <category>Python Programming</category>
         <category>Technology Tutorials</category>
+        <category>Python Programming</category>
         <category>Big Data</category>
         <category>ETL</category>
         <category>IT Operations</category>
@@ -1128,6 +1089,45 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Big Data Processing</tag>
         <tag>Automation in Data Science</tag>
         <tag>Python Scripting for Airflow</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
+    <url>/2020/11/23/Manage-ssh-keys/</url>
+    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>for example, I have 2 keys in my laptop</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>Next, add the new key you just created</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>You can check your added keys</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-the-connection">3. Test the connection</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
+<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add public key to your source control profile setting</h1>
+<p>Copy the public key to clipboard</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
+<p>Paste the key to gitlab ssh setting</p>
+<p><img src="/images/2020-11-23/001.png"></p>
+<p>Paste the key to github ssh setting</p>
+<p><img src="/images/2020-11-23/002.png"></p>
+<h1 id="clone-the-source-code-using-different-user">5. Clone the source code using different user</h1>
+<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
+<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
+<p>That's all! Good luck!</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GitLab</tag>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -1471,29 +1471,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>SQLAlchemy for Python ORM Mapping</title>
-    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
-<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
-<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="table-define">Table Define</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="example">Example</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>SQLAlchemy</tag>
-        <tag>ORM</tag>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Schedule Task Runner with Celery</title>
     <url>/2020/11/27/Schedule-Task-Runner-with-Celery/</url>
     <content><![CDATA[<blockquote><p>Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so that your product can scale and integrate with other languages, and it comes with the tools and support you need to run such a system in production.</p>
@@ -1526,6 +1503,29 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Celery</tag>
         <tag>Cronjob</tag>
         <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLAlchemy for Python ORM Mapping</title>
+    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
+<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways - allowing the object model and database schema to develop in a cleanly decoupled way from the beginning.</p>
+<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="table-define">Table Define</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="example">Example</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>SQLAlchemy</tag>
+        <tag>ORM</tag>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -1590,6 +1590,57 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Docker</tag>
         <tag>Airflow</tag>
         <tag>docker-compose</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Setup your own Docker Private Registry</title>
+    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
+    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
+<ol type="1">
+<li>Create an <code>htpasswd</code> file containing the login credentials for the initial account.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Create a directory to hold the certs for the registry server</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Create a self-signed certificate for the registry.</li>
+</ol>
+<p>NOTE: For the <code>Common Name</code> field, enter the hostname of the registry server. Here I will use <code>registry.internal</code></p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>Create a container to run the registry.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
+<ol start="5" type="1">
+<li>Once the registry starts up, verify that it is responsive. It's OK if this command returns nothing, just make sure it does not fail.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
+<h1 id="in-the-docker-client">In the Docker Client</h1>
+<ol type="1">
+<li>Add the registry's public self-signed certificate to <code>/etc/docker/certs.d</code>. The scp command is copying the file from the registry server to the client.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Log in to the private registry. The credentials should be username <code>hienhoang</code> and password <code>SupP3rS3cureP@ssW0rd</code>.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Test the setup by push a image to the registry</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Registry</tag>
+        <tag>Openssl</tag>
+        <tag>Self-signed Certificate</tag>
       </tags>
   </entry>
   <entry>
@@ -1673,76 +1724,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Kubernetes</tag>
         <tag>K8S</tag>
         <tag>On-premise</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Setup your own Docker Private Registry</title>
-    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
-    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
-<ol type="1">
-<li>Create an <code>htpasswd</code> file containing the login credentials for the initial account.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Create a directory to hold the certs for the registry server</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Create a self-signed certificate for the registry.</li>
-</ol>
-<p>NOTE: For the <code>Common Name</code> field, enter the hostname of the registry server. Here I will use <code>registry.internal</code></p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
-<ol start="4" type="1">
-<li>Create a container to run the registry.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
-<ol start="5" type="1">
-<li>Once the registry starts up, verify that it is responsive. It's OK if this command returns nothing, just make sure it does not fail.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
-<h1 id="in-the-docker-client">In the Docker Client</h1>
-<ol type="1">
-<li>Add the registry's public self-signed certificate to <code>/etc/docker/certs.d</code>. The scp command is copying the file from the registry server to the client.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Log in to the private registry. The credentials should be username <code>hienhoang</code> and password <code>SupP3rS3cureP@ssW0rd</code>.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Test the setup by push a image to the registry</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Docker Registry</tag>
-        <tag>Openssl</tag>
-        <tag>Self-signed Certificate</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The First Birthday of Donnie</title>
-    <url>/2021/05/14/The-First-Birthday-of-Donnie/</url>
-    <content><![CDATA[<p><img src="/images/2021-05-14/001.jpg"></p>
-<p>That was a day of summer, our son turned one and enjoyed his very first birthday from when his new journey began. He also got a new nickname - Donnie, actually the nickname came from his previous one, Dino (Dinosaur). He's growing as fast as the waterfall of time, just a glance and now he can walk by his own, he can say "papa", "mama", "mum mum"... Sooner or later, Donnie will attend the preschool program. I'm writing this blog to save the date Donnie had his first birthday.</p>
-<a id="more"></a>
-<p>The first birthday of every baby is an important occasion, marking a new period of its life has just begun. In Vietnamese, this ceremony is called "Lễ Thôi Nôi" or "Lễ Đầy Năm", originally come from Chinese culture since Chinese people immigrated to Vietnam. However, the ceremony can be different depending on each family's tradition and origins. For example, the first birthday ceremony of my family members is very simple, some other families even don't celebrate it until their babies turn two or three years old. For my son's ceremony, we decided to celebrate fully as Vietnamese culture. The purpose of the ceremony is expressing gratefulness to Twelve Goddesses (12 Bà Mụ) and Three Gods (3 Đức Thầy), who have been blessing our son's growth and future career, then we all pray the best wishes for him. There is an interesting part of the ceremony, every baby will pick or choose one of many different items that can predict his or her future career, which is considered to be pretty accurate.</p>
-<p>Due to the complicated situation of Covid-19, we couldn't set up a big party and invite relatives and friends to join us. We preparing everything for the ceremony, including food, fruits, offerings, decoration and birthday cake. Food includes boiled chicken, pork, rice soup, white cow-bean sweet gruel, 4-color sticky rice. For decorating, she purchased many lovely blue and grey balloons, blowing them all, then hanging on the wall to form cloud of balloons, which created a stunning background for shooting photos. My wife got up early and displayed the food and offerings on a table, lighting up candles and incense for the ceremony to start. We pray to Goddesses and Gods with respect to bless our little Donnie. The ceremony finished as soon as the incense fired to the end. Donnie started stepping forward to pick up one item that represents the future career. In front of him, there were a laptop, a notebook, a pen, a ruler, a box of English flashcards, etc. Can you guess Which one he would choose? Surprisingly, he picked up the pen! The pen can represent for creative jobs, such as writer, author, novelist, journalist, composer, script writer, etc. or even artist! There were 13 dishes of sticky rice, 13 bowls of sweet bean gruel, and 13 bowls of rice soup. My wife shared the sticky rice and sweet bean gruel to our neighbors as special gifts. We took some photos of Donnie with the balloons background, and that was all.</p>
-<p>You see how time flies no matter what happens. Looking at Donnie growing day by day, it reminds me the song "Slipping through my fingers" by ABBA. Let's take some times to listen to this song, you will know what I mean ;) It's great song, and you can feel it when you have children too. Oh believe me, I'm not a cheesy person, but the older we grow, the deeper we think and feel. Finally to our son, be strong and happy, Donnie! We're always by your side and always love you more than 3000 times!</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/lQj_DtAwmeM" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -1861,14 +1842,14 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 <p>Remember, the database you choose plays a pivotal role in the success of your application, so choose wisely!</p>
 ]]></content>
       <categories>
-        <category>Cloud Computing</category>
         <category>Software Development</category>
+        <category>Cloud Computing</category>
         <category>Technology</category>
-        <category>Web Development</category>
         <category>Database Technologies</category>
         <category>IT Infrastructure</category>
         <category>Big Data</category>
         <category>Data Management</category>
+        <category>Web Development</category>
       </categories>
       <tags>
         <tag>AWS DynamoDB</tag>
@@ -1942,6 +1923,36 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
+    <title>Debugging Parenthood: Celebrating Donnie&#39;s First Milestone</title>
+    <url>/2021/05/14/debugging-parenthood-celebrating-donnie-first-milestone/</url>
+    <content><![CDATA[<p><img src="/images/2021-05-14/001.jpg"></p>
+<p>Hey fellow coders,</p>
+<p>In the midst of coding and deploying, I took a break to celebrate a special milestone - my son Donnie's first birthday. It's like watching a project come to life, from the initial launch (his birth) to this exciting version 1.0 update.</p>
+<a id="more"></a>
+<p><strong>The Big One</strong></p>
+<p>In Vietnam, a child's first birthday is a big deal, akin to a major product release. We call it "Lễ Thôi Nôi" or "Lễ Đầy Năm". It's a time to thank the cosmic support team (Twelve Goddesses and Three Gods) for their 'bug fixes' and blessings on our little one's growth and future path.</p>
+<p><strong>A Developer's Celebration</strong></p>
+<p>Due to COVID-19, we scaled down the launch party. Imagine preparing for a product launch in a home office - that was us setting up the celebration. We had traditional dishes (think of them as legacy systems) and a balloon cloud setup for photo ops - a perfect backdrop for our mini user's big day.</p>
+<p><strong>Future Career Algorithm</strong></p>
+<p>The highlight? Donnie chose his future career tool from a range of options, including a laptop (hello, fellow future coder?), pen, and more. He picked a pen! In our world, that's like choosing a classic programming language over the latest framework - both have their unique charm and potential.</p>
+<p><strong>Time and Code</strong></p>
+<p>Watching Donnie grow reminds me of how quickly time and technology evolve. It's like the ABBA song "Slipping through my fingers," perfectly capturing the bittersweet, swift passage of time. If you've got a moment, give it a listen; it hits differently when you're juggling pull requests and playdates.</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/lQj_DtAwmeM" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p><strong>Conclusion</strong></p>
+<p>To Donnie, our little MVP (Most Valuable Person), grow strong and happy. We're your support team, offering endless updates of love and care. Keep developing, little one!</p>
+]]></content>
+      <categories>
+        <category>Tech and Humanity</category>
+      </categories>
+      <tags>
+        <tag>Parenting in Tech</tag>
+        <tag>Work-Life Balance</tag>
+        <tag>Life as a Coder</tag>
+        <tag>Cultural Traditions</tag>
+        <tag>Child Development</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World! My Coding Journey into Fatherhood</title>
     <url>/2020/11/14/hello-world-my-coding-journey-into-fatherhood/</url>
     <content><![CDATA[<p>Hey fellow coders! Let me share a personal fork in my life's repository - becoming a dad. It's like deploying a new life feature that brings unexpected joys and challenges.</p>
@@ -1968,9 +1979,9 @@ Why Vagrant?
         <category>Parenting in Tech</category>
       </categories>
       <tags>
+        <tag>Work-Life Balance</tag>
         <tag>Developer Dad</tag>
         <tag>Tech Family</tag>
-        <tag>Work-Life Balance</tag>
       </tags>
   </entry>
   <entry>
@@ -1999,23 +2010,74 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
-    <title>Pray For Peace</title>
-    <url>/2022/02/28/peace/</url>
-    <content><![CDATA[<p>Dear friends, today I just want to share some words about my feelings towards the event between Ukraine and Russia, not related to the political issue or something similar. I have considered it as proof that life changes unexpectedly, no matter what.</p>
-<a id="more"></a>
-<p>We never know what will come tomorrow, and anything can happen for a reason.</p>
-<p>It’s like what has happened to Ukraine and Russia recently. We don’t expect war to come, but it is happening in front of the world’s observation. I don’t know how others have felt about that, to me, I have been shocked and cannot say a word. From my heart, I have wondered if that war can really solve the problem between those countries or if there will be more and more innocent people suffering.</p>
-<p>I cannot imagine that it came so suddenly. I have been worried for Ukrainian partners who had worked closely with me before the war occurred. We were working and talking to each other online as usual, then one day they were all offline and uncontactable. Then, I read in the news that all Ukrainian males, from 18 to 60, must take part in the campaign fighting against Russian. Nothing I can do, but praying for them all to be fine, then they can return home alive, safe and sound.</p>
-<p>I think that you may experience that kind of feeling sometimes in your lives. Today, we still saw our friends in front of our eyes, worked and laughed. One day later, they were away, fighting to protect their countries, no promises when war was over that we could see each other again. I really really want to see our Ukrainian friends again and we can work together as before.</p>
-<p>Changes, although we don’t know where or what those changes lead us to, are inevitable. And whether we are ready for it or not, there is nothing we can do to stop it, but come over it by one way or another. I’m keeping praying for it to end in peace with the least suffering.</p>
-<p>From VN we pray.</p>
+    <title>Visualize high-dimensional dataset in a 2D Chart.</title>
+    <url>/2020/10/23/how-to-visualize-your-dataset-in-a-2d-or-3d-chart/</url>
+    <content><![CDATA[<p><img src="/images/2020-10-23/001.png" /> In this post, I'll use a well known dataset <a href="http://yann.lecun.com/exdb/mnist/">MINIST handwritten</a>. There are <code>70,000</code> images, each image in this dataset is of size <code>28x28</code>.</p>
+<h4 id="first-import-the-libraries-we-are-going-to-use.">First, import the libraries we are going to use.</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<p>I'm using <code>matplotlib</code> and <code>seaborn</code> for visualization. <code>numpy</code> and <code>pandas</code> to handle numerical arrays and dataframe. I'm also use <code>scikit-learn</code> to get the data and perform <code>t-SNE</code>.</p>
+<h4 id="download-the-dataset">Download the dataset</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data</span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">print(pixel_values.shape)</span><br></pre></td></tr></table></figure>
+<p><strong>(70000, 784)</strong></p>
+<p>The dataset downloaded has 70,000 records, each record has 784 columns.</p>
+<h4 id="lets-plot-an-image-to-see-what-does-it-look-like">Let's plot an image to see what does it look like</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">image = pixel_values[<span class="number">0</span>, :].reshape(<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">plt.imshow(image, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<div style="display:flex;align-items:start"><img src="/images/2020-10-23/002.png" /></div>
+
+<p>The image in the dataset has size <code>768</code>, so I need convert it to <code>28x28</code>.</p>
+<h4 id="now-the-importance-part-compute-t-sne">Now the importance part, compute t-SNE</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne = manifold.TSNE(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line">transformed_data = tsne.fit_transform(pixel_values[:<span class="number">6000</span>, :])</span><br><span class="line"></span><br><span class="line">print(transformed_data.shape)</span><br></pre></td></tr></table></figure>
+<p><strong>(6000, 2)</strong></p>
+<p>In this example, I using only <code>6000</code> rows, and reduce the columns from <code>768</code> to <code>2</code>. Enough for plotting the data to 2D chart.</p>
+<h4 id="lets-visualize-the-transformed-dataset">Let's visualize the transformed dataset</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne_df = pd.DataFrame(np.column_stack((transformed_data, targets[:<span class="number">6000</span>])), columns=[<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;targets&#x27;</span>])</span><br><span class="line">tsne_df.loc[:, <span class="string">&#x27;targets&#x27;</span>] = tsne_df.targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">grid = sns.FacetGrid(tsne_df, hue=<span class="string">&#x27;targets&#x27;</span>, height=<span class="number">8</span>)</span><br><span class="line">grid.<span class="built_in">map</span>(plt.scatter, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>).add_legend()</span><br></pre></td></tr></table></figure>
+
+<div style="display:flex;align-items:start"><img src="/images/2020-10-23/003.png" /></div>
+
+<p>This is one way to visualize dataset. By plotting the dataset in the chart, we can see that, the number <code>0</code> and <code>6</code> are distinguishable easily. The number <code>4</code> and <code>9</code> are harder to distinguish.</p>
 ]]></content>
       <categories>
-        <category>Living</category>
+        <category>Analytics</category>
       </categories>
       <tags>
-        <tag>Ukraine</tag>
-        <tag>War</tag>
+        <tag>Python</tag>
+        <tag>Data visualization</tag>
+        <tag>Chart</tag>
+        <tag>Decomposition</tag>
+        <tag>t-SNE</tag>
+        <tag>Jupyter Notebook</tag>
+        <tag>MNIST</tag>
+        <tag>Matplotlib</tag>
+        <tag>Seaborn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reflecting on Unexpected Changes: A Developer&#39;s Perspective on the Ukraine-Russia Situation</title>
+    <url>/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/</url>
+    <content><![CDATA[<p>Hey fellow developers,</p>
+<p>Today, I'm stepping away from our usual tech-focused discussions to share some personal reflections. Recent events, particularly the situation between Ukraine and Russia, have been a stark reminder of how life can change unexpectedly.</p>
+<p><strong>The Uncertainty of Tomorrow</strong></p>
+<p>In our world of structured code and predictable algorithms, the unpredictability of life stands in stark contrast. The conflict between Ukraine and Russia, far removed from the realm of technology, has brought this reality to the forefront. As developers, we're accustomed to solving problems logically, but some situations, like this conflict, defy straightforward solutions.</p>
+<a id="more"></a>
+<p><strong>The Impact on Our Global Community</strong></p>
+<p>I've been deeply affected by the situation, especially thinking about my Ukrainian colleagues. We were in the midst of projects, collaborating seamlessly across borders, when suddenly, they were unreachable. Learning that Ukrainian males aged 18 to 60 were called to join the defense forces hit close to home. All I could do was hope for their safety and a swift return to normalcy.</p>
+<p><strong>Personal Connection</strong></p>
+<p>Perhaps you've felt similar emotions. One day, we're sharing laughs and code reviews; the next, our friends are in a war zone, with no certainty of reunion. The thought of not being able to collaborate with my Ukrainian peers again is heartbreaking. I long for the day when we can reunite and continue our work together.</p>
+<p><strong>Embracing Change and Hope</strong></p>
+<p>Change is an inevitable part of life, as much as it is in the development cycle. While we might not be able to control these changes, we can navigate them, hoping for peaceful resolutions and minimal suffering. From here in Vietnam, my thoughts and prayers go out to everyone affected by this conflict.</p>
+<p>As we grapple with these changes and their impact, both near and far, it's important to remember the resilience and adaptability we possess, especially in our tech community. This leads me to a final thought, a message of hope and solidarity that I want to share with all of you.</p>
+<p><strong>Conclusion</strong></p>
+<p>In our journey as developers, we code not just for functionality but for a better world. Through our work, we strive to build bridges of understanding and cooperation. Despite the uncertainties and challenges, let's remain united in hope and continue to support each other. Stay strong and hopeful, everyone.</p>
+]]></content>
+      <categories>
+        <category>Tech and Humanity</category>
+      </categories>
+      <tags>
+        <tag>Work-Life Balance</tag>
+        <tag>Global Events</tag>
+        <tag>Developer Community</tag>
+        <tag>Tech and Society</tag>
       </tags>
   </entry>
   <entry>
@@ -2077,49 +2139,6 @@ Why Vagrant?
         <tag>Web Development</tag>
         <tag>Tech How-To</tag>
         <tag>Docker Deployment</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Visualize high-dimensional dataset in a 2D Chart.</title>
-    <url>/2020/10/23/how-to-visualize-your-dataset-in-a-2d-or-3d-chart/</url>
-    <content><![CDATA[<p><img src="/images/2020-10-23/001.png" /> In this post, I'll use a well known dataset <a href="http://yann.lecun.com/exdb/mnist/">MINIST handwritten</a>. There are <code>70,000</code> images, each image in this dataset is of size <code>28x28</code>.</p>
-<h4 id="first-import-the-libraries-we-are-going-to-use.">First, import the libraries we are going to use.</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> manifold</span><br><span class="line"></span><br><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
-<p>I'm using <code>matplotlib</code> and <code>seaborn</code> for visualization. <code>numpy</code> and <code>pandas</code> to handle numerical arrays and dataframe. I'm also use <code>scikit-learn</code> to get the data and perform <code>t-SNE</code>.</p>
-<h4 id="download-the-dataset">Download the dataset</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = datasets.fetch_openml(<span class="string">&#x27;mnist_784&#x27;</span>, version=<span class="number">1</span>, return_X_y=<span class="literal">True</span>)</span><br><span class="line">pixel_values, targets = data</span><br><span class="line">targets = targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">print(pixel_values.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>(70000, 784)</strong></p>
-<p>The dataset downloaded has 70,000 records, each record has 784 columns.</p>
-<h4 id="lets-plot-an-image-to-see-what-does-it-look-like">Let's plot an image to see what does it look like</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">image = pixel_values[<span class="number">0</span>, :].reshape(<span class="number">28</span>, <span class="number">28</span>)</span><br><span class="line">plt.imshow(image, cmap=<span class="string">&#x27;gray&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<div style="display:flex;align-items:start"><img src="/images/2020-10-23/002.png" /></div>
-
-<p>The image in the dataset has size <code>768</code>, so I need convert it to <code>28x28</code>.</p>
-<h4 id="now-the-importance-part-compute-t-sne">Now the importance part, compute t-SNE</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne = manifold.TSNE(n_components=<span class="number">2</span>, random_state=<span class="number">42</span>)</span><br><span class="line">transformed_data = tsne.fit_transform(pixel_values[:<span class="number">6000</span>, :])</span><br><span class="line"></span><br><span class="line">print(transformed_data.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>(6000, 2)</strong></p>
-<p>In this example, I using only <code>6000</code> rows, and reduce the columns from <code>768</code> to <code>2</code>. Enough for plotting the data to 2D chart.</p>
-<h4 id="lets-visualize-the-transformed-dataset">Let's visualize the transformed dataset</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tsne_df = pd.DataFrame(np.column_stack((transformed_data, targets[:<span class="number">6000</span>])), columns=[<span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;targets&#x27;</span>])</span><br><span class="line">tsne_df.loc[:, <span class="string">&#x27;targets&#x27;</span>] = tsne_df.targets.astype(<span class="built_in">int</span>)</span><br><span class="line"></span><br><span class="line">grid = sns.FacetGrid(tsne_df, hue=<span class="string">&#x27;targets&#x27;</span>, height=<span class="number">8</span>)</span><br><span class="line">grid.<span class="built_in">map</span>(plt.scatter, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>).add_legend()</span><br></pre></td></tr></table></figure>
-
-<div style="display:flex;align-items:start"><img src="/images/2020-10-23/003.png" /></div>
-
-<p>This is one way to visualize dataset. By plotting the dataset in the chart, we can see that, the number <code>0</code> and <code>6</code> are distinguishable easily. The number <code>4</code> and <code>9</code> are harder to distinguish.</p>
-]]></content>
-      <categories>
-        <category>Analytics</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Data visualization</tag>
-        <tag>Chart</tag>
-        <tag>Decomposition</tag>
-        <tag>t-SNE</tag>
-        <tag>Jupyter Notebook</tag>
-        <tag>MNIST</tag>
-        <tag>Matplotlib</tag>
-        <tag>Seaborn</tag>
       </tags>
   </entry>
   <entry>
