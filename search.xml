@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Azure DevOps Engineering Expert achievement</title>
+    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
+<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
+<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
+<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>DevOps</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
+    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
+    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a time-traveling journey through the evolution of JavaScript's asynchronous capabilities. From the early days of callbacks to the modern elegance of async/await, we'll explore how these features came to be and how they've shaped the way we write JavaScript today.</p>
+<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
+<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like a helpful little assistant, great for adding interactive bits to websites. But as the internet grows, our assistant needs to juggle more tasks simultaneously.</p>
+<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
+<ol type="1">
+<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the original method for handling asynchronous operations in JavaScript. They're like the first pair of training wheels for the language, helping it to manage tasks that take time, like loading data from a server.</li>
+</ol>
+<a id="more"></a>
+<ol start="2" type="1">
+<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015 (also known as ES6), Promises were officially introduced. They brought a new level of sophistication to handling async operations, much like upgrading from a flip phone to a smartphone.</p></li>
+<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In 2017, JavaScript took a significant leap forward with async/await, part of the ES2017 standard. Writing async code became as easy as writing your usual synchronous code, but with all the power of non-blocking execution.</p></li>
+</ol>
+<p><strong>A Coding Journey Through Time</strong></p>
+<p>Let's see how each of these stages changed the way we write code when performing a simple task: fetching and displaying data.</p>
+<p><em>In the Time of Callbacks:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><em>The Promises Era Begins:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
+<p><em>The Age of Async/Await:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
+<hr />
+<p>From the early days of callbacks to the streamlined era of async/await, JavaScript's journey in asynchronous programming is nothing short of remarkable. It reflects the language's adaptability and growth, paralleling the ever-evolving landscape of web development. As JavaScript continues to evolve, who knows what the future holds? But one thing is certain – it will keep making our coding lives easier and more efficient.</p>
+]]></content>
+      <categories>
+        <category>Web Development</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Asynchronous Programming</tag>
+        <tag>Event Loop</tag>
+        <tag>Callbacks</tag>
+        <tag>Promises</tag>
+        <tag>Async/Await</tag>
+        <tag>ES2015</tag>
+        <tag>ES2017</tag>
+        <tag>Web Development</tag>
+        <tag>JavaScript Evolution</tag>
+        <tag>Coding History</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Azure Administrator Associate achievement</title>
     <url>/2021/06/12/Azure-Administrator-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
@@ -17,24 +79,6 @@
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
         <tag>Administrator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure DevOps Engineering Expert achievement</title>
-    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
-<p>To be able to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft Azure DevOps Expert Certification</a> you have to achieve <a href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure Administrator Certification</a>. The responsibilities for the DevOps role include designing and implementing strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.</p>
-<p>As part of my role, I have already been familiar with design and implement DevOps pipeline for automation deployment. So it somewhat easy to me to learn the course quickly. Just the <code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>. After a few days of practicing exercises, I decide to take the tests online due to the increasing of Covid-19. The process was the same as the last time I had taken the test for Administrator Associate certification. After an hour, I submitted the test and then the result was awesome. Yay, you got it, I passed!</p>
-<p>I have felt very happy for what I have had achieved, I must say I'm so proud of myself hohoho. There will be other tests waiting for me to achieve in the near future, so keep following my blog for new updates! Thanks you guys!</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
       </tags>
   </entry>
   <entry>
@@ -184,311 +228,6 @@
         <tag>Distributed Processing</tag>
         <tag>Minibatch Processing</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Django Object Level Permission Template</title>
-    <url>/2021/01/21/Django-Object-Level-Permission-Templage/</url>
-    <content><![CDATA[<p>A template to guide you how to setup a Django Project with Object Level Permission.</p>
-<a id="more"></a>
-<h2 id="authentication">1. Authentication</h2>
-<h3 id="packages">1.1. Packages</h3>
-<ul>
-<li><p><a href="https://djoser.readthedocs.io/">Djoser</a> provide commonly use authentication functions such as: Sign Up, Login, Change Password, Forgot Password, User Account Activation, User Profile</p></li>
-<li><p><a href="https://django-rest-framework-simplejwt.readthedocs.io/">Simple JWT</a> provide Json Web Token authentication method.</p></li>
-<li><p><a href="https://github.com/django-guardian/django-guardian">Django Guardian</a> provide object level permission management.</p></li>
-</ul>
-<h3 id="configuration">1.2. Configuration</h3>
-<ul>
-<li>JWT authentication is configured in</li>
-</ul>
-<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Application definition</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;rest_framework&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;djoser&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;guardian&#x27;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">AUTHENTICATION_BACKENDS = (</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth.backends.ModelBackend&#x27;</span>, <span class="comment"># default</span></span><br><span class="line">    <span class="string">&#x27;guardian.backends.ObjectPermissionBackend&#x27;</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Configuration for Django Rest Framework</span></span><br><span class="line"><span class="comment"># https://www.django-rest-framework.org/</span></span><br><span class="line"></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">&#x27;DEFAULT_AUTHENTICATION_CLASSES&#x27;</span>: (</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Simple JWT Authentication</span></span><br><span class="line">        <span class="comment"># https://django-rest-framework-simplejwt.readthedocs.io/</span></span><br><span class="line">        <span class="string">&#x27;rest_framework_simplejwt.authentication.JWTAuthentication&#x27;</span>,</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>core/urls.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls&#x27;</span>)),</span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls.jwt&#x27;</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
-<h3 id="data-model">1.3. Data Model</h3>
-<h4 id="using-a-custom-model">1.3.1. Using a custom model</h4>
-<p>If you’re starting a new project, it’s highly recommended to set up a custom user model, even if the default User model is sufficient for you. This model behaves identically to the default user model, but you’ll be able to customize it in the future if the need arises.</p>
-<p><code>core/user/models.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> AbstractUser</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>(<span class="params">AbstractUser</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">AUTH_USER_MODEL = <span class="string">&#x27;user.User&#x27;</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line">    <span class="string">&#x27;core.user&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
-<h4 id="reusable-apps-and-auth_user_model">1.3.2. Reusable apps and AUTH_USER_MODEL</h4>
-<p>Reusable apps shouldn’t implement a custom user model. A project may use many apps, and two reusable apps that implemented a custom user model couldn’t be used together. If you need to store per user information in your app, use a <code>ForeignKey</code> or <code>OneToOneField</code> to <code>settings.AUTH_USER_MODEL</code> as described below.</p>
-<h5 id="referencing-the-user-model">Referencing the User model</h5>
-<p>If you reference <code>User</code> directly (for example, by referring to it in a foreign key), your code will not work in projects where the <code>AUTH_USER_MODEL</code> setting has been changed to a different user model.</p>
-<p>Instead of referring to User directly, you should reference the user model using <code>django.contrib.auth.get_user_model()</code>. This method will return the currently active user model – the custom user model if one is specified, or User otherwise.</p>
-<p>When you define a <code>foreign key</code> or <code>many-to-many</code> relations to the user model, you should specify the custom model using the <code>AUTH_USER_MODEL</code> setting. For example:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    author = models.ForeignKey(</span><br><span class="line">        settings.AUTH_USER_MODEL,</span><br><span class="line">        on_delete=models.CASCADE,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
-<h3 id="declare-model-permissions">1.4. Declare model permissions</h3>
-<h4>
-1.4.1 <a href="https://docs.djangoproject.com/en/3.0/topics/auth/default/#permissions-and-authorization">Django builtin permission</a>
-</h4>
-<p>Django comes with a built-in permissions system. It provides a way to assign permissions to specific users and groups of users.</p>
-<p>When <code>django.contrib.auth</code> is listed in your <strong>INSTALLED_APPS</strong> setting, it will ensure that four default permissions – <code>add</code>, <code>change</code>, <code>delete</code>, and <code>view</code> – are created for each Django model defined in one of your installed applications.</p>
-<h4>
-1.4.2 Declare new permission
-</h4>
-<p>Define directly inside model <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Job</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    (...)</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        permissions = [(<span class="string">&#x27;review_job&#x27;</span>, <span class="string">&#x27;Can review job (approve or deny)&#x27;</span>)]</span><br></pre></td></tr></table></figure></p>
-Define programmatically <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> myapp.models <span class="keyword">import</span> Job</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Permission</span><br><span class="line"><span class="keyword">from</span> django.contrib.contenttypes.models <span class="keyword">import</span> ContentType</span><br><span class="line"></span><br><span class="line">content_type = ContentType.objects.get_for_model(Job)</span><br><span class="line">permission = Permission.objects.create(</span><br><span class="line">    codename=<span class="string">&#x27;review_job&#x27;</span>,</span><br><span class="line">    name=<span class="string">&#x27;Can review job (approve or deny)&#x27;</span>,</span><br><span class="line">    content_type=content_type,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<h4>
-1.4.3 Assign permission to user/group
-</h4>
-<p><strong>Global Permission</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Object Permission</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
-<h4>
-1.4.4 Retrieve user permitted objects
-</h4>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; leaders = Group.objects.create(name=<span class="string">&#x27;leaders&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm, get_objects_for_user</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet []&gt;</span><br><span class="line"></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;]&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Let try with global permission</span></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;, &lt;Group: level1&gt;]&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="database">2. Database</h2>
-<h3 id="packages-1">2.1. Packages</h3>
-<ul>
-<li><a href="https://github.com/jacobian/dj-database-url">dj-database-url</a> database connection string parser that is helpful to parse database configuration in a connection string style.</li>
-</ul>
-<h3 id="supported-url-connection-schema">2.2. Supported URL connection schema</h3>
-<table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 55%" />
-<col style="width: 17%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Engine</th>
-<th>Django Backend</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>SQLite</td>
-<td><code>django.db.backends.sqlite3</code></td>
-<td><code>sqlite:///PATH</code></td>
-</tr>
-<tr class="even">
-<td>PostgreSQL</td>
-<td><code>django.db.backends.postgresql</code></td>
-<td><code>postgres://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="odd">
-<td>PostGIS</td>
-<td><code>django.contrib.gis.db.backends.postgis</code></td>
-<td><code>postgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="even">
-<td>MSSQL</td>
-<td><code>sql_server.pyodbc</code></td>
-<td><code>mssql://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="odd">
-<td>MySQL</td>
-<td><code>django.db.backends.mysql</code></td>
-<td><code>mysql://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="even">
-<td>MySQL (GIS)</td>
-<td><code>django.contrib.gis.db.backends.mysql</code></td>
-<td><code>mysqlgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="odd">
-<td>Oracle</td>
-<td><code>django.db.backends.oracle</code></td>
-<td><code>oracle://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="even">
-<td>Oracle (GIS)</td>
-<td><code>django.contrib.gis.db.backends.oracle</code></td>
-<td><code>oraclegis://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="odd">
-<td>Redshift</td>
-<td><code>django_redshift_backend</code></td>
-<td><code>redshift://USER:PASSWORD@HOST:PORT/NAME</code></td>
-</tr>
-<tr class="even">
-<td>SpatiaLite</td>
-<td><code>django.contrib.gis.db.backends.spatialite</code></td>
-<td><code>spatialite:///PATH</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="configuration-1">2.3. Configuration</h3>
-<p>This is configuration for the database, the default database will use sqlite3 for simple to quick to run in development mode. This may conflict with database you run on production mode because some of the funtion sqlite may not support. It is recommended to config the database in development mode have the same database system you run on production. To change the database system, config the environment variable <code>DATABASE_URL</code></p>
-<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> dj_database_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># Database</span></span><br><span class="line"><span class="comment"># https://docs.djangoproject.com/en/3.0/ref/settings/#databases</span></span><br><span class="line"></span><br><span class="line">DATABASE_URL = os.environ.get(<span class="string">&#x27;DATABASE_URL&#x27;</span>, <span class="string">&#x27;sqlite:///&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(os.path.join(BASE_DIR, <span class="string">&#x27;db.sqlite3&#x27;</span>)))</span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: dj_database_url.config(default=DATABASE_URL)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="api-development">3. API Development</h2>
-<h3 id="packages-2">3.1. Packages</h3>
-<ul>
-<li><a href="https://django-rest-framework-json-api.readthedocs.io/en/stable/">djangorestframework-jsonapi</a> provide the implementation of the <a href="http://jsonapi.org/format/">JSON API format specification</a></li>
-</ul>
-<h3 id="serializers">3.2. Serializers</h3>
-<blockquote>
-<p>TODO What is serializers, how to code one?</p>
-</blockquote>
-<h3 id="views">3.3. Views</h3>
-<blockquote>
-<p>TODO What is views, how to code one?</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Django</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Django</tag>
-        <tag>Template</tag>
-        <tag>Django Guardian</tag>
-        <tag>Djoser</tag>
-        <tag>Object Level Permission</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
-    <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>In the ever-evolving world of software development, efficiency and flexibility are paramount. Docker, a household name in containerization, has taken a significant leap forward with Docker Buildx. This advanced feature not only enhances the capabilities of the standard Docker build command but revolutionizes how developers approach multi-platform containerization. Let’s dive into the world of Docker Buildx and explore how it's changing the game.</p>
-<p><img src="/images/2023-12-19/infographic.png"> <a id="more"></a></p>
-<h1 id="key-features-of-docker-buildx">Key Features of Docker Buildx</h1>
-<p><strong>Multi-Platform Support</strong>: Docker Buildx stands out with its ability to build container images for various platforms, like amd64 and arm64, from a single code base. This is a game-changer for developers targeting diverse hardware architectures.</p>
-<p><strong>BuildKit Backend</strong>: At its core, Docker Buildx leverages BuildKit, offering superior performance and caching compared to the traditional Docker build. BuildKit's efficiency lies in its parallelized builds, drastically cutting down build times.</p>
-<p><strong>Enhanced Caching</strong>: Speed is of the essence, and Buildx’s advanced caching mechanisms are designed to reuse previous build steps, significantly accelerating the build process.</p>
-<p><strong>Remote Building Capabilities</strong>: Docker Buildx isn't limited to local builds. It can seamlessly integrate with remote Docker daemons or cloud-based build services, optimizing resource usage and offering flexibility in build environments.</p>
-<p><strong>Flexible Output Options</strong>: It offers a variety of output options, including local file systems, Docker registries, and direct outputs to the Docker daemon.</p>
-<h1 id="practical-guide-utilizing-docker-buildx">Practical Guide: Utilizing Docker Buildx</h1>
-<ol type="1">
-<li><strong>Getting Started: Installation</strong> Docker Buildx comes with Docker 19.03 or later. To ensure it's installed and to set it up, follow these steps:</li>
-</ol>
-<ul>
-<li><strong>Check Docker Version:</strong></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
-<p>Ensure that the version is 19.03 or newer.</p>
-<ul>
-<li><strong>Enable Experimental Features:</strong></li>
-</ul>
-<p>If not already enabled, you might need to enable Docker's experimental features. This can be done by editing the Docker configuration file (usually located at ~/.docker/config.json) and setting "experimental": "enabled". Alternatively, you can set the environment variable DOCKER_CLI_EXPERIMENTAL=enabled.</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;experimental&quot;</span>: <span class="string">&quot;enabled&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li><strong>Creating a Buildx Builder Instance</strong></li>
-</ol>
-<p>To take full advantage of Docker Buildx, create a new builder instance with the following command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx create --name mybuilder --use</span><br></pre></td></tr></table></figure>
-<p>This command creates a new builder instance named mybuilder and sets it as the current builder.</p>
-<ol start="3" type="1">
-<li><strong>Building Images</strong></li>
-</ol>
-<p>Use the docker buildx build command to build images. Here's an example that demonstrates a multi-platform build:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest .</span><br></pre></td></tr></table></figure>
-<p>This command builds an image for both amd64 and arm64 platforms, tags it with myuser/myapp:latest, and uses the current directory as the build context.</p>
-<ol start="4" type="1">
-<li><strong>Pushing to Registries</strong></li>
-</ol>
-<p>To push the built images to a Docker registry, include the --push flag in the build command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest . --push</span><br></pre></td></tr></table></figure>
-<p>This command builds the images and pushes them to the Docker registry with the specified tag.</p>
-<p>Note: Replace myuser/myapp:latest with your own Docker Hub username and desired image name.</p>
-<h1 id="use-cases-in-the-real-world">Use Cases in the Real World</h1>
-<p><strong>Cross-Platform Compatibility</strong>: Create Docker images that work across various systems, from traditional Intel/AMD processors to ARM-based devices like the Raspberry Pi.</p>
-<p><strong>Enhancing CI/CD Pipelines</strong>: Integrate Docker Buildx into CI/CD pipelines for automated, multi-platform builds, ensuring consistent and efficient deployment.</p>
-<p><strong>Optimizing Local Development</strong>: Benefit from advanced caching and parallel builds, making the development process faster and more efficient.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>Docker Buildx is not just a tool; it's a paradigm shift for developers and organizations aiming to optimize their Docker container builds, particularly in multi-platform scenarios. Its synergy with BuildKit ushers in a new era of performance, flexibility, and efficiency, surpassing traditional Docker builds. Whether you're a solo developer or part of a large team, Docker Buildx is poised to become an indispensable part of your development toolkit.</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-        <category>Cloud Computing</category>
-        <category>Software Development</category>
-        <category>CI/CD</category>
-        <category>Containerization</category>
-        <category>Performance Optimization</category>
-        <category>Technology Tutorials</category>
-        <category>Programming &amp; Tools</category>
-        <category>Cross-Platform Development</category>
-        <category>Technology Innovations</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Docker Buildx</tag>
-        <tag>Containerization Technology</tag>
-        <tag>Multi-Platform Docker Builds</tag>
-        <tag>Docker Buildx Tutorial</tag>
-        <tag>BuildKit Backend</tag>
-        <tag>CI/CD with Docker</tag>
-        <tag>Cross-Platform Docker Images</tag>
-        <tag>Docker Caching Mechanisms</tag>
-        <tag>Remote Docker Builds</tag>
-        <tag>Docker CLI Plugin</tag>
-        <tag>Efficient Docker Builds</tag>
-        <tag>Docker Buildx Features</tag>
-        <tag>Docker Build Optimization</tag>
-        <tag>Software Development</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DynamoDB Scan vs Query: Choosing the Right Operation for Your Data</title>
-    <url>/2023/12/20/DynamoDB-Scan-vs-Query-Choosing-the-Right-Operation-for-Your-Data/</url>
-    <content><![CDATA[<p>When working with AWS DynamoDB, one of the key decisions you'll face is whether to use a Scan or a Query operation. Understanding the differences between these two operations is crucial for efficient database management and cost-effective operations. In this post, we'll explore the distinctions between Scan and Query in DynamoDB, and guide you on when to use each.</p>
-<p><img src="/images/2023-12-20/002.png" style="max-height: 540px;"></p>
-<h1 id="understanding-dynamodb-scan">Understanding DynamoDB Scan</h1>
-<p>The Scan operation in DynamoDB is straightforward but comes with a significant cost, especially for larger tables.</p>
-<h3 id="what-is-a-scan">What is a Scan?</h3>
-<a id="more"></a>
-<p><strong>Function</strong>: Scan reads every item in the table. It does not use the primary key or secondary indexes and simply examines all the data.</p>
-<h3 id="performance-considerations">Performance Considerations</h3>
-<p><strong>Efficiency</strong>: Scan is less efficient as it goes through every item in the table, consuming more read capacity units.</p>
-<p><strong>Suitability</strong>: It's suitable when you need to retrieve all data or when your criteria cannot be addressed by a Query operation.</p>
-<h3 id="cost-implications">Cost Implications</h3>
-<p><strong>Expense</strong>: Scan can be more expensive, particularly for larger tables, due to higher read capacity usage.</p>
-<h1 id="understanding-dynamodb-query">Understanding DynamoDB Query</h1>
-<p>The Query operation, on the other hand, is more efficient and often the preferred choice for frequent data retrieval tasks.</p>
-<h2 id="what-is-a-query">What is a Query?</h2>
-<p><strong>Function</strong>: Query finds items using the primary key attribute and a specific value. It is much faster as it only retrieves selective items.</p>
-<h3 id="performance-considerations-1">Performance Considerations</h3>
-<p><strong>Efficiency</strong>: Query leverages primary keys or secondary indexes for efficient data retrieval.</p>
-<p><strong>Suitability</strong>: Ideal for frequent operations where you know the exact item or range of items you're searching for.</p>
-<h3 id="cost-implications-1">Cost Implications</h3>
-<p><strong>Expense</strong>: Generally more cost-effective due to lower read capacity consumption.</p>
-<h1 id="key-differences-between-scan-and-query">Key Differences Between Scan and Query</h1>
-<p><strong>Efficiency</strong>: Query outperforms Scan in efficiency, especially for large datasets.</p>
-<p><strong>Speed</strong>: Query operations are faster, utilizing primary keys or indexes.</p>
-<p><strong>Use Cases</strong>: Query is best for precise lookups, while Scan is for more comprehensive data retrievals.</p>
-<p><strong>Cost</strong>: Query is typically more cost-effective than Scan.</p>
-<h1 id="when-to-use-scan-vs-query">When to Use Scan vs Query</h1>
-<p><strong>Use Scan when:</strong></p>
-<ul>
-<li><p>You need to retrieve all the data from a table.</p></li>
-<li><p>Your search criteria do not align with the capabilities of a Query operation.</p></li>
-</ul>
-<p><strong>Use Query when:</strong></p>
-<ul>
-<li><p>You need to perform frequent lookups.</p></li>
-<li><p>You know the specific item(s) you are looking for.</p></li>
-<li><p>You are dealing with large datasets and require efficiency.</p></li>
-</ul>
-<h1 id="conclusion">Conclusion</h1>
-<p>Choosing between Scan and Query in DynamoDB depends on the specific requirements of your task. For efficient and cost-effective operations, prefer Query for its speed and precise data retrieval capabilities. Reserve Scan for scenarios where you need a complete overview of your data and where efficiency is not a primary concern.</p>
-<p>Understanding these operations and using them wisely will significantly impact the performance and cost of your DynamoDB usage. Remember, the right choice leads to better performance and optimized costs.</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-        <category>Database Management</category>
-        <category>AWS Services</category>
-        <category>Data Engineering</category>
-        <category>Big Data</category>
-      </categories>
-      <tags>
-        <tag>DynamoDB Scan</tag>
-        <tag>DynamoDB Query</tag>
-        <tag>AWS DynamoDB</tag>
-        <tag>NoSQL Database Operations</tag>
-        <tag>Database Performance Optimization</tag>
-        <tag>AWS Database Services</tag>
-        <tag>Read Capacity Management</tag>
-        <tag>Data Retrieval in DynamoDB</tag>
-        <tag>Efficient Database Queries</tag>
-        <tag>Scalable Database Solutions</tag>
-        <tag>Cloud Database Management</tag>
-        <tag>DynamoDB Best Practices</tag>
-        <tag>Key-Value Store Optimization</tag>
-        <tag>Cost-Effective Database Operations</tag>
-        <tag>DynamoDB Data Access Patterns</tag>
       </tags>
   </entry>
   <entry>
@@ -679,6 +418,267 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>DynamoDB Scan vs Query: Choosing the Right Operation for Your Data</title>
+    <url>/2023/12/20/DynamoDB-Scan-vs-Query-Choosing-the-Right-Operation-for-Your-Data/</url>
+    <content><![CDATA[<p>When working with AWS DynamoDB, one of the key decisions you'll face is whether to use a Scan or a Query operation. Understanding the differences between these two operations is crucial for efficient database management and cost-effective operations. In this post, we'll explore the distinctions between Scan and Query in DynamoDB, and guide you on when to use each.</p>
+<p><img src="/images/2023-12-20/002.png" style="max-height: 540px;"></p>
+<h1 id="understanding-dynamodb-scan">Understanding DynamoDB Scan</h1>
+<p>The Scan operation in DynamoDB is straightforward but comes with a significant cost, especially for larger tables.</p>
+<h3 id="what-is-a-scan">What is a Scan?</h3>
+<a id="more"></a>
+<p><strong>Function</strong>: Scan reads every item in the table. It does not use the primary key or secondary indexes and simply examines all the data.</p>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<p><strong>Efficiency</strong>: Scan is less efficient as it goes through every item in the table, consuming more read capacity units.</p>
+<p><strong>Suitability</strong>: It's suitable when you need to retrieve all data or when your criteria cannot be addressed by a Query operation.</p>
+<h3 id="cost-implications">Cost Implications</h3>
+<p><strong>Expense</strong>: Scan can be more expensive, particularly for larger tables, due to higher read capacity usage.</p>
+<h1 id="understanding-dynamodb-query">Understanding DynamoDB Query</h1>
+<p>The Query operation, on the other hand, is more efficient and often the preferred choice for frequent data retrieval tasks.</p>
+<h2 id="what-is-a-query">What is a Query?</h2>
+<p><strong>Function</strong>: Query finds items using the primary key attribute and a specific value. It is much faster as it only retrieves selective items.</p>
+<h3 id="performance-considerations-1">Performance Considerations</h3>
+<p><strong>Efficiency</strong>: Query leverages primary keys or secondary indexes for efficient data retrieval.</p>
+<p><strong>Suitability</strong>: Ideal for frequent operations where you know the exact item or range of items you're searching for.</p>
+<h3 id="cost-implications-1">Cost Implications</h3>
+<p><strong>Expense</strong>: Generally more cost-effective due to lower read capacity consumption.</p>
+<h1 id="key-differences-between-scan-and-query">Key Differences Between Scan and Query</h1>
+<p><strong>Efficiency</strong>: Query outperforms Scan in efficiency, especially for large datasets.</p>
+<p><strong>Speed</strong>: Query operations are faster, utilizing primary keys or indexes.</p>
+<p><strong>Use Cases</strong>: Query is best for precise lookups, while Scan is for more comprehensive data retrievals.</p>
+<p><strong>Cost</strong>: Query is typically more cost-effective than Scan.</p>
+<h1 id="when-to-use-scan-vs-query">When to Use Scan vs Query</h1>
+<p><strong>Use Scan when:</strong></p>
+<ul>
+<li><p>You need to retrieve all the data from a table.</p></li>
+<li><p>Your search criteria do not align with the capabilities of a Query operation.</p></li>
+</ul>
+<p><strong>Use Query when:</strong></p>
+<ul>
+<li><p>You need to perform frequent lookups.</p></li>
+<li><p>You know the specific item(s) you are looking for.</p></li>
+<li><p>You are dealing with large datasets and require efficiency.</p></li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>Choosing between Scan and Query in DynamoDB depends on the specific requirements of your task. For efficient and cost-effective operations, prefer Query for its speed and precise data retrieval capabilities. Reserve Scan for scenarios where you need a complete overview of your data and where efficiency is not a primary concern.</p>
+<p>Understanding these operations and using them wisely will significantly impact the performance and cost of your DynamoDB usage. Remember, the right choice leads to better performance and optimized costs.</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+        <category>Database Management</category>
+        <category>AWS Services</category>
+        <category>Data Engineering</category>
+        <category>Big Data</category>
+      </categories>
+      <tags>
+        <tag>DynamoDB Scan</tag>
+        <tag>DynamoDB Query</tag>
+        <tag>AWS DynamoDB</tag>
+        <tag>NoSQL Database Operations</tag>
+        <tag>Database Performance Optimization</tag>
+        <tag>AWS Database Services</tag>
+        <tag>Read Capacity Management</tag>
+        <tag>Data Retrieval in DynamoDB</tag>
+        <tag>Efficient Database Queries</tag>
+        <tag>Scalable Database Solutions</tag>
+        <tag>Cloud Database Management</tag>
+        <tag>DynamoDB Best Practices</tag>
+        <tag>Key-Value Store Optimization</tag>
+        <tag>Cost-Effective Database Operations</tag>
+        <tag>DynamoDB Data Access Patterns</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Django Object Level Permission Template</title>
+    <url>/2021/01/21/Django-Object-Level-Permission-Templage/</url>
+    <content><![CDATA[<p>A template to guide you how to setup a Django Project with Object Level Permission.</p>
+<a id="more"></a>
+<h2 id="authentication">1. Authentication</h2>
+<h3 id="packages">1.1. Packages</h3>
+<ul>
+<li><p><a href="https://djoser.readthedocs.io/">Djoser</a> provide commonly use authentication functions such as: Sign Up, Login, Change Password, Forgot Password, User Account Activation, User Profile</p></li>
+<li><p><a href="https://django-rest-framework-simplejwt.readthedocs.io/">Simple JWT</a> provide Json Web Token authentication method.</p></li>
+<li><p><a href="https://github.com/django-guardian/django-guardian">Django Guardian</a> provide object level permission management.</p></li>
+</ul>
+<h3 id="configuration">1.2. Configuration</h3>
+<ul>
+<li>JWT authentication is configured in</li>
+</ul>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Application definition</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;rest_framework&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;djoser&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;guardian&#x27;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">AUTHENTICATION_BACKENDS = (</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth.backends.ModelBackend&#x27;</span>, <span class="comment"># default</span></span><br><span class="line">    <span class="string">&#x27;guardian.backends.ObjectPermissionBackend&#x27;</span>,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Configuration for Django Rest Framework</span></span><br><span class="line"><span class="comment"># https://www.django-rest-framework.org/</span></span><br><span class="line"></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">    <span class="string">&#x27;DEFAULT_AUTHENTICATION_CLASSES&#x27;</span>: (</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Simple JWT Authentication</span></span><br><span class="line">        <span class="comment"># https://django-rest-framework-simplejwt.readthedocs.io/</span></span><br><span class="line">        <span class="string">&#x27;rest_framework_simplejwt.authentication.JWTAuthentication&#x27;</span>,</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>core/urls.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    (...),</span><br><span class="line"></span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls&#x27;</span>)),</span><br><span class="line">    path(<span class="string">&#x27;auth/&#x27;</span>, include(<span class="string">&#x27;djoser.urls.jwt&#x27;</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h3 id="data-model">1.3. Data Model</h3>
+<h4 id="using-a-custom-model">1.3.1. Using a custom model</h4>
+<p>If you’re starting a new project, it’s highly recommended to set up a custom user model, even if the default User model is sufficient for you. This model behaves identically to the default user model, but you’ll be able to customize it in the future if the need arises.</p>
+<p><code>core/user/models.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> AbstractUser</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>(<span class="params">AbstractUser</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">AUTH_USER_MODEL = <span class="string">&#x27;user.User&#x27;</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    (...),</span><br><span class="line">    <span class="string">&#x27;core.user&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h4 id="reusable-apps-and-auth_user_model">1.3.2. Reusable apps and AUTH_USER_MODEL</h4>
+<p>Reusable apps shouldn’t implement a custom user model. A project may use many apps, and two reusable apps that implemented a custom user model couldn’t be used together. If you need to store per user information in your app, use a <code>ForeignKey</code> or <code>OneToOneField</code> to <code>settings.AUTH_USER_MODEL</code> as described below.</p>
+<h5 id="referencing-the-user-model">Referencing the User model</h5>
+<p>If you reference <code>User</code> directly (for example, by referring to it in a foreign key), your code will not work in projects where the <code>AUTH_USER_MODEL</code> setting has been changed to a different user model.</p>
+<p>Instead of referring to User directly, you should reference the user model using <code>django.contrib.auth.get_user_model()</code>. This method will return the currently active user model – the custom user model if one is specified, or User otherwise.</p>
+<p>When you define a <code>foreign key</code> or <code>many-to-many</code> relations to the user model, you should specify the custom model using the <code>AUTH_USER_MODEL</code> setting. For example:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    author = models.ForeignKey(</span><br><span class="line">        settings.AUTH_USER_MODEL,</span><br><span class="line">        on_delete=models.CASCADE,</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<h3 id="declare-model-permissions">1.4. Declare model permissions</h3>
+<h4>
+1.4.1 <a href="https://docs.djangoproject.com/en/3.0/topics/auth/default/#permissions-and-authorization">Django builtin permission</a>
+</h4>
+<p>Django comes with a built-in permissions system. It provides a way to assign permissions to specific users and groups of users.</p>
+<p>When <code>django.contrib.auth</code> is listed in your <strong>INSTALLED_APPS</strong> setting, it will ensure that four default permissions – <code>add</code>, <code>change</code>, <code>delete</code>, and <code>view</code> – are created for each Django model defined in one of your installed applications.</p>
+<h4>
+1.4.2 Declare new permission
+</h4>
+<p>Define directly inside model <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Job</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    (...)</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        permissions = [(<span class="string">&#x27;review_job&#x27;</span>, <span class="string">&#x27;Can review job (approve or deny)&#x27;</span>)]</span><br></pre></td></tr></table></figure></p>
+Define programmatically <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> myapp.models <span class="keyword">import</span> Job</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Permission</span><br><span class="line"><span class="keyword">from</span> django.contrib.contenttypes.models <span class="keyword">import</span> ContentType</span><br><span class="line"></span><br><span class="line">content_type = ContentType.objects.get_for_model(Job)</span><br><span class="line">permission = Permission.objects.create(</span><br><span class="line">    codename=<span class="string">&#x27;review_job&#x27;</span>,</span><br><span class="line">    name=<span class="string">&#x27;Can review job (approve or deny)&#x27;</span>,</span><br><span class="line">    content_type=content_type,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4>
+1.4.3 Assign permission to user/group
+</h4>
+<p><strong>Global Permission</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Object Permission</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm</span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; jack.has_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, admins)</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure></p>
+<h4>
+1.4.4 Retrieve user permitted objects
+</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth <span class="keyword">import</span> get_user_model</span><br><span class="line">&gt;&gt; <span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> Group</span><br><span class="line">&gt;&gt; User = get_user_model()</span><br><span class="line"></span><br><span class="line">&gt;&gt; jack = User.objects.create_user(<span class="string">&#x27;jack&#x27;</span>, <span class="string">&#x27;jack@example.com&#x27;</span>, <span class="string">&#x27;topsecretagentjack&#x27;</span>)</span><br><span class="line">&gt;&gt; admins = Group.objects.create(name=<span class="string">&#x27;admins&#x27;</span>)</span><br><span class="line">&gt;&gt; leaders = Group.objects.create(name=<span class="string">&#x27;leaders&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;&gt; <span class="keyword">from</span> guardian.shortcuts <span class="keyword">import</span> assign_perm, get_objects_for_user</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet []&gt;</span><br><span class="line"></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack, admins)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;]&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Let try with global permission</span></span><br><span class="line">&gt;&gt; assign_perm(<span class="string">&#x27;auth.change_group&#x27;</span>, jack)</span><br><span class="line">&gt;&gt; get_objects_for_user(jack, perms=[<span class="string">&#x27;auth.change_group&#x27;</span>],  accept_global_perms=<span class="literal">True</span>)</span><br><span class="line">&lt;QuerySet [&lt;Group: admins&gt;, &lt;Group: level1&gt;]&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="database">2. Database</h2>
+<h3 id="packages-1">2.1. Packages</h3>
+<ul>
+<li><a href="https://github.com/jacobian/dj-database-url">dj-database-url</a> database connection string parser that is helpful to parse database configuration in a connection string style.</li>
+</ul>
+<h3 id="supported-url-connection-schema">2.2. Supported URL connection schema</h3>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 55%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Engine</th>
+<th>Django Backend</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SQLite</td>
+<td><code>django.db.backends.sqlite3</code></td>
+<td><code>sqlite:///PATH</code></td>
+</tr>
+<tr class="even">
+<td>PostgreSQL</td>
+<td><code>django.db.backends.postgresql</code></td>
+<td><code>postgres://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>PostGIS</td>
+<td><code>django.contrib.gis.db.backends.postgis</code></td>
+<td><code>postgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>MSSQL</td>
+<td><code>sql_server.pyodbc</code></td>
+<td><code>mssql://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>MySQL</td>
+<td><code>django.db.backends.mysql</code></td>
+<td><code>mysql://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>MySQL (GIS)</td>
+<td><code>django.contrib.gis.db.backends.mysql</code></td>
+<td><code>mysqlgis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>Oracle</td>
+<td><code>django.db.backends.oracle</code></td>
+<td><code>oracle://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>Oracle (GIS)</td>
+<td><code>django.contrib.gis.db.backends.oracle</code></td>
+<td><code>oraclegis://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="odd">
+<td>Redshift</td>
+<td><code>django_redshift_backend</code></td>
+<td><code>redshift://USER:PASSWORD@HOST:PORT/NAME</code></td>
+</tr>
+<tr class="even">
+<td>SpatiaLite</td>
+<td><code>django.contrib.gis.db.backends.spatialite</code></td>
+<td><code>spatialite:///PATH</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-1">2.3. Configuration</h3>
+<p>This is configuration for the database, the default database will use sqlite3 for simple to quick to run in development mode. This may conflict with database you run on production mode because some of the funtion sqlite may not support. It is recommended to config the database in development mode have the same database system you run on production. To change the database system, config the environment variable <code>DATABASE_URL</code></p>
+<p><code>core/settings.py</code> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> dj_database_url</span><br><span class="line"></span><br><span class="line"><span class="comment"># Database</span></span><br><span class="line"><span class="comment"># https://docs.djangoproject.com/en/3.0/ref/settings/#databases</span></span><br><span class="line"></span><br><span class="line">DATABASE_URL = os.environ.get(<span class="string">&#x27;DATABASE_URL&#x27;</span>, <span class="string">&#x27;sqlite:///&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(os.path.join(BASE_DIR, <span class="string">&#x27;db.sqlite3&#x27;</span>)))</span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: dj_database_url.config(default=DATABASE_URL)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="api-development">3. API Development</h2>
+<h3 id="packages-2">3.1. Packages</h3>
+<ul>
+<li><a href="https://django-rest-framework-json-api.readthedocs.io/en/stable/">djangorestframework-jsonapi</a> provide the implementation of the <a href="http://jsonapi.org/format/">JSON API format specification</a></li>
+</ul>
+<h3 id="serializers">3.2. Serializers</h3>
+<blockquote>
+<p>TODO What is serializers, how to code one?</p>
+</blockquote>
+<h3 id="views">3.3. Views</h3>
+<blockquote>
+<p>TODO What is views, how to code one?</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Django</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Django</tag>
+        <tag>Template</tag>
+        <tag>Django Guardian</tag>
+        <tag>Djoser</tag>
+        <tag>Object Level Permission</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hijack your computer http request with Fiddler</title>
+    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
+<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
+<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
+<p>On my laptop, I use the linux version. You can download here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
+<h1 id="configuration">Configuration</h1>
+<p>This is the main view of the tool</p>
+<p><img src="/images/2020-12-23/001.png"></p>
+<ol type="1">
+<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
+</ol>
+<p><img src="/images/2020-12-23/005.png"></p>
+<ol start="2" type="1">
+<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
+</ol>
+<p><img src="/images/2020-12-23/003.png"></p>
+<ol start="3" type="1">
+<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
+</ol>
+<p><img src="/images/2020-12-23/004.png"></p>
+<h1 id="experiement">Experiement</h1>
+<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
+<p><img src="/images/2020-12-23/002.png"></p>
+]]></content>
+      <categories>
+        <category>Networking</category>
+      </categories>
+      <tags>
+        <tag>Networking</tag>
+        <tag>Tool</tag>
+        <tag>HTTP</tag>
+        <tag>Debugging</tag>
+        <tag>Snipping</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration</title>
     <url>/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/</url>
     <content><![CDATA[<p>In the world of workflow orchestration, AWS Step Functions and Apache Airflow stand out as prominent tools, each with its unique features, purposes, and operational models. Understanding their differences is crucial for selecting the right tool for your specific needs. Here's a comparison:</p>
@@ -743,9 +743,9 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 <p>In summary, choosing between AWS Step Functions and Apache Airflow for workflow orchestration also involves considering their triggering mechanisms, which reflects their operational models and integration capabilities. While Step Functions offer integrated, AWS-centric triggering options, Airflow provides a more customizable and flexible approach, albeit with a steeper learning curve for those not already familiar with its paradigm.</p>
 ]]></content>
       <categories>
-        <category>DevOps</category>
         <category>Cloud Computing</category>
         <category>Software Development</category>
+        <category>DevOps</category>
         <category>Data Engineering</category>
         <category>CI/CD</category>
         <category>Workflow Automation</category>
@@ -842,45 +842,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Compute Engine</tag>
         <tag>Backup</tag>
         <tag>Machine Image</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hijack your computer http request with Fiddler</title>
-    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests &amp; responses.</p>
-<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
-<p><a href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
-<p>On my laptop, I use the linux version. You can download here</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
-<h1 id="configuration">Configuration</h1>
-<p>This is the main view of the tool</p>
-<p><img src="/images/2020-12-23/001.png"></p>
-<ol type="1">
-<li>To enable capture HTTPS <code>View -&gt; Preferences -&gt; HTTPS</code>. Click <code>Export root certificate to Desktop</code>, then enable <code>Capture HTTPS traffic</code> + <code>Ignore server certificate error (unsafe)</code>. Click <code>Save</code>.</li>
-</ol>
-<p><img src="/images/2020-12-23/005.png"></p>
-<ol start="2" type="1">
-<li>Open any browser, go to the <code>Certificate</code> Preferences, Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and enable Trust this certificate.</li>
-</ol>
-<p><img src="/images/2020-12-23/003.png"></p>
-<ol start="3" type="1">
-<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
-</ol>
-<p><img src="/images/2020-12-23/004.png"></p>
-<h1 id="experiement">Experiement</h1>
-<p>Now open any Web Browser with any url. You will see all the network requests sent out using HTTP(s)</p>
-<p><img src="/images/2020-12-23/002.png"></p>
-]]></content>
-      <categories>
-        <category>Networking</category>
-      </categories>
-      <tags>
-        <tag>Networking</tag>
-        <tag>Tool</tag>
-        <tag>HTTP</tag>
-        <tag>Debugging</tag>
-        <tag>Snipping</tag>
       </tags>
   </entry>
   <entry>
@@ -1049,144 +1010,86 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Mastering DAGs in Apache Airflow: The Key to Efficient Workflow Automation</title>
-    <url>/2023/12/18/Mastering-DAGs-in-Apache-Airflow-The-Key-to-Efficient-Workflow-Automation/</url>
+    <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
+    <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>Apache Airflow has revolutionized the way we automate and orchestrate workflows, and at the heart of this powerful tool lies the concept of Directed Acyclic Graphs (DAGs). Understanding DAGs is crucial for leveraging Airflow's full potential. Let's delve into the world of DAGs and uncover how they empower efficient workflow automation.</p>
-<p><img src="/images/2023-12-18/infographic.png"> <a id="more"></a></p>
-<h1 id="basic-concepts-of-apache-airflow">Basic Concepts of Apache Airflow</h1>
+<p>In the ever-evolving world of software development, efficiency and flexibility are paramount. Docker, a household name in containerization, has taken a significant leap forward with Docker Buildx. This advanced feature not only enhances the capabilities of the standard Docker build command but revolutionizes how developers approach multi-platform containerization. Let’s dive into the world of Docker Buildx and explore how it's changing the game.</p>
+<p><img src="/images/2023-12-19/infographic.png"> <a id="more"></a></p>
+<h1 id="key-features-of-docker-buildx">Key Features of Docker Buildx</h1>
+<p><strong>Multi-Platform Support</strong>: Docker Buildx stands out with its ability to build container images for various platforms, like amd64 and arm64, from a single code base. This is a game-changer for developers targeting diverse hardware architectures.</p>
+<p><strong>BuildKit Backend</strong>: At its core, Docker Buildx leverages BuildKit, offering superior performance and caching compared to the traditional Docker build. BuildKit's efficiency lies in its parallelized builds, drastically cutting down build times.</p>
+<p><strong>Enhanced Caching</strong>: Speed is of the essence, and Buildx’s advanced caching mechanisms are designed to reuse previous build steps, significantly accelerating the build process.</p>
+<p><strong>Remote Building Capabilities</strong>: Docker Buildx isn't limited to local builds. It can seamlessly integrate with remote Docker daemons or cloud-based build services, optimizing resource usage and offering flexibility in build environments.</p>
+<p><strong>Flexible Output Options</strong>: It offers a variety of output options, including local file systems, Docker registries, and direct outputs to the Docker daemon.</p>
+<h1 id="practical-guide-utilizing-docker-buildx">Practical Guide: Utilizing Docker Buildx</h1>
 <ol type="1">
-<li><p><strong>Directed Acyclic Graph (DAG):</strong> At its core, a DAG in Airflow is like a sophisticated flowchart, outlining tasks and their dependencies. Its acyclic nature ensures a clear, non-repetitive flow of operations.</p></li>
-<li><p><strong>Task:</strong> Each node in a DAG represents a task, a fundamental unit of work, executed through different types of Operators.</p></li>
-<li><p><strong>Operator:</strong> These are the building blocks of Airflow, defining the actual work done in each task. From PythonOperator to BashOperator, each has its unique purpose.</p></li>
-<li><p><strong>Trigger Rules:</strong> These rules set the conditions for task execution, ensuring that tasks run based on the success or failure of preceding tasks.</p></li>
+<li><strong>Getting Started: Installation</strong> Docker Buildx comes with Docker 19.03 or later. To ensure it's installed and to set it up, follow these steps:</li>
 </ol>
-<h1 id="how-a-dag-works-in-airflow">How a DAG Works in Airflow</h1>
 <ul>
-<li><p><strong>Definition:</strong> A DAG is crafted in a Python script, which Airflow interprets to understand the tasks and their relationships.</p></li>
-<li><p><strong>Scheduling:</strong> Airflow's scheduler orchestrates the timing of these tasks, aligning them with specified intervals or external triggers.</p></li>
-<li><p><strong>Execution:</strong> The execution phase is where the magic happens. Airflow determines the sequence and state of the tasks, ensuring everything runs smoothly.</p></li>
-<li><p><strong>Task Instances:</strong> Every execution of a task in the DAG's lifetime is a unique instance, each with its own state.</p></li>
-<li><p><strong>Data Passing:</strong> A key feature of DAGs is the ability to pass data between tasks, enabling complex data workflows.</p></li>
+<li><strong>Check Docker Version:</strong></li>
 </ul>
-<h1 id="practical-example">Practical Example</h1>
-<p>Consider a simple DAG for data processing:</p>
-<p><strong>Task 1:</strong> Extract data from a database.</p>
-<p><strong>Task 2:</strong> Process the extracted data.</p>
-<p><strong>Task 3:</strong> Save the processed data.</p>
-<p>Each task is dependent on the success of its predecessor, illustrating the sequential nature of DAGs in data workflow. To demonstrate the practical example of a data processing pipeline in Apache Airflow using a DAG, I will provide a Python code snippet. This code will define a simple DAG with three tasks: extracting data from a database, processing the extracted data, and saving the processed data to a file system.</p>
-<p>Here's how the Python code would look:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line"><span class="keyword">from</span> airflow <span class="keyword">import</span> DAG</span><br><span class="line"><span class="keyword">from</span> airflow.operators.dummy_operator <span class="keyword">import</span> DummyOperator</span><br><span class="line"><span class="keyword">from</span> airflow.operators.python_operator <span class="keyword">import</span> PythonOperator</span><br><span class="line"><span class="keyword">from</span> airflow.utils.dates <span class="keyword">import</span> days_ago</span><br><span class="line"></span><br><span class="line"><span class="comment"># These args will get passed on to each operator</span></span><br><span class="line">default_args = &#123;</span><br><span class="line">    <span class="string">&#x27;owner&#x27;</span>: <span class="string">&#x27;airflow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;depends_on_past&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;start_date&#x27;</span>: days_ago(<span class="number">1</span>),</span><br><span class="line">    <span class="string">&#x27;email_on_failure&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;email_on_retry&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;retries&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;retry_delay&#x27;</span>: timedelta(minutes=<span class="number">5</span>),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the DAG</span></span><br><span class="line">dag = DAG(</span><br><span class="line">    <span class="string">&#x27;data_processing_pipeline&#x27;</span>,</span><br><span class="line">    default_args=default_args,</span><br><span class="line">    description=<span class="string">&#x27;A simple data processing pipeline&#x27;</span>,</span><br><span class="line">    schedule_interval=timedelta(days=<span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the tasks</span></span><br><span class="line">extract_task = PythonOperator(</span><br><span class="line">    task_id=<span class="string">&#x27;extract_data&#x27;</span>,</span><br><span class="line">    python_callable=extract_data_function,</span><br><span class="line">    dag=dag,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">process_task = PythonOperator(</span><br><span class="line">    task_id=<span class="string">&#x27;process_data&#x27;</span>,</span><br><span class="line">    python_callable=process_data_function,</span><br><span class="line">    dag=dag,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">save_task = PythonOperator(</span><br><span class="line">    task_id=<span class="string">&#x27;save_data&#x27;</span>,</span><br><span class="line">    python_callable=save_data_function,</span><br><span class="line">    dag=dag,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up the dependencies</span></span><br><span class="line">extract_task &gt;&gt; process_task &gt;&gt; save_task</span><br><span class="line"></span><br><span class="line"><span class="comment"># Dummy functions for each task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extract_data_function</span>():</span></span><br><span class="line">    <span class="comment"># Logic for extracting data from a database</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process_data_function</span>():</span></span><br><span class="line">    <span class="comment"># Logic for processing the data</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_data_function</span>():</span></span><br><span class="line">    <span class="comment"># Logic for saving data to a file system</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>In this code:</p>
-<p><strong>DAG Definition:</strong> The DAG is defined with default arguments like owner, start date, retry policies, etc.</p>
-<p><strong>Task Definitions:</strong> Three tasks are created using the PythonOperator. Each task calls a respective Python function (which you would define based on your specific requirements).</p>
-<p><strong>Setting Dependencies:</strong> The tasks are arranged in a sequence where extract_task runs first, followed by process_task, and then save_task.</p>
-<p><strong>Dummy Functions:</strong> These are placeholders for the actual logic for each task. In a real-world scenario, you would replace pass with the code to extract, process, and save data.</p>
-<h1 id="key-takeaways">Key Takeaways</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+<p>Ensure that the version is 19.03 or newer.</p>
 <ul>
-<li><p>DAGs are the blueprint of workflows in Airflow, not the workflow itself.</p></li>
-<li><p>Understanding and defining DAGs is fundamental to effective workflow automation with Airflow.</p></li>
-<li><p>Airflow's strength lies in its ability to manage complex workflows, thanks to the structured approach of DAGs.</p></li>
+<li><strong>Enable Experimental Features:</strong></li>
 </ul>
+<p>If not already enabled, you might need to enable Docker's experimental features. This can be done by editing the Docker configuration file (usually located at ~/.docker/config.json) and setting "experimental": "enabled". Alternatively, you can set the environment variable DOCKER_CLI_EXPERIMENTAL=enabled.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;experimental&quot;</span>: <span class="string">&quot;enabled&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li><strong>Creating a Buildx Builder Instance</strong></li>
+</ol>
+<p>To take full advantage of Docker Buildx, create a new builder instance with the following command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx create --name mybuilder --use</span><br></pre></td></tr></table></figure>
+<p>This command creates a new builder instance named mybuilder and sets it as the current builder.</p>
+<ol start="3" type="1">
+<li><strong>Building Images</strong></li>
+</ol>
+<p>Use the docker buildx build command to build images. Here's an example that demonstrates a multi-platform build:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest .</span><br></pre></td></tr></table></figure>
+<p>This command builds an image for both amd64 and arm64 platforms, tags it with myuser/myapp:latest, and uses the current directory as the build context.</p>
+<ol start="4" type="1">
+<li><strong>Pushing to Registries</strong></li>
+</ol>
+<p>To push the built images to a Docker registry, include the --push flag in the build command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest . --push</span><br></pre></td></tr></table></figure>
+<p>This command builds the images and pushes them to the Docker registry with the specified tag.</p>
+<p>Note: Replace myuser/myapp:latest with your own Docker Hub username and desired image name.</p>
+<h1 id="use-cases-in-the-real-world">Use Cases in the Real World</h1>
+<p><strong>Cross-Platform Compatibility</strong>: Create Docker images that work across various systems, from traditional Intel/AMD processors to ARM-based devices like the Raspberry Pi.</p>
+<p><strong>Enhancing CI/CD Pipelines</strong>: Integrate Docker Buildx into CI/CD pipelines for automated, multi-platform builds, ensuring consistent and efficient deployment.</p>
+<p><strong>Optimizing Local Development</strong>: Benefit from advanced caching and parallel builds, making the development process faster and more efficient.</p>
 <h1 id="conclusion">Conclusion</h1>
-<p>Grasping the concept of Directed Acyclic Graphs (DAGs) is essential for anyone looking to harness the power of Apache Airflow. Whether you're orchestrating simple tasks or complex data processes, the efficiency and clarity brought by DAGs are unmatched. Embrace the power of DAGs and take your workflow automation to new heights with Apache Airflow.</p>
+<p>Docker Buildx is not just a tool; it's a paradigm shift for developers and organizations aiming to optimize their Docker container builds, particularly in multi-platform scenarios. Its synergy with BuildKit ushers in a new era of performance, flexibility, and efficiency, surpassing traditional Docker builds. Whether you're a solo developer or part of a large team, Docker Buildx is poised to become an indispensable part of your development toolkit.</p>
 ]]></content>
       <categories>
-        <category>DevOps</category>
         <category>Cloud Computing</category>
         <category>Software Development</category>
-        <category>Data Engineering</category>
+        <category>DevOps</category>
         <category>CI/CD</category>
-        <category>Workflow Automation</category>
-        <category>Python Programming</category>
+        <category>Containerization</category>
         <category>Technology Tutorials</category>
-        <category>Big Data</category>
-        <category>ETL</category>
-        <category>IT Operations</category>
+        <category>Programming &amp; Tools</category>
+        <category>Cross-Platform Development</category>
+        <category>Performance Optimization</category>
+        <category>Technology Innovations</category>
       </categories>
       <tags>
-        <tag>Apache Airflow</tag>
-        <tag>Data Engineering</tag>
-        <tag>Workflow Automation</tag>
-        <tag>Data Pipeline</tag>
-        <tag>Airflow DAG Tutorial</tag>
-        <tag>Python Workflow</tag>
-        <tag>Directed Acyclic Graph</tag>
-        <tag>Airflow Operators</tag>
-        <tag>Task Management in Airflow</tag>
-        <tag>Airflow Scheduling</tag>
-        <tag>ETL Processes</tag>
-        <tag>DevOps Tools</tag>
-        <tag>Big Data Processing</tag>
-        <tag>Automation in Data Science</tag>
-        <tag>Python Scripting for Airflow</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mastering GitHub Copilot: 10 Tips for Writing Effective Comments</title>
-    <url>/2023/12/21/Mastering-GitHub-Copilot-10-Tips-for-Writing-Effective-Comments/</url>
-    <content><![CDATA[<p>Hey there, fellow coders! 👋 Welcome to my cozy corner where I talk all things code, with a special spotlight on our AI buddy, GitHub Copilot. Today, I'm excited to share some super cool tips on how to chat with Copilot through comments. Yes, you read that right! We're gonna learn how to make this AI tool our best coding companion yet. So, let's dive into these tips, complete with examples and what to expect from Copilot’s magical code generation.</p>
-<h2 id="clearly-define-functionality">1. Clearly Define Functionality</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Function to calculate the factorial of a number</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (n === <span class="number">0</span> || n === <span class="number">1</span>) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>Result: A simple factorial function - concise and to the point.</em></p>
-<h2 id="specify-api-requests">2. Specify API Requests</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Function to make a GET request to &#x27;https://api.example.com/data&#x27; and return the JSON response</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong></p>
-<a id="more"></a>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span>():</span></span><br><span class="line">    response = requests.get(<span class="string">&#x27;https://api.example.com/data&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> response.json()</span><br></pre></td></tr></table></figure>
-<p><em>Result: A Python function for making a GET request and parsing the JSON response.</em></p>
-<h2 id="outline-error-handling">3. Outline Error Handling</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Try-catch block to handle SQLException in a database query</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// database query code</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>Result: A template for a try-catch block, ready to be filled with specific query code.</em></p>
-<h2 id="guide-data-parsing">4. Guide Data Parsing</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the following JSON string into a JavaScript object: &#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> parsedObject = <span class="built_in">JSON</span>.parse(jsonString);</span><br><span class="line"><span class="built_in">console</span>.log(parsedObject);</span><br></pre></td></tr></table></figure> <em>Result: A straightforward JSON parsing example in JavaScript.</em></p>
-<h2 id="regular-expressions">5. Regular Expressions</h2>
-<p><strong>Example:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Regular expression to validate an email address format</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">email_regex = <span class="string">r&#x27;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]&#123;2,&#125;\b&#x27;</span></span><br></pre></td></tr></table></figure> <em>Result: A Python regex pattern for email validation.</em></p>
-<h2 id="request-algorithms">6. Request Algorithms</h2>
-<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Implement a binary search algorithm for a sorted array of integers</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">arr, x, start, end</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (start &gt; end) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   <span class="keyword">let</span> mid=<span class="built_in">Math</span>.floor((start + end)/<span class="number">2</span>);</span><br><span class="line">   <span class="keyword">if</span> (arr[mid]===x) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   <span class="keyword">if</span>(arr[mid] &gt; x) <span class="keyword">return</span> binarySearch(arr, x, start, mid-<span class="number">1</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">return</span> binarySearch(arr, x, mid+<span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A binary search function, encapsulating the classic algorithm.</em></p>
-<h2 id="validate-user-input">7. Validate User Input</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Validate user input to ensure it&#x27;s an integer between 1 and 100</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (userInput &gt;= <span class="number">1</span> &amp;&amp; userInput &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">   <span class="comment">// valid input</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">// invalid input</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A basic Java condition to check the range of user input.</em></p>
-<h2 id="css-for-responsiveness">8. CSS for Responsiveness</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS to make an image responsive with a max-width of 100% and height auto */</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">   <span class="attribute">height</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A CSS snippet to make images responsive.</em></p>
-<h2 id="database-queries">9. Database Queries</h2>
-<p><strong>Example:</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- SQL query to select name, age from users table where age is greater than 20</span></span><br></pre></td></tr></table></figure>
-<p><strong>Copilot's Response:</strong> <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, age <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> age &gt; <span class="number">20</span>;</span><br></pre></td></tr></table></figure> <em>Result: A straightforward SQL query for user data filtering.</em></p>
-<h2 id="react-state-management">10. React State Management</h2>
-<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// React function component with useState hook for managing a &#x27;counter&#x27; state initialized at 0</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CounterComponent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">const</span> [counter, setCounter] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">// JSX for the counter</span></span><br><span class="line">   );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A React functional component template using the useState hook.</em></p>
-<h2 id="wrapping-it-up">Wrapping It Up!</h2>
-<p>Writing effective comments for GitHub Copilot is like providing clear instructions to a smart assistant. Remember, the trick is to be clear, be descriptive, and sometimes, just have a little fun with your comments. With these tips, you're all set to make Copilot your trusty coding sidekick. Happy coding, and may your bugs be few and your coffee strong! ☕🚀👩‍💻👨‍💻</p>
-]]></content>
-      <categories>
-        <category>Artificial Intelligence</category>
-        <category>Software Development</category>
-        <category>Developer Tools and Resources</category>
-        <category>Programming Best Practices</category>
-      </categories>
-      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Buildx</tag>
+        <tag>Containerization Technology</tag>
+        <tag>Multi-Platform Docker Builds</tag>
+        <tag>Docker Buildx Tutorial</tag>
+        <tag>BuildKit Backend</tag>
+        <tag>CI/CD with Docker</tag>
+        <tag>Cross-Platform Docker Images</tag>
+        <tag>Docker Caching Mechanisms</tag>
+        <tag>Remote Docker Builds</tag>
+        <tag>Docker CLI Plugin</tag>
+        <tag>Efficient Docker Builds</tag>
+        <tag>Docker Buildx Features</tag>
+        <tag>Docker Build Optimization</tag>
         <tag>Software Development</tag>
-        <tag>Developer Tools</tag>
-        <tag>GitHub Copilot</tag>
-        <tag>AI Coding</tag>
-        <tag>Copilot Tips</tag>
-        <tag>AI Programming</tag>
-        <tag>Code Automation</tag>
-        <tag>Coding Efficiency</tag>
-        <tag>Programming Tips</tag>
-        <tag>Tech Blogging</tag>
       </tags>
   </entry>
   <entry>
@@ -1402,6 +1305,73 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
+    <title>Mastering GitHub Copilot: 10 Tips for Writing Effective Comments</title>
+    <url>/2023/12/21/Mastering-GitHub-Copilot-10-Tips-for-Writing-Effective-Comments/</url>
+    <content><![CDATA[<p>Hey there, fellow coders! 👋 Welcome to my cozy corner where I talk all things code, with a special spotlight on our AI buddy, GitHub Copilot. Today, I'm excited to share some super cool tips on how to chat with Copilot through comments. Yes, you read that right! We're gonna learn how to make this AI tool our best coding companion yet. So, let's dive into these tips, complete with examples and what to expect from Copilot’s magical code generation.</p>
+<h2 id="clearly-define-functionality">1. Clearly Define Functionality</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Function to calculate the factorial of a number</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (n === <span class="number">0</span> || n === <span class="number">1</span>) &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>Result: A simple factorial function - concise and to the point.</em></p>
+<h2 id="specify-api-requests">2. Specify API Requests</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Function to make a GET request to &#x27;https://api.example.com/data&#x27; and return the JSON response</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong></p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_data</span>():</span></span><br><span class="line">    response = requests.get(<span class="string">&#x27;https://api.example.com/data&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> response.json()</span><br></pre></td></tr></table></figure>
+<p><em>Result: A Python function for making a GET request and parsing the JSON response.</em></p>
+<h2 id="outline-error-handling">3. Outline Error Handling</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Try-catch block to handle SQLException in a database query</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// database query code</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>Result: A template for a try-catch block, ready to be filled with specific query code.</em></p>
+<h2 id="guide-data-parsing">4. Guide Data Parsing</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Parse the following JSON string into a JavaScript object: &#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> jsonString = <span class="string">&#x27;&#123;&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;&#125;&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> parsedObject = <span class="built_in">JSON</span>.parse(jsonString);</span><br><span class="line"><span class="built_in">console</span>.log(parsedObject);</span><br></pre></td></tr></table></figure> <em>Result: A straightforward JSON parsing example in JavaScript.</em></p>
+<h2 id="regular-expressions">5. Regular Expressions</h2>
+<p><strong>Example:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Regular expression to validate an email address format</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">email_regex = <span class="string">r&#x27;\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]&#123;2,&#125;\b&#x27;</span></span><br></pre></td></tr></table></figure> <em>Result: A Python regex pattern for email validation.</em></p>
+<h2 id="request-algorithms">6. Request Algorithms</h2>
+<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Implement a binary search algorithm for a sorted array of integers</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">arr, x, start, end</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (start &gt; end) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   <span class="keyword">let</span> mid=<span class="built_in">Math</span>.floor((start + end)/<span class="number">2</span>);</span><br><span class="line">   <span class="keyword">if</span> (arr[mid]===x) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">   <span class="keyword">if</span>(arr[mid] &gt; x) <span class="keyword">return</span> binarySearch(arr, x, start, mid-<span class="number">1</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">return</span> binarySearch(arr, x, mid+<span class="number">1</span>, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A binary search function, encapsulating the classic algorithm.</em></p>
+<h2 id="validate-user-input">7. Validate User Input</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Validate user input to ensure it&#x27;s an integer between 1 and 100</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (userInput &gt;= <span class="number">1</span> &amp;&amp; userInput &lt;= <span class="number">100</span>) &#123;</span><br><span class="line">   <span class="comment">// valid input</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">// invalid input</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A basic Java condition to check the range of user input.</em></p>
+<h2 id="css-for-responsiveness">8. CSS for Responsiveness</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* CSS to make an image responsive with a max-width of 100% and height auto */</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">   <span class="attribute">height</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A CSS snippet to make images responsive.</em></p>
+<h2 id="database-queries">9. Database Queries</h2>
+<p><strong>Example:</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- SQL query to select name, age from users table where age is greater than 20</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copilot's Response:</strong> <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>, age <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> age &gt; <span class="number">20</span>;</span><br></pre></td></tr></table></figure> <em>Result: A straightforward SQL query for user data filtering.</em></p>
+<h2 id="react-state-management">10. React State Management</h2>
+<p><strong>Example:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// React function component with useState hook for managing a &#x27;counter&#x27; state initialized at 0</span></span><br></pre></td></tr></table></figure> <strong>Copilot's Response:</strong> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CounterComponent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="keyword">const</span> [counter, setCounter] = useState(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> (</span><br><span class="line">      <span class="comment">// JSX for the counter</span></span><br><span class="line">   );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <em>Result: A React functional component template using the useState hook.</em></p>
+<h2 id="wrapping-it-up">Wrapping It Up!</h2>
+<p>Writing effective comments for GitHub Copilot is like providing clear instructions to a smart assistant. Remember, the trick is to be clear, be descriptive, and sometimes, just have a little fun with your comments. With these tips, you're all set to make Copilot your trusty coding sidekick. Happy coding, and may your bugs be few and your coffee strong! ☕🚀👩‍💻👨‍💻</p>
+]]></content>
+      <categories>
+        <category>Artificial Intelligence</category>
+        <category>Software Development</category>
+        <category>Developer Tools and Resources</category>
+        <category>Programming Best Practices</category>
+      </categories>
+      <tags>
+        <tag>Developer Tools</tag>
+        <tag>Software Development</tag>
+        <tag>GitHub Copilot</tag>
+        <tag>AI Coding</tag>
+        <tag>Copilot Tips</tag>
+        <tag>AI Programming</tag>
+        <tag>Code Automation</tag>
+        <tag>Coding Efficiency</tag>
+        <tag>Programming Tips</tag>
+        <tag>Tech Blogging</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Rau Yêu Thương</title>
     <url>/2021/08/23/Rau-Yeu-Thuong/</url>
     <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một phần quà tiếp sức vượt qua mùa dịch.</p>
@@ -1416,6 +1386,80 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       <tags>
         <tag>Living</tag>
         <tag>Family</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mastering DAGs in Apache Airflow: The Key to Efficient Workflow Automation</title>
+    <url>/2023/12/18/Mastering-DAGs-in-Apache-Airflow-The-Key-to-Efficient-Workflow-Automation/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>Apache Airflow has revolutionized the way we automate and orchestrate workflows, and at the heart of this powerful tool lies the concept of Directed Acyclic Graphs (DAGs). Understanding DAGs is crucial for leveraging Airflow's full potential. Let's delve into the world of DAGs and uncover how they empower efficient workflow automation.</p>
+<p><img src="/images/2023-12-18/infographic.png"> <a id="more"></a></p>
+<h1 id="basic-concepts-of-apache-airflow">Basic Concepts of Apache Airflow</h1>
+<ol type="1">
+<li><p><strong>Directed Acyclic Graph (DAG):</strong> At its core, a DAG in Airflow is like a sophisticated flowchart, outlining tasks and their dependencies. Its acyclic nature ensures a clear, non-repetitive flow of operations.</p></li>
+<li><p><strong>Task:</strong> Each node in a DAG represents a task, a fundamental unit of work, executed through different types of Operators.</p></li>
+<li><p><strong>Operator:</strong> These are the building blocks of Airflow, defining the actual work done in each task. From PythonOperator to BashOperator, each has its unique purpose.</p></li>
+<li><p><strong>Trigger Rules:</strong> These rules set the conditions for task execution, ensuring that tasks run based on the success or failure of preceding tasks.</p></li>
+</ol>
+<h1 id="how-a-dag-works-in-airflow">How a DAG Works in Airflow</h1>
+<ul>
+<li><p><strong>Definition:</strong> A DAG is crafted in a Python script, which Airflow interprets to understand the tasks and their relationships.</p></li>
+<li><p><strong>Scheduling:</strong> Airflow's scheduler orchestrates the timing of these tasks, aligning them with specified intervals or external triggers.</p></li>
+<li><p><strong>Execution:</strong> The execution phase is where the magic happens. Airflow determines the sequence and state of the tasks, ensuring everything runs smoothly.</p></li>
+<li><p><strong>Task Instances:</strong> Every execution of a task in the DAG's lifetime is a unique instance, each with its own state.</p></li>
+<li><p><strong>Data Passing:</strong> A key feature of DAGs is the ability to pass data between tasks, enabling complex data workflows.</p></li>
+</ul>
+<h1 id="practical-example">Practical Example</h1>
+<p>Consider a simple DAG for data processing:</p>
+<p><strong>Task 1:</strong> Extract data from a database.</p>
+<p><strong>Task 2:</strong> Process the extracted data.</p>
+<p><strong>Task 3:</strong> Save the processed data.</p>
+<p>Each task is dependent on the success of its predecessor, illustrating the sequential nature of DAGs in data workflow. To demonstrate the practical example of a data processing pipeline in Apache Airflow using a DAG, I will provide a Python code snippet. This code will define a simple DAG with three tasks: extracting data from a database, processing the extracted data, and saving the processed data to a file system.</p>
+<p>Here's how the Python code would look:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line"><span class="keyword">from</span> airflow <span class="keyword">import</span> DAG</span><br><span class="line"><span class="keyword">from</span> airflow.operators.dummy_operator <span class="keyword">import</span> DummyOperator</span><br><span class="line"><span class="keyword">from</span> airflow.operators.python_operator <span class="keyword">import</span> PythonOperator</span><br><span class="line"><span class="keyword">from</span> airflow.utils.dates <span class="keyword">import</span> days_ago</span><br><span class="line"></span><br><span class="line"><span class="comment"># These args will get passed on to each operator</span></span><br><span class="line">default_args = &#123;</span><br><span class="line">    <span class="string">&#x27;owner&#x27;</span>: <span class="string">&#x27;airflow&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;depends_on_past&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;start_date&#x27;</span>: days_ago(<span class="number">1</span>),</span><br><span class="line">    <span class="string">&#x27;email_on_failure&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;email_on_retry&#x27;</span>: <span class="literal">False</span>,</span><br><span class="line">    <span class="string">&#x27;retries&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;retry_delay&#x27;</span>: timedelta(minutes=<span class="number">5</span>),</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the DAG</span></span><br><span class="line">dag = DAG(</span><br><span class="line">    <span class="string">&#x27;data_processing_pipeline&#x27;</span>,</span><br><span class="line">    default_args=default_args,</span><br><span class="line">    description=<span class="string">&#x27;A simple data processing pipeline&#x27;</span>,</span><br><span class="line">    schedule_interval=timedelta(days=<span class="number">1</span>),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Define the tasks</span></span><br><span class="line">extract_task = PythonOperator(</span><br><span class="line">    task_id=<span class="string">&#x27;extract_data&#x27;</span>,</span><br><span class="line">    python_callable=extract_data_function,</span><br><span class="line">    dag=dag,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">process_task = PythonOperator(</span><br><span class="line">    task_id=<span class="string">&#x27;process_data&#x27;</span>,</span><br><span class="line">    python_callable=process_data_function,</span><br><span class="line">    dag=dag,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">save_task = PythonOperator(</span><br><span class="line">    task_id=<span class="string">&#x27;save_data&#x27;</span>,</span><br><span class="line">    python_callable=save_data_function,</span><br><span class="line">    dag=dag,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up the dependencies</span></span><br><span class="line">extract_task &gt;&gt; process_task &gt;&gt; save_task</span><br><span class="line"></span><br><span class="line"><span class="comment"># Dummy functions for each task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">extract_data_function</span>():</span></span><br><span class="line">    <span class="comment"># Logic for extracting data from a database</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">process_data_function</span>():</span></span><br><span class="line">    <span class="comment"># Logic for processing the data</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_data_function</span>():</span></span><br><span class="line">    <span class="comment"># Logic for saving data to a file system</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>In this code:</p>
+<p><strong>DAG Definition:</strong> The DAG is defined with default arguments like owner, start date, retry policies, etc.</p>
+<p><strong>Task Definitions:</strong> Three tasks are created using the PythonOperator. Each task calls a respective Python function (which you would define based on your specific requirements).</p>
+<p><strong>Setting Dependencies:</strong> The tasks are arranged in a sequence where extract_task runs first, followed by process_task, and then save_task.</p>
+<p><strong>Dummy Functions:</strong> These are placeholders for the actual logic for each task. In a real-world scenario, you would replace pass with the code to extract, process, and save data.</p>
+<h1 id="key-takeaways">Key Takeaways</h1>
+<ul>
+<li><p>DAGs are the blueprint of workflows in Airflow, not the workflow itself.</p></li>
+<li><p>Understanding and defining DAGs is fundamental to effective workflow automation with Airflow.</p></li>
+<li><p>Airflow's strength lies in its ability to manage complex workflows, thanks to the structured approach of DAGs.</p></li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>Grasping the concept of Directed Acyclic Graphs (DAGs) is essential for anyone looking to harness the power of Apache Airflow. Whether you're orchestrating simple tasks or complex data processes, the efficiency and clarity brought by DAGs are unmatched. Embrace the power of DAGs and take your workflow automation to new heights with Apache Airflow.</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+        <category>Software Development</category>
+        <category>DevOps</category>
+        <category>Data Engineering</category>
+        <category>CI/CD</category>
+        <category>Workflow Automation</category>
+        <category>Python Programming</category>
+        <category>Technology Tutorials</category>
+        <category>Big Data</category>
+        <category>ETL</category>
+        <category>IT Operations</category>
+      </categories>
+      <tags>
+        <tag>Apache Airflow</tag>
+        <tag>Data Engineering</tag>
+        <tag>Workflow Automation</tag>
+        <tag>Data Pipeline</tag>
+        <tag>Airflow DAG Tutorial</tag>
+        <tag>Python Workflow</tag>
+        <tag>Directed Acyclic Graph</tag>
+        <tag>Airflow Operators</tag>
+        <tag>Task Management in Airflow</tag>
+        <tag>Airflow Scheduling</tag>
+        <tag>ETL Processes</tag>
+        <tag>DevOps Tools</tag>
+        <tag>Big Data Processing</tag>
+        <tag>Automation in Data Science</tag>
+        <tag>Python Scripting for Airflow</tag>
       </tags>
   </entry>
   <entry>
@@ -1486,42 +1530,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Schedule Task Runner with Celery</title>
-    <url>/2020/11/27/Schedule-Task-Runner-with-Celery/</url>
-    <content><![CDATA[<blockquote><p>Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so that your product can scale and integrate with other languages, and it comes with the tools and support you need to run such a system in production.</p>
-<footer><strong>Celery</strong><cite><a href="https://docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html">docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install celery</span><br></pre></td></tr></table></figure>
-<h1 id="choosing-a-broker">Choosing a Broker</h1>
-<p>Celery requires a solution to send and receive messages; usually this comes in the form of a separate service called a message broker. In this example, I use RabbitMQ on docker for the most simple experiment.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 5672:5672 rabbitmq</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="the-application">The Application</h1>
-<ul>
-<li><p>Python code to define the task to run <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>
-<li><p>Run the worker <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">celery -A tasks worker -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-------------- celery@Lap-012 v5.0.2 (singularity)</span><br><span class="line">--- ***** ----- </span><br><span class="line">-- ******* ---- Linux-5.4.0-54-generic-x86_64-with-debian-bullseye-sid 2020-11-27 10:13:21</span><br><span class="line">- *** --- * --- </span><br><span class="line">- ** ---------- [config]</span><br><span class="line">- ** ---------- .&gt; app:         tasks:0x7f5b26a11750</span><br><span class="line">- ** ---------- .&gt; transport:   amqp://guest:**@localhost:5672//</span><br><span class="line">- ** ---------- .&gt; results:     disabled://</span><br><span class="line">- *** --- * --- .&gt; concurrency: 8 (prefork)</span><br><span class="line">-- ******* ---- .&gt; task events: OFF (enable -E to monitor tasks in this worker)</span><br><span class="line">--- ***** ----- </span><br><span class="line"> -------------- [queues]</span><br><span class="line">                .&gt; celery           exchange=celery(direct) key=celery</span><br><span class="line">                </span><br><span class="line">[tasks]</span><br><span class="line">  . tasks.add</span><br><span class="line"></span><br><span class="line">[2020-11-27 10:13:21,496: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//</span><br><span class="line">[2020-11-27 10:13:21,506: INFO/MainProcess] mingle: searching for neighbors</span><br><span class="line">[2020-11-27 10:13:22,528: INFO/MainProcess] mingle: all alone</span><br><span class="line">[2020-11-27 10:13:22,568: INFO/MainProcess] celery@Lap-012 ready.</span><br></pre></td></tr></table></figure></p></li>
-<li><p>The Scheduler, let add few more code to config schedule task <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p>Run the scheduler, open new terminal and run <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">celery -A tasks beat -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">celery beat v5.0.2 (singularity) is starting.</span><br><span class="line">__    -    ... __   -        _</span><br><span class="line">LocalTime -&gt; 2020-11-27 10:18:19</span><br><span class="line">Configuration -&gt;</span><br><span class="line">    . broker -&gt; amqp://guest:**@localhost:5672//</span><br><span class="line">    . loader -&gt; celery.loaders.app.AppLoader</span><br><span class="line">    . scheduler -&gt; celery.beat.PersistentScheduler</span><br><span class="line">    . db -&gt; celerybeat-schedule</span><br><span class="line">    . logfile -&gt; [stderr]@%INFO</span><br><span class="line">    . maxinterval -&gt; 5.00 minutes (300s)</span><br><span class="line">[2020-11-27 10:18:19,508: INFO/MainProcess] beat: Starting...</span><br><span class="line">[2020-11-27 10:18:49,552: INFO/MainProcess] Scheduler: Sending due task add-every-30-seconds (tasks.add)</span><br></pre></td></tr></table></figure></p></li>
-<li><p>You can check whether the worker is running on the terminal log <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[2020-11-27 10:19:19,546: INFO/MainProcess] Received task: tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4]  </span><br><span class="line">[2020-11-27 10:19:19,549: INFO/ForkPoolWorker-5] Task tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4] succeeded in 0.00027026102179661393s: 32</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h1 id="organize-all-together-using-docker-compose">Organize all together using docker-compose</h1>
-<ul>
-<li><p>./Dockerfile <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install celery</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . .</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p>./docker-compose.yml <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rabbitmq:3.7</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">worker:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">worker</span> <span class="string">-l</span> <span class="string">info</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">sched:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">beat</span> <span class="string">-l</span> <span class="string">info</span></span><br></pre></td></tr></table></figure></p></li>
-<li><p>./tasks.py <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">MQ_HOST = os.environ.get(<span class="string">&#x27;MQ_HOST&#x27;</span>, <span class="string">&#x27;localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">f&#x27;amqp://<span class="subst">&#123;MQ_HOST&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Docker</tag>
-        <tag>Celery</tag>
-        <tag>Cronjob</tag>
-        <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Setup Apache Airflow Using Docker Compose</title>
     <url>/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/</url>
     <content><![CDATA[<p><img width="480" src="/images/2021-05-08/001.png" /></p>
@@ -1583,6 +1591,57 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Docker</tag>
         <tag>Airflow</tag>
         <tag>docker-compose</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Setup your own Docker Private Registry</title>
+    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
+    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
+<ol type="1">
+<li>Create an <code>htpasswd</code> file containing the login credentials for the initial account.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Create a directory to hold the certs for the registry server</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Create a self-signed certificate for the registry.</li>
+</ol>
+<p>NOTE: For the <code>Common Name</code> field, enter the hostname of the registry server. Here I will use <code>registry.internal</code></p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>Create a container to run the registry.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
+<ol start="5" type="1">
+<li>Once the registry starts up, verify that it is responsive. It's OK if this command returns nothing, just make sure it does not fail.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
+<h1 id="in-the-docker-client">In the Docker Client</h1>
+<ol type="1">
+<li>Add the registry's public self-signed certificate to <code>/etc/docker/certs.d</code>. The scp command is copying the file from the registry server to the client.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Log in to the private registry. The credentials should be username <code>hienhoang</code> and password <code>SupP3rS3cureP@ssW0rd</code>.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Test the setup by push a image to the registry</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Registry</tag>
+        <tag>Openssl</tag>
+        <tag>Self-signed Certificate</tag>
       </tags>
   </entry>
   <entry>
@@ -1669,57 +1728,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
       </tags>
   </entry>
   <entry>
-    <title>Setup your own Docker Private Registry</title>
-    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
-    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
-<ol type="1">
-<li>Create an <code>htpasswd</code> file containing the login credentials for the initial account.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Create a directory to hold the certs for the registry server</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Create a self-signed certificate for the registry.</li>
-</ol>
-<p>NOTE: For the <code>Common Name</code> field, enter the hostname of the registry server. Here I will use <code>registry.internal</code></p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
-<ol start="4" type="1">
-<li>Create a container to run the registry.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
-<ol start="5" type="1">
-<li>Once the registry starts up, verify that it is responsive. It's OK if this command returns nothing, just make sure it does not fail.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
-<h1 id="in-the-docker-client">In the Docker Client</h1>
-<ol type="1">
-<li>Add the registry's public self-signed certificate to <code>/etc/docker/certs.d</code>. The scp command is copying the file from the registry server to the client.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Log in to the private registry. The credentials should be username <code>hienhoang</code> and password <code>SupP3rS3cureP@ssW0rd</code>.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Test the setup by push a image to the registry</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Docker Registry</tag>
-        <tag>Openssl</tag>
-        <tag>Self-signed Certificate</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Understanding Reserved and Provisioned Concurrency in AWS Lambda: Key Differences and Use Cases</title>
     <url>/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -1761,11 +1769,11 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
 <p>Understanding Reserved and Provisioned Concurrency in AWS Lambda is crucial for optimizing performance and cost. Reserved Concurrency is ideal for managing resource allocation and limiting costs, while Provisioned Concurrency is the go-to feature for ensuring low latency and eliminating cold starts. By strategically implementing these features, you can significantly enhance the efficiency and reliability of your serverless applications.</p>
 ]]></content>
       <categories>
-        <category>DevOps</category>
         <category>Cloud Computing</category>
-        <category>Serverless Architecture</category>
-        <category>Performance Optimization</category>
+        <category>DevOps</category>
         <category>Technology Tutorials</category>
+        <category>Performance Optimization</category>
+        <category>Serverless Architecture</category>
         <category>AWS Lambda</category>
         <category>Serverless Development</category>
         <category>Cost Management</category>
@@ -1793,73 +1801,6 @@ Define programmatically <figure class="highlight python"><table><tr><td class="c
         <tag>Cloud Application Scaling</tag>
         <tag>AWS Best Practices</tag>
         <tag>Serverless Function Management</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Understanding the Key Differences: AWS DynamoDB vs MongoDB</title>
-    <url>/2023/12/20/Understanding-the-Key-Differences-AWS-DynamoDB-vs-MongoDB/</url>
-    <content><![CDATA[<p>In the realm of NoSQL databases, AWS DynamoDB and MongoDB stand out as two of the most popular choices. Both databases offer unique features and capabilities, making them suitable for a variety of applications. However, understanding their differences is crucial for developers and businesses to make an informed decision. Let’s dive into a detailed comparison.</p>
-<p><img src="/images/2023-12-20/001.png" style="max-height: 540px;"></p>
-<h1 id="service-model">Service Model</h1>
-<p><strong>DynamoDB</strong> is a fully managed NoSQL database service offered by Amazon Web Services (AWS). It's serverless, meaning users are freed from managing the underlying infrastructure.</p>
-<p><strong>MongoDB</strong>, on the other hand, is an open-source NoSQL database. Users can self-host MongoDB on their own servers or opt for MongoDB Atlas, its fully-managed cloud version.</p>
-<a id="more"></a>
-<h1 id="data-model">Data Model</h1>
-<p><strong>DynamoDB</strong> uses a key-value and document data model designed for high performance, even at large scales.</p>
-<p><strong>MongoDB</strong> primarily focuses on a document-oriented approach, allowing for more complex data structures stored in JSON-like documents.</p>
-<h1 id="scalability">Scalability</h1>
-<p><strong>DynamoDB</strong> shines in scalability. It's highly scalable without any manual intervention, automatically adjusting to workload demands.</p>
-<p><strong>MongoDB</strong> is also scalable but requires more manual setup, especially in self-hosted scenarios. MongoDB Atlas, however, offers auto-scaling features similar to DynamoDB.</p>
-<h1 id="querying">Querying</h1>
-<p>When it comes to querying capabilities, <strong>MongoDB</strong> leads with its rich query language and indexing capabilities, suitable for complex queries and aggregations. <strong>DynamoDB’s</strong> querying is more basic, focusing on key-value queries and simple filtering.</p>
-<h1 id="consistency">Consistency</h1>
-<p>Both databases offer different consistency models. <strong>DynamoDB</strong> provides options for strong and eventual consistency, while <strong>MongoDB</strong> generally offers eventual consistency, with stronger options available in certain configurations.</p>
-<h1 id="pricing-model">Pricing Model</h1>
-<p><strong>DynamoDB’s</strong> pricing is based on the read/write throughput and the storage used. It also has an on-demand pricing model for more flexibility. <strong>MongoDB’s</strong> pricing varies based on the deployment model, with self-hosted costs tied to the underlying infrastructure and MongoDB Atlas pricing based on resource usage.</p>
-<h1 id="use-cases">Use Cases</h1>
-<p><strong>DynamoDB</strong> is ideal for applications needing high performance and scalability with less complex querying needs, such as gaming, IoT, and mobile apps. <strong>MongoDB</strong> is more suited for applications requiring rich data structures and complex queries, like content management systems and e-commerce platforms.</p>
-<h1 id="integration-and-ecosystem">Integration and Ecosystem</h1>
-<p><strong>DynamoDB</strong> integrates seamlessly with other AWS services, making it a go-to choice for applications embedded in the AWS ecosystem. <strong>MongoDB’s</strong> open-source nature means it has a broad compatibility range and a large community, offering diverse integration possibilities.</p>
-<h1 id="coding-example">Coding Example</h1>
-<h2 id="mongodb-python-example">MongoDB Python Example</h2>
-<p>First, here's a simple example showing how to connect to a MongoDB database, insert a document, and retrieve documents:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line"><span class="comment"># Connect to MongoDB (replace &#x27;mongodb_uri&#x27; with your MongoDB URI)</span></span><br><span class="line">client = MongoClient(<span class="string">&#x27;mongodb_uri&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select the database and collection</span></span><br><span class="line">db = client[<span class="string">&#x27;example_db&#x27;</span>]</span><br><span class="line">collection = db[<span class="string">&#x27;example_collection&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Insert a document</span></span><br><span class="line">document = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;John Doe&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">30</span>, <span class="string">&quot;city&quot;</span>: <span class="string">&quot;New York&quot;</span>&#125;</span><br><span class="line">collection.insert_one(document)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Retrieve all documents</span></span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> collection.find():</span><br><span class="line">    print(doc)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="dynamodb-python-example">DynamoDB Python Example</h2>
-<p>Now, here's an example for AWS DynamoDB using the boto3 library:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> boto3</span><br><span class="line"></span><br><span class="line"><span class="comment"># Initialize a DynamoDB client (AWS credentials needed)</span></span><br><span class="line">dynamodb = boto3.resource(<span class="string">&#x27;dynamodb&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select the table</span></span><br><span class="line">table = dynamodb.Table(<span class="string">&#x27;example_table&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Insert an item</span></span><br><span class="line">item = &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;123&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Jane Doe&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span>, <span class="string">&quot;city&quot;</span>: <span class="string">&quot;Los Angeles&quot;</span>&#125;</span><br><span class="line">table.put_item(Item=item)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Retrieve an item</span></span><br><span class="line">response = table.get_item(Key=&#123;<span class="string">&#x27;id&#x27;</span>: <span class="string">&#x27;123&#x27;</span>&#125;)</span><br><span class="line">item = response.get(<span class="string">&#x27;Item&#x27;</span>, &#123;&#125;)</span><br><span class="line">print(item)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>In these examples:</p>
-<p>For MongoDB, we use <code>pymongo</code>, the native Python driver for MongoDB, to connect to the database, insert, and retrieve documents.</p>
-<p>For DynamoDB, we use <code>boto3</code>, the AWS SDK for Python, to interact with the DynamoDB service. This includes inserting and retrieving items.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>The choice between AWS DynamoDB and MongoDB hinges on your project's specific needs. Consider factors like scalability, data complexity, budget, and existing infrastructure before deciding. Both databases have their strengths, and understanding these will guide you towards the right choice for your application.</p>
-<p>Remember, the database you choose plays a pivotal role in the success of your application, so choose wisely!</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-        <category>Software Development</category>
-        <category>Technology</category>
-        <category>Database Technologies</category>
-        <category>IT Infrastructure</category>
-        <category>Big Data</category>
-        <category>Data Management</category>
-        <category>Web Development</category>
-      </categories>
-      <tags>
-        <tag>AWS DynamoDB</tag>
-        <tag>MongoDB</tag>
-        <tag>NoSQL Databases</tag>
-        <tag>Database Comparison</tag>
-        <tag>Cloud Databases</tag>
-        <tag>AWS Services</tag>
-        <tag>MongoDB Atlas</tag>
-        <tag>Data Modeling</tag>
-        <tag>Scalable Databases</tag>
-        <tag>Database Query Languages</tag>
-        <tag>Serverless Databases</tag>
-        <tag>Database Scalability</tag>
-        <tag>DynamoDB vs MongoDB</tag>
-        <tag>Data Storage Solutions</tag>
-        <tag>Key-Value Store</tag>
       </tags>
   </entry>
   <entry>
@@ -1916,6 +1857,141 @@ Why Vagrant?
       </tags>
   </entry>
   <entry>
+    <title>Schedule Task Runner with Celery</title>
+    <url>/2020/11/27/Schedule-Task-Runner-with-Celery/</url>
+    <content><![CDATA[<blockquote><p>Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so that your product can scale and integrate with other languages, and it comes with the tools and support you need to run such a system in production.</p>
+<footer><strong>Celery</strong><cite><a href="https://docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html">docs.celeryproject.org/en/master/getting-started/first-steps-with-celery.html</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install celery</span><br></pre></td></tr></table></figure>
+<h1 id="choosing-a-broker">Choosing a Broker</h1>
+<p>Celery requires a solution to send and receive messages; usually this comes in the form of a separate service called a message broker. In this example, I use RabbitMQ on docker for the most simple experiment.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 5672:5672 rabbitmq</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="the-application">The Application</h1>
+<ul>
+<li><p>Python code to define the task to run <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>
+<li><p>Run the worker <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">celery -A tasks worker -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-------------- celery@Lap-012 v5.0.2 (singularity)</span><br><span class="line">--- ***** ----- </span><br><span class="line">-- ******* ---- Linux-5.4.0-54-generic-x86_64-with-debian-bullseye-sid 2020-11-27 10:13:21</span><br><span class="line">- *** --- * --- </span><br><span class="line">- ** ---------- [config]</span><br><span class="line">- ** ---------- .&gt; app:         tasks:0x7f5b26a11750</span><br><span class="line">- ** ---------- .&gt; transport:   amqp://guest:**@localhost:5672//</span><br><span class="line">- ** ---------- .&gt; results:     disabled://</span><br><span class="line">- *** --- * --- .&gt; concurrency: 8 (prefork)</span><br><span class="line">-- ******* ---- .&gt; task events: OFF (enable -E to monitor tasks in this worker)</span><br><span class="line">--- ***** ----- </span><br><span class="line"> -------------- [queues]</span><br><span class="line">                .&gt; celery           exchange=celery(direct) key=celery</span><br><span class="line">                </span><br><span class="line">[tasks]</span><br><span class="line">  . tasks.add</span><br><span class="line"></span><br><span class="line">[2020-11-27 10:13:21,496: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//</span><br><span class="line">[2020-11-27 10:13:21,506: INFO/MainProcess] mingle: searching for neighbors</span><br><span class="line">[2020-11-27 10:13:22,528: INFO/MainProcess] mingle: all alone</span><br><span class="line">[2020-11-27 10:13:22,568: INFO/MainProcess] celery@Lap-012 ready.</span><br></pre></td></tr></table></figure></p></li>
+<li><p>The Scheduler, let add few more code to config schedule task <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./tasks.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">&#x27;amqp://localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>Run the scheduler, open new terminal and run <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">celery -A tasks beat -l info</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">celery beat v5.0.2 (singularity) is starting.</span><br><span class="line">__    -    ... __   -        _</span><br><span class="line">LocalTime -&gt; 2020-11-27 10:18:19</span><br><span class="line">Configuration -&gt;</span><br><span class="line">    . broker -&gt; amqp://guest:**@localhost:5672//</span><br><span class="line">    . loader -&gt; celery.loaders.app.AppLoader</span><br><span class="line">    . scheduler -&gt; celery.beat.PersistentScheduler</span><br><span class="line">    . db -&gt; celerybeat-schedule</span><br><span class="line">    . logfile -&gt; [stderr]@%INFO</span><br><span class="line">    . maxinterval -&gt; 5.00 minutes (300s)</span><br><span class="line">[2020-11-27 10:18:19,508: INFO/MainProcess] beat: Starting...</span><br><span class="line">[2020-11-27 10:18:49,552: INFO/MainProcess] Scheduler: Sending due task add-every-30-seconds (tasks.add)</span><br></pre></td></tr></table></figure></p></li>
+<li><p>You can check whether the worker is running on the terminal log <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[2020-11-27 10:19:19,546: INFO/MainProcess] Received task: tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4]  </span><br><span class="line">[2020-11-27 10:19:19,549: INFO/ForkPoolWorker-5] Task tasks.add[b09eb21e-3e9f-459a-8069-d41b068d02c4] succeeded in 0.00027026102179661393s: 32</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h1 id="organize-all-together-using-docker-compose">Organize all together using docker-compose</h1>
+<ul>
+<li><p>./Dockerfile <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> pip install celery</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . .</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>./docker-compose.yml <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rabbitmq:3.7</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">worker:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">worker</span> <span class="string">-l</span> <span class="string">info</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">sched:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">environment:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">MQ_HOST=rabbitmq</span></span><br><span class="line">    <span class="attr">depends_on:</span> </span><br><span class="line">      <span class="bullet">-</span> <span class="string">rabbitmq</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">worker</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">celery</span> <span class="string">-A</span> <span class="string">tasks</span> <span class="string">beat</span> <span class="string">-l</span> <span class="string">info</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>./tasks.py <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> celery <span class="keyword">import</span> Celery</span><br><span class="line"></span><br><span class="line">MQ_HOST = os.environ.get(<span class="string">&#x27;MQ_HOST&#x27;</span>, <span class="string">&#x27;localhost&#x27;</span>)</span><br><span class="line"></span><br><span class="line">app = Celery(<span class="string">&#x27;tasks&#x27;</span>, broker=<span class="string">f&#x27;amqp://<span class="subst">&#123;MQ_HOST&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">app.conf.beat_schedule = &#123;</span><br><span class="line">    <span class="string">&#x27;add-every-30-seconds&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;task&#x27;</span>: <span class="string">&#x27;tasks.add&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;schedule&#x27;</span>: <span class="number">30.0</span>,</span><br><span class="line">        <span class="string">&#x27;args&#x27;</span>: (<span class="number">16</span>, <span class="number">16</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">app.conf.timezone = <span class="string">&#x27;UTC&#x27;</span></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Docker</tag>
+        <tag>Celery</tag>
+        <tag>Cronjob</tag>
+        <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Understanding the Key Differences: AWS DynamoDB vs MongoDB</title>
+    <url>/2023/12/20/Understanding-the-Key-Differences-AWS-DynamoDB-vs-MongoDB/</url>
+    <content><![CDATA[<p>In the realm of NoSQL databases, AWS DynamoDB and MongoDB stand out as two of the most popular choices. Both databases offer unique features and capabilities, making them suitable for a variety of applications. However, understanding their differences is crucial for developers and businesses to make an informed decision. Let’s dive into a detailed comparison.</p>
+<p><img src="/images/2023-12-20/001.png" style="max-height: 540px;"></p>
+<h1 id="service-model">Service Model</h1>
+<p><strong>DynamoDB</strong> is a fully managed NoSQL database service offered by Amazon Web Services (AWS). It's serverless, meaning users are freed from managing the underlying infrastructure.</p>
+<p><strong>MongoDB</strong>, on the other hand, is an open-source NoSQL database. Users can self-host MongoDB on their own servers or opt for MongoDB Atlas, its fully-managed cloud version.</p>
+<a id="more"></a>
+<h1 id="data-model">Data Model</h1>
+<p><strong>DynamoDB</strong> uses a key-value and document data model designed for high performance, even at large scales.</p>
+<p><strong>MongoDB</strong> primarily focuses on a document-oriented approach, allowing for more complex data structures stored in JSON-like documents.</p>
+<h1 id="scalability">Scalability</h1>
+<p><strong>DynamoDB</strong> shines in scalability. It's highly scalable without any manual intervention, automatically adjusting to workload demands.</p>
+<p><strong>MongoDB</strong> is also scalable but requires more manual setup, especially in self-hosted scenarios. MongoDB Atlas, however, offers auto-scaling features similar to DynamoDB.</p>
+<h1 id="querying">Querying</h1>
+<p>When it comes to querying capabilities, <strong>MongoDB</strong> leads with its rich query language and indexing capabilities, suitable for complex queries and aggregations. <strong>DynamoDB’s</strong> querying is more basic, focusing on key-value queries and simple filtering.</p>
+<h1 id="consistency">Consistency</h1>
+<p>Both databases offer different consistency models. <strong>DynamoDB</strong> provides options for strong and eventual consistency, while <strong>MongoDB</strong> generally offers eventual consistency, with stronger options available in certain configurations.</p>
+<h1 id="pricing-model">Pricing Model</h1>
+<p><strong>DynamoDB’s</strong> pricing is based on the read/write throughput and the storage used. It also has an on-demand pricing model for more flexibility. <strong>MongoDB’s</strong> pricing varies based on the deployment model, with self-hosted costs tied to the underlying infrastructure and MongoDB Atlas pricing based on resource usage.</p>
+<h1 id="use-cases">Use Cases</h1>
+<p><strong>DynamoDB</strong> is ideal for applications needing high performance and scalability with less complex querying needs, such as gaming, IoT, and mobile apps. <strong>MongoDB</strong> is more suited for applications requiring rich data structures and complex queries, like content management systems and e-commerce platforms.</p>
+<h1 id="integration-and-ecosystem">Integration and Ecosystem</h1>
+<p><strong>DynamoDB</strong> integrates seamlessly with other AWS services, making it a go-to choice for applications embedded in the AWS ecosystem. <strong>MongoDB’s</strong> open-source nature means it has a broad compatibility range and a large community, offering diverse integration possibilities.</p>
+<h1 id="coding-example">Coding Example</h1>
+<h2 id="mongodb-python-example">MongoDB Python Example</h2>
+<p>First, here's a simple example showing how to connect to a MongoDB database, insert a document, and retrieve documents:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"></span><br><span class="line"><span class="comment"># Connect to MongoDB (replace &#x27;mongodb_uri&#x27; with your MongoDB URI)</span></span><br><span class="line">client = MongoClient(<span class="string">&#x27;mongodb_uri&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select the database and collection</span></span><br><span class="line">db = client[<span class="string">&#x27;example_db&#x27;</span>]</span><br><span class="line">collection = db[<span class="string">&#x27;example_collection&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Insert a document</span></span><br><span class="line">document = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;John Doe&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">30</span>, <span class="string">&quot;city&quot;</span>: <span class="string">&quot;New York&quot;</span>&#125;</span><br><span class="line">collection.insert_one(document)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Retrieve all documents</span></span><br><span class="line"><span class="keyword">for</span> doc <span class="keyword">in</span> collection.find():</span><br><span class="line">    print(doc)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="dynamodb-python-example">DynamoDB Python Example</h2>
+<p>Now, here's an example for AWS DynamoDB using the boto3 library:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> boto3</span><br><span class="line"></span><br><span class="line"><span class="comment"># Initialize a DynamoDB client (AWS credentials needed)</span></span><br><span class="line">dynamodb = boto3.resource(<span class="string">&#x27;dynamodb&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Select the table</span></span><br><span class="line">table = dynamodb.Table(<span class="string">&#x27;example_table&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Insert an item</span></span><br><span class="line">item = &#123;<span class="string">&quot;id&quot;</span>: <span class="string">&quot;123&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Jane Doe&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">25</span>, <span class="string">&quot;city&quot;</span>: <span class="string">&quot;Los Angeles&quot;</span>&#125;</span><br><span class="line">table.put_item(Item=item)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Retrieve an item</span></span><br><span class="line">response = table.get_item(Key=&#123;<span class="string">&#x27;id&#x27;</span>: <span class="string">&#x27;123&#x27;</span>&#125;)</span><br><span class="line">item = response.get(<span class="string">&#x27;Item&#x27;</span>, &#123;&#125;)</span><br><span class="line">print(item)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>In these examples:</p>
+<p>For MongoDB, we use <code>pymongo</code>, the native Python driver for MongoDB, to connect to the database, insert, and retrieve documents.</p>
+<p>For DynamoDB, we use <code>boto3</code>, the AWS SDK for Python, to interact with the DynamoDB service. This includes inserting and retrieving items.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>The choice between AWS DynamoDB and MongoDB hinges on your project's specific needs. Consider factors like scalability, data complexity, budget, and existing infrastructure before deciding. Both databases have their strengths, and understanding these will guide you towards the right choice for your application.</p>
+<p>Remember, the database you choose plays a pivotal role in the success of your application, so choose wisely!</p>
+]]></content>
+      <categories>
+        <category>Web Development</category>
+        <category>Cloud Computing</category>
+        <category>Software Development</category>
+        <category>Big Data</category>
+        <category>Technology</category>
+        <category>Database Technologies</category>
+        <category>IT Infrastructure</category>
+        <category>Data Management</category>
+      </categories>
+      <tags>
+        <tag>AWS DynamoDB</tag>
+        <tag>MongoDB</tag>
+        <tag>NoSQL Databases</tag>
+        <tag>Database Comparison</tag>
+        <tag>Cloud Databases</tag>
+        <tag>AWS Services</tag>
+        <tag>MongoDB Atlas</tag>
+        <tag>Data Modeling</tag>
+        <tag>Scalable Databases</tag>
+        <tag>Database Query Languages</tag>
+        <tag>Serverless Databases</tag>
+        <tag>Database Scalability</tag>
+        <tag>DynamoDB vs MongoDB</tag>
+        <tag>Data Storage Solutions</tag>
+        <tag>Key-Value Store</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Decoding Relaxation: My Year-End Company Trip to Ho Tram Beach</title>
+    <url>/2021/02/01/decoding-relaxation-my-year-end-company-trip-to-ho-tram-beach/</url>
+    <content><![CDATA[<p>Hey tech enthusiasts!</p>
+<p>Ever thought of a year-end company trip as a system reboot? That's exactly what my getaway to Ho Coc - Ho Tram in Ba Ria - Vung Tau felt like – a perfect blend of team spirit and sea breeze.</p>
+<p><strong>The Epic Year-End Logout:</strong></p>
+<p>Our journey began not with code pushes but with packed bags, as nearly 100 of us, myself and my family included, set off for a year-end company trip. It was time to exchange our usual digital tools for some real-world team building and family bonding.</p>
+<a id="more"></a>
+<p><strong>The Journey:</strong></p>
+<p>Our adventure started at the crack of dawn (yes, 5 AM!). The youngest team member on board? My 8-month-old son, prepped and ready for his first 'debugging' session with the ocean waves. As a developer, I couldn't have been more excited to introduce him to the vast, unexplored world of nature.</p>
+<p><strong>Team Building: The Real-Life Multiplayer Game:</strong></p>
+<p>Before we could dive into relaxation mode, there were team-building activities waiting for us. Think of it as a real-life cooperative multiplayer game, but with more sand and less screen time. It was a series of challenges that reminded us that even in the digital world, teamwork makes the dream work.</p>
+<p><strong>A Developer's Day Off:</strong></p>
+<p>Post-games, I took my family to the beach. Watching my son's first encounter with the waves was like witnessing a user experience their first bug-free app – pure joy! As we built sandcastles (without any architectural planning), I realized that sometimes, the best moments are the ones without a single line of code.</p>
+<p><img src="/images/2021-02-01/002.jpeg"></p>
+<p><strong>An Unexpected Commit:</strong></p>
+<p>The highlight of the trip? At the Year End Party, I was recognized as <strong>The Best Trainer</strong> and promoted to <strong>Principal Software Engineer</strong>. Talk about a surprise feature release at the end of the year!</p>
+<p><img src="/images/2021-02-01/003.jpeg"></p>
+<hr />
+<p>This short but sweet trip reminded me that life, much like coding, is full of unexpected joys. As we gear up for the Tet holiday, I'm ready to embrace the new adventures, both on and off the screen.</p>
+<p>Thanks for reading, fellow devs! Can't wait to share more of my ‘out of office’ escapades with you soon.</p>
+]]></content>
+      <categories>
+        <category>Tech Life Balance</category>
+      </categories>
+      <tags>
+        <tag>Developer Lifestyle</tag>
+        <tag>Year-End Celebration</tag>
+        <tag>Work Achievement</tag>
+        <tag>Family and Work</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
     <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
     <content><![CDATA[<p>Hey code warriors!</p>
@@ -1969,38 +2045,6 @@ Why Vagrant?
         <tag>Life as a Coder</tag>
         <tag>Cultural Traditions</tag>
         <tag>Child Development</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Decoding Relaxation: My Year-End Company Trip to Ho Tram Beach</title>
-    <url>/2021/02/01/decoding-relaxation-my-year-end-company-trip-to-ho-tram-beach/</url>
-    <content><![CDATA[<p>Hey tech enthusiasts!</p>
-<p>Ever thought of a year-end company trip as a system reboot? That's exactly what my getaway to Ho Coc - Ho Tram in Ba Ria - Vung Tau felt like – a perfect blend of team spirit and sea breeze.</p>
-<p><strong>The Epic Year-End Logout:</strong></p>
-<p>Our journey began not with code pushes but with packed bags, as nearly 100 of us, myself and my family included, set off for a year-end company trip. It was time to exchange our usual digital tools for some real-world team building and family bonding.</p>
-<a id="more"></a>
-<p><strong>The Journey:</strong></p>
-<p>Our adventure started at the crack of dawn (yes, 5 AM!). The youngest team member on board? My 8-month-old son, prepped and ready for his first 'debugging' session with the ocean waves. As a developer, I couldn't have been more excited to introduce him to the vast, unexplored world of nature.</p>
-<p><strong>Team Building: The Real-Life Multiplayer Game:</strong></p>
-<p>Before we could dive into relaxation mode, there were team-building activities waiting for us. Think of it as a real-life cooperative multiplayer game, but with more sand and less screen time. It was a series of challenges that reminded us that even in the digital world, teamwork makes the dream work.</p>
-<p><strong>A Developer's Day Off:</strong></p>
-<p>Post-games, I took my family to the beach. Watching my son's first encounter with the waves was like witnessing a user experience their first bug-free app – pure joy! As we built sandcastles (without any architectural planning), I realized that sometimes, the best moments are the ones without a single line of code.</p>
-<p><img src="/images/2021-02-01/002.jpeg"></p>
-<p><strong>An Unexpected Commit:</strong></p>
-<p>The highlight of the trip? At the Year End Party, I was recognized as <strong>The Best Trainer</strong> and promoted to <strong>Principal Software Engineer</strong>. Talk about a surprise feature release at the end of the year!</p>
-<p><img src="/images/2021-02-01/003.jpeg"></p>
-<hr />
-<p>This short but sweet trip reminded me that life, much like coding, is full of unexpected joys. As we gear up for the Tet holiday, I'm ready to embrace the new adventures, both on and off the screen.</p>
-<p>Thanks for reading, fellow devs! Can't wait to share more of my ‘out of office’ escapades with you soon.</p>
-]]></content>
-      <categories>
-        <category>Tech Life Balance</category>
-      </categories>
-      <tags>
-        <tag>Developer Lifestyle</tag>
-        <tag>Year-End Celebration</tag>
-        <tag>Work Achievement</tag>
-        <tag>Family and Work</tag>
       </tags>
   </entry>
   <entry>
@@ -2173,9 +2217,10 @@ Why Vagrant?
         <category>Automation and Efficiency</category>
       </categories>
       <tags>
+        <tag>Web Development</tag>
         <tag>Cloud Computing</tag>
-        <tag>DevOps Tools</tag>
         <tag>Programming Tips</tag>
+        <tag>DevOps Tools</tag>
         <tag>Headless Chrome</tag>
         <tag>Docker Containers</tag>
         <tag>Web Automation</tag>
@@ -2190,7 +2235,6 @@ Why Vagrant?
         <tag>Technology Tutorials</tag>
         <tag>Python Flask</tag>
         <tag>Automated Testing</tag>
-        <tag>Web Development</tag>
         <tag>Tech How-To</tag>
         <tag>Docker Deployment</tag>
       </tags>
