@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="The problem with letting agents run unattended I run several coding agents headless on my workstation. One reviews pull requests, one implements tickets from a written plan, one watches repositories a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Approve What Your Headless Coding Agent Does With One Telegram Button">
+<meta property="og:url" content="https://hien.dev/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/index.html">
+<meta property="og:site_name" content="Hien Hoang">
+<meta property="og:description" content="The problem with letting agents run unattended I run several coding agents headless on my workstation. One reviews pull requests, one implements tickets from a written plan, one watches repositories a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-26T17:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-26T09:08:41.831Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="AI Coding Agents">
+<meta property="article:tag" content="Claude Code">
+<meta property="article:tag" content="Automation">
+<meta property="article:tag" content="Telegram">
+<meta property="article:tag" content="Bash">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://hien.dev/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Approve What Your Headless Coding Agent Does With One Telegram Button | Hien Hoang</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hien Hoang</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-problem-with-letting-agents-run-unattended"><span class="nav-text">The problem with
+letting agents run unattended</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-shape"><span class="nav-text">The shape</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-pending-item"><span class="nav-text">The pending item</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sending-the-offer"><span class="nav-text">Sending the offer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-bridge"><span class="nav-text">The bridge</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-action-handler"><span class="nav-text">The action handler</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gating-a-step-in-the-middle-of-a-run"><span class="nav-text">Gating a step in the
+middle of a run</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#what-i-would-tell-someone-building-this"><span class="nav-text">What I would tell
+someone building this</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">306</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hien Hoang">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Approve What Your Headless Coding Agent Does With One Telegram Button
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-10-26 17:00:00 / Modified: 09:08:41" itemprop="dateCreated datePublished" datetime="2026-10-26T17:00:00+00:00">2026-10-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/AI-Engineering/" itemprop="url" rel="index"><span itemprop="name">AI Engineering</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="the-problem-with-letting-agents-run-unattended">The problem with
+letting agents run unattended</h1>
+<p>I run several coding agents headless on my workstation. One reviews
+pull requests, one implements tickets from a written plan, one watches
+repositories and regenerates documentation when the code moves. They run
+as <code>claude -p</code> processes started by systemd timers and shell
+scripts, which means nobody is sitting at a terminal when they
+finish.</p>
+<p>Most of their work is safe to do alone: reading code, running tests,
+writing a report to disk. A few steps are not. Posting a review comment
+under my name, pushing a branch, opening a PR, deploying to a shared
+environment. Those are outward facing and hard to take back, and I want
+to see them before they happen.</p>
+<p>The usual answers did not fit. A permission prompt needs a terminal.
+Email is too slow to act on. A web dashboard is one more thing to keep
+running. What I already had open all day was Telegram on my phone, and
+Telegram bots support inline buttons. So every risky step became a
+message with <strong>Approve</strong>, <strong>Show</strong> and
+<strong>Skip</strong> under it.</p>
+<a id="more"></a>
+<p>After running this for a few months, the shape that works is small:
+three scripts and a directory of JSON files.</p>
+<h1 id="the-shape">The shape</h1>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">agent ──writes──&gt; pending&#x2F;&lt;id&gt;.json ──offer.sh──&gt; Telegram message + buttons</span><br><span class="line">                        ^                                   │ tap</span><br><span class="line">                        │                                   v</span><br><span class="line">                  action.sh &lt;──callback_data &quot;ok:&lt;id&gt;&quot;── bridge (getUpdates loop)</span><br></pre></td></tr></table></figure>
+<ol type="1">
+<li>The agent does its work, writes the draft (a comment, a PR body, a
+plan) to a file, and registers a <strong>pending item</strong>: a JSON
+file that says what kind of action it is and what it needs.</li>
+<li><code>offer.sh</code> sends the draft to Telegram with three buttons
+whose <code>callback_data</code> carries the item id.</li>
+<li>A long-running <strong>bridge</strong> is the only process polling
+the bot. When a button is tapped it calls
+<code>action.sh &lt;verb&gt; &lt;id&gt;</code>.</li>
+<li><code>action.sh</code> does the publishing for that kind of item and
+replies with one line of status.</li>
+</ol>
+<p>The agent never publishes anything itself. It can only propose.</p>
+<h1 id="the-pending-item">The pending item</h1>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;2026-10-26-fix-typo-in-readme&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;github_comment&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;repo&quot;</span>: <span class="string">&quot;someorg/somerepo&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;number&quot;</span>: <span class="number">123</span>,</span><br><span class="line">  <span class="attr">&quot;draft_file&quot;</span>: <span class="string">&quot;drafts/2026-10-26-fix-typo-in-readme.md&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;awaiting&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The <code>kind</code> matters more than it looks. It is tempting to
+store a shell command in the item and run it on approval. That is
+convenient and a bad idea: anything that can write a pending file can
+now run arbitrary commands the moment I tap a button on my phone,
+usually without reading closely. The current version has a fixed set of
+kinds, and each one maps to a publisher function written by hand. The
+item supplies data, never code.</p>
+<h1 id="sending-the-offer">Sending the offer</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment"># offer.sh &lt;id&gt;: send a pending draft to Telegram with buttons</span></span><br><span class="line"><span class="built_in">set</span> -euo pipefail</span><br><span class="line">. ~/.config/agent-gate/telegram.env   <span class="comment"># TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID</span></span><br><span class="line">id=<span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">pend=<span class="string">&quot;pending/<span class="variable">$id</span>.json&quot;</span></span><br><span class="line">draft=$(jq -r .draft_file <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">kb=$(jq -nc --arg id <span class="string">&quot;<span class="variable">$id</span>&quot;</span> <span class="string">&#x27;&#123;inline_keyboard: [[</span></span><br><span class="line"><span class="string">  &#123;text: &quot;✅ Approve&quot;, callback_data: (&quot;ok:&quot;   + $id)&#125;,</span></span><br><span class="line"><span class="string">  &#123;text: &quot;📄 Show&quot;,    callback_data: (&quot;show:&quot; + $id)&#125;,</span></span><br><span class="line"><span class="string">  &#123;text: &quot;✖️ Skip&quot;,    callback_data: (&quot;skip:&quot; + $id)&#125;</span></span><br><span class="line"><span class="string">]]&#125;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">curl -s <span class="string">&quot;https://api.telegram.org/bot<span class="variable">$&#123;TELEGRAM_BOT_TOKEN&#125;</span>/sendMessage&quot;</span> \</span><br><span class="line">  -d chat_id=<span class="string">&quot;<span class="variable">$TELEGRAM_CHAT_ID</span>&quot;</span> \</span><br><span class="line">  --data-urlencode <span class="string">&quot;text=<span class="subst">$(jq -r .kind <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>: <span class="subst">$(head -c 3000 <span class="string">&quot;<span class="variable">$draft</span>&quot;</span>)</span>&quot;</span> \</span><br><span class="line">  --data-urlencode <span class="string">&quot;reply_markup=<span class="variable">$kb</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Two limits to know about: a message is at most 4096 characters, and
+<code>callback_data</code> is at most 64 bytes. Keep the id short and
+put everything else in the file. For long drafts I send a preview in the
+message and let <strong>Show</strong> send the whole file as a
+document.</p>
+<h1 id="the-bridge">The bridge</h1>
+<p>Telegram allows only one <code>getUpdates</code> consumer per bot. If
+two scripts poll the same bot, they steal each other's updates and
+buttons appear to do nothing. So there is exactly one bridge, and every
+agent's buttons go through it with a prefix per agent.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment"># bridge.sh: the single getUpdates consumer, dispatching button taps</span></span><br><span class="line">. ~/.config/agent-gate/telegram.env</span><br><span class="line">API=<span class="string">&quot;https://api.telegram.org/bot<span class="variable">$&#123;TELEGRAM_BOT_TOKEN&#125;</span>&quot;</span></span><br><span class="line">OFFSET=$(cat offset 2&gt;/dev/null || <span class="built_in">echo</span> 0)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span></span><br><span class="line">  resp=$(curl -s -m 40 <span class="string">&quot;<span class="variable">$&#123;API&#125;</span>/getUpdates?offset=<span class="variable">$&#123;OFFSET&#125;</span>&amp;timeout=30&amp;allowed_updates=%5B%22callback_query%22%5D&quot;</span>)</span><br><span class="line">  <span class="keyword">while</span> <span class="built_in">read</span> -r u; <span class="keyword">do</span></span><br><span class="line">    [ -n <span class="string">&quot;<span class="variable">$u</span>&quot;</span> ] || <span class="built_in">continue</span></span><br><span class="line">    OFFSET=$(( $(jq .update_id &lt;&lt;&lt;&quot;<span class="variable">$u</span>&quot;) + <span class="number">1</span> )); <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$OFFSET</span>&quot;</span> &gt; offset</span><br><span class="line">    cb=$(jq -c .callback_query &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$u</span>&quot;</span>)</span><br><span class="line">    <span class="comment"># Only my own chat may approve anything.</span></span><br><span class="line">    [ <span class="string">&quot;<span class="subst">$(jq -r .from.id &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$cb</span>&quot;</span>)</span>&quot;</span> = <span class="string">&quot;<span class="variable">$TELEGRAM_CHAT_ID</span>&quot;</span> ] || <span class="built_in">continue</span></span><br><span class="line">    curl -s <span class="string">&quot;<span class="variable">$&#123;API&#125;</span>/answerCallbackQuery&quot;</span> -d callback_query_id=<span class="string">&quot;<span class="subst">$(jq -r .id &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$cb</span>&quot;</span>)</span>&quot;</span> &gt;/dev/null</span><br><span class="line">    data=$(jq -r .data &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$cb</span>&quot;</span>)</span><br><span class="line">    verb=<span class="variable">$&#123;data%%:*&#125;</span>; id=<span class="variable">$&#123;data#*:&#125;</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;<span class="variable">$id</span>&quot;</span> <span class="keyword">in</span> *[!A-Za-z0-9._-]*|<span class="string">&quot;&quot;</span>) <span class="built_in">continue</span>;; <span class="keyword">esac</span></span><br><span class="line">    out=$(./action.sh <span class="string">&quot;<span class="variable">$verb</span>&quot;</span> <span class="string">&quot;<span class="variable">$id</span>&quot;</span> 2&gt;&amp;1 | tail -1)</span><br><span class="line">    curl -s <span class="string">&quot;<span class="variable">$&#123;API&#125;</span>/sendMessage&quot;</span> -d chat_id=<span class="string">&quot;<span class="variable">$TELEGRAM_CHAT_ID</span>&quot;</span> --data-urlencode <span class="string">&quot;text=<span class="variable">$out</span>&quot;</span> &gt;/dev/null</span><br><span class="line">  <span class="keyword">done</span> &lt; &lt;(jq -c <span class="string">&#x27;.result[]?&#x27;</span> &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$resp</span>&quot;</span>)</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>Three details in there earned their place by breaking:</p>
+<ul>
+<li><strong>Persist the offset.</strong> Without it, a restart replays
+the last day of taps and approves things twice.</li>
+<li><strong>Answer the callback.</strong> If you do not call
+<code>answerCallbackQuery</code>, the button spins on the phone for a
+while and you tap it again.</li>
+<li><strong>Check who tapped and what the id looks like.</strong> The id
+ends up in a file path. Allow only safe characters.</li>
+</ul>
+<p>I run the bridge as a systemd user service with
+<code>Restart=always</code> and lingering enabled, so it survives
+logouts and reboots.</p>
+<h1 id="the-action-handler">The action handler</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment"># action.sh &lt;ok|show|skip&gt; &lt;id&gt;</span></span><br><span class="line"><span class="built_in">set</span> -uo pipefail</span><br><span class="line">pend=<span class="string">&quot;pending/<span class="variable">$2</span>.json&quot;</span></span><br><span class="line">[ -f <span class="string">&quot;<span class="variable">$pend</span>&quot;</span> ] || &#123; <span class="built_in">echo</span> <span class="string">&quot;Nothing pending for <span class="variable">$2</span>&quot;</span>; <span class="built_in">exit</span> 0; &#125;</span><br><span class="line">status=$(jq -r .status <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">stamp</span></span>() &#123; jq --arg s <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="string">&#x27;.status=$s | .decided_at=(now|todate)&#x27;</span> <span class="string">&quot;<span class="variable">$pend</span>&quot;</span> &gt; <span class="string">&quot;<span class="variable">$pend</span>.tmp&quot;</span> &amp;&amp; mv <span class="string">&quot;<span class="variable">$pend</span>.tmp&quot;</span> <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">  show) cat <span class="string">&quot;<span class="subst">$(jq -r .draft_file <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> ;;</span><br><span class="line">  skip) [ <span class="string">&quot;<span class="variable">$status</span>&quot;</span> = awaiting ] &amp;&amp; stamp skipped &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;Skipped&quot;</span> ;;</span><br><span class="line">  ok)</span><br><span class="line">    [ <span class="string">&quot;<span class="variable">$status</span>&quot;</span> = awaiting ] || &#123; <span class="built_in">echo</span> <span class="string">&quot;Already <span class="variable">$status</span>&quot;</span>; <span class="built_in">exit</span> 0; &#125;</span><br><span class="line">    stamp publishing</span><br><span class="line">    <span class="keyword">case</span> $(jq -r .kind <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>) <span class="keyword">in</span></span><br><span class="line">      github_comment)</span><br><span class="line">        gh issue comment <span class="string">&quot;<span class="subst">$(jq -r .number <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> --repo <span class="string">&quot;<span class="subst">$(jq -r .repo <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> \</span><br><span class="line">          --body-file <span class="string">&quot;<span class="subst">$(jq -r .draft_file <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> &amp;&amp; stamp <span class="keyword">done</span> &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;Posted&quot;</span> ;;</span><br><span class="line">      *) <span class="built_in">echo</span> <span class="string">&quot;Unknown kind&quot;</span>; stamp failed ;;</span><br><span class="line">    <span class="keyword">esac</span> ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+<p>The status check before publishing is the double-tap guard. Phones
+lag, people tap twice, and without it you post the same comment twice.
+Moving to <code>publishing</code> before the slow call means a second
+tap that arrives mid-publish sees <code>publishing</code> and stops.</p>
+<h1 id="gating-a-step-in-the-middle-of-a-run">Gating a step in the
+middle of a run</h1>
+<p>Sometimes the agent should not just propose and exit. The
+ticket-implementing agent writes a plan, and only after I approve the
+plan does it start changing code. For that the agent offers the plan,
+then waits on the file:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./offer.sh <span class="string">&quot;<span class="variable">$id</span>&quot;</span></span><br><span class="line"><span class="keyword">while</span> [ <span class="string">&quot;<span class="subst">$(jq -r .status <span class="string">&quot;pending/<span class="variable">$id</span>.json&quot;</span>)</span>&quot;</span> = awaiting ]; <span class="keyword">do</span> sleep 10; <span class="keyword">done</span></span><br><span class="line">[ <span class="string">&quot;<span class="subst">$(jq -r .status <span class="string">&quot;pending/<span class="variable">$id</span>.json&quot;</span>)</span>&quot;</span> = approved ] || <span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+<p>For the waiting case, the action handler only stamps the decision
+instead of publishing. The agent reads it and carries on. A file on disk
+is the whole protocol, so I can approve from the shell with
+<code>jq</code> when my phone is not around, and I can see every
+decision afterwards with <code>ls pending/</code>.</p>
+<h1 id="what-i-would-tell-someone-building-this">What I would tell
+someone building this</h1>
+<ul>
+<li><strong>Keep the agent's permissions and the approver's permissions
+apart.</strong> The agent writes drafts. A separate, boring script holds
+the tokens that publish.</li>
+<li><strong>Show the real thing.</strong> Approving a summary of a
+comment is not approving the comment. Send the exact text that will go
+out, or the diff.</li>
+<li><strong>Make Skip cheap.</strong> If saying no is more work than
+saying yes, you will start saying yes.</li>
+<li><strong>Log decisions.</strong> An append-only
+<code>history.jsonl</code> with what was proposed, what I chose and when
+has been more useful than I expected, mostly for noticing which kinds of
+proposal I skip and fixing the agent that makes them.</li>
+</ul>
+<p>The whole thing is a few hundred lines of Bash, <code>jq</code> and
+<code>curl</code>. It has been the difference between agents I check on
+and agents I trust to run while I sleep, because the parts that matter
+still wait for me.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/AI-Coding-Agents/" rel="tag"># AI Coding Agents</a>
+              <a href="/tags/Claude-Code/" rel="tag"># Claude Code</a>
+              <a href="/tags/Automation/" rel="tag"># Automation</a>
+              <a href="/tags/Telegram/" rel="tag"># Telegram</a>
+              <a href="/tags/Bash/" rel="tag"># Bash</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/12/25/Simplifying-Data-Validation-in-Python-with-Pydantic/" rel="prev" title="Simplifying Data Validation in Python with Pydantic">
+                  <i class="fa fa-chevron-left"></i> Simplifying Data Validation in Python with Pydantic
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
