@@ -1,111 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Azure Administrator Associate achievement</title>
-    <url>/2021/06/12/Azure-Administrator-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
-<a id="more"></a>
-<p>After getting the first <code>Azure Fundamentals Certificate</code>,
-I went on studying the higher level to achieve this one as an
-Administrator Associate. I spent most of my free time to learn <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
-learning website</a> and to do the exercises for about a week, as soon
-as having full knowledge of the course.</p>
-<p>Then I officially took an online exam at home due to the spreading of
-Covid-19 in the city. The exam lasted for 2 hours in a private quiet
-room, but to me, I just finished the test in within 1 hour. A check-in
-progress was required before the exam started (about 30 minutes),
-including capturing angles of the room, making sure that no sounds
-happened to disturb the exam, or else candidates could be considered to
-be fail.</p>
-<p>The feeling of taking the online exam at home was pretty awesome and
-safe. I was confident to pass the test because I had had practiced many
-many times and learned from them, and you know what, I did it. I passed
-the exam! The result was announced as soon as the test was submitted,
-the certification was released in about 30 minutes later. I couldn't
-wait to publish it on muy Linkedin page! It showed that my studying
-method was right and useful, which could help me get the
-certification.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>Administrator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
-    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
-    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a
-time-traveling journey through the evolution of JavaScript's
-asynchronous capabilities. From the early days of callbacks to the
-modern elegance of async/await, we'll explore how these features came to
-be and how they've shaped the way we write JavaScript today.</p>
-<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
-<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like
-a helpful little assistant, great for adding interactive bits to
-websites. But as the internet grows, our assistant needs to juggle more
-tasks simultaneously.</p>
-<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
-<ol type="1">
-<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the
-original method for handling asynchronous operations in JavaScript.
-They're like the first pair of training wheels for the language, helping
-it to manage tasks that take time, like loading data from a server.</li>
-</ol>
-<a id="more"></a>
-<ol start="2" type="1">
-<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015
-(also known as ES6), Promises were officially introduced. They brought a
-new level of sophistication to handling async operations, much like
-upgrading from a flip phone to a smartphone.</p></li>
-<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In
-2017, JavaScript took a significant leap forward with async/await, part
-of the ES2017 standard. Writing async code became as easy as writing
-your usual synchronous code, but with all the power of non-blocking
-execution.</p></li>
-</ol>
-<p><strong>A Coding Journey Through Time</strong></p>
-<p>Let's see how each of these stages changed the way we write code when
-performing a simple task: fetching and displaying data.</p>
-<p><em>In the Time of Callbacks:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><em>The Promises Era Begins:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
-<p><em>The Age of Async/Await:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
-<hr />
-<p>From the early days of callbacks to the streamlined era of
-async/await, JavaScript's journey in asynchronous programming is nothing
-short of remarkable. It reflects the language's adaptability and growth,
-paralleling the ever-evolving landscape of web development. As
-JavaScript continues to evolve, who knows what the future holds? But one
-thing is certain – it will keep making our coding lives easier and more
-efficient.</p>
-]]></content>
-      <categories>
-        <category>Web Development</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>Asynchronous Programming</tag>
-        <tag>Event Loop</tag>
-        <tag>Callbacks</tag>
-        <tag>Promises</tag>
-        <tag>Async/Await</tag>
-        <tag>ES2015</tag>
-        <tag>ES2017</tag>
-        <tag>Web Development</tag>
-        <tag>JavaScript Evolution</tag>
-        <tag>Coding History</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>10 Tips You Must Know for Effectively Using CloudWatch Logs Insights</title>
     <url>/2023/12/21/10-Tips-You-Must-Know-for-Effectively-Using-CloudWatch-Logs-Insights/</url>
     <content><![CDATA[<p>Amazon CloudWatch Logs Insights is a robust tool for log analysis,
@@ -939,18 +834,136 @@ trends.</li>
       </tags>
   </entry>
   <entry>
-    <title>Azure Solution Architect Achievement</title>
-    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
-<p>Finally got it, after many days of learning from <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft
-Learning</a>.</p>
-<p>To be able to earn this certification you should have advanced
-experience and knowledge of IT operations, including networking,
-virtualization, identity, security, business continuity, disaster
-recovery, data platform, budgeting, and governance. In addition, you
-should have expert-level skills in Azure administration and have
-experience with development and DevOps processes.</p>
+    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
+    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
+    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a
+time-traveling journey through the evolution of JavaScript's
+asynchronous capabilities. From the early days of callbacks to the
+modern elegance of async/await, we'll explore how these features came to
+be and how they've shaped the way we write JavaScript today.</p>
+<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
+<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like
+a helpful little assistant, great for adding interactive bits to
+websites. But as the internet grows, our assistant needs to juggle more
+tasks simultaneously.</p>
+<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
+<ol type="1">
+<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the
+original method for handling asynchronous operations in JavaScript.
+They're like the first pair of training wheels for the language, helping
+it to manage tasks that take time, like loading data from a server.</li>
+</ol>
+<a id="more"></a>
+<ol start="2" type="1">
+<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015
+(also known as ES6), Promises were officially introduced. They brought a
+new level of sophistication to handling async operations, much like
+upgrading from a flip phone to a smartphone.</p></li>
+<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In
+2017, JavaScript took a significant leap forward with async/await, part
+of the ES2017 standard. Writing async code became as easy as writing
+your usual synchronous code, but with all the power of non-blocking
+execution.</p></li>
+</ol>
+<p><strong>A Coding Journey Through Time</strong></p>
+<p>Let's see how each of these stages changed the way we write code when
+performing a simple task: fetching and displaying data.</p>
+<p><em>In the Time of Callbacks:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><em>The Promises Era Begins:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
+<p><em>The Age of Async/Await:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
+<hr />
+<p>From the early days of callbacks to the streamlined era of
+async/await, JavaScript's journey in asynchronous programming is nothing
+short of remarkable. It reflects the language's adaptability and growth,
+paralleling the ever-evolving landscape of web development. As
+JavaScript continues to evolve, who knows what the future holds? But one
+thing is certain – it will keep making our coding lives easier and more
+efficient.</p>
+]]></content>
+      <categories>
+        <category>Web Development</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Asynchronous Programming</tag>
+        <tag>Event Loop</tag>
+        <tag>Callbacks</tag>
+        <tag>Promises</tag>
+        <tag>Async/Await</tag>
+        <tag>ES2015</tag>
+        <tag>ES2017</tag>
+        <tag>Web Development</tag>
+        <tag>JavaScript Evolution</tag>
+        <tag>Coding History</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure Administrator Associate achievement</title>
+    <url>/2021/06/12/Azure-Administrator-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
+<a id="more"></a>
+<p>After getting the first <code>Azure Fundamentals Certificate</code>,
+I went on studying the higher level to achieve this one as an
+Administrator Associate. I spent most of my free time to learn <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
+learning website</a> and to do the exercises for about a week, as soon
+as having full knowledge of the course.</p>
+<p>Then I officially took an online exam at home due to the spreading of
+Covid-19 in the city. The exam lasted for 2 hours in a private quiet
+room, but to me, I just finished the test in within 1 hour. A check-in
+progress was required before the exam started (about 30 minutes),
+including capturing angles of the room, making sure that no sounds
+happened to disturb the exam, or else candidates could be considered to
+be fail.</p>
+<p>The feeling of taking the online exam at home was pretty awesome and
+safe. I was confident to pass the test because I had had practiced many
+many times and learned from them, and you know what, I did it. I passed
+the exam! The result was announced as soon as the test was submitted,
+the certification was released in about 30 minutes later. I couldn't
+wait to publish it on muy Linkedin page! It showed that my studying
+method was right and useful, which could help me get the
+certification.</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Administrator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure DevOps Engineering Expert achievement</title>
+    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
+<p>To be able to achieve <a
+href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft
+Azure DevOps Expert Certification</a> you have to achieve <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure
+Administrator Certification</a>. The responsibilities for the DevOps
+role include designing and implementing strategies for collaboration,
+code, infrastructure, source control, security, compliance, continuous
+integration, testing, delivery, monitoring, and feedback.</p>
+<p>As part of my role, I have already been familiar with design and
+implement DevOps pipeline for automation deployment. So it somewhat easy
+to me to learn the course quickly. Just the
+<code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar
+to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>.
+After a few days of practicing exercises, I decide to take the tests
+online due to the increasing of Covid-19. The process was the same as
+the last time I had taken the test for Administrator Associate
+certification. After an hour, I submitted the test and then the result
+was awesome. Yay, you got it, I passed!</p>
+<p>I have felt very happy for what I have had achieved, I must say I'm
+so proud of myself hohoho. There will be other tests waiting for me to
+achieve in the near future, so keep following my blog for new updates!
+Thanks you guys!</p>
 ]]></content>
       <categories>
         <category>Certification</category>
@@ -960,7 +973,6 @@ experience with development and DevOps processes.</p>
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
         <tag>DevOps</tag>
-        <tag>Solution Architect</tag>
       </tags>
   </entry>
   <entry>
@@ -1004,31 +1016,18 @@ achieve the goal. Keep on learning!!!</p>
       </tags>
   </entry>
   <entry>
-    <title>Azure DevOps Engineering Expert achievement</title>
-    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
-<p>To be able to achieve <a
-href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft
-Azure DevOps Expert Certification</a> you have to achieve <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure
-Administrator Certification</a>. The responsibilities for the DevOps
-role include designing and implementing strategies for collaboration,
-code, infrastructure, source control, security, compliance, continuous
-integration, testing, delivery, monitoring, and feedback.</p>
-<p>As part of my role, I have already been familiar with design and
-implement DevOps pipeline for automation deployment. So it somewhat easy
-to me to learn the course quickly. Just the
-<code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar
-to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>.
-After a few days of practicing exercises, I decide to take the tests
-online due to the increasing of Covid-19. The process was the same as
-the last time I had taken the test for Administrator Associate
-certification. After an hour, I submitted the test and then the result
-was awesome. Yay, you got it, I passed!</p>
-<p>I have felt very happy for what I have had achieved, I must say I'm
-so proud of myself hohoho. There will be other tests waiting for me to
-achieve in the near future, so keep following my blog for new updates!
-Thanks you guys!</p>
+    <title>Azure Solution Architect Achievement</title>
+    <url>/2021/07/03/Azure-Solution-Architect-Achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/6edc9c29-1037-44f0-bc8a-a36749a57c8e"><img src="/images/2021-07-02/001.jpg"></a></p>
+<p>Finally got it, after many days of learning from <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/">Microsoft
+Learning</a>.</p>
+<p>To be able to earn this certification you should have advanced
+experience and knowledge of IT operations, including networking,
+virtualization, identity, security, business continuity, disaster
+recovery, data platform, budgeting, and governance. In addition, you
+should have expert-level skills in Azure administration and have
+experience with development and DevOps processes.</p>
 ]]></content>
       <categories>
         <category>Certification</category>
@@ -1038,6 +1037,7 @@ Thanks you guys!</p>
         <tag>Azure</tag>
         <tag>Microsoft Certified</tag>
         <tag>DevOps</tag>
+        <tag>Solution Architect</tag>
       </tags>
   </entry>
   <entry>
@@ -1509,6 +1509,136 @@ difference tasks from a same publisher.</p>
       </tags>
   </entry>
   <entry>
+    <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
+    <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>In the ever-evolving world of software development, efficiency and
+flexibility are paramount. Docker, a household name in containerization,
+has taken a significant leap forward with Docker Buildx. This advanced
+feature not only enhances the capabilities of the standard Docker build
+command but revolutionizes how developers approach multi-platform
+containerization. Let’s dive into the world of Docker Buildx and explore
+how it's changing the game.</p>
+<p><img src="/images/2023-12-19/infographic.png"> <a id="more"></a></p>
+<h1 id="key-features-of-docker-buildx">Key Features of Docker
+Buildx</h1>
+<p><strong>Multi-Platform Support</strong>: Docker Buildx stands out
+with its ability to build container images for various platforms, like
+amd64 and arm64, from a single code base. This is a game-changer for
+developers targeting diverse hardware architectures.</p>
+<p><strong>BuildKit Backend</strong>: At its core, Docker Buildx
+leverages BuildKit, offering superior performance and caching compared
+to the traditional Docker build. BuildKit's efficiency lies in its
+parallelized builds, drastically cutting down build times.</p>
+<p><strong>Enhanced Caching</strong>: Speed is of the essence, and
+Buildx’s advanced caching mechanisms are designed to reuse previous
+build steps, significantly accelerating the build process.</p>
+<p><strong>Remote Building Capabilities</strong>: Docker Buildx isn't
+limited to local builds. It can seamlessly integrate with remote Docker
+daemons or cloud-based build services, optimizing resource usage and
+offering flexibility in build environments.</p>
+<p><strong>Flexible Output Options</strong>: It offers a variety of
+output options, including local file systems, Docker registries, and
+direct outputs to the Docker daemon.</p>
+<h1 id="practical-guide-utilizing-docker-buildx">Practical Guide:
+Utilizing Docker Buildx</h1>
+<ol type="1">
+<li><strong>Getting Started: Installation</strong> Docker Buildx comes
+with Docker 19.03 or later. To ensure it's installed and to set it up,
+follow these steps:</li>
+</ol>
+<ul>
+<li><strong>Check Docker Version:</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+<p>Ensure that the version is 19.03 or newer.</p>
+<ul>
+<li><strong>Enable Experimental Features:</strong></li>
+</ul>
+<p>If not already enabled, you might need to enable Docker's
+experimental features. This can be done by editing the Docker
+configuration file (usually located at ~/.docker/config.json) and
+setting "experimental": "enabled". Alternatively, you can set the
+environment variable DOCKER_CLI_EXPERIMENTAL=enabled.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;experimental&quot;</span>: <span class="string">&quot;enabled&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li><strong>Creating a Buildx Builder Instance</strong></li>
+</ol>
+<p>To take full advantage of Docker Buildx, create a new builder
+instance with the following command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx create --name mybuilder --use</span><br></pre></td></tr></table></figure>
+<p>This command creates a new builder instance named mybuilder and sets
+it as the current builder.</p>
+<ol start="3" type="1">
+<li><strong>Building Images</strong></li>
+</ol>
+<p>Use the docker buildx build command to build images. Here's an
+example that demonstrates a multi-platform build:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest .</span><br></pre></td></tr></table></figure>
+<p>This command builds an image for both amd64 and arm64 platforms, tags
+it with myuser/myapp:latest, and uses the current directory as the build
+context.</p>
+<ol start="4" type="1">
+<li><strong>Pushing to Registries</strong></li>
+</ol>
+<p>To push the built images to a Docker registry, include the --push
+flag in the build command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest . --push</span><br></pre></td></tr></table></figure>
+<p>This command builds the images and pushes them to the Docker registry
+with the specified tag.</p>
+<p>Note: Replace myuser/myapp:latest with your own Docker Hub username
+and desired image name.</p>
+<h1 id="use-cases-in-the-real-world">Use Cases in the Real World</h1>
+<p><strong>Cross-Platform Compatibility</strong>: Create Docker images
+that work across various systems, from traditional Intel/AMD processors
+to ARM-based devices like the Raspberry Pi.</p>
+<p><strong>Enhancing CI/CD Pipelines</strong>: Integrate Docker Buildx
+into CI/CD pipelines for automated, multi-platform builds, ensuring
+consistent and efficient deployment.</p>
+<p><strong>Optimizing Local Development</strong>: Benefit from advanced
+caching and parallel builds, making the development process faster and
+more efficient.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Docker Buildx is not just a tool; it's a paradigm shift for
+developers and organizations aiming to optimize their Docker container
+builds, particularly in multi-platform scenarios. Its synergy with
+BuildKit ushers in a new era of performance, flexibility, and
+efficiency, surpassing traditional Docker builds. Whether you're a solo
+developer or part of a large team, Docker Buildx is poised to become an
+indispensable part of your development toolkit.</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+        <category>DevOps</category>
+        <category>Software Development</category>
+        <category>CI/CD</category>
+        <category>Containerization</category>
+        <category>Performance Optimization</category>
+        <category>Technology Tutorials</category>
+        <category>Programming &amp; Tools</category>
+        <category>Cross-Platform Development</category>
+        <category>Technology Innovations</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Buildx</tag>
+        <tag>Containerization Technology</tag>
+        <tag>Multi-Platform Docker Builds</tag>
+        <tag>Docker Buildx Tutorial</tag>
+        <tag>BuildKit Backend</tag>
+        <tag>CI/CD with Docker</tag>
+        <tag>Cross-Platform Docker Images</tag>
+        <tag>Docker Caching Mechanisms</tag>
+        <tag>Remote Docker Builds</tag>
+        <tag>Docker CLI Plugin</tag>
+        <tag>Efficient Docker Builds</tag>
+        <tag>Docker Buildx Features</tag>
+        <tag>Docker Build Optimization</tag>
+        <tag>Software Development</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Django Object Level Permission Template</title>
     <url>/2021/01/21/Django-Object-Level-Permission-Templage/</url>
     <content><![CDATA[<p>A template to guide you how to setup a Django Project with Object
@@ -1704,136 +1834,6 @@ href="http://jsonapi.org/format/">JSON API format specification</a></li>
         <tag>Django Guardian</tag>
         <tag>Djoser</tag>
         <tag>Object Level Permission</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
-    <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>In the ever-evolving world of software development, efficiency and
-flexibility are paramount. Docker, a household name in containerization,
-has taken a significant leap forward with Docker Buildx. This advanced
-feature not only enhances the capabilities of the standard Docker build
-command but revolutionizes how developers approach multi-platform
-containerization. Let’s dive into the world of Docker Buildx and explore
-how it's changing the game.</p>
-<p><img src="/images/2023-12-19/infographic.png"> <a id="more"></a></p>
-<h1 id="key-features-of-docker-buildx">Key Features of Docker
-Buildx</h1>
-<p><strong>Multi-Platform Support</strong>: Docker Buildx stands out
-with its ability to build container images for various platforms, like
-amd64 and arm64, from a single code base. This is a game-changer for
-developers targeting diverse hardware architectures.</p>
-<p><strong>BuildKit Backend</strong>: At its core, Docker Buildx
-leverages BuildKit, offering superior performance and caching compared
-to the traditional Docker build. BuildKit's efficiency lies in its
-parallelized builds, drastically cutting down build times.</p>
-<p><strong>Enhanced Caching</strong>: Speed is of the essence, and
-Buildx’s advanced caching mechanisms are designed to reuse previous
-build steps, significantly accelerating the build process.</p>
-<p><strong>Remote Building Capabilities</strong>: Docker Buildx isn't
-limited to local builds. It can seamlessly integrate with remote Docker
-daemons or cloud-based build services, optimizing resource usage and
-offering flexibility in build environments.</p>
-<p><strong>Flexible Output Options</strong>: It offers a variety of
-output options, including local file systems, Docker registries, and
-direct outputs to the Docker daemon.</p>
-<h1 id="practical-guide-utilizing-docker-buildx">Practical Guide:
-Utilizing Docker Buildx</h1>
-<ol type="1">
-<li><strong>Getting Started: Installation</strong> Docker Buildx comes
-with Docker 19.03 or later. To ensure it's installed and to set it up,
-follow these steps:</li>
-</ol>
-<ul>
-<li><strong>Check Docker Version:</strong></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
-<p>Ensure that the version is 19.03 or newer.</p>
-<ul>
-<li><strong>Enable Experimental Features:</strong></li>
-</ul>
-<p>If not already enabled, you might need to enable Docker's
-experimental features. This can be done by editing the Docker
-configuration file (usually located at ~/.docker/config.json) and
-setting "experimental": "enabled". Alternatively, you can set the
-environment variable DOCKER_CLI_EXPERIMENTAL=enabled.</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;experimental&quot;</span>: <span class="string">&quot;enabled&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li><strong>Creating a Buildx Builder Instance</strong></li>
-</ol>
-<p>To take full advantage of Docker Buildx, create a new builder
-instance with the following command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx create --name mybuilder --use</span><br></pre></td></tr></table></figure>
-<p>This command creates a new builder instance named mybuilder and sets
-it as the current builder.</p>
-<ol start="3" type="1">
-<li><strong>Building Images</strong></li>
-</ol>
-<p>Use the docker buildx build command to build images. Here's an
-example that demonstrates a multi-platform build:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest .</span><br></pre></td></tr></table></figure>
-<p>This command builds an image for both amd64 and arm64 platforms, tags
-it with myuser/myapp:latest, and uses the current directory as the build
-context.</p>
-<ol start="4" type="1">
-<li><strong>Pushing to Registries</strong></li>
-</ol>
-<p>To push the built images to a Docker registry, include the --push
-flag in the build command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest . --push</span><br></pre></td></tr></table></figure>
-<p>This command builds the images and pushes them to the Docker registry
-with the specified tag.</p>
-<p>Note: Replace myuser/myapp:latest with your own Docker Hub username
-and desired image name.</p>
-<h1 id="use-cases-in-the-real-world">Use Cases in the Real World</h1>
-<p><strong>Cross-Platform Compatibility</strong>: Create Docker images
-that work across various systems, from traditional Intel/AMD processors
-to ARM-based devices like the Raspberry Pi.</p>
-<p><strong>Enhancing CI/CD Pipelines</strong>: Integrate Docker Buildx
-into CI/CD pipelines for automated, multi-platform builds, ensuring
-consistent and efficient deployment.</p>
-<p><strong>Optimizing Local Development</strong>: Benefit from advanced
-caching and parallel builds, making the development process faster and
-more efficient.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>Docker Buildx is not just a tool; it's a paradigm shift for
-developers and organizations aiming to optimize their Docker container
-builds, particularly in multi-platform scenarios. Its synergy with
-BuildKit ushers in a new era of performance, flexibility, and
-efficiency, surpassing traditional Docker builds. Whether you're a solo
-developer or part of a large team, Docker Buildx is poised to become an
-indispensable part of your development toolkit.</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-        <category>Software Development</category>
-        <category>DevOps</category>
-        <category>CI/CD</category>
-        <category>Containerization</category>
-        <category>Performance Optimization</category>
-        <category>Technology Tutorials</category>
-        <category>Programming &amp; Tools</category>
-        <category>Cross-Platform Development</category>
-        <category>Technology Innovations</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Docker Buildx</tag>
-        <tag>Containerization Technology</tag>
-        <tag>Multi-Platform Docker Builds</tag>
-        <tag>Docker Buildx Tutorial</tag>
-        <tag>BuildKit Backend</tag>
-        <tag>CI/CD with Docker</tag>
-        <tag>Cross-Platform Docker Images</tag>
-        <tag>Docker Caching Mechanisms</tag>
-        <tag>Remote Docker Builds</tag>
-        <tag>Docker CLI Plugin</tag>
-        <tag>Efficient Docker Builds</tag>
-        <tag>Docker Buildx Features</tag>
-        <tag>Docker Build Optimization</tag>
-        <tag>Software Development</tag>
       </tags>
   </entry>
   <entry>
@@ -2333,9 +2333,9 @@ familiar with its paradigm.</p>
 ]]></content>
       <categories>
         <category>Cloud Computing</category>
-        <category>Software Development</category>
         <category>DevOps</category>
         <category>Data Engineering</category>
+        <category>Software Development</category>
         <category>CI/CD</category>
         <category>Workflow Automation</category>
         <category>Serverless Computing</category>
@@ -2598,113 +2598,6 @@ have the game enviroment implemented first.</p>
         <tag>Tictactoe</tag>
         <tag>Game</tag>
         <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
-    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
-<p>The <code>dig</code> command is a staple for web developers needing
-to troubleshoot and analyze DNS (Domain Name System) issues. It stands
-for Domain Information Groper, providing detailed DNS information with
-simplicity and flexibility.</p>
-<h1 id="check-dig-installation">Check dig Installation:</h1>
-<p>Run `dig -v`` in your terminal. This command checks if dig is
-installed on your Linux machine by returning the installed version.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
-<h1 id="install-dig-if-not-found">Install dig if not found</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
-<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
-<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
-This command fetches the A record of example.com, showing the IP address
-associated with the domain.</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
-<p>To query a specific DNS server, such as Google’s public DNS, use
-<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
-DNS resolution occurs through different servers.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
-<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
-Instead of translating a domain to an IP address, it does the opposite,
-revealing the domain linked to a given IP.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
-<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
-Queries:</h1>
-<p>For querying multiple domains, dig offers a batch mode. Simply create
-a file with a list of domains and execute
-<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
-DNS queries.</p>
-<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
-<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
-allows you to set default options tailored to your regular usage
-patterns.</p>
-<h1 id="conclusion">Conclusion:</h1>
-<p><code>dig</code> is an invaluable tool for developers dealing with
-DNS. It’s precise, flexible, and provides a depth of information crucial
-for diagnosing and understanding domain resolutions.</p>
-]]></content>
-      <categories>
-        <category>Linux System Administration</category>
-        <category>IT and Networking Tools</category>
-        <category>Command Line Utilities</category>
-      </categories>
-      <tags>
-        <tag>Linux Commands</tag>
-        <tag>DNS Lookup</tag>
-        <tag>Network Troubleshooting</tag>
-        <tag>DNS Query Tool</tag>
-        <tag>Command Line Tools</tag>
-        <tag>Linux Networking</tag>
-        <tag>System Administration</tag>
-        <tag>DNS Analysis</tag>
-        <tag>Linux Tutorials</tag>
-        <tag>Developer Tools</tag>
-        <tag>DNS Configuration</tag>
-        <tag>Linux Server Management</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
-    <url>/2020/11/23/Manage-ssh-keys/</url>
-    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>for example, I have 2 keys in my laptop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>Next, add the new key you just created</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>You can check your added keys</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-the-connection">3. Test the connection</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
-<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add
-public key to your source control profile setting</h1>
-<p>Copy the public key to clipboard</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
-<p>Paste the key to gitlab ssh setting</p>
-<p><img src="/images/2020-11-23/001.png"></p>
-<p>Paste the key to github ssh setting</p>
-<p><img src="/images/2020-11-23/002.png"></p>
-<h1 id="clone-the-source-code-using-different-user">5. Clone the source
-code using different user</h1>
-<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
-<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
-<p>That's all! Good luck!</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GitLab</tag>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -2998,6 +2891,113 @@ visualization utils from tensorflow models</h2>
       </tags>
   </entry>
   <entry>
+    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
+    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
+<p>The <code>dig</code> command is a staple for web developers needing
+to troubleshoot and analyze DNS (Domain Name System) issues. It stands
+for Domain Information Groper, providing detailed DNS information with
+simplicity and flexibility.</p>
+<h1 id="check-dig-installation">Check dig Installation:</h1>
+<p>Run `dig -v`` in your terminal. This command checks if dig is
+installed on your Linux machine by returning the installed version.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
+<h1 id="install-dig-if-not-found">Install dig if not found</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
+<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
+<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
+This command fetches the A record of example.com, showing the IP address
+associated with the domain.</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
+<p>To query a specific DNS server, such as Google’s public DNS, use
+<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
+DNS resolution occurs through different servers.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
+<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
+Instead of translating a domain to an IP address, it does the opposite,
+revealing the domain linked to a given IP.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
+<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
+Queries:</h1>
+<p>For querying multiple domains, dig offers a batch mode. Simply create
+a file with a list of domains and execute
+<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
+DNS queries.</p>
+<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
+<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
+allows you to set default options tailored to your regular usage
+patterns.</p>
+<h1 id="conclusion">Conclusion:</h1>
+<p><code>dig</code> is an invaluable tool for developers dealing with
+DNS. It’s precise, flexible, and provides a depth of information crucial
+for diagnosing and understanding domain resolutions.</p>
+]]></content>
+      <categories>
+        <category>Linux System Administration</category>
+        <category>IT and Networking Tools</category>
+        <category>Command Line Utilities</category>
+      </categories>
+      <tags>
+        <tag>Linux Commands</tag>
+        <tag>DNS Lookup</tag>
+        <tag>Network Troubleshooting</tag>
+        <tag>DNS Query Tool</tag>
+        <tag>Command Line Tools</tag>
+        <tag>Linux Networking</tag>
+        <tag>System Administration</tag>
+        <tag>DNS Analysis</tag>
+        <tag>Linux Tutorials</tag>
+        <tag>Developer Tools</tag>
+        <tag>DNS Configuration</tag>
+        <tag>Linux Server Management</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
+    <url>/2020/11/23/Manage-ssh-keys/</url>
+    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>for example, I have 2 keys in my laptop</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>Next, add the new key you just created</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>You can check your added keys</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-the-connection">3. Test the connection</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
+<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add
+public key to your source control profile setting</h1>
+<p>Copy the public key to clipboard</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
+<p>Paste the key to gitlab ssh setting</p>
+<p><img src="/images/2020-11-23/001.png"></p>
+<p>Paste the key to github ssh setting</p>
+<p><img src="/images/2020-11-23/002.png"></p>
+<h1 id="clone-the-source-code-using-different-user">5. Clone the source
+code using different user</h1>
+<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
+<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
+<p>That's all! Good luck!</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GitLab</tag>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mastering DAGs in Apache Airflow: The Key to Efficient Workflow Automation</title>
     <url>/2023/12/18/Mastering-DAGs-in-Apache-Airflow-The-Key-to-Efficient-Workflow-Automation/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -3086,9 +3086,9 @@ Airflow.</p>
 ]]></content>
       <categories>
         <category>Cloud Computing</category>
-        <category>Software Development</category>
         <category>DevOps</category>
         <category>Data Engineering</category>
+        <category>Software Development</category>
         <category>CI/CD</category>
         <category>Workflow Automation</category>
         <category>Python Programming</category>
@@ -3653,33 +3653,6 @@ viết tiếp từ đây.</p>
       </tags>
   </entry>
   <entry>
-    <title>SQLAlchemy for Python ORM Mapping</title>
-    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
-<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an
-optional component that provides the data mapper pattern, where classes
-can be mapped to the database in open ended, multiple ways - allowing
-the object model and database schema to develop in a cleanly decoupled
-way from the beginning.</p>
-<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="table-define">Table Define</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="example">Example</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>SQLAlchemy</tag>
-        <tag>ORM</tag>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Rời Phố Về Núi, Ta Chill (P2)</title>
     <url>/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/</url>
     <content><![CDATA[<p>Rời phố về quê<br/> Sống với núi rừng<br/> Sương trời gió lộng<br/>
@@ -3781,6 +3754,33 @@ together using docker-compose</h1>
         <tag>Celery</tag>
         <tag>Cronjob</tag>
         <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLAlchemy for Python ORM Mapping</title>
+    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
+<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an
+optional component that provides the data mapper pattern, where classes
+can be mapped to the database in open ended, multiple ways - allowing
+the object model and database schema to develop in a cleanly decoupled
+way from the beginning.</p>
+<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="table-define">Table Define</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="example">Example</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>SQLAlchemy</tag>
+        <tag>ORM</tag>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -4297,8 +4297,8 @@ right choice for your application.</p>
 of your application, so choose wisely!</p>
 ]]></content>
       <categories>
-        <category>Web Development</category>
         <category>Cloud Computing</category>
+        <category>Web Development</category>
         <category>Software Development</category>
         <category>Technology</category>
         <category>Database Technologies</category>
@@ -4392,6 +4392,124 @@ to expose virtual machine port <code>80</code> to
       </tags>
   </entry>
   <entry>
+    <title>Approve What Your Headless Coding Agent Does With One Telegram Button</title>
+    <url>/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/</url>
+    <content><![CDATA[<h1 id="the-problem-with-letting-agents-run-unattended">The problem with
+letting agents run unattended</h1>
+<p>I run several coding agents headless on my workstation. One reviews
+pull requests, one implements tickets from a written plan, one watches
+repositories and regenerates documentation when the code moves. They are
+started by timers and scripts, so nobody is sitting at a terminal when
+they finish.</p>
+<p>Most of their work is safe to do alone: reading code, running tests,
+writing a report to disk. A few steps are not. Posting a review comment
+under my name, pushing a branch, opening a PR, deploying to a shared
+environment. Those are outward facing and hard to take back, and I want
+to see them before they happen.</p>
+<p>A permission prompt needs a terminal. Email is too slow to act on. A
+web dashboard is one more thing to keep running. What I already had open
+all day was Telegram on my phone, and Telegram bots support buttons
+under a message. So every risky step became a message with
+<strong>Approve</strong>, <strong>Show</strong> and
+<strong>Skip</strong> under it.</p>
+<a id="more"></a>
+<h1 id="the-whole-flow">The whole flow</h1>
+<p><img src="/images/2026-10-26/approval-flow.png" style="max-height: 420px;"></p>
+<p>The top row is the agent's half. It does its work, writes the draft
+(a comment, a PR description, a plan) to a file, and registers a small
+<strong>pending item</strong> next to it: what kind of action this is,
+where it goes, and a status of <code>awaiting</code>. An offer script
+then sends the draft to Telegram with the three buttons.</p>
+<p>The bottom row is mine. I read the message and tap. The tap reaches a
+<strong>bridge</strong>, a single long-running process that polls the
+bot, which hands it to an <strong>action handler</strong>. The handler
+does the publishing and writes the decision back onto the pending
+item.</p>
+<p>The split in colour is the point of the design. The agent can only
+propose. It never holds the token that posts to GitHub or deploys the
+site. The publisher holds those, and it only acts when I tap.</p>
+<h1 id="one-tap-step-by-step">One tap, step by step</h1>
+<p><img src="/images/2026-10-26/one-tap.png" style="max-height: 520px;"></p>
+<p>Each check in that picture is there because something broke without
+it.</p>
+<p><strong>Who tapped.</strong> The bridge drops any button press that
+does not come from my own chat. If the bot is ever added to a group, or
+someone else finds it, their taps must do nothing.</p>
+<p><strong>What the id looks like.</strong> The item id travels inside
+the button and ends up pointing at a file on disk, so only plain
+letters, digits and dashes are accepted. Telegram also caps button data
+at 64 bytes, which I found out the first time an id was a long, readable
+title and the message simply failed to send. Short ids, everything else
+in the file.</p>
+<p><strong>Answer the tap straight away.</strong> If the bot does not
+acknowledge the button press, the button keeps spinning on the phone and
+you tap it again.</p>
+<p><strong>Only one process polls the bot.</strong> Telegram hands each
+update to one consumer. When two scripts poll the same bot, they steal
+each other's taps and the buttons appear to do nothing. Every agent's
+buttons go through the one bridge, each with its own prefix.</p>
+<p><strong>Remember where you got to.</strong> The bridge stores the
+last update it handled. Without that, a restart replays the day's taps
+and approves things twice.</p>
+<h1 id="the-life-of-a-pending-item">The life of a pending item</h1>
+<p><img src="/images/2026-10-26/item-lifecycle.png" style="max-height: 440px;"></p>
+<p>There are two ways an item gets approved.</p>
+<p>In <strong>publish mode</strong> the tap does the work: the handler
+moves the item to <code>publishing</code>, posts the comment or opens
+the PR, and marks it <code>done</code> or <code>failed</code>. Moving to
+<code>publishing</code> before the slow call is the double-tap guard.
+Phones lag and people tap twice, and the second tap finds the item
+already past <code>awaiting</code> and changes nothing. A failed item is
+not lost; once the cause is fixed it goes back to <code>awaiting</code>
+and is offered again.</p>
+<p>In <strong>gate mode</strong> the agent is still running and waiting
+on the answer. The ticket-implementing agent writes a plan, offers it,
+and then watches the pending item. The tap only records
+<code>approved</code>, and the agent carries on and starts changing
+code. Because the whole protocol is a file on disk, I can also approve
+from a shell when my phone is not around, and every decision is still
+there to read afterwards.</p>
+<h1 id="the-one-design-rule-i-would-not-bend">The one design rule I
+would not bend</h1>
+<p>It is tempting to store a ready-made command in the pending item and
+simply run it when Approve is tapped. It is convenient, and it means
+anything that can write a pending file can run whatever it likes the
+moment I tap a button on my phone, usually without reading closely.</p>
+<p>So the item carries data, never code. There is a fixed list of kinds
+(a GitHub comment, a pull request, a blog post) and each kind has a
+publisher written by hand. A new kind of action means writing a new
+publisher, deliberately.</p>
+<h1 id="what-i-would-tell-someone-building-this">What I would tell
+someone building this</h1>
+<ul>
+<li><strong>Show the real thing.</strong> Approving a summary of a
+comment is not approving the comment. Send the exact text that will go
+out, or the diff. For anything long, the message carries a preview and
+<strong>Show</strong> sends the full draft as a file.</li>
+<li><strong>Make Skip cheap.</strong> If saying no is more work than
+saying yes, you will start saying yes.</li>
+<li><strong>Keep a log of decisions.</strong> An append-only history of
+what was proposed, what I chose and when has been more useful than I
+expected, mostly for spotting which kinds of proposal I keep skipping
+and fixing the agent that makes them.</li>
+</ul>
+<p>The whole thing is a few hundred lines of shell around Telegram's bot
+API. It has been the difference between agents I check on and agents I
+let run while I sleep, because the parts that matter still wait for
+me.</p>
+]]></content>
+      <categories>
+        <category>AI Engineering</category>
+      </categories>
+      <tags>
+        <tag>AI Coding Agents</tag>
+        <tag>Claude Code</tag>
+        <tag>Automation</tag>
+        <tag>Telegram</tag>
+        <tag>Human in the Loop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
     <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
     <content><![CDATA[<p>Hey code warriors!</p>
@@ -4436,131 +4554,6 @@ comments!</p>
         <tag>Remote Work</tag>
         <tag>Tech Humor</tag>
         <tag>Work-Life Balance</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Approve What Your Headless Coding Agent Does With One Telegram Button</title>
-    <url>/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/</url>
-    <content><![CDATA[<h1 id="the-problem-with-letting-agents-run-unattended">The problem with
-letting agents run unattended</h1>
-<p>I run several coding agents headless on my workstation. One reviews
-pull requests, one implements tickets from a written plan, one watches
-repositories and regenerates documentation when the code moves. They run
-as <code>claude -p</code> processes started by systemd timers and shell
-scripts, which means nobody is sitting at a terminal when they
-finish.</p>
-<p>Most of their work is safe to do alone: reading code, running tests,
-writing a report to disk. A few steps are not. Posting a review comment
-under my name, pushing a branch, opening a PR, deploying to a shared
-environment. Those are outward facing and hard to take back, and I want
-to see them before they happen.</p>
-<p>The usual answers did not fit. A permission prompt needs a terminal.
-Email is too slow to act on. A web dashboard is one more thing to keep
-running. What I already had open all day was Telegram on my phone, and
-Telegram bots support inline buttons. So every risky step became a
-message with <strong>Approve</strong>, <strong>Show</strong> and
-<strong>Skip</strong> under it.</p>
-<a id="more"></a>
-<p>After running this for a few months, the shape that works is small:
-three scripts and a directory of JSON files.</p>
-<h1 id="the-shape">The shape</h1>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">agent ──writes──&gt; pending&#x2F;&lt;id&gt;.json ──offer.sh──&gt; Telegram message + buttons</span><br><span class="line">                        ^                                   │ tap</span><br><span class="line">                        │                                   v</span><br><span class="line">                  action.sh &lt;──callback_data &quot;ok:&lt;id&gt;&quot;── bridge (getUpdates loop)</span><br></pre></td></tr></table></figure>
-<ol type="1">
-<li>The agent does its work, writes the draft (a comment, a PR body, a
-plan) to a file, and registers a <strong>pending item</strong>: a JSON
-file that says what kind of action it is and what it needs.</li>
-<li><code>offer.sh</code> sends the draft to Telegram with three buttons
-whose <code>callback_data</code> carries the item id.</li>
-<li>A long-running <strong>bridge</strong> is the only process polling
-the bot. When a button is tapped it calls
-<code>action.sh &lt;verb&gt; &lt;id&gt;</code>.</li>
-<li><code>action.sh</code> does the publishing for that kind of item and
-replies with one line of status.</li>
-</ol>
-<p>The agent never publishes anything itself. It can only propose.</p>
-<h1 id="the-pending-item">The pending item</h1>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;2026-10-26-fix-typo-in-readme&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;kind&quot;</span>: <span class="string">&quot;github_comment&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;repo&quot;</span>: <span class="string">&quot;someorg/somerepo&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;number&quot;</span>: <span class="number">123</span>,</span><br><span class="line">  <span class="attr">&quot;draft_file&quot;</span>: <span class="string">&quot;drafts/2026-10-26-fix-typo-in-readme.md&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;awaiting&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>The <code>kind</code> matters more than it looks. It is tempting to
-store a shell command in the item and run it on approval. That is
-convenient and a bad idea: anything that can write a pending file can
-now run arbitrary commands the moment I tap a button on my phone,
-usually without reading closely. The current version has a fixed set of
-kinds, and each one maps to a publisher function written by hand. The
-item supplies data, never code.</p>
-<h1 id="sending-the-offer">Sending the offer</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment"># offer.sh &lt;id&gt;: send a pending draft to Telegram with buttons</span></span><br><span class="line"><span class="built_in">set</span> -euo pipefail</span><br><span class="line">. ~/.config/agent-gate/telegram.env   <span class="comment"># TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID</span></span><br><span class="line">id=<span class="string">&quot;<span class="variable">$1</span>&quot;</span></span><br><span class="line">pend=<span class="string">&quot;pending/<span class="variable">$id</span>.json&quot;</span></span><br><span class="line">draft=$(jq -r .draft_file <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">kb=$(jq -nc --arg id <span class="string">&quot;<span class="variable">$id</span>&quot;</span> <span class="string">&#x27;&#123;inline_keyboard: [[</span></span><br><span class="line"><span class="string">  &#123;text: &quot;✅ Approve&quot;, callback_data: (&quot;ok:&quot;   + $id)&#125;,</span></span><br><span class="line"><span class="string">  &#123;text: &quot;📄 Show&quot;,    callback_data: (&quot;show:&quot; + $id)&#125;,</span></span><br><span class="line"><span class="string">  &#123;text: &quot;✖️ Skip&quot;,    callback_data: (&quot;skip:&quot; + $id)&#125;</span></span><br><span class="line"><span class="string">]]&#125;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">curl -s <span class="string">&quot;https://api.telegram.org/bot<span class="variable">$&#123;TELEGRAM_BOT_TOKEN&#125;</span>/sendMessage&quot;</span> \</span><br><span class="line">  -d chat_id=<span class="string">&quot;<span class="variable">$TELEGRAM_CHAT_ID</span>&quot;</span> \</span><br><span class="line">  --data-urlencode <span class="string">&quot;text=<span class="subst">$(jq -r .kind <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>: <span class="subst">$(head -c 3000 <span class="string">&quot;<span class="variable">$draft</span>&quot;</span>)</span>&quot;</span> \</span><br><span class="line">  --data-urlencode <span class="string">&quot;reply_markup=<span class="variable">$kb</span>&quot;</span></span><br></pre></td></tr></table></figure>
-<p>Two limits to know about: a message is at most 4096 characters, and
-<code>callback_data</code> is at most 64 bytes. Keep the id short and
-put everything else in the file. For long drafts I send a preview in the
-message and let <strong>Show</strong> send the whole file as a
-document.</p>
-<h1 id="the-bridge">The bridge</h1>
-<p>Telegram allows only one <code>getUpdates</code> consumer per bot. If
-two scripts poll the same bot, they steal each other's updates and
-buttons appear to do nothing. So there is exactly one bridge, and every
-agent's buttons go through it with a prefix per agent.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment"># bridge.sh: the single getUpdates consumer, dispatching button taps</span></span><br><span class="line">. ~/.config/agent-gate/telegram.env</span><br><span class="line">API=<span class="string">&quot;https://api.telegram.org/bot<span class="variable">$&#123;TELEGRAM_BOT_TOKEN&#125;</span>&quot;</span></span><br><span class="line">OFFSET=$(cat offset 2&gt;/dev/null || <span class="built_in">echo</span> 0)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span></span><br><span class="line">  resp=$(curl -s -m 40 <span class="string">&quot;<span class="variable">$&#123;API&#125;</span>/getUpdates?offset=<span class="variable">$&#123;OFFSET&#125;</span>&amp;timeout=30&amp;allowed_updates=%5B%22callback_query%22%5D&quot;</span>)</span><br><span class="line">  <span class="keyword">while</span> <span class="built_in">read</span> -r u; <span class="keyword">do</span></span><br><span class="line">    [ -n <span class="string">&quot;<span class="variable">$u</span>&quot;</span> ] || <span class="built_in">continue</span></span><br><span class="line">    OFFSET=$(( $(jq .update_id &lt;&lt;&lt;&quot;<span class="variable">$u</span>&quot;) + <span class="number">1</span> )); <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$OFFSET</span>&quot;</span> &gt; offset</span><br><span class="line">    cb=$(jq -c .callback_query &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$u</span>&quot;</span>)</span><br><span class="line">    <span class="comment"># Only my own chat may approve anything.</span></span><br><span class="line">    [ <span class="string">&quot;<span class="subst">$(jq -r .from.id &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$cb</span>&quot;</span>)</span>&quot;</span> = <span class="string">&quot;<span class="variable">$TELEGRAM_CHAT_ID</span>&quot;</span> ] || <span class="built_in">continue</span></span><br><span class="line">    curl -s <span class="string">&quot;<span class="variable">$&#123;API&#125;</span>/answerCallbackQuery&quot;</span> -d callback_query_id=<span class="string">&quot;<span class="subst">$(jq -r .id &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$cb</span>&quot;</span>)</span>&quot;</span> &gt;/dev/null</span><br><span class="line">    data=$(jq -r .data &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$cb</span>&quot;</span>)</span><br><span class="line">    verb=<span class="variable">$&#123;data%%:*&#125;</span>; id=<span class="variable">$&#123;data#*:&#125;</span></span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;<span class="variable">$id</span>&quot;</span> <span class="keyword">in</span> *[!A-Za-z0-9._-]*|<span class="string">&quot;&quot;</span>) <span class="built_in">continue</span>;; <span class="keyword">esac</span></span><br><span class="line">    out=$(./action.sh <span class="string">&quot;<span class="variable">$verb</span>&quot;</span> <span class="string">&quot;<span class="variable">$id</span>&quot;</span> 2&gt;&amp;1 | tail -1)</span><br><span class="line">    curl -s <span class="string">&quot;<span class="variable">$&#123;API&#125;</span>/sendMessage&quot;</span> -d chat_id=<span class="string">&quot;<span class="variable">$TELEGRAM_CHAT_ID</span>&quot;</span> --data-urlencode <span class="string">&quot;text=<span class="variable">$out</span>&quot;</span> &gt;/dev/null</span><br><span class="line">  <span class="keyword">done</span> &lt; &lt;(jq -c <span class="string">&#x27;.result[]?&#x27;</span> &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$resp</span>&quot;</span>)</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-<p>Three details in there earned their place by breaking:</p>
-<ul>
-<li><strong>Persist the offset.</strong> Without it, a restart replays
-the last day of taps and approves things twice.</li>
-<li><strong>Answer the callback.</strong> If you do not call
-<code>answerCallbackQuery</code>, the button spins on the phone for a
-while and you tap it again.</li>
-<li><strong>Check who tapped and what the id looks like.</strong> The id
-ends up in a file path. Allow only safe characters.</li>
-</ul>
-<p>I run the bridge as a systemd user service with
-<code>Restart=always</code> and lingering enabled, so it survives
-logouts and reboots.</p>
-<h1 id="the-action-handler">The action handler</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment"># action.sh &lt;ok|show|skip&gt; &lt;id&gt;</span></span><br><span class="line"><span class="built_in">set</span> -uo pipefail</span><br><span class="line">pend=<span class="string">&quot;pending/<span class="variable">$2</span>.json&quot;</span></span><br><span class="line">[ -f <span class="string">&quot;<span class="variable">$pend</span>&quot;</span> ] || &#123; <span class="built_in">echo</span> <span class="string">&quot;Nothing pending for <span class="variable">$2</span>&quot;</span>; <span class="built_in">exit</span> 0; &#125;</span><br><span class="line">status=$(jq -r .status <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">stamp</span></span>() &#123; jq --arg s <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="string">&#x27;.status=$s | .decided_at=(now|todate)&#x27;</span> <span class="string">&quot;<span class="variable">$pend</span>&quot;</span> &gt; <span class="string">&quot;<span class="variable">$pend</span>.tmp&quot;</span> &amp;&amp; mv <span class="string">&quot;<span class="variable">$pend</span>.tmp&quot;</span> <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;<span class="variable">$1</span>&quot;</span> <span class="keyword">in</span></span><br><span class="line">  show) cat <span class="string">&quot;<span class="subst">$(jq -r .draft_file <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> ;;</span><br><span class="line">  skip) [ <span class="string">&quot;<span class="variable">$status</span>&quot;</span> = awaiting ] &amp;&amp; stamp skipped &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;Skipped&quot;</span> ;;</span><br><span class="line">  ok)</span><br><span class="line">    [ <span class="string">&quot;<span class="variable">$status</span>&quot;</span> = awaiting ] || &#123; <span class="built_in">echo</span> <span class="string">&quot;Already <span class="variable">$status</span>&quot;</span>; <span class="built_in">exit</span> 0; &#125;</span><br><span class="line">    stamp publishing</span><br><span class="line">    <span class="keyword">case</span> $(jq -r .kind <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>) <span class="keyword">in</span></span><br><span class="line">      github_comment)</span><br><span class="line">        gh issue comment <span class="string">&quot;<span class="subst">$(jq -r .number <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> --repo <span class="string">&quot;<span class="subst">$(jq -r .repo <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> \</span><br><span class="line">          --body-file <span class="string">&quot;<span class="subst">$(jq -r .draft_file <span class="string">&quot;<span class="variable">$pend</span>&quot;</span>)</span>&quot;</span> &amp;&amp; stamp <span class="keyword">done</span> &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;Posted&quot;</span> ;;</span><br><span class="line">      *) <span class="built_in">echo</span> <span class="string">&quot;Unknown kind&quot;</span>; stamp failed ;;</span><br><span class="line">    <span class="keyword">esac</span> ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
-<p>The status check before publishing is the double-tap guard. Phones
-lag, people tap twice, and without it you post the same comment twice.
-Moving to <code>publishing</code> before the slow call means a second
-tap that arrives mid-publish sees <code>publishing</code> and stops.</p>
-<h1 id="gating-a-step-in-the-middle-of-a-run">Gating a step in the
-middle of a run</h1>
-<p>Sometimes the agent should not just propose and exit. The
-ticket-implementing agent writes a plan, and only after I approve the
-plan does it start changing code. For that the agent offers the plan,
-then waits on the file:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./offer.sh <span class="string">&quot;<span class="variable">$id</span>&quot;</span></span><br><span class="line"><span class="keyword">while</span> [ <span class="string">&quot;<span class="subst">$(jq -r .status <span class="string">&quot;pending/<span class="variable">$id</span>.json&quot;</span>)</span>&quot;</span> = awaiting ]; <span class="keyword">do</span> sleep 10; <span class="keyword">done</span></span><br><span class="line">[ <span class="string">&quot;<span class="subst">$(jq -r .status <span class="string">&quot;pending/<span class="variable">$id</span>.json&quot;</span>)</span>&quot;</span> = approved ] || <span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
-<p>For the waiting case, the action handler only stamps the decision
-instead of publishing. The agent reads it and carries on. A file on disk
-is the whole protocol, so I can approve from the shell with
-<code>jq</code> when my phone is not around, and I can see every
-decision afterwards with <code>ls pending/</code>.</p>
-<h1 id="what-i-would-tell-someone-building-this">What I would tell
-someone building this</h1>
-<ul>
-<li><strong>Keep the agent's permissions and the approver's permissions
-apart.</strong> The agent writes drafts. A separate, boring script holds
-the tokens that publish.</li>
-<li><strong>Show the real thing.</strong> Approving a summary of a
-comment is not approving the comment. Send the exact text that will go
-out, or the diff.</li>
-<li><strong>Make Skip cheap.</strong> If saying no is more work than
-saying yes, you will start saying yes.</li>
-<li><strong>Log decisions.</strong> An append-only
-<code>history.jsonl</code> with what was proposed, what I chose and when
-has been more useful than I expected, mostly for noticing which kinds of
-proposal I skip and fixing the agent that makes them.</li>
-</ul>
-<p>The whole thing is a few hundred lines of Bash, <code>jq</code> and
-<code>curl</code>. It has been the difference between agents I check on
-and agents I trust to run while I sleep, because the parts that matter
-still wait for me.</p>
-]]></content>
-      <categories>
-        <category>AI Engineering</category>
-      </categories>
-      <tags>
-        <tag>AI Coding Agents</tag>
-        <tag>Claude Code</tag>
-        <tag>Automation</tag>
-        <tag>Telegram</tag>
-        <tag>Bash</tag>
       </tags>
   </entry>
   <entry>
@@ -4823,62 +4816,6 @@ harder to distinguish.</p>
       </tags>
   </entry>
   <entry>
-    <title>Reflecting on Unexpected Changes: A Developer&#39;s Perspective on the Ukraine-Russia Situation</title>
-    <url>/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/</url>
-    <content><![CDATA[<p>Hey fellow developers,</p>
-<p>Today, I'm stepping away from our usual tech-focused discussions to
-share some personal reflections. Recent events, particularly the
-situation between Ukraine and Russia, have been a stark reminder of how
-life can change unexpectedly.</p>
-<p><strong>The Uncertainty of Tomorrow</strong></p>
-<p>In our world of structured code and predictable algorithms, the
-unpredictability of life stands in stark contrast. The conflict between
-Ukraine and Russia, far removed from the realm of technology, has
-brought this reality to the forefront. As developers, we're accustomed
-to solving problems logically, but some situations, like this conflict,
-defy straightforward solutions.</p>
-<a id="more"></a>
-<p><strong>The Impact on Our Global Community</strong></p>
-<p>I've been deeply affected by the situation, especially thinking about
-my Ukrainian colleagues. We were in the midst of projects, collaborating
-seamlessly across borders, when suddenly, they were unreachable.
-Learning that Ukrainian males aged 18 to 60 were called to join the
-defense forces hit close to home. All I could do was hope for their
-safety and a swift return to normalcy.</p>
-<p><strong>Personal Connection</strong></p>
-<p>Perhaps you've felt similar emotions. One day, we're sharing laughs
-and code reviews; the next, our friends are in a war zone, with no
-certainty of reunion. The thought of not being able to collaborate with
-my Ukrainian peers again is heartbreaking. I long for the day when we
-can reunite and continue our work together.</p>
-<p><strong>Embracing Change and Hope</strong></p>
-<p>Change is an inevitable part of life, as much as it is in the
-development cycle. While we might not be able to control these changes,
-we can navigate them, hoping for peaceful resolutions and minimal
-suffering. From here in Vietnam, my thoughts and prayers go out to
-everyone affected by this conflict.</p>
-<p>As we grapple with these changes and their impact, both near and far,
-it's important to remember the resilience and adaptability we possess,
-especially in our tech community. This leads me to a final thought, a
-message of hope and solidarity that I want to share with all of you.</p>
-<p><strong>Conclusion</strong></p>
-<p>In our journey as developers, we code not just for functionality but
-for a better world. Through our work, we strive to build bridges of
-understanding and cooperation. Despite the uncertainties and challenges,
-let's remain united in hope and continue to support each other. Stay
-strong and hopeful, everyone.</p>
-]]></content>
-      <categories>
-        <category>Tech and Humanity</category>
-      </categories>
-      <tags>
-        <tag>Work-Life Balance</tag>
-        <tag>Global Events</tag>
-        <tag>Developer Community</tag>
-        <tag>Tech and Society</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Run Headless Chrome Browser Inside a Docker Container</title>
     <url>/2020/11/20/run-headless-chrome-inside-a-docker-container/</url>
     <content><![CDATA[<h1 id="overview">1. Overview</h1>
@@ -4943,6 +4880,62 @@ href="http://localhost:5000">http://localhost:5000</a></li>
         <tag>Automated Testing</tag>
         <tag>Tech How-To</tag>
         <tag>Docker Deployment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Reflecting on Unexpected Changes: A Developer&#39;s Perspective on the Ukraine-Russia Situation</title>
+    <url>/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/</url>
+    <content><![CDATA[<p>Hey fellow developers,</p>
+<p>Today, I'm stepping away from our usual tech-focused discussions to
+share some personal reflections. Recent events, particularly the
+situation between Ukraine and Russia, have been a stark reminder of how
+life can change unexpectedly.</p>
+<p><strong>The Uncertainty of Tomorrow</strong></p>
+<p>In our world of structured code and predictable algorithms, the
+unpredictability of life stands in stark contrast. The conflict between
+Ukraine and Russia, far removed from the realm of technology, has
+brought this reality to the forefront. As developers, we're accustomed
+to solving problems logically, but some situations, like this conflict,
+defy straightforward solutions.</p>
+<a id="more"></a>
+<p><strong>The Impact on Our Global Community</strong></p>
+<p>I've been deeply affected by the situation, especially thinking about
+my Ukrainian colleagues. We were in the midst of projects, collaborating
+seamlessly across borders, when suddenly, they were unreachable.
+Learning that Ukrainian males aged 18 to 60 were called to join the
+defense forces hit close to home. All I could do was hope for their
+safety and a swift return to normalcy.</p>
+<p><strong>Personal Connection</strong></p>
+<p>Perhaps you've felt similar emotions. One day, we're sharing laughs
+and code reviews; the next, our friends are in a war zone, with no
+certainty of reunion. The thought of not being able to collaborate with
+my Ukrainian peers again is heartbreaking. I long for the day when we
+can reunite and continue our work together.</p>
+<p><strong>Embracing Change and Hope</strong></p>
+<p>Change is an inevitable part of life, as much as it is in the
+development cycle. While we might not be able to control these changes,
+we can navigate them, hoping for peaceful resolutions and minimal
+suffering. From here in Vietnam, my thoughts and prayers go out to
+everyone affected by this conflict.</p>
+<p>As we grapple with these changes and their impact, both near and far,
+it's important to remember the resilience and adaptability we possess,
+especially in our tech community. This leads me to a final thought, a
+message of hope and solidarity that I want to share with all of you.</p>
+<p><strong>Conclusion</strong></p>
+<p>In our journey as developers, we code not just for functionality but
+for a better world. Through our work, we strive to build bridges of
+understanding and cooperation. Despite the uncertainties and challenges,
+let's remain united in hope and continue to support each other. Stay
+strong and hopeful, everyone.</p>
+]]></content>
+      <categories>
+        <category>Tech and Humanity</category>
+      </categories>
+      <tags>
+        <tag>Work-Life Balance</tag>
+        <tag>Global Events</tag>
+        <tag>Developer Community</tag>
+        <tag>Tech and Society</tag>
       </tags>
   </entry>
   <entry>

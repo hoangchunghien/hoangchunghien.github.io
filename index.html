@@ -323,7 +323,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2026-10-26 17:00:00 / Modified: 09:08:41" itemprop="dateCreated datePublished" datetime="2026-10-26T17:00:00+00:00">2026-10-26</time>
+      <time title="Created: 2026-10-26 17:00:00 / Modified: 09:16:22" itemprop="dateCreated datePublished" datetime="2026-10-26T17:00:00+00:00">2026-10-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -349,20 +349,19 @@
 letting agents run unattended</h1>
 <p>I run several coding agents headless on my workstation. One reviews
 pull requests, one implements tickets from a written plan, one watches
-repositories and regenerates documentation when the code moves. They run
-as <code>claude -p</code> processes started by systemd timers and shell
-scripts, which means nobody is sitting at a terminal when they
-finish.</p>
+repositories and regenerates documentation when the code moves. They are
+started by timers and scripts, so nobody is sitting at a terminal when
+they finish.</p>
 <p>Most of their work is safe to do alone: reading code, running tests,
 writing a report to disk. A few steps are not. Posting a review comment
 under my name, pushing a branch, opening a PR, deploying to a shared
 environment. Those are outward facing and hard to take back, and I want
 to see them before they happen.</p>
-<p>The usual answers did not fit. A permission prompt needs a terminal.
-Email is too slow to act on. A web dashboard is one more thing to keep
-running. What I already had open all day was Telegram on my phone, and
-Telegram bots support inline buttons. So every risky step became a
-message with <strong>Approve</strong>, <strong>Show</strong> and
+<p>A permission prompt needs a terminal. Email is too slow to act on. A
+web dashboard is one more thing to keep running. What I already had open
+all day was Telegram on my phone, and Telegram bots support buttons
+under a message. So every risky step became a message with
+<strong>Approve</strong>, <strong>Show</strong> and
 <strong>Skip</strong> under it.</p>
           <!--noindex-->
             <div class="post-button">
