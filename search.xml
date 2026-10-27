@@ -1,6 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
+    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
+    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a
+time-traveling journey through the evolution of JavaScript's
+asynchronous capabilities. From the early days of callbacks to the
+modern elegance of async/await, we'll explore how these features came to
+be and how they've shaped the way we write JavaScript today.</p>
+<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
+<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like
+a helpful little assistant, great for adding interactive bits to
+websites. But as the internet grows, our assistant needs to juggle more
+tasks simultaneously.</p>
+<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
+<ol type="1">
+<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the
+original method for handling asynchronous operations in JavaScript.
+They're like the first pair of training wheels for the language, helping
+it to manage tasks that take time, like loading data from a server.</li>
+</ol>
+<a id="more"></a>
+<ol start="2" type="1">
+<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015
+(also known as ES6), Promises were officially introduced. They brought a
+new level of sophistication to handling async operations, much like
+upgrading from a flip phone to a smartphone.</p></li>
+<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In
+2017, JavaScript took a significant leap forward with async/await, part
+of the ES2017 standard. Writing async code became as easy as writing
+your usual synchronous code, but with all the power of non-blocking
+execution.</p></li>
+</ol>
+<p><strong>A Coding Journey Through Time</strong></p>
+<p>Let's see how each of these stages changed the way we write code when
+performing a simple task: fetching and displaying data.</p>
+<p><em>In the Time of Callbacks:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><em>The Promises Era Begins:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
+<p><em>The Age of Async/Await:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
+<hr />
+<p>From the early days of callbacks to the streamlined era of
+async/await, JavaScript's journey in asynchronous programming is nothing
+short of remarkable. It reflects the language's adaptability and growth,
+paralleling the ever-evolving landscape of web development. As
+JavaScript continues to evolve, who knows what the future holds? But one
+thing is certain – it will keep making our coding lives easier and more
+efficient.</p>
+]]></content>
+      <categories>
+        <category>Web Development</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Asynchronous Programming</tag>
+        <tag>Event Loop</tag>
+        <tag>Callbacks</tag>
+        <tag>Promises</tag>
+        <tag>Async/Await</tag>
+        <tag>ES2015</tag>
+        <tag>ES2017</tag>
+        <tag>Web Development</tag>
+        <tag>JavaScript Evolution</tag>
+        <tag>Coding History</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure Administrator Associate achievement</title>
+    <url>/2021/06/12/Azure-Administrator-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
+<a id="more"></a>
+<p>After getting the first <code>Azure Fundamentals Certificate</code>,
+I went on studying the higher level to achieve this one as an
+Administrator Associate. I spent most of my free time to learn <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
+learning website</a> and to do the exercises for about a week, as soon
+as having full knowledge of the course.</p>
+<p>Then I officially took an online exam at home due to the spreading of
+Covid-19 in the city. The exam lasted for 2 hours in a private quiet
+room, but to me, I just finished the test in within 1 hour. A check-in
+progress was required before the exam started (about 30 minutes),
+including capturing angles of the room, making sure that no sounds
+happened to disturb the exam, or else candidates could be considered to
+be fail.</p>
+<p>The feeling of taking the online exam at home was pretty awesome and
+safe. I was confident to pass the test because I had had practiced many
+many times and learned from them, and you know what, I did it. I passed
+the exam! The result was announced as soon as the test was submitted,
+the certification was released in about 30 minutes later. I couldn't
+wait to publish it on muy Linkedin page! It showed that my studying
+method was right and useful, which could help me get the
+certification.</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Administrator</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>10 Tips You Must Know for Effectively Using CloudWatch Logs Insights</title>
     <url>/2023/12/21/10-Tips-You-Must-Know-for-Effectively-Using-CloudWatch-Logs-Insights/</url>
     <content><![CDATA[<p>Amazon CloudWatch Logs Insights is a robust tool for log analysis,
@@ -834,111 +939,6 @@ trends.</li>
       </tags>
   </entry>
   <entry>
-    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
-    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
-    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a
-time-traveling journey through the evolution of JavaScript's
-asynchronous capabilities. From the early days of callbacks to the
-modern elegance of async/await, we'll explore how these features came to
-be and how they've shaped the way we write JavaScript today.</p>
-<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
-<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like
-a helpful little assistant, great for adding interactive bits to
-websites. But as the internet grows, our assistant needs to juggle more
-tasks simultaneously.</p>
-<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
-<ol type="1">
-<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the
-original method for handling asynchronous operations in JavaScript.
-They're like the first pair of training wheels for the language, helping
-it to manage tasks that take time, like loading data from a server.</li>
-</ol>
-<a id="more"></a>
-<ol start="2" type="1">
-<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015
-(also known as ES6), Promises were officially introduced. They brought a
-new level of sophistication to handling async operations, much like
-upgrading from a flip phone to a smartphone.</p></li>
-<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In
-2017, JavaScript took a significant leap forward with async/await, part
-of the ES2017 standard. Writing async code became as easy as writing
-your usual synchronous code, but with all the power of non-blocking
-execution.</p></li>
-</ol>
-<p><strong>A Coding Journey Through Time</strong></p>
-<p>Let's see how each of these stages changed the way we write code when
-performing a simple task: fetching and displaying data.</p>
-<p><em>In the Time of Callbacks:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><em>The Promises Era Begins:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
-<p><em>The Age of Async/Await:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
-<hr />
-<p>From the early days of callbacks to the streamlined era of
-async/await, JavaScript's journey in asynchronous programming is nothing
-short of remarkable. It reflects the language's adaptability and growth,
-paralleling the ever-evolving landscape of web development. As
-JavaScript continues to evolve, who knows what the future holds? But one
-thing is certain – it will keep making our coding lives easier and more
-efficient.</p>
-]]></content>
-      <categories>
-        <category>Web Development</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>Asynchronous Programming</tag>
-        <tag>Event Loop</tag>
-        <tag>Callbacks</tag>
-        <tag>Promises</tag>
-        <tag>Async/Await</tag>
-        <tag>ES2015</tag>
-        <tag>ES2017</tag>
-        <tag>Web Development</tag>
-        <tag>JavaScript Evolution</tag>
-        <tag>Coding History</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure Administrator Associate achievement</title>
-    <url>/2021/06/12/Azure-Administrator-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
-<a id="more"></a>
-<p>After getting the first <code>Azure Fundamentals Certificate</code>,
-I went on studying the higher level to achieve this one as an
-Administrator Associate. I spent most of my free time to learn <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
-learning website</a> and to do the exercises for about a week, as soon
-as having full knowledge of the course.</p>
-<p>Then I officially took an online exam at home due to the spreading of
-Covid-19 in the city. The exam lasted for 2 hours in a private quiet
-room, but to me, I just finished the test in within 1 hour. A check-in
-progress was required before the exam started (about 30 minutes),
-including capturing angles of the room, making sure that no sounds
-happened to disturb the exam, or else candidates could be considered to
-be fail.</p>
-<p>The feeling of taking the online exam at home was pretty awesome and
-safe. I was confident to pass the test because I had had practiced many
-many times and learned from them, and you know what, I did it. I passed
-the exam! The result was announced as soon as the test was submitted,
-the certification was released in about 30 minutes later. I couldn't
-wait to publish it on muy Linkedin page! It showed that my studying
-method was right and useful, which could help me get the
-certification.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>Administrator</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Azure DevOps Engineering Expert achievement</title>
     <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
@@ -1509,136 +1509,6 @@ difference tasks from a same publisher.</p>
       </tags>
   </entry>
   <entry>
-    <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
-    <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction</h1>
-<p>In the ever-evolving world of software development, efficiency and
-flexibility are paramount. Docker, a household name in containerization,
-has taken a significant leap forward with Docker Buildx. This advanced
-feature not only enhances the capabilities of the standard Docker build
-command but revolutionizes how developers approach multi-platform
-containerization. Let’s dive into the world of Docker Buildx and explore
-how it's changing the game.</p>
-<p><img src="/images/2023-12-19/infographic.png"> <a id="more"></a></p>
-<h1 id="key-features-of-docker-buildx">Key Features of Docker
-Buildx</h1>
-<p><strong>Multi-Platform Support</strong>: Docker Buildx stands out
-with its ability to build container images for various platforms, like
-amd64 and arm64, from a single code base. This is a game-changer for
-developers targeting diverse hardware architectures.</p>
-<p><strong>BuildKit Backend</strong>: At its core, Docker Buildx
-leverages BuildKit, offering superior performance and caching compared
-to the traditional Docker build. BuildKit's efficiency lies in its
-parallelized builds, drastically cutting down build times.</p>
-<p><strong>Enhanced Caching</strong>: Speed is of the essence, and
-Buildx’s advanced caching mechanisms are designed to reuse previous
-build steps, significantly accelerating the build process.</p>
-<p><strong>Remote Building Capabilities</strong>: Docker Buildx isn't
-limited to local builds. It can seamlessly integrate with remote Docker
-daemons or cloud-based build services, optimizing resource usage and
-offering flexibility in build environments.</p>
-<p><strong>Flexible Output Options</strong>: It offers a variety of
-output options, including local file systems, Docker registries, and
-direct outputs to the Docker daemon.</p>
-<h1 id="practical-guide-utilizing-docker-buildx">Practical Guide:
-Utilizing Docker Buildx</h1>
-<ol type="1">
-<li><strong>Getting Started: Installation</strong> Docker Buildx comes
-with Docker 19.03 or later. To ensure it's installed and to set it up,
-follow these steps:</li>
-</ol>
-<ul>
-<li><strong>Check Docker Version:</strong></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
-<p>Ensure that the version is 19.03 or newer.</p>
-<ul>
-<li><strong>Enable Experimental Features:</strong></li>
-</ul>
-<p>If not already enabled, you might need to enable Docker's
-experimental features. This can be done by editing the Docker
-configuration file (usually located at ~/.docker/config.json) and
-setting "experimental": "enabled". Alternatively, you can set the
-environment variable DOCKER_CLI_EXPERIMENTAL=enabled.</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;experimental&quot;</span>: <span class="string">&quot;enabled&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li><strong>Creating a Buildx Builder Instance</strong></li>
-</ol>
-<p>To take full advantage of Docker Buildx, create a new builder
-instance with the following command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx create --name mybuilder --use</span><br></pre></td></tr></table></figure>
-<p>This command creates a new builder instance named mybuilder and sets
-it as the current builder.</p>
-<ol start="3" type="1">
-<li><strong>Building Images</strong></li>
-</ol>
-<p>Use the docker buildx build command to build images. Here's an
-example that demonstrates a multi-platform build:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest .</span><br></pre></td></tr></table></figure>
-<p>This command builds an image for both amd64 and arm64 platforms, tags
-it with myuser/myapp:latest, and uses the current directory as the build
-context.</p>
-<ol start="4" type="1">
-<li><strong>Pushing to Registries</strong></li>
-</ol>
-<p>To push the built images to a Docker registry, include the --push
-flag in the build command:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest . --push</span><br></pre></td></tr></table></figure>
-<p>This command builds the images and pushes them to the Docker registry
-with the specified tag.</p>
-<p>Note: Replace myuser/myapp:latest with your own Docker Hub username
-and desired image name.</p>
-<h1 id="use-cases-in-the-real-world">Use Cases in the Real World</h1>
-<p><strong>Cross-Platform Compatibility</strong>: Create Docker images
-that work across various systems, from traditional Intel/AMD processors
-to ARM-based devices like the Raspberry Pi.</p>
-<p><strong>Enhancing CI/CD Pipelines</strong>: Integrate Docker Buildx
-into CI/CD pipelines for automated, multi-platform builds, ensuring
-consistent and efficient deployment.</p>
-<p><strong>Optimizing Local Development</strong>: Benefit from advanced
-caching and parallel builds, making the development process faster and
-more efficient.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>Docker Buildx is not just a tool; it's a paradigm shift for
-developers and organizations aiming to optimize their Docker container
-builds, particularly in multi-platform scenarios. Its synergy with
-BuildKit ushers in a new era of performance, flexibility, and
-efficiency, surpassing traditional Docker builds. Whether you're a solo
-developer or part of a large team, Docker Buildx is poised to become an
-indispensable part of your development toolkit.</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-        <category>DevOps</category>
-        <category>Software Development</category>
-        <category>CI/CD</category>
-        <category>Containerization</category>
-        <category>Performance Optimization</category>
-        <category>Technology Tutorials</category>
-        <category>Programming &amp; Tools</category>
-        <category>Cross-Platform Development</category>
-        <category>Technology Innovations</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Docker Buildx</tag>
-        <tag>Containerization Technology</tag>
-        <tag>Multi-Platform Docker Builds</tag>
-        <tag>Docker Buildx Tutorial</tag>
-        <tag>BuildKit Backend</tag>
-        <tag>CI/CD with Docker</tag>
-        <tag>Cross-Platform Docker Images</tag>
-        <tag>Docker Caching Mechanisms</tag>
-        <tag>Remote Docker Builds</tag>
-        <tag>Docker CLI Plugin</tag>
-        <tag>Efficient Docker Builds</tag>
-        <tag>Docker Buildx Features</tag>
-        <tag>Docker Build Optimization</tag>
-        <tag>Software Development</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Django Object Level Permission Template</title>
     <url>/2021/01/21/Django-Object-Level-Permission-Templage/</url>
     <content><![CDATA[<p>A template to guide you how to setup a Django Project with Object
@@ -1834,6 +1704,136 @@ href="http://jsonapi.org/format/">JSON API format specification</a></li>
         <tag>Django Guardian</tag>
         <tag>Djoser</tag>
         <tag>Object Level Permission</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
+    <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>In the ever-evolving world of software development, efficiency and
+flexibility are paramount. Docker, a household name in containerization,
+has taken a significant leap forward with Docker Buildx. This advanced
+feature not only enhances the capabilities of the standard Docker build
+command but revolutionizes how developers approach multi-platform
+containerization. Let’s dive into the world of Docker Buildx and explore
+how it's changing the game.</p>
+<p><img src="/images/2023-12-19/infographic.png"> <a id="more"></a></p>
+<h1 id="key-features-of-docker-buildx">Key Features of Docker
+Buildx</h1>
+<p><strong>Multi-Platform Support</strong>: Docker Buildx stands out
+with its ability to build container images for various platforms, like
+amd64 and arm64, from a single code base. This is a game-changer for
+developers targeting diverse hardware architectures.</p>
+<p><strong>BuildKit Backend</strong>: At its core, Docker Buildx
+leverages BuildKit, offering superior performance and caching compared
+to the traditional Docker build. BuildKit's efficiency lies in its
+parallelized builds, drastically cutting down build times.</p>
+<p><strong>Enhanced Caching</strong>: Speed is of the essence, and
+Buildx’s advanced caching mechanisms are designed to reuse previous
+build steps, significantly accelerating the build process.</p>
+<p><strong>Remote Building Capabilities</strong>: Docker Buildx isn't
+limited to local builds. It can seamlessly integrate with remote Docker
+daemons or cloud-based build services, optimizing resource usage and
+offering flexibility in build environments.</p>
+<p><strong>Flexible Output Options</strong>: It offers a variety of
+output options, including local file systems, Docker registries, and
+direct outputs to the Docker daemon.</p>
+<h1 id="practical-guide-utilizing-docker-buildx">Practical Guide:
+Utilizing Docker Buildx</h1>
+<ol type="1">
+<li><strong>Getting Started: Installation</strong> Docker Buildx comes
+with Docker 19.03 or later. To ensure it's installed and to set it up,
+follow these steps:</li>
+</ol>
+<ul>
+<li><strong>Check Docker Version:</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+<p>Ensure that the version is 19.03 or newer.</p>
+<ul>
+<li><strong>Enable Experimental Features:</strong></li>
+</ul>
+<p>If not already enabled, you might need to enable Docker's
+experimental features. This can be done by editing the Docker
+configuration file (usually located at ~/.docker/config.json) and
+setting "experimental": "enabled". Alternatively, you can set the
+environment variable DOCKER_CLI_EXPERIMENTAL=enabled.</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;experimental&quot;</span>: <span class="string">&quot;enabled&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li><strong>Creating a Buildx Builder Instance</strong></li>
+</ol>
+<p>To take full advantage of Docker Buildx, create a new builder
+instance with the following command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx create --name mybuilder --use</span><br></pre></td></tr></table></figure>
+<p>This command creates a new builder instance named mybuilder and sets
+it as the current builder.</p>
+<ol start="3" type="1">
+<li><strong>Building Images</strong></li>
+</ol>
+<p>Use the docker buildx build command to build images. Here's an
+example that demonstrates a multi-platform build:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest .</span><br></pre></td></tr></table></figure>
+<p>This command builds an image for both amd64 and arm64 platforms, tags
+it with myuser/myapp:latest, and uses the current directory as the build
+context.</p>
+<ol start="4" type="1">
+<li><strong>Pushing to Registries</strong></li>
+</ol>
+<p>To push the built images to a Docker registry, include the --push
+flag in the build command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker buildx build --platform linux/amd64,linux/arm64 -t myuser/myapp:latest . --push</span><br></pre></td></tr></table></figure>
+<p>This command builds the images and pushes them to the Docker registry
+with the specified tag.</p>
+<p>Note: Replace myuser/myapp:latest with your own Docker Hub username
+and desired image name.</p>
+<h1 id="use-cases-in-the-real-world">Use Cases in the Real World</h1>
+<p><strong>Cross-Platform Compatibility</strong>: Create Docker images
+that work across various systems, from traditional Intel/AMD processors
+to ARM-based devices like the Raspberry Pi.</p>
+<p><strong>Enhancing CI/CD Pipelines</strong>: Integrate Docker Buildx
+into CI/CD pipelines for automated, multi-platform builds, ensuring
+consistent and efficient deployment.</p>
+<p><strong>Optimizing Local Development</strong>: Benefit from advanced
+caching and parallel builds, making the development process faster and
+more efficient.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Docker Buildx is not just a tool; it's a paradigm shift for
+developers and organizations aiming to optimize their Docker container
+builds, particularly in multi-platform scenarios. Its synergy with
+BuildKit ushers in a new era of performance, flexibility, and
+efficiency, surpassing traditional Docker builds. Whether you're a solo
+developer or part of a large team, Docker Buildx is poised to become an
+indispensable part of your development toolkit.</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+        <category>DevOps</category>
+        <category>Software Development</category>
+        <category>CI/CD</category>
+        <category>Containerization</category>
+        <category>Performance Optimization</category>
+        <category>Technology Tutorials</category>
+        <category>Programming &amp; Tools</category>
+        <category>Cross-Platform Development</category>
+        <category>Technology Innovations</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Buildx</tag>
+        <tag>Containerization Technology</tag>
+        <tag>Multi-Platform Docker Builds</tag>
+        <tag>Docker Buildx Tutorial</tag>
+        <tag>BuildKit Backend</tag>
+        <tag>CI/CD with Docker</tag>
+        <tag>Cross-Platform Docker Images</tag>
+        <tag>Docker Caching Mechanisms</tag>
+        <tag>Remote Docker Builds</tag>
+        <tag>Docker CLI Plugin</tag>
+        <tag>Efficient Docker Builds</tag>
+        <tag>Docker Buildx Features</tag>
+        <tag>Docker Build Optimization</tag>
+        <tag>Software Development</tag>
       </tags>
   </entry>
   <entry>
@@ -2601,6 +2601,113 @@ have the game enviroment implemented first.</p>
       </tags>
   </entry>
   <entry>
+    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
+    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
+<p>The <code>dig</code> command is a staple for web developers needing
+to troubleshoot and analyze DNS (Domain Name System) issues. It stands
+for Domain Information Groper, providing detailed DNS information with
+simplicity and flexibility.</p>
+<h1 id="check-dig-installation">Check dig Installation:</h1>
+<p>Run `dig -v`` in your terminal. This command checks if dig is
+installed on your Linux machine by returning the installed version.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
+<h1 id="install-dig-if-not-found">Install dig if not found</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
+<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
+<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
+This command fetches the A record of example.com, showing the IP address
+associated with the domain.</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
+<p>To query a specific DNS server, such as Google’s public DNS, use
+<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
+DNS resolution occurs through different servers.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
+<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
+Instead of translating a domain to an IP address, it does the opposite,
+revealing the domain linked to a given IP.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
+<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
+Queries:</h1>
+<p>For querying multiple domains, dig offers a batch mode. Simply create
+a file with a list of domains and execute
+<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
+DNS queries.</p>
+<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
+<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
+allows you to set default options tailored to your regular usage
+patterns.</p>
+<h1 id="conclusion">Conclusion:</h1>
+<p><code>dig</code> is an invaluable tool for developers dealing with
+DNS. It’s precise, flexible, and provides a depth of information crucial
+for diagnosing and understanding domain resolutions.</p>
+]]></content>
+      <categories>
+        <category>Linux System Administration</category>
+        <category>IT and Networking Tools</category>
+        <category>Command Line Utilities</category>
+      </categories>
+      <tags>
+        <tag>Linux Commands</tag>
+        <tag>DNS Lookup</tag>
+        <tag>Network Troubleshooting</tag>
+        <tag>DNS Query Tool</tag>
+        <tag>Command Line Tools</tag>
+        <tag>Linux Networking</tag>
+        <tag>System Administration</tag>
+        <tag>DNS Analysis</tag>
+        <tag>Linux Tutorials</tag>
+        <tag>Developer Tools</tag>
+        <tag>DNS Configuration</tag>
+        <tag>Linux Server Management</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
+    <url>/2020/11/23/Manage-ssh-keys/</url>
+    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>for example, I have 2 keys in my laptop</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>Next, add the new key you just created</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>You can check your added keys</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-the-connection">3. Test the connection</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
+<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add
+public key to your source control profile setting</h1>
+<p>Copy the public key to clipboard</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
+<p>Paste the key to gitlab ssh setting</p>
+<p><img src="/images/2020-11-23/001.png"></p>
+<p>Paste the key to github ssh setting</p>
+<p><img src="/images/2020-11-23/002.png"></p>
+<h1 id="clone-the-source-code-using-different-user">5. Clone the source
+code using different user</h1>
+<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
+<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
+<p>That's all! Good luck!</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GitLab</tag>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Image Semantic Segmentation</title>
     <url>/2021/04/21/Image-Semantic-Segmentation/</url>
     <content><![CDATA[<h1 id="overview">1. Overview</h1>
@@ -2888,113 +2995,6 @@ visualization utils from tensorflow models</h2>
         <tag>MobileNet-V2</tag>
         <tag>Pretrain</tag>
         <tag>Fully Convolution Network</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
-    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
-<p>The <code>dig</code> command is a staple for web developers needing
-to troubleshoot and analyze DNS (Domain Name System) issues. It stands
-for Domain Information Groper, providing detailed DNS information with
-simplicity and flexibility.</p>
-<h1 id="check-dig-installation">Check dig Installation:</h1>
-<p>Run `dig -v`` in your terminal. This command checks if dig is
-installed on your Linux machine by returning the installed version.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
-<h1 id="install-dig-if-not-found">Install dig if not found</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
-<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
-<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
-This command fetches the A record of example.com, showing the IP address
-associated with the domain.</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
-<p>To query a specific DNS server, such as Google’s public DNS, use
-<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
-DNS resolution occurs through different servers.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
-<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
-Instead of translating a domain to an IP address, it does the opposite,
-revealing the domain linked to a given IP.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
-<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
-Queries:</h1>
-<p>For querying multiple domains, dig offers a batch mode. Simply create
-a file with a list of domains and execute
-<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
-DNS queries.</p>
-<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
-<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
-allows you to set default options tailored to your regular usage
-patterns.</p>
-<h1 id="conclusion">Conclusion:</h1>
-<p><code>dig</code> is an invaluable tool for developers dealing with
-DNS. It’s precise, flexible, and provides a depth of information crucial
-for diagnosing and understanding domain resolutions.</p>
-]]></content>
-      <categories>
-        <category>Linux System Administration</category>
-        <category>IT and Networking Tools</category>
-        <category>Command Line Utilities</category>
-      </categories>
-      <tags>
-        <tag>Linux Commands</tag>
-        <tag>DNS Lookup</tag>
-        <tag>Network Troubleshooting</tag>
-        <tag>DNS Query Tool</tag>
-        <tag>Command Line Tools</tag>
-        <tag>Linux Networking</tag>
-        <tag>System Administration</tag>
-        <tag>DNS Analysis</tag>
-        <tag>Linux Tutorials</tag>
-        <tag>Developer Tools</tag>
-        <tag>DNS Configuration</tag>
-        <tag>Linux Server Management</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
-    <url>/2020/11/23/Manage-ssh-keys/</url>
-    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>for example, I have 2 keys in my laptop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>Next, add the new key you just created</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>You can check your added keys</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-the-connection">3. Test the connection</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
-<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add
-public key to your source control profile setting</h1>
-<p>Copy the public key to clipboard</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
-<p>Paste the key to gitlab ssh setting</p>
-<p><img src="/images/2020-11-23/001.png"></p>
-<p>Paste the key to github ssh setting</p>
-<p><img src="/images/2020-11-23/002.png"></p>
-<h1 id="clone-the-source-code-using-different-user">5. Clone the source
-code using different user</h1>
-<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
-<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
-<p>That's all! Good luck!</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GitLab</tag>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -3298,103 +3298,6 @@ standards in code quality and security.</p>
       </tags>
   </entry>
   <entry>
-    <title>Ngày giãn cách ở Sài Gòn</title>
-    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
-    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa
-náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19
-lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm
-trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ
-lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi
-người "Work From Home".</p>
-<a id="more"></a>
-<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng
-một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê
-Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê
-sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê
-do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê
-nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu
-pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để
-cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không
-ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến
-tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải
-ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường
-xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm
-mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một
-chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
-<p><img src="/images/2021-07-18/001.jpg"></p>
-<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ
-đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua
-thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người
-tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích
-trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn
-cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có
-thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các
-quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất
-ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món
-như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà
-rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để
-tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp
-hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể
-tả.</p>
-<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã
-khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để
-chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng,
-nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong
-nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc
-thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra
-ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng
-thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ,
-hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè,
-nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối
-tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện
-đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như
-không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã
-già?!</p>
-<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều
-người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công
-nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến
-vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó
-khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân
-cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang
-khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau
-21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và
-được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được
-may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị;
-ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy
-tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy
-giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển
-biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ
-sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ
-tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn
-(tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng
-anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để
-vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của
-tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực
-phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn
-là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
-<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần
-giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ,
-một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều
-người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả
-người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương
-tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình
-hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả
-nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy
-khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu
-phải đi cách ly, vì Donnie còn quá nhỏ.</p>
-<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời
-gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách
-lúc này.</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pandas Efficient Data Storage Benchmark</title>
     <url>/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/</url>
     <content><![CDATA[<p>Do you agree that dealing with large data file is such a painful
@@ -3545,6 +3448,103 @@ each)</em></p>
         <tag>Parquet</tag>
         <tag>CSV</tag>
         <tag>Benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ngày giãn cách ở Sài Gòn</title>
+    <url>/2021/07/18/Ngay-gian-cach-o-Sai-Gon/</url>
+    <content><![CDATA[<p>Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa
+náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19
+lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện trở nên nghiêm
+trọng hơn năm ngoái nhiều. Đã hơn hai tháng tôi chưa ra khỏi nhà, kể từ
+lúc dịch bệnh bắt đầu diễn biến phức tạp buộc công ty phải yêu cầu mọi
+người "Work From Home".</p>
+<a id="more"></a>
+<p>Mỗi ngày, tôi dậy sớm, tự tay mình làm một ly cà phê Expresso bằng
+một chiếc máy pha cà phê mini cầm tay mà vợ tôi hay gọi vui là "Cà Phê
+Bóp". Nhờ nó mà ly cà phê đậm đà không thua kém gì những quán cà phê
+sang chảnh. Dĩ nhiên, hương vị vẫn không thể so sánh được với ly cà phê
+do chính tay vợ tôi pha cho, bởi cô ấy tỉ mỉ chuẩn bị từ khâu cho cà phê
+nguyên hạt từ từ vào máy xay để cho ra độ mịn chuẩn xác, cho đến khâu
+pha chế với một lượng "tỉ lệ vàng" cà phê xay và nước nóng, vừa đủ để
+cho ra ly cà phê đậm đà không đâu sánh bằng, vừa uống, không nhiều không
+ít. Cô ấy đã gợi ý pha cà phê cùng với một muỗng mật ong, quả thật khiến
+tôi uống vào thích ngay và cho đến tận bây giờ. Tuy nhiên, không phải
+ngày nào vợ tôi cũng có thời gian để pha chế vào buổi sớm. Cô ấy thường
+xuyên bận rộn với các công việc nhà cửa, chăm sóc con cái mà nhiều đêm
+mất ngủ hoặc ngủ không đủ giấc. Vậy nên, tôi để vợ ngủ nướng thêm một
+chút, việc pha cà phê tôi cũng đã có "đồ chơi" của mình.</p>
+<p><img src="/images/2021-07-18/001.jpg"></p>
+<p>Tình hình ngày một căng thẳng khi dịch bệnh bắt đầu tấn công các chợ
+đầu mối nên bị chính quyền yêu cầu tạm thời đóng cửa, khiến cho việc mua
+thực phẩm tươi sống trở nên khó khăn hơn. Thêm vào đó, do nhiều người
+tâm lý lo lắng, hoảng loạn, nên họ đã mua nhiều hơn ngày thường để tích
+trữ, phần cũng vì nguồn cung và vận chuyển trở nên khó khăn do giãn
+cách. Đã hơn tuần nay, tôi chưa nhìn thấy quả trứng nào, mặc dù vẫn có
+thể mua được một ít thịt, rau, nhưng cũng khá chật vật xếp hàng. Các
+quán ăn quan nước cũng bị đóng cửa. Thât may mắn là vợ tôi nấu ăn rất
+ngon, nhưng lâu rồi không order được đồ ăn ngoài nên khá là thèm các món
+như bún thái, phở bò, mì hoành thánh, hủ tiếu nam vang, pizza và gà
+rán,... Rồi một ngày nọ, chính quyền yêu cầu mọi người đi xét nghiệm để
+tầm soát Covid trên diện rộng, vợ chồng tôi cũng thay phiên nhau ra xếp
+hàng, trải nghiêm cái cảm giác bị chọc vào mũi thật là thốn không thể
+tả.</p>
+<p>Trong thời gian hai tháng WFH này, tôi phải làm việc online, và do đã
+khá quen nên công việc vẫn trôi chảy. Tôi cũng có nhiều thời gian hơn để
+chơi với con, trò chuyện với vợ. Donnie đã biết đi từ khi tròn 11 tháng,
+nhưng tới nay vẫn chưa được ra ngoài dạo chơi mà chỉ đi quanh quẩn trong
+nhà, tôi đoán cu cậu cũng thấy buồn chán nữa là. Khi tôi đang làm việc
+thì cu cậu cứ hay chạy đến ôm chân kéo kéo đòi ẳm. Lâu rồi không ra
+ngoài dạo phố, hít thở không khí, khiến tôi cũng thấy buồn bực, căng
+thẳng với công việc. Tôi khá nhớ những lúc ra siêu thị mua sắm cùng vợ,
+hay khi ngồi quán cà phê, quán ăn yêu thích cùng chuyện trò cùng bạn bè,
+nhâm nhi vài ly bia tươi, lai rai nhắm đồ nướng. Giờ đây những ngày cuối
+tuần, tôi chỉ còn biết chăm sóc cây, đọc sách hay nghe sách nói, luyện
+đàn ghi-ta, thỉnh thoảng giúp vợ rửa chén, dọn rác. Tôi đã dường như
+không còn tìm được niềm vui với phim ảnh nữa, phải chăng mình đã
+già?!</p>
+<p>Dịch bệnh cũng nhanh chóng lan vào các khu công nghiệp khiến nhiều
+người phải tạm thời thất nghiệp, tôi khá may mắn vì làm trong ngành công
+nghệ nên không bị ảnh hưởng. Nhưng rất nhiều người không may mắn đến
+vậy, hầu hết đã phải tạm nghỉ không lương khiến cuộc sống trở nên khó
+khăn hơn. Dịch bệnh không chỉ ở Sài Gòn, mà còn lây sang các tỉnh lân
+cận, đặc biệt là Bình Dương, quê của vợ tôi. Tôi cảm thấy rất hoang mang
+khi nghe tin ba vợ bị đưa đi cách ly vì tiếp xúc với F0, rất may là sau
+21 ngày trong trại cách ly, ông ấy đã có kết quả âm tính với Covid-19 và
+được về nhà. Thế nhưng một vài người ở chung trại với ông lại không được
+may mắn vậy, hầu hết đã bị xác định là dương tính và nhập viện điều trị;
+ở khu cách ly có một cô trung niên vì chủ quan, không tuân thủ đủ quy
+tắc 5K, thêm nữa vì không ăn được đồ ăn ở đấy dẫn đến sức đề kháng suy
+giảm, tạo điều kiện cho vi rút phát triển nhanh chóng, tình trạng chuyển
+biến xấu và qua đời ngay khi được phát hiện và đưa vào nhập viên. Anh vợ
+sống ở Bình Dương (tôi hay gọi là anh ba) cũng phải vào công ty ăn ngủ
+tại chỗ để tránh lây lan dịch bệnh. Còn một anh khác cũng sống ở Sài Gòn
+(tôi hay gọi là anh hai) đã nghỉ dạy không lương được hơn tháng nhưng
+anh phải nuôi cả gia đình một vợ hai con nên phải đi vay mượn thêm để
+vượt qua. Dịch bệnh cũng đã lây lan lên quê hương Lâm Đồng - Đà Lạt của
+tôi, vì nghe tin ca dương tính gần nhà, mẹ tôi trong lúc đi mua thực
+phẩm dự trữ đã đụng xe vào một chú chó bất ngờ chạy qua đường. May mắn
+là mẹ tôi chạy chậm nên chỉ bị sây xát nhẹ.</p>
+<p>Qua những việc tôi kể cho thấy cơn sóng Covid-19 này diễn ra gần
+giống như tình tiết các bộ phim khoa học giả tưởng về chủ đề thảm hoạ,
+một khi xảy ra liền kéo theo nhiều hê luỵ không lường trước được. Nhiều
+người xung quanh khu tôi sống hay nói câu "trời kêu ai nấy dạ", ngay cả
+người đi đường tình cờ bị yêu cầu kiểm tra nhanh cũng phát hiện dương
+tính với Covid-19. Mấy ngày nay, ngày nào Sài Gòn cũng tăng trung bình
+hơn 2000 ca nhiễm. Vợ tôi là người trực tiếp đi mua thực phẩm cho cả
+nhà, tôi luôn dặn cô ấy phải chú ý vệ sinh sát khuẩn, dù tôi biết cô ấy
+khá cẩn trọng, tôi không thể tưởng tượng được gia đình tôi sẽ ra sao nếu
+phải đi cách ly, vì Donnie còn quá nhỏ.</p>
+<p>Hy vọng dịch bệnh nhanh chóng qua đi, tôi sẽ xin nghi phép một thời
+gian để đưa gia đình đi ngắm biển, ngắm núi để giải toả cảm giác bí bách
+lúc này.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -3711,6 +3711,33 @@ developer phía sau màn hình vào bài tiếp theo nhé!</p>
       </tags>
   </entry>
   <entry>
+    <title>SQLAlchemy for Python ORM Mapping</title>
+    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
+<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an
+optional component that provides the data mapper pattern, where classes
+can be mapped to the database in open ended, multiple ways - allowing
+the object model and database schema to develop in a cleanly decoupled
+way from the beginning.</p>
+<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="table-define">Table Define</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="example">Example</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>SQLAlchemy</tag>
+        <tag>ORM</tag>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Schedule Task Runner with Celery</title>
     <url>/2020/11/27/Schedule-Task-Runner-with-Celery/</url>
     <content><![CDATA[<blockquote><p>Celery is a task queue with batteries included. It’s easy to use so
@@ -3754,33 +3781,6 @@ together using docker-compose</h1>
         <tag>Celery</tag>
         <tag>Cronjob</tag>
         <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQLAlchemy for Python ORM Mapping</title>
-    <url>/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting started</h1>
-<blockquote><p>SQLAlchemy is most famous for its object-relational mapper (ORM), an
-optional component that provides the data mapper pattern, where classes
-can be mapped to the database in open ended, multiple ways - allowing
-the object model and database schema to develop in a cleanly decoupled
-way from the beginning.</p>
-<footer><strong>SQLAlchemy</strong><cite><a href="https://www.sqlalchemy.org/">www.sqlalchemy.org</a></cite></footer></blockquote>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install SQLAlchemy</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="table-define">Table Define</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># database.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.declarative <span class="keyword">import</span> declarative_base</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Column, Integer, String, DateTime</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"><span class="keyword">import</span> config</span><br><span class="line"></span><br><span class="line">Base = declarative_base()</span><br><span class="line"></span><br><span class="line"><span class="comment">## Optional: for your custom schema</span></span><br><span class="line"><span class="comment"># Base.metadata.schema = &#x27;myschema&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span>(<span class="params">Base</span>):</span></span><br><span class="line">    __tablename__ = <span class="string">&#x27;my_task&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">id</span> = Column(Integer, primary_key=<span class="literal">True</span>)</span><br><span class="line">    name = Column(String)</span><br><span class="line">    created_at = Column(DateTime)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = create_engine(config.DATABASE_URI, echo=<span class="literal">True</span>)</span><br><span class="line">Session = sessionmaker(bind=engine)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="example">Example</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> database <span class="keyword">import</span> Session, Task</span><br><span class="line"></span><br><span class="line">session = Session()</span><br><span class="line">first_task = session.query(Task).first()</span><br><span class="line">print(first_task)</span><br><span class="line"></span><br><span class="line">session.close()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>SQLAlchemy</tag>
-        <tag>ORM</tag>
-        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -4297,8 +4297,8 @@ right choice for your application.</p>
 of your application, so choose wisely!</p>
 ]]></content>
       <categories>
-        <category>Cloud Computing</category>
         <category>Web Development</category>
+        <category>Cloud Computing</category>
         <category>Software Development</category>
         <category>Technology</category>
         <category>Database Technologies</category>
@@ -4663,6 +4663,120 @@ of office’ escapades with you soon.</p>
       </tags>
   </entry>
   <entry>
+    <title>Every Issue Already Had a PR: Contributing to Open Source When Agents Got There First</title>
+    <url>/2026/10/27/every-issue-already-had-a-pr/</url>
+    <content><![CDATA[<h1 id="the-plan-that-didnt-survive-the-first-afternoon">The plan that
+didn't survive the first afternoon</h1>
+<p>I set out to do one useful open source contribution a day, with a
+coding agent doing the legwork and me approving every comment and pull
+request before it went out. The plan was the classic one: find a small,
+fresh bug in a project I use, fix it, send the PR.</p>
+<p>By the end of the first afternoon I had a problem. Almost every
+small, fresh bug I found already had a fix waiting.</p>
+<a id="more"></a>
+<h1 id="what-i-actually-measured">What I actually measured</h1>
+<p>So I stopped guessing and measured it. I took the 34 small, recent
+issues I had looked at across agent tooling (MCP SDKs and servers, an
+agent SDK), AWS projects and Python libraries, and checked when the
+first pull request was linked to each.</p>
+<p><img src="/images/2026-10-27/first-pr-race.png" style="max-height: 360px;"></p>
+<p>A third of them had a PR <strong>within an hour</strong>, and in 11
+of those 12 the person who opened the issue also opened the PR, minutes
+apart. That is what a coding agent's workflow looks like from the
+outside: find the bug, write it up, open the fix, all in one go. Another
+7 were claimed within a day. A third of all 34 had two or more competing
+PRs, and one had nine.</p>
+<p>To be fair to the numbers: this is not a random sample. These are the
+small, recently filed issues I was looking at, which is exactly the
+slice agents go after. Older, larger issues in the same repos behave
+differently. But that slice is also where most "first contribution"
+advice sends people.</p>
+<p>Two other things showed up along the way. One popular project had a
+hundred or more open PRs and nothing merged in five weeks, so being
+first there buys nothing. And one project from a large company had
+turned off outside PRs entirely: you write a plan in an issue and their
+own agents implement it.</p>
+<h1 id="where-the-doors-were-still-open">Where the doors were still
+open</h1>
+<p>The contributions that did go somewhere had something in common. I
+wasn't racing anyone for them.</p>
+<p><img src="/images/2026-10-27/pr-decision.png" style="max-height: 520px;"></p>
+<p><strong>A bug I hit in my own tools.</strong> My blog's build prints
+a Node deprecation warning about <code>url.parse()</code>. I traced it
+to the theme, found that an earlier PR had fixed one of four call sites,
+and finished the job. Nobody else was looking at it, because nobody else
+was staring at my build log.</p>
+<p><strong>A fresh automated test failure.</strong> typeshed runs its
+test suite against the newest library releases every night and opens an
+issue when it breaks. One morning a gRPC package had added an RPC and
+the Python standard library had backported a method. Both halves needed
+a fix, and the bot issue is a starting gun most people don't hear.</p>
+<p><strong>A check the maintainer asked for.</strong> An AWS Labs
+repository that publishes Extended Support prices asked contributors to
+spot-check rates against the AWS Price List. I checked EKS in every
+region, not just one. The maintainer changed their monthly check to read
+every region and credited it in the release notes. ElastiCache matched
+exactly. The DocumentDB follow-up found a real gap: one instance family
+had prices but no vCPU counts, so its cost could not be computed.</p>
+<p><strong>A flake that hit my own PR.</strong> One of my PRs failed CI
+on a network error in a test that makes hundreds of live requests. Three
+of the four HTTP calls in that tool had no retry. That fix helps every
+future PR in the project, which is a better reason to send it than being
+first.</p>
+<p><strong>A root cause where the policy says ask first.</strong> Some
+projects want agreement before an outside PR for an enhancement. There,
+the useful contribution is a comment: a minimal repro on the current
+version, the exact line, the one-line fix, and an offer to send it.</p>
+<h1 id="what-made-a-pr-easy-to-review">What made a PR easy to
+review</h1>
+<p>Being uncontested gets you a look. It doesn't get you merged.
+Maintainers now see a lot of plausible-looking generated code, so the
+thing I tried to send with every change was proof.</p>
+<p><img src="/images/2026-10-27/proof-ladder.png" style="max-height: 440px;"></p>
+<p>The two that took longest were also the ones I trust most. For the
+<code>url.parse()</code> change, I ran the old and new logic over 182
+combinations of links and site URLs and explained every difference. Then
+I built a real site on both branches and got byte-identical output
+(apart from a sidebar color the theme randomizes on purpose). For the
+retry change, I set the retry count to zero and watched the new tests
+fail, because a test that passes either way proves nothing.</p>
+<p>The house-style step sounds minor and isn't. typeshed has a specific
+way of handling a method that exists in some patch releases but not
+others: temporary allowlist entries with a "remove once this version is
+on GitHub Actions" note. Following that exactly is the difference
+between a PR a maintainer can merge and one they have to rewrite.</p>
+<h1 id="what-i-would-tell-someone-starting-now">What I would tell
+someone starting now</h1>
+<ul>
+<li><strong>Read the issue's timeline before you read its code.</strong>
+Linked PRs show up there. Thirty seconds saves an afternoon.</li>
+<li><strong>Check that the project still merges things.</strong> Look at
+the last few merged PRs, and at who wrote them.</li>
+<li><strong>Read CONTRIBUTING, all of it.</strong> Several projects now
+say how they want AI-assisted contributions handled, and at least one
+doesn't take outside PRs at all.</li>
+<li><strong>Start from your own friction.</strong> Warnings in your
+build, a failure in your CI, a tool that does something odd. That queue
+has no competition.</li>
+<li><strong>When you can't be first, be useful.</strong> Running someone
+else's PR and reporting what you found is still a contribution, and
+maintainers need it more than another fix.</li>
+</ul>
+<p>As I write this, none of the PRs has been reviewed yet, so I can't
+tell you which of these approaches gets merged. The pricing check
+already changed someone's project. I'll come back with the rest.</p>
+]]></content>
+      <categories>
+        <category>AI Engineering</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>AI Coding Agents</tag>
+        <tag>Claude Code</tag>
+        <tag>Open Source</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World! My Coding Journey into Fatherhood</title>
     <url>/2020/11/14/hello-world-my-coding-journey-into-fatherhood/</url>
     <content><![CDATA[<p>Hey fellow coders! Let me share a personal fork in my life's
@@ -4816,6 +4930,62 @@ harder to distinguish.</p>
       </tags>
   </entry>
   <entry>
+    <title>Reflecting on Unexpected Changes: A Developer&#39;s Perspective on the Ukraine-Russia Situation</title>
+    <url>/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/</url>
+    <content><![CDATA[<p>Hey fellow developers,</p>
+<p>Today, I'm stepping away from our usual tech-focused discussions to
+share some personal reflections. Recent events, particularly the
+situation between Ukraine and Russia, have been a stark reminder of how
+life can change unexpectedly.</p>
+<p><strong>The Uncertainty of Tomorrow</strong></p>
+<p>In our world of structured code and predictable algorithms, the
+unpredictability of life stands in stark contrast. The conflict between
+Ukraine and Russia, far removed from the realm of technology, has
+brought this reality to the forefront. As developers, we're accustomed
+to solving problems logically, but some situations, like this conflict,
+defy straightforward solutions.</p>
+<a id="more"></a>
+<p><strong>The Impact on Our Global Community</strong></p>
+<p>I've been deeply affected by the situation, especially thinking about
+my Ukrainian colleagues. We were in the midst of projects, collaborating
+seamlessly across borders, when suddenly, they were unreachable.
+Learning that Ukrainian males aged 18 to 60 were called to join the
+defense forces hit close to home. All I could do was hope for their
+safety and a swift return to normalcy.</p>
+<p><strong>Personal Connection</strong></p>
+<p>Perhaps you've felt similar emotions. One day, we're sharing laughs
+and code reviews; the next, our friends are in a war zone, with no
+certainty of reunion. The thought of not being able to collaborate with
+my Ukrainian peers again is heartbreaking. I long for the day when we
+can reunite and continue our work together.</p>
+<p><strong>Embracing Change and Hope</strong></p>
+<p>Change is an inevitable part of life, as much as it is in the
+development cycle. While we might not be able to control these changes,
+we can navigate them, hoping for peaceful resolutions and minimal
+suffering. From here in Vietnam, my thoughts and prayers go out to
+everyone affected by this conflict.</p>
+<p>As we grapple with these changes and their impact, both near and far,
+it's important to remember the resilience and adaptability we possess,
+especially in our tech community. This leads me to a final thought, a
+message of hope and solidarity that I want to share with all of you.</p>
+<p><strong>Conclusion</strong></p>
+<p>In our journey as developers, we code not just for functionality but
+for a better world. Through our work, we strive to build bridges of
+understanding and cooperation. Despite the uncertainties and challenges,
+let's remain united in hope and continue to support each other. Stay
+strong and hopeful, everyone.</p>
+]]></content>
+      <categories>
+        <category>Tech and Humanity</category>
+      </categories>
+      <tags>
+        <tag>Work-Life Balance</tag>
+        <tag>Global Events</tag>
+        <tag>Developer Community</tag>
+        <tag>Tech and Society</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Run Headless Chrome Browser Inside a Docker Container</title>
     <url>/2020/11/20/run-headless-chrome-inside-a-docker-container/</url>
     <content><![CDATA[<h1 id="overview">1. Overview</h1>
@@ -4880,62 +5050,6 @@ href="http://localhost:5000">http://localhost:5000</a></li>
         <tag>Automated Testing</tag>
         <tag>Tech How-To</tag>
         <tag>Docker Deployment</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Reflecting on Unexpected Changes: A Developer&#39;s Perspective on the Ukraine-Russia Situation</title>
-    <url>/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/</url>
-    <content><![CDATA[<p>Hey fellow developers,</p>
-<p>Today, I'm stepping away from our usual tech-focused discussions to
-share some personal reflections. Recent events, particularly the
-situation between Ukraine and Russia, have been a stark reminder of how
-life can change unexpectedly.</p>
-<p><strong>The Uncertainty of Tomorrow</strong></p>
-<p>In our world of structured code and predictable algorithms, the
-unpredictability of life stands in stark contrast. The conflict between
-Ukraine and Russia, far removed from the realm of technology, has
-brought this reality to the forefront. As developers, we're accustomed
-to solving problems logically, but some situations, like this conflict,
-defy straightforward solutions.</p>
-<a id="more"></a>
-<p><strong>The Impact on Our Global Community</strong></p>
-<p>I've been deeply affected by the situation, especially thinking about
-my Ukrainian colleagues. We were in the midst of projects, collaborating
-seamlessly across borders, when suddenly, they were unreachable.
-Learning that Ukrainian males aged 18 to 60 were called to join the
-defense forces hit close to home. All I could do was hope for their
-safety and a swift return to normalcy.</p>
-<p><strong>Personal Connection</strong></p>
-<p>Perhaps you've felt similar emotions. One day, we're sharing laughs
-and code reviews; the next, our friends are in a war zone, with no
-certainty of reunion. The thought of not being able to collaborate with
-my Ukrainian peers again is heartbreaking. I long for the day when we
-can reunite and continue our work together.</p>
-<p><strong>Embracing Change and Hope</strong></p>
-<p>Change is an inevitable part of life, as much as it is in the
-development cycle. While we might not be able to control these changes,
-we can navigate them, hoping for peaceful resolutions and minimal
-suffering. From here in Vietnam, my thoughts and prayers go out to
-everyone affected by this conflict.</p>
-<p>As we grapple with these changes and their impact, both near and far,
-it's important to remember the resilience and adaptability we possess,
-especially in our tech community. This leads me to a final thought, a
-message of hope and solidarity that I want to share with all of you.</p>
-<p><strong>Conclusion</strong></p>
-<p>In our journey as developers, we code not just for functionality but
-for a better world. Through our work, we strive to build bridges of
-understanding and cooperation. Despite the uncertainties and challenges,
-let's remain united in hope and continue to support each other. Stay
-strong and hopeful, everyone.</p>
-]]></content>
-      <categories>
-        <category>Tech and Humanity</category>
-      </categories>
-      <tags>
-        <tag>Work-Life Balance</tag>
-        <tag>Global Events</tag>
-        <tag>Developer Community</tag>
-        <tag>Tech and Society</tag>
       </tags>
   </entry>
   <entry>
