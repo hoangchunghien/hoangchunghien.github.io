@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="A model API is simple: text goes in, text comes out. Every real application then rebuilds the same plumbing around that one call. LangChain is that plumbing, packaged once. It helps to know which prob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What LangChain Is For: Six Problems Every LLM App Runs Into">
+<meta property="og:url" content="https://hien.dev/2026/10/28/what-langchain-is-for/index.html">
+<meta property="og:site_name" content="Hien Hoang">
+<meta property="og:description" content="A model API is simple: text goes in, text comes out. Every real application then rebuilds the same plumbing around that one call. LangChain is that plumbing, packaged once. It helps to know which prob">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hien.dev/images/2026-10-28/rag-pipeline.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-10-28/agent-loop.svg">
+<meta property="article:published_time" content="2026-10-28T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-28T03:25:25.983Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="LangChain">
+<meta property="article:tag" content="AI Agents">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hien.dev/images/2026-10-28/rag-pipeline.svg">
+
+
+<link rel="canonical" href="https://hien.dev/2026/10/28/what-langchain-is-for/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>What LangChain Is For: Six Problems Every LLM App Runs Into | Hien Hoang</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2026/10/28/what-langchain-is-for/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hien Hoang</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#every-provider-speaks-a-different-dialect"><span class="nav-text">1. Every provider
+speaks a different dialect</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-model-does-not-know-your-data"><span class="nav-text">2. The model does not know
+your data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-model-cannot-act"><span class="nav-text">3. The model cannot act</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#an-agent-that-can-act-needs-rules"><span class="nav-text">4. An agent that can act
+needs rules</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#long-running-work-needs-memory-and-a-pause-button"><span class="nav-text">5.
+Long-running work needs memory and a pause button</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#you-cannot-see-why-an-answer-was-bad"><span class="nav-text">6. You cannot see why an
+answer was bad</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#what-it-costs"><span class="nav-text">What it costs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-this-differs-from-claude-code"><span class="nav-text">How this differs from Claude
+Code</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">309</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2026/10/28/what-langchain-is-for/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hien Hoang">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          What LangChain Is For: Six Problems Every LLM App Runs Into
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-10-28 11:00:00 / Modified: 10:25:25" itemprop="dateCreated datePublished" datetime="2026-10-28T11:00:00+07:00">2026-10-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/AI-Engineering/" itemprop="url" rel="index"><span itemprop="name">AI Engineering</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>A model API is simple: text goes in, text comes out. Every real
+application then rebuilds the same plumbing around that one call.
+LangChain is that plumbing, packaged once.</p>
+<p>It helps to know which problem each part solves, because that also
+tells you when you do not need it. Here are the six problems, in the
+order most projects hit them.</p>
+<a id="more"></a>
+<h1 id="every-provider-speaks-a-different-dialect">1. Every provider
+speaks a different dialect</h1>
+<p>OpenAI, Anthropic, Gemini, Mistral and a local model on Ollama all
+accept a list of messages and return a reply. They disagree on almost
+everything else: how a message is shaped, how tools are described, how a
+tool call comes back, how streaming and errors work. Code written
+against one provider does not run on another.</p>
+<p>LangChain's answer is a set of shared interfaces in
+<code>langchain-core</code> (a chat model, a message, a tool, an
+embedding model, a vector store) and one integration package per
+provider: <code>langchain-openai</code>,
+<code>langchain-anthropic</code>, <code>langchain-ollama</code> and so
+on. Your code talks to the interface, so switching providers, or running
+a cheaper model for some calls, is a configuration change rather than a
+rewrite.</p>
+<h1 id="the-model-does-not-know-your-data">2. The model does not know
+your data</h1>
+<p>A model knows what it was trained on. It does not know your
+documents, your tickets or yesterday's decision. To answer from your
+data, you have to find the right passages and put them in the prompt,
+every time. That is retrieval-augmented generation, or RAG.</p>
+<p><img src="/images/2026-10-28/rag-pipeline.svg" alt="Animated: documents are split into chunks, embedded and stored; later a question is embedded, the retriever finds the closest chunks, and they go into the prompt for the answer." style="max-height: 420px;"></p>
+<p>Every box in that pipeline is a part LangChain provides: document
+loaders, text splitters, embedding models, vector stores (Chroma,
+Qdrant, pgvector and others) and retrievers. You still choose how to
+chunk, which embedding model to use and how many passages to send. Those
+choices decide answer quality far more than the framework does.</p>
+<h1 id="the-model-cannot-act">3. The model cannot act</h1>
+<p>A model cannot delete a file, call an API or query a database. The
+most it can do is say "call this tool, with these arguments". Something
+has to describe the tools to the model, read its tool call, run the real
+function, hand the result back, and repeat until the model says it is
+done. That loop is what people mean by an agent.</p>
+<p><img src="/images/2026-10-28/agent-loop.svg" alt="Animated: the model proposes a tool call, middleware checks it, a person can approve it while the state is saved, the tool runs and the result goes back to the model, which continues or answers." style="max-height: 420px;"></p>
+<p>In LangChain this is <code>create_agent</code>: you pass a model and
+a list of tools, and it runs the loop. The important detail is in the
+second box. The model only ever proposes. Your code decides what
+actually runs.</p>
+<h1 id="an-agent-that-can-act-needs-rules">4. An agent that can act
+needs rules</h1>
+<p>Once an agent can act, you need control over how it acts. You want a
+person to approve anything destructive, retries when a model or tool
+fails, a limit on how many calls a single request can make, long
+conversations trimmed or summarised so they fit the context window, and
+personal data kept out of prompts.</p>
+<p>LangChain calls these middleware: hooks that run before and after the
+model, and around each tool call. It ships middleware for human
+approval, model and tool retries, call limits, summarisation, PII
+handling and more, and you can write your own. This is the part I find
+most useful, because it is where the safety of an agent actually lives.
+An approval rule belongs at the point where the action happens, not in
+the conversation that led to it.</p>
+<h1 id="long-running-work-needs-memory-and-a-pause-button">5.
+Long-running work needs memory and a pause button</h1>
+<p>A conversation spans many requests. An approval might come back an
+hour later, from a phone. Something has to save the agent's state and
+continue exactly where it stopped.</p>
+<p>That is what LangGraph does, and it is the runtime underneath
+<code>create_agent</code>. It runs the agent as a graph of steps and,
+when you give it a checkpointer, saves the state after each one. When a
+middleware needs a person, the graph pauses with an interrupt. When the
+answer arrives, the agent resumes from the checkpoint instead of
+starting over. You can also use LangGraph directly when your workflow is
+not a simple loop: branches, parallel steps, several agents.</p>
+<h1 id="you-cannot-see-why-an-answer-was-bad">6. You cannot see why an
+answer was bad</h1>
+<p>When an answer is wrong you need to know which prompt was sent, which
+passages were retrieved, which tools ran and what they returned.
+LangSmith, LangChain's hosted product, records a trace of every step and
+runs evaluations over sets of questions. Any tracing tool works; what
+matters is that you can see the steps.</p>
+<h1 id="what-it-costs">What it costs</h1>
+<p>LangChain is a lot of abstraction, and it has changed fast. The
+original "chains" API now lives in a separate
+<code>langchain-classic</code> package, and code written two years ago
+often needs work to run on v1. When a call fails, you sometimes debug
+the framework before your own code.</p>
+<p>For a single model and a single prompt, call the provider's SDK
+directly. LangChain pays off when you need several of the six at once:
+more than one provider, retrieval over your own data, an agent with
+tools, rules around its actions, or state that has to survive a
+pause.</p>
+<h1 id="how-this-differs-from-claude-code">How this differs from Claude
+Code</h1>
+<p>Claude Code, Codex CLI and Gemini CLI are agents too, so it is fair
+to ask how they relate. They sit one level up. LangChain is a toolkit
+for building an agent; Claude Code is a finished agent that you use. It
+already has the loop, tools for reading and editing files and running
+commands, permission prompts before risky actions, hooks around each
+action, and memory between sessions, all tuned for working on code on
+your own machine.</p>
+<p>Use a finished agent when the job is work on your own machine. Use
+LangChain or LangGraph when you are building an AI feature into your own
+product, with your own tools, your choice of model and your own rules.
+Anthropic's Claude Agent SDK sits in between: Claude Code's loop and
+permission model as a library. Tools built on the Model Context Protocol
+(MCP) work with all of them.</p>
+<p>The ideas are the same in each: the model proposes, a loop runs the
+tools, rules decide what is allowed, and state lets the work pause and
+resume. My own agent that drafts GitHub replies and <a
+href="/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/">waits
+for a Telegram tap before posting</a> is the same pattern again, built
+by hand.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/LLM/" rel="tag"># LLM</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/LangChain/" rel="tag"># LangChain</a>
+              <a href="/tags/AI-Agents/" rel="tag"># AI Agents</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/10/27/every-issue-already-had-a-pr/" rel="prev" title="Every Issue Already Had a PR: Contributing to Open Source When Agents Got There First">
+                  <i class="fa fa-chevron-left"></i> Every Issue Already Had a PR: Contributing to Open Source When Agents Got There First
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
