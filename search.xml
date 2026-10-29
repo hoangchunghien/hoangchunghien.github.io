@@ -1187,58 +1187,6 @@ tech-driven lives with the richness of our traditions!</p>
       </tags>
   </entry>
   <entry>
-    <title>Distributed Tasks Processing With Google Pub/Sub</title>
-    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
-    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
-<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services
-that produce events from services that process events. You can use
-Pub/Sub as messaging-oriented middleware or event ingestion and delivery
-for streaming analytics pipelines. Pub/Sub offers durable message
-storage and real-time message delivery with high availability and
-consistent performance at scale. Pub/Sub servers run in all Google Cloud
-regions around the world.</p>
-<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
-<h1 id="core-concepts">Core concepts</h1>
-<ul>
-<li><strong>Topic</strong>: A named resource to which messages are sent
-by publishers.</li>
-<li><strong>Subscription</strong>: A named resource representing the
-stream of messages from a single, specific topic, to be delivered to the
-subscribing application.</li>
-<li><strong>Message</strong>: The combination of data and (optional)
-attributes that a publisher sends to a topic and is eventually delivered
-to subscribers.</li>
-<li><strong>Message attribute</strong>: A key-value pair that a
-publisher can define for a message. For example, key
-iana.org/language_tag and value en could be added to messages to mark
-them as readable by an English-speaking subscriber.</li>
-</ul>
-<a id="more"></a>
-<h1 id="install">Install</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
-<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
-<p>In this example, the publisher will act as a task distributer.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
-<p>Multiple workers will subscribe to a same subscriptions to receive
-difference tasks from a same publisher.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Google Cloud</category>
-        <category>Pub/Sub</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Pub/Sub</tag>
-        <tag>GCP</tag>
-        <tag>Google Cloud</tag>
-        <tag>Distributed Processing</tag>
-        <tag>Minibatch Processing</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Build a Search Engine with TF-IDF</title>
     <url>/2020/11/22/Build-a-Search-Engine-with-TF-IDF/</url>
     <content><![CDATA[<blockquote><p>TF-IDF short for term frequency – inverse document frequency, is a
@@ -1498,14 +1446,66 @@ algorithm. Not bad isn't it?</p>
         <category>Natural Language Processing</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>TF-IDF</tag>
         <tag>NLP</tag>
         <tag>Search Engine</tag>
         <tag>Bag of Words</tag>
         <tag>BOW</tag>
         <tag>Information Retrieval</tag>
+        <tag>Python</tag>
         <tag>Scikit-Learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Distributed Tasks Processing With Google Pub/Sub</title>
+    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
+    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
+<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services
+that produce events from services that process events. You can use
+Pub/Sub as messaging-oriented middleware or event ingestion and delivery
+for streaming analytics pipelines. Pub/Sub offers durable message
+storage and real-time message delivery with high availability and
+consistent performance at scale. Pub/Sub servers run in all Google Cloud
+regions around the world.</p>
+<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
+<h1 id="core-concepts">Core concepts</h1>
+<ul>
+<li><strong>Topic</strong>: A named resource to which messages are sent
+by publishers.</li>
+<li><strong>Subscription</strong>: A named resource representing the
+stream of messages from a single, specific topic, to be delivered to the
+subscribing application.</li>
+<li><strong>Message</strong>: The combination of data and (optional)
+attributes that a publisher sends to a topic and is eventually delivered
+to subscribers.</li>
+<li><strong>Message attribute</strong>: A key-value pair that a
+publisher can define for a message. For example, key
+iana.org/language_tag and value en could be added to messages to mark
+them as readable by an English-speaking subscriber.</li>
+</ul>
+<a id="more"></a>
+<h1 id="install">Install</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
+<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
+<p>In this example, the publisher will act as a task distributer.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
+<p>Multiple workers will subscribe to a same subscriptions to receive
+difference tasks from a same publisher.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Google Cloud</category>
+        <category>Pub/Sub</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Python</tag>
+        <tag>Pub/Sub</tag>
+        <tag>GCP</tag>
+        <tag>Google Cloud</tag>
+        <tag>Distributed Processing</tag>
+        <tag>Minibatch Processing</tag>
       </tags>
   </entry>
   <entry>
@@ -3395,47 +3395,6 @@ lúc này.</p>
       </tags>
   </entry>
   <entry>
-    <title>Rau Yêu Thương</title>
-    <url>/2021/08/23/Rau-Yeu-Thuong/</url>
-    <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công
-việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải
-qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số
-ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong
-vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn
-hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền
-nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập
-ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ
-để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui
-được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích
-lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục
-mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một
-phần quà tiếp sức vượt qua mùa dịch.</p>
-<a id="more"></a>
-<p><img src="/images/2021-08-23/001.jpg"></p>
-<p>Thú thật là tôi cảm thấy rất ấm áp khi nhận được món quà "Rau Yêu
-Thương" từ công ty, bởi tôi cảm nhận được tình cảm, sự quan tâm dành cho
-mình qua những túi rau, đậu, quả, trái, đủ dùng trong nhiều ngày. Gia
-đình tôi không thuộc diện khó khăn, nhưng trong thời buổi dịch bệnh
-hoành hành với những chính sách hạn chế khiến cho việc mua đồ ăn trở nên
-chật vật hơn, ví dụ như, một là hôm nay không có món này món kia, hai là
-xếp hàng chờ mua thật lâu, tới lượt mình liền hết hàng. Bây giờ bất kể
-là thực phẩm tươi sống gì cũng đều rất quý giá, vậy nên nhận được một bó
-rau thôi cũng là một điều vô cùng đáng trân trọng.</p>
-<p>Người Việt có câu "Lá lành đùm lá rách", trong một tập thể, chúng ta
-hãy luôn sẵn lòng đưa tay ra giúp đỡ lẫn nhau những lúc khó khăn. Tôi
-tin rằng, với tinh thần này, chúng ta sẽ cùng nhau vượt qua được đại
-dịch Covid, và tôi mong sẽ sớm được gặp lại các bạn đồng nghiệp thân
-thương của mình.</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>Living</tag>
-        <tag>Family</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pandas Efficient Data Storage Benchmark</title>
     <url>/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/</url>
     <content><![CDATA[<p>Do you agree that dealing with large data file is such a painful
@@ -3586,6 +3545,47 @@ each)</em></p>
         <tag>Parquet</tag>
         <tag>CSV</tag>
         <tag>Benchmark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rau Yêu Thương</title>
+    <url>/2021/08/23/Rau-Yeu-Thuong/</url>
+    <content><![CDATA[<p>Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công
+việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải
+qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức tạp với số
+ca Covid vẫn tăng đều mỗi ngày, hơn nữa có vẻ nó sẽ không giảm trong
+vòng một tháng nữa. Những người vốn đã khó khăn càng trở nên khó khăn
+hơn nếu tình hình vẫn không khá hơn, tuy có sự hỗ trợ của chính quyền
+nhà nước nhưng chỉ là tạm thời. Trong hoàn cảnh này, Công ty tôi đã lập
+ra quỹ hỗ trợ Covid và kêu gọi mọi thành viên công ty đóng góp vào quỹ
+để hỗ trợ các bạn đồng nghiệp nếu chẳng may trở thành F0. Tôi rất vui
+được góp một phần nhỏ vào công tác chống dịch này. Đồng thời, để khích
+lệ tinh thần nhân viên làm việc tại nhà thời gian dài, công ty tiếp tục
+mở chiến dịch "Rau Yêu Thương", gửi tới tất cả thành viên công ty một
+phần quà tiếp sức vượt qua mùa dịch.</p>
+<a id="more"></a>
+<p><img src="/images/2021-08-23/001.jpg"></p>
+<p>Thú thật là tôi cảm thấy rất ấm áp khi nhận được món quà "Rau Yêu
+Thương" từ công ty, bởi tôi cảm nhận được tình cảm, sự quan tâm dành cho
+mình qua những túi rau, đậu, quả, trái, đủ dùng trong nhiều ngày. Gia
+đình tôi không thuộc diện khó khăn, nhưng trong thời buổi dịch bệnh
+hoành hành với những chính sách hạn chế khiến cho việc mua đồ ăn trở nên
+chật vật hơn, ví dụ như, một là hôm nay không có món này món kia, hai là
+xếp hàng chờ mua thật lâu, tới lượt mình liền hết hàng. Bây giờ bất kể
+là thực phẩm tươi sống gì cũng đều rất quý giá, vậy nên nhận được một bó
+rau thôi cũng là một điều vô cùng đáng trân trọng.</p>
+<p>Người Việt có câu "Lá lành đùm lá rách", trong một tập thể, chúng ta
+hãy luôn sẵn lòng đưa tay ra giúp đỡ lẫn nhau những lúc khó khăn. Tôi
+tin rằng, với tinh thần này, chúng ta sẽ cùng nhau vượt qua được đại
+dịch Covid, và tôi mong sẽ sớm được gặp lại các bạn đồng nghiệp thân
+thương của mình.</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>Living</tag>
+        <tag>Family</tag>
       </tags>
   </entry>
   <entry>
@@ -4660,6 +4660,160 @@ of office’ escapades with you soon.</p>
         <tag>Year-End Celebration</tag>
         <tag>Work Achievement</tag>
         <tag>Family and Work</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Do You Need a Vector Database?</title>
+    <url>/2026/10/29/do-you-need-a-vector-database/</url>
+    <content><![CDATA[<p>Most RAG tutorials start by setting up a vector database. For a lot
+of projects that is the first piece of infrastructure they did not need
+yet. For others it is the right call, and knowing which group you are in
+saves a migration later.</p>
+<p>This post covers what a vector database actually does, how far plain
+exact search gets you, what Postgres can do with pgvector, and the point
+where a dedicated store earns its place.</p>
+<a id="more"></a>
+<h1 id="what-a-vector-database-does">What a vector database does</h1>
+<p>Strip away the marketing and a vector database does two jobs. It
+stores vectors next to an id and some metadata, and it finds the vectors
+closest to a query vector, quickly, while respecting filters.</p>
+<p><img src="/images/2026-10-29/what-it-does.svg" alt="Animated: a chunk with metadata is embedded, added to an index and stored with its id; later a question is embedded the same way, the index is walked, filters apply, and the top matches come back as ids." style="max-height: 420px;"></p>
+<p>The "quickly" is the whole product. Finding the nearest vectors is
+easy if you compare the query with every stored vector. A vector
+database adds an index that lets it look at a small part of the data
+instead, and accepts that it will sometimes miss a true neighbour. That
+trade is called approximate nearest neighbour search, or ANN.</p>
+<p>Everything else follows from that one feature: tuning how much
+accuracy to give up, keeping the index fresh while you write to it, and
+making filters work with an index that was built without knowing about
+them.</p>
+<h1 id="start-with-exact-search">Start with exact search</h1>
+<p>Before you add an index, do the arithmetic. A typical embedding has
+768 dimensions, stored as 4-byte floats, so one vector is about 3 KB. A
+hundred thousand chunks is around 300 MB. That fits in memory on a
+laptop.</p>
+<p>Searching it exactly means one dot product per stored vector: 100,000
+of them, about 77 million multiply-adds. Modern CPUs do that in tens of
+milliseconds on one core, often less. The result is exact, so recall is
+perfect by definition, and there is no index to build, tune or
+rebuild.</p>
+<p>For a personal knowledge base, a documentation site or one team's
+tickets, that is often the end of the story. Keep the vectors in SQLite
+or a file next to the text, load them, compare. My own small RAG project
+keeps text, a keyword index and vectors in a single SQLite file, and the
+vector search is a straight scan.</p>
+<p>Exact search stops being enough when the numbers grow. At ten million
+chunks you are scanning 30 GB per query, and no tuning saves that. That
+is the point where you need an index, which is not the same as needing a
+new database.</p>
+<h1 id="what-an-ann-index-buys-and-what-it-costs">What an ANN index
+buys, and what it costs</h1>
+<p>The two index types you will meet most are HNSW and IVF.</p>
+<ul>
+<li>HNSW builds a graph in layers. Each vector links to a few close
+neighbours, and a search walks the graph greedily from the top layer
+down, getting closer at each hop. It visits a few hundred vectors
+instead of millions.</li>
+<li>IVF clusters the vectors first. A search finds the closest few
+clusters and scans only those lists.</li>
+</ul>
+<p>Here is HNSW on 80 points in two dimensions. Exact search measures
+all 80. The graph walk starts on the top layer, drops a layer whenever
+it cannot get closer, and finds the same nearest point after 14 distance
+checks.</p>
+<video src="/videos/2026-10-29/hnsw-search.mp4" poster="/videos/2026-10-29/hnsw-search.jpg" controls playsinline preload="metadata" style="width: 100%; height: auto;" aria-label="Animation: exact search measures all 80 points; HNSW builds a layered graph, then walks it from the top layer down and finds the same nearest point after 14 distance checks.">
+</video>
+<p>Both have a dial that trades speed for recall: how wide the graph
+walk is, or how many lists to probe. Turn it up and you find more true
+neighbours, more slowly. HNSW usually gives a better speed-recall trade
+than IVF, but takes longer to build and uses more memory. IVF needs
+representative data before you build it, because the clusters come from
+that data.</p>
+<p>So an index brings three new problems: recall that is now a number
+you have to measure, memory and build time, and a setting someone has to
+own. Take them on when exact search is measurably too slow, not
+before.</p>
+<h1 id="postgres-is-probably-enough">Postgres is probably enough</h1>
+<p>If your data already lives in Postgres, the pgvector extension is the
+obvious next step. It stores vectors in a normal column, searches
+exactly by default, and adds HNSW and IVFFlat indexes when you need
+them.</p>
+<p>What you get for free is the part people underestimate. The vector
+sits in the same row as the text and the metadata, so filters are
+ordinary SQL, a delete removes the vector in the same transaction, and
+backups, access control and monitoring are the ones you already run.
+There is no second copy to keep in sync.</p>
+<p>Two limits are worth knowing before you start:</p>
+<ul>
+<li>Indexes on the standard vector type support up to 2,000 dimensions;
+the half-precision type goes to 4,000. Some newer embedding models
+produce more than that, so check your model's output size before you
+pick it.</li>
+<li>Filters are applied after the index scan. With the default HNSW
+search width of 40, a filter that matches 10% of rows leaves about 4
+results on average, even if you asked for 10. pgvector 0.8.0 added
+iterative index scans, which keep scanning until enough rows pass the
+filter. Turn them on for filtered queries.</li>
+</ul>
+<p>That filter trap applies to every ANN index, not just pgvector. It is
+the most common reason a RAG system "works in testing" and returns thin
+results in production, where every query is scoped to one tenant or one
+date range.</p>
+<h1 id="when-a-dedicated-store-earns-its-place">When a dedicated store
+earns its place</h1>
+<p>A dedicated vector database (Qdrant, Milvus, Weaviate, Pinecone and
+others) makes sense when one Postgres node is genuinely outgrown:
+hundreds of millions of vectors, high query rates, or search load you do
+not want on your transactional database.</p>
+<p><img src="/images/2026-10-29/do-you-need-one.svg" alt="Animated decision path: start with exact search; if it is too slow and you already run Postgres, use pgvector with HNSW; if filters thin results, turn on iterative scans; only when one node is outgrown, move to a dedicated store and plan the sync." style="max-height: 420px;"></p>
+<p>What they bring is real. Several of them build filtering into the
+index search rather than applying it afterwards, sharding and
+replication are part of the product, and quantization (storing vectors
+in fewer bits) is built in and tuned, which cuts memory several times
+over. Many also combine keyword and vector search in one query.</p>
+<p>What they cost is a second system that holds a copy of your data.
+Every insert, update and delete now has to reach two places, and the day
+they disagree you will be answering questions from deleted documents.
+Plan that sync from the start: write changes to an outbox table in the
+same transaction and ship them, or stream them out of the database's
+change log. Dual writes from application code drift the first time one
+of them fails.</p>
+<h1 id="two-things-that-matter-more-than-the-database">Two things that
+matter more than the database</h1>
+<p>Whatever you choose, two decisions shape answer quality more than the
+store does.</p>
+<p>The embedding model is part of your schema. Vectors from different
+models are not comparable, so changing the model means re-embedding
+everything. Record which model and version produced each vector, and
+keep the text, so a re-embed is a batch job rather than a rescue.</p>
+<p>Vectors are bad at exact strings. An error code, a function name or a
+product SKU often lands near the wrong neighbours. Run a keyword search
+next to the vector search and merge the two rankings (reciprocal rank
+fusion is the simple, robust way). Postgres full-text search or SQLite
+FTS5 is enough for that half.</p>
+<h1 id="the-short-version">The short version</h1>
+<ul>
+<li>Exact search over a few hundred thousand vectors is fast, simple and
+perfectly accurate. Start there.</li>
+<li>Add an ANN index when a measurement says exact search is too slow,
+and measure recall when you do.</li>
+<li>If you run Postgres, pgvector keeps vectors next to the data they
+describe. Check the dimension limits, and turn on iterative scans for
+filtered queries.</li>
+<li>Move to a dedicated store when one node is truly outgrown, and plan
+the sync before the first write.</li>
+<li>Store the embedding model with every vector, and pair vector search
+with keyword search.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AI Engineering</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
+        <tag>Vector Database</tag>
+        <tag>RAG</tag>
+        <tag>PostgreSQL</tag>
       </tags>
   </entry>
   <entry>

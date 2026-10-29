@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Most RAG tutorials start by setting up a vector database. For a lot of projects that is the first piece of infrastructure they did not need yet. For others it is the right call, and knowing which grou">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Do You Need a Vector Database?">
+<meta property="og:url" content="https://hien.dev/2026/10/29/do-you-need-a-vector-database/index.html">
+<meta property="og:site_name" content="Hien Hoang">
+<meta property="og:description" content="Most RAG tutorials start by setting up a vector database. For a lot of projects that is the first piece of infrastructure they did not need yet. For others it is the right call, and knowing which grou">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hien.dev/images/2026-10-29/what-it-does.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-10-29/do-you-need-one.svg">
+<meta property="article:published_time" content="2026-10-29T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-29T01:39:44.930Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="Vector Database">
+<meta property="article:tag" content="RAG">
+<meta property="article:tag" content="PostgreSQL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hien.dev/images/2026-10-29/what-it-does.svg">
+
+
+<link rel="canonical" href="https://hien.dev/2026/10/29/do-you-need-a-vector-database/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Do You Need a Vector Database? | Hien Hoang</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2026/10/29/do-you-need-a-vector-database/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hien Hoang</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#what-a-vector-database-does"><span class="nav-text">What a vector database does</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#start-with-exact-search"><span class="nav-text">Start with exact search</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#what-an-ann-index-buys-and-what-it-costs"><span class="nav-text">What an ANN index
+buys, and what it costs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#postgres-is-probably-enough"><span class="nav-text">Postgres is probably enough</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#when-a-dedicated-store-earns-its-place"><span class="nav-text">When a dedicated store
+earns its place</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#two-things-that-matter-more-than-the-database"><span class="nav-text">Two things that
+matter more than the database</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-short-version"><span class="nav-text">The short version</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">77</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">312</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2026/10/29/do-you-need-a-vector-database/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hien Hoang">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Do You Need a Vector Database?
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-10-29 09:00:00 / Modified: 08:39:44" itemprop="dateCreated datePublished" datetime="2026-10-29T09:00:00+07:00">2026-10-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/AI-Engineering/" itemprop="url" rel="index"><span itemprop="name">AI Engineering</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Most RAG tutorials start by setting up a vector database. For a lot
+of projects that is the first piece of infrastructure they did not need
+yet. For others it is the right call, and knowing which group you are in
+saves a migration later.</p>
+<p>This post covers what a vector database actually does, how far plain
+exact search gets you, what Postgres can do with pgvector, and the point
+where a dedicated store earns its place.</p>
+<a id="more"></a>
+<h1 id="what-a-vector-database-does">What a vector database does</h1>
+<p>Strip away the marketing and a vector database does two jobs. It
+stores vectors next to an id and some metadata, and it finds the vectors
+closest to a query vector, quickly, while respecting filters.</p>
+<p><img src="/images/2026-10-29/what-it-does.svg" alt="Animated: a chunk with metadata is embedded, added to an index and stored with its id; later a question is embedded the same way, the index is walked, filters apply, and the top matches come back as ids." style="max-height: 420px;"></p>
+<p>The "quickly" is the whole product. Finding the nearest vectors is
+easy if you compare the query with every stored vector. A vector
+database adds an index that lets it look at a small part of the data
+instead, and accepts that it will sometimes miss a true neighbour. That
+trade is called approximate nearest neighbour search, or ANN.</p>
+<p>Everything else follows from that one feature: tuning how much
+accuracy to give up, keeping the index fresh while you write to it, and
+making filters work with an index that was built without knowing about
+them.</p>
+<h1 id="start-with-exact-search">Start with exact search</h1>
+<p>Before you add an index, do the arithmetic. A typical embedding has
+768 dimensions, stored as 4-byte floats, so one vector is about 3 KB. A
+hundred thousand chunks is around 300 MB. That fits in memory on a
+laptop.</p>
+<p>Searching it exactly means one dot product per stored vector: 100,000
+of them, about 77 million multiply-adds. Modern CPUs do that in tens of
+milliseconds on one core, often less. The result is exact, so recall is
+perfect by definition, and there is no index to build, tune or
+rebuild.</p>
+<p>For a personal knowledge base, a documentation site or one team's
+tickets, that is often the end of the story. Keep the vectors in SQLite
+or a file next to the text, load them, compare. My own small RAG project
+keeps text, a keyword index and vectors in a single SQLite file, and the
+vector search is a straight scan.</p>
+<p>Exact search stops being enough when the numbers grow. At ten million
+chunks you are scanning 30 GB per query, and no tuning saves that. That
+is the point where you need an index, which is not the same as needing a
+new database.</p>
+<h1 id="what-an-ann-index-buys-and-what-it-costs">What an ANN index
+buys, and what it costs</h1>
+<p>The two index types you will meet most are HNSW and IVF.</p>
+<ul>
+<li>HNSW builds a graph in layers. Each vector links to a few close
+neighbours, and a search walks the graph greedily from the top layer
+down, getting closer at each hop. It visits a few hundred vectors
+instead of millions.</li>
+<li>IVF clusters the vectors first. A search finds the closest few
+clusters and scans only those lists.</li>
+</ul>
+<p>Here is HNSW on 80 points in two dimensions. Exact search measures
+all 80. The graph walk starts on the top layer, drops a layer whenever
+it cannot get closer, and finds the same nearest point after 14 distance
+checks.</p>
+<video src="/videos/2026-10-29/hnsw-search.mp4" poster="/videos/2026-10-29/hnsw-search.jpg" controls playsinline preload="metadata" style="width: 100%; height: auto;" aria-label="Animation: exact search measures all 80 points; HNSW builds a layered graph, then walks it from the top layer down and finds the same nearest point after 14 distance checks.">
+</video>
+<p>Both have a dial that trades speed for recall: how wide the graph
+walk is, or how many lists to probe. Turn it up and you find more true
+neighbours, more slowly. HNSW usually gives a better speed-recall trade
+than IVF, but takes longer to build and uses more memory. IVF needs
+representative data before you build it, because the clusters come from
+that data.</p>
+<p>So an index brings three new problems: recall that is now a number
+you have to measure, memory and build time, and a setting someone has to
+own. Take them on when exact search is measurably too slow, not
+before.</p>
+<h1 id="postgres-is-probably-enough">Postgres is probably enough</h1>
+<p>If your data already lives in Postgres, the pgvector extension is the
+obvious next step. It stores vectors in a normal column, searches
+exactly by default, and adds HNSW and IVFFlat indexes when you need
+them.</p>
+<p>What you get for free is the part people underestimate. The vector
+sits in the same row as the text and the metadata, so filters are
+ordinary SQL, a delete removes the vector in the same transaction, and
+backups, access control and monitoring are the ones you already run.
+There is no second copy to keep in sync.</p>
+<p>Two limits are worth knowing before you start:</p>
+<ul>
+<li>Indexes on the standard vector type support up to 2,000 dimensions;
+the half-precision type goes to 4,000. Some newer embedding models
+produce more than that, so check your model's output size before you
+pick it.</li>
+<li>Filters are applied after the index scan. With the default HNSW
+search width of 40, a filter that matches 10% of rows leaves about 4
+results on average, even if you asked for 10. pgvector 0.8.0 added
+iterative index scans, which keep scanning until enough rows pass the
+filter. Turn them on for filtered queries.</li>
+</ul>
+<p>That filter trap applies to every ANN index, not just pgvector. It is
+the most common reason a RAG system "works in testing" and returns thin
+results in production, where every query is scoped to one tenant or one
+date range.</p>
+<h1 id="when-a-dedicated-store-earns-its-place">When a dedicated store
+earns its place</h1>
+<p>A dedicated vector database (Qdrant, Milvus, Weaviate, Pinecone and
+others) makes sense when one Postgres node is genuinely outgrown:
+hundreds of millions of vectors, high query rates, or search load you do
+not want on your transactional database.</p>
+<p><img src="/images/2026-10-29/do-you-need-one.svg" alt="Animated decision path: start with exact search; if it is too slow and you already run Postgres, use pgvector with HNSW; if filters thin results, turn on iterative scans; only when one node is outgrown, move to a dedicated store and plan the sync." style="max-height: 420px;"></p>
+<p>What they bring is real. Several of them build filtering into the
+index search rather than applying it afterwards, sharding and
+replication are part of the product, and quantization (storing vectors
+in fewer bits) is built in and tuned, which cuts memory several times
+over. Many also combine keyword and vector search in one query.</p>
+<p>What they cost is a second system that holds a copy of your data.
+Every insert, update and delete now has to reach two places, and the day
+they disagree you will be answering questions from deleted documents.
+Plan that sync from the start: write changes to an outbox table in the
+same transaction and ship them, or stream them out of the database's
+change log. Dual writes from application code drift the first time one
+of them fails.</p>
+<h1 id="two-things-that-matter-more-than-the-database">Two things that
+matter more than the database</h1>
+<p>Whatever you choose, two decisions shape answer quality more than the
+store does.</p>
+<p>The embedding model is part of your schema. Vectors from different
+models are not comparable, so changing the model means re-embedding
+everything. Record which model and version produced each vector, and
+keep the text, so a re-embed is a batch job rather than a rescue.</p>
+<p>Vectors are bad at exact strings. An error code, a function name or a
+product SKU often lands near the wrong neighbours. Run a keyword search
+next to the vector search and merge the two rankings (reciprocal rank
+fusion is the simple, robust way). Postgres full-text search or SQLite
+FTS5 is enough for that half.</p>
+<h1 id="the-short-version">The short version</h1>
+<ul>
+<li>Exact search over a few hundred thousand vectors is fast, simple and
+perfectly accurate. Start there.</li>
+<li>Add an ANN index when a measurement says exact search is too slow,
+and measure recall when you do.</li>
+<li>If you run Postgres, pgvector keeps vectors next to the data they
+describe. Check the dimension limits, and turn on iterative scans for
+filtered queries.</li>
+<li>Move to a dedicated store when one node is truly outgrown, and plan
+the sync before the first write.</li>
+<li>Store the embedding model with every vector, and pair vector search
+with keyword search.</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/LLM/" rel="tag"># LLM</a>
+              <a href="/tags/Vector-Database/" rel="tag"># Vector Database</a>
+              <a href="/tags/RAG/" rel="tag"># RAG</a>
+              <a href="/tags/PostgreSQL/" rel="tag"># PostgreSQL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/10/28/what-langchain-is-for/" rel="prev" title="What LangChain Is For: Six Problems Every LLM App Runs Into">
+                  <i class="fa fa-chevron-left"></i> What LangChain Is For: Six Problems Every LLM App Runs Into
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
