@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Retries are easy to add. With SQS and Lambda you do not even add them: they are on from the first deploy. Safe retries are the hard part, and they are your job, not the platform&#39;s. This post walks thr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Safe Retries for SQS and Lambda Consumers">
+<meta property="og:url" content="https://hien.dev/2026/10/30/safe-retries-for-sqs-and-lambda/index.html">
+<meta property="og:site_name" content="Hien Hoang">
+<meta property="og:description" content="Retries are easy to add. With SQS and Lambda you do not even add them: they are on from the first deploy. Safe retries are the hard part, and they are your job, not the platform&#39;s. This post walks thr">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hien.dev/images/2026-10-30/retry-loop.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-10-30/partial-batch.svg">
+<meta property="article:published_time" content="2026-10-30T09:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-30T01:08:26.215Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="AWS">
+<meta property="article:tag" content="Serverless">
+<meta property="article:tag" content="Reliability">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hien.dev/images/2026-10-30/retry-loop.svg">
+
+
+<link rel="canonical" href="https://hien.dev/2026/10/30/safe-retries-for-sqs-and-lambda/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Safe Retries for SQS and Lambda Consumers | Hien Hoang</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2026/10/30/safe-retries-for-sqs-and-lambda/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hien Hoang</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#where-the-second-run-comes-from"><span class="nav-text">Where the second run comes
+from</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#one-bad-message-should-not-replay-the-batch"><span class="nav-text">One bad message
+should not replay the batch</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-the-second-run-harmless"><span class="nav-text">Make the second run harmless</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dead-letters-you-can-actually-replay"><span class="nav-text">Dead letters you can
+actually replay</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-short-version"><span class="nav-text">The short version</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">78</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">315</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2026/10/30/safe-retries-for-sqs-and-lambda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hien Hoang">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Safe Retries for SQS and Lambda Consumers
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-10-30 09:00:00 / Modified: 01:08:26" itemprop="dateCreated datePublished" datetime="2026-10-30T09:00:00+00:00">2026-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Cloud-Architecture/" itemprop="url" rel="index"><span itemprop="name">Cloud Architecture</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Retries are easy to add. With SQS and Lambda you do not even add
+them: they are on from the first deploy. Safe retries are the hard part,
+and they are your job, not the platform's.</p>
+<p>This post walks through where the second run of a message comes from,
+how to keep one bad message from replaying a whole batch, how to make
+the second run harmless, and how to keep the messages that never succeed
+in a state you can actually replay.</p>
+<a id="more"></a>
+<h1 id="where-the-second-run-comes-from">Where the second run comes
+from</h1>
+<p>A standard SQS queue delivers each message at least once. "At least"
+is doing real work in that sentence: the same message can reach your
+function twice even when nothing failed, and it will certainly come back
+when something did.</p>
+<p><img src="/images/2026-10-30/retry-loop.svg" alt="Animated: a message is received, the handler fails, the visibility timeout ends, the message is received again, and after the maximum receive count it moves to the dead-letter queue." style="max-height: 420px;"></p>
+<p>When Lambda polls a batch, SQS does not delete the messages. It hides
+them for the queue's visibility timeout. Lambda deletes them only when
+your function returns successfully. If the function throws, or runs past
+its own timeout, nothing deletes them, and when the visibility timeout
+ends they are visible again with their receive count one higher.</p>
+<p>Two settings decide how this loop behaves:</p>
+<ul>
+<li>The visibility timeout. AWS recommends at least six times the
+function timeout (plus the batch window, if you use one), so Lambda has
+time to retry a batch that was throttled. Lambda refuses a function
+timeout longer than the visibility timeout outright.</li>
+<li>The redrive policy's <code>maxReceiveCount</code>. After that many
+receives, SQS moves the message to the dead-letter queue. AWS recommends
+at least 5, which gives Lambda a few chances to retry before a message
+lands in the DLQ.</li>
+</ul>
+<p>The point to take away is that a second run is normal behaviour, not
+an incident. Design for it from the first handler.</p>
+<h1 id="one-bad-message-should-not-replay-the-batch">One bad message
+should not replay the batch</h1>
+<p>Lambda hands your function a batch of messages. By default, the batch
+succeeds or fails as a unit: if the function throws because one message
+is bad, every message in the batch returns to the queue, including the
+ones that were already processed.</p>
+<p><img src="/images/2026-10-30/partial-batch.svg" alt="Animated: one message in a batch of five fails. Without partial batch responses all five come back; with them, only the failed one does." style="max-height: 420px;"></p>
+<p>The fix is partial batch responses. Turn on
+<code>ReportBatchItemFailures</code> on the event source mapping, catch
+failures per message inside the handler, and return the IDs of the
+messages that failed in <code>batchItemFailures</code>. Lambda deletes
+the rest. Only the failures come back.</p>
+<p>A few details matter:</p>
+<ul>
+<li>Return the failures, do not throw. If the function throws, Lambda
+treats the whole batch as failed even with the setting on.</li>
+<li>An empty list means everything succeeded. A response Lambda cannot
+read, or an item ID that is not in the batch, counts as a failure of the
+whole batch.</li>
+<li>On a FIFO queue, order is the point. When one message fails, return
+it and every message after it in the batch, so nothing later in the
+group runs ahead of it.</li>
+</ul>
+<p>Partial responses shrink how much runs twice. They do not make the
+second run safe. That is the next part.</p>
+<h1 id="make-the-second-run-harmless">Make the second run harmless</h1>
+<p>A message that runs twice should leave the same result as a message
+that ran once. That property is idempotency, and the useful question is
+where the check lives.</p>
+<ul>
+<li>In the handler: easy to write, but every new handler has to remember
+it.</li>
+<li>In a shared library: one place to get it right. Powertools for AWS
+Lambda has an idempotency utility that records each key in a persistence
+store such as DynamoDB. It cannot see inside your database transaction,
+though.</li>
+<li>At the database, with a unique constraint on the idempotency key:
+the last line of defence, because it holds even when the code is
+wrong.</li>
+</ul>
+<p>I put the unique constraint in first and treat the handler or library
+check as an optimisation that saves work. A retry that hits the
+constraint is then a normal result: the work is already done, so the
+handler reports success and the message is deleted.</p>
+<p>Pick the key before any side effect happens. A message ID is not
+always enough, because the same business event can arrive in two
+different messages. A key built from the event itself (an order ID plus
+the action, for example) survives that.</p>
+<p>Side effects outside your database need the same care. A payment or
+an email cannot be rolled back with your transaction, so pass the
+idempotency key to the provider when its API accepts one, and record
+that you sent it.</p>
+<h1 id="dead-letters-you-can-actually-replay">Dead letters you can
+actually replay</h1>
+<p>A dead-letter queue full of messages is only useful if you can tell
+them apart. SQS moves a message to the DLQ unchanged: the body survives,
+the reason it failed does not.</p>
+<p>So log, next to every failure, what you will need later: the error
+type and message, the version of the consumer that failed it, the
+receive count, and a correlation ID back to the original request. With
+that you can sort the DLQ before replaying it: fixed by the new code,
+needs a data fix, or safe to drop.</p>
+<p>SQS can move messages from a DLQ back to the source queue (DLQ
+redrive, in the console or through the API). Replay the "fixed by the
+new code" group only, in small batches, and watch for the same error
+coming back. A replay that fails again is the DLQ telling you the fix
+did not cover what you thought it covered.</p>
+<h1 id="the-short-version">The short version</h1>
+<ul>
+<li>Expect every message to run more than once. It is how the queue
+works.</li>
+<li>Set the visibility timeout to at least six times the function
+timeout (plus any batch window), and <code>maxReceiveCount</code> to at
+least 5.</li>
+<li>Turn on <code>ReportBatchItemFailures</code> and return failed IDs
+instead of throwing.</li>
+<li>On FIFO queues, return the failed message and everything after
+it.</li>
+<li>Choose the idempotency key before any side effect, and back it with
+a unique constraint.</li>
+<li>Log enough with each failure to sort the DLQ, then replay in small
+batches after a fix.</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/AWS/" rel="tag"># AWS</a>
+              <a href="/tags/Serverless/" rel="tag"># Serverless</a>
+              <a href="/tags/Reliability/" rel="tag"># Reliability</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/10/29/do-you-need-a-vector-database/" rel="prev" title="Do You Need a Vector Database?">
+                  <i class="fa fa-chevron-left"></i> Do You Need a Vector Database?
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

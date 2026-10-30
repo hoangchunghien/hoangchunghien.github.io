@@ -1,148 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
-    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
-    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a
-time-traveling journey through the evolution of JavaScript's
-asynchronous capabilities. From the early days of callbacks to the
-modern elegance of async/await, we'll explore how these features came to
-be and how they've shaped the way we write JavaScript today.</p>
-<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
-<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like
-a helpful little assistant, great for adding interactive bits to
-websites. But as the internet grows, our assistant needs to juggle more
-tasks simultaneously.</p>
-<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
-<ol type="1">
-<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the
-original method for handling asynchronous operations in JavaScript.
-They're like the first pair of training wheels for the language, helping
-it to manage tasks that take time, like loading data from a server.</li>
-</ol>
-<a id="more"></a>
-<ol start="2" type="1">
-<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015
-(also known as ES6), Promises were officially introduced. They brought a
-new level of sophistication to handling async operations, much like
-upgrading from a flip phone to a smartphone.</p></li>
-<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In
-2017, JavaScript took a significant leap forward with async/await, part
-of the ES2017 standard. Writing async code became as easy as writing
-your usual synchronous code, but with all the power of non-blocking
-execution.</p></li>
-</ol>
-<p><strong>A Coding Journey Through Time</strong></p>
-<p>Let's see how each of these stages changed the way we write code when
-performing a simple task: fetching and displaying data.</p>
-<p><em>In the Time of Callbacks:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><em>The Promises Era Begins:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
-<p><em>The Age of Async/Await:</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
-<hr />
-<p>From the early days of callbacks to the streamlined era of
-async/await, JavaScript's journey in asynchronous programming is nothing
-short of remarkable. It reflects the language's adaptability and growth,
-paralleling the ever-evolving landscape of web development. As
-JavaScript continues to evolve, who knows what the future holds? But one
-thing is certain – it will keep making our coding lives easier and more
-efficient.</p>
-]]></content>
-      <categories>
-        <category>Web Development</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>Asynchronous Programming</tag>
-        <tag>Event Loop</tag>
-        <tag>Callbacks</tag>
-        <tag>Promises</tag>
-        <tag>Async/Await</tag>
-        <tag>ES2015</tag>
-        <tag>ES2017</tag>
-        <tag>Web Development</tag>
-        <tag>JavaScript Evolution</tag>
-        <tag>Coding History</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure Administrator Associate achievement</title>
-    <url>/2021/06/12/Azure-Administrator-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
-<a id="more"></a>
-<p>After getting the first <code>Azure Fundamentals Certificate</code>,
-I went on studying the higher level to achieve this one as an
-Administrator Associate. I spent most of my free time to learn <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
-learning website</a> and to do the exercises for about a week, as soon
-as having full knowledge of the course.</p>
-<p>Then I officially took an online exam at home due to the spreading of
-Covid-19 in the city. The exam lasted for 2 hours in a private quiet
-room, but to me, I just finished the test in within 1 hour. A check-in
-progress was required before the exam started (about 30 minutes),
-including capturing angles of the room, making sure that no sounds
-happened to disturb the exam, or else candidates could be considered to
-be fail.</p>
-<p>The feeling of taking the online exam at home was pretty awesome and
-safe. I was confident to pass the test because I had had practiced many
-many times and learned from them, and you know what, I did it. I passed
-the exam! The result was announced as soon as the test was submitted,
-the certification was released in about 30 minutes later. I couldn't
-wait to publish it on muy Linkedin page! It showed that my studying
-method was right and useful, which could help me get the
-certification.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>Administrator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Azure DevOps Engineering Expert achievement</title>
-    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
-<p>To be able to achieve <a
-href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft
-Azure DevOps Expert Certification</a> you have to achieve <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure
-Administrator Certification</a>. The responsibilities for the DevOps
-role include designing and implementing strategies for collaboration,
-code, infrastructure, source control, security, compliance, continuous
-integration, testing, delivery, monitoring, and feedback.</p>
-<p>As part of my role, I have already been familiar with design and
-implement DevOps pipeline for automation deployment. So it somewhat easy
-to me to learn the course quickly. Just the
-<code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar
-to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>.
-After a few days of practicing exercises, I decide to take the tests
-online due to the increasing of Covid-19. The process was the same as
-the last time I had taken the test for Administrator Associate
-certification. After an hour, I submitted the test and then the result
-was awesome. Yay, you got it, I passed!</p>
-<p>I have felt very happy for what I have had achieved, I must say I'm
-so proud of myself hohoho. There will be other tests waiting for me to
-achieve in the near future, so keep following my blog for new updates!
-Thanks you guys!</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>DevOps</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>10 Tips You Must Know for Effectively Using CloudWatch Logs Insights</title>
     <url>/2023/12/21/10-Tips-You-Must-Know-for-Effectively-Using-CloudWatch-Logs-Insights/</url>
     <content><![CDATA[<p>Amazon CloudWatch Logs Insights is a robust tool for log analysis,
@@ -976,6 +834,148 @@ trends.</li>
       </tags>
   </entry>
   <entry>
+    <title>Azure Administrator Associate achievement</title>
+    <url>/2021/06/12/Azure-Administrator-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
+<a id="more"></a>
+<p>After getting the first <code>Azure Fundamentals Certificate</code>,
+I went on studying the higher level to achieve this one as an
+Administrator Associate. I spent most of my free time to learn <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
+learning website</a> and to do the exercises for about a week, as soon
+as having full knowledge of the course.</p>
+<p>Then I officially took an online exam at home due to the spreading of
+Covid-19 in the city. The exam lasted for 2 hours in a private quiet
+room, but to me, I just finished the test in within 1 hour. A check-in
+progress was required before the exam started (about 30 minutes),
+including capturing angles of the room, making sure that no sounds
+happened to disturb the exam, or else candidates could be considered to
+be fail.</p>
+<p>The feeling of taking the online exam at home was pretty awesome and
+safe. I was confident to pass the test because I had had practiced many
+many times and learned from them, and you know what, I did it. I passed
+the exam! The result was announced as soon as the test was submitted,
+the certification was released in about 30 minutes later. I couldn't
+wait to publish it on muy Linkedin page! It showed that my studying
+method was right and useful, which could help me get the
+certification.</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Administrator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>A Time-Travel Through JavaScript&#39;s Asynchronous Landscape</title>
+    <url>/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/</url>
+    <content><![CDATA[<p>Hello, JavaScript adventurers! Today, let's embark on a
+time-traveling journey through the evolution of JavaScript's
+asynchronous capabilities. From the early days of callbacks to the
+modern elegance of async/await, we'll explore how these features came to
+be and how they've shaped the way we write JavaScript today.</p>
+<p><strong>JavaScript's Early Days to Asynchronous Mastery</strong></p>
+<p>Picture this: It's 1995, and JavaScript is born. Initially, it's like
+a helpful little assistant, great for adding interactive bits to
+websites. But as the internet grows, our assistant needs to juggle more
+tasks simultaneously.</p>
+<p><strong>The Evolution of Asynchronous JavaScript</strong></p>
+<ol type="1">
+<li><strong>The Callbacks Era (1990s-2000s):</strong> Callbacks were the
+original method for handling asynchronous operations in JavaScript.
+They're like the first pair of training wheels for the language, helping
+it to manage tasks that take time, like loading data from a server.</li>
+</ol>
+<a id="more"></a>
+<ol start="2" type="1">
+<li><p><strong>Promises Arrive (ECMAScript 2015):</strong> With ES2015
+(also known as ES6), Promises were officially introduced. They brought a
+new level of sophistication to handling async operations, much like
+upgrading from a flip phone to a smartphone.</p></li>
+<li><p><strong>The Async/Await Revolution (ECMAScript 2017):</strong> In
+2017, JavaScript took a significant leap forward with async/await, part
+of the ES2017 standard. Writing async code became as easy as writing
+your usual synchronous code, but with all the power of non-blocking
+execution.</p></li>
+</ol>
+<p><strong>A Coding Journey Through Time</strong></p>
+<p>Let's see how each of these stages changed the way we write code when
+performing a simple task: fetching and displaying data.</p>
+<p><em>In the Time of Callbacks:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        callback(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// The callback way!</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><em>The Promises Era Begins:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetchData().then(<span class="function"><span class="params">data</span> =&gt;</span> <span class="built_in">console</span>.log(data)); <span class="comment">// Cleaner with Promises</span></span><br></pre></td></tr></table></figure>
+<p><em>The Age of Async/Await:</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">&quot;Data Loaded&quot;</span>);</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">displayData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> fetchData();</span><br><span class="line">    <span class="built_in">console</span>.log(data); <span class="comment">// Simplified with async/await</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">displayData();</span><br></pre></td></tr></table></figure>
+<hr />
+<p>From the early days of callbacks to the streamlined era of
+async/await, JavaScript's journey in asynchronous programming is nothing
+short of remarkable. It reflects the language's adaptability and growth,
+paralleling the ever-evolving landscape of web development. As
+JavaScript continues to evolve, who knows what the future holds? But one
+thing is certain – it will keep making our coding lives easier and more
+efficient.</p>
+]]></content>
+      <categories>
+        <category>Web Development</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Asynchronous Programming</tag>
+        <tag>Event Loop</tag>
+        <tag>Callbacks</tag>
+        <tag>Promises</tag>
+        <tag>Async/Await</tag>
+        <tag>ES2015</tag>
+        <tag>ES2017</tag>
+        <tag>Web Development</tag>
+        <tag>JavaScript Evolution</tag>
+        <tag>Coding History</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Azure DevOps Engineering Expert achievement</title>
+    <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
+<p>To be able to achieve <a
+href="https://docs.microsoft.com/en-us/learn/certifications/devops-engineer/">Microsoft
+Azure DevOps Expert Certification</a> you have to achieve <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Azure
+Administrator Certification</a>. The responsibilities for the DevOps
+role include designing and implementing strategies for collaboration,
+code, infrastructure, source control, security, compliance, continuous
+integration, testing, delivery, monitoring, and feedback.</p>
+<p>As part of my role, I have already been familiar with design and
+implement DevOps pipeline for automation deployment. So it somewhat easy
+to me to learn the course quickly. Just the
+<code>Microsoft DevOps Pipeline</code> is the new tool to me, it similar
+to <code>Gitlab Pipeline</code> or <code>Bitbucket Pipeline</code>.
+After a few days of practicing exercises, I decide to take the tests
+online due to the increasing of Covid-19. The process was the same as
+the last time I had taken the test for Administrator Associate
+certification. After an hour, I submitted the test and then the result
+was awesome. Yay, you got it, I passed!</p>
+<p>I have felt very happy for what I have had achieved, I must say I'm
+so proud of myself hohoho. There will be other tests waiting for me to
+achieve in the near future, so keep following my blog for new updates!
+Thanks you guys!</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>DevOps</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Azure Fundamentals Achievement</title>
     <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
@@ -1707,108 +1707,6 @@ href="http://jsonapi.org/format/">JSON API format specification</a></li>
       </tags>
   </entry>
   <entry>
-    <title>DynamoDB Scan vs Query: Choosing the Right Operation for Your Data</title>
-    <url>/2023/12/20/DynamoDB-Scan-vs-Query-Choosing-the-Right-Operation-for-Your-Data/</url>
-    <content><![CDATA[<p>When working with AWS DynamoDB, one of the key decisions you'll face
-is whether to use a Scan or a Query operation. Understanding the
-differences between these two operations is crucial for efficient
-database management and cost-effective operations. In this post, we'll
-explore the distinctions between Scan and Query in DynamoDB, and guide
-you on when to use each.</p>
-<p><img src="/images/2023-12-20/002.png" style="max-height: 540px;"></p>
-<h1 id="understanding-dynamodb-scan">Understanding DynamoDB Scan</h1>
-<p>The Scan operation in DynamoDB is straightforward but comes with a
-significant cost, especially for larger tables.</p>
-<h3 id="what-is-a-scan">What is a Scan?</h3>
-<a id="more"></a>
-<p><strong>Function</strong>: Scan reads every item in the table. It
-does not use the primary key or secondary indexes and simply examines
-all the data.</p>
-<h3 id="performance-considerations">Performance Considerations</h3>
-<p><strong>Efficiency</strong>: Scan is less efficient as it goes
-through every item in the table, consuming more read capacity units.</p>
-<p><strong>Suitability</strong>: It's suitable when you need to retrieve
-all data or when your criteria cannot be addressed by a Query
-operation.</p>
-<h3 id="cost-implications">Cost Implications</h3>
-<p><strong>Expense</strong>: Scan can be more expensive, particularly
-for larger tables, due to higher read capacity usage.</p>
-<h1 id="understanding-dynamodb-query">Understanding DynamoDB Query</h1>
-<p>The Query operation, on the other hand, is more efficient and often
-the preferred choice for frequent data retrieval tasks.</p>
-<h2 id="what-is-a-query">What is a Query?</h2>
-<p><strong>Function</strong>: Query finds items using the primary key
-attribute and a specific value. It is much faster as it only retrieves
-selective items.</p>
-<h3 id="performance-considerations-1">Performance Considerations</h3>
-<p><strong>Efficiency</strong>: Query leverages primary keys or
-secondary indexes for efficient data retrieval.</p>
-<p><strong>Suitability</strong>: Ideal for frequent operations where you
-know the exact item or range of items you're searching for.</p>
-<h3 id="cost-implications-1">Cost Implications</h3>
-<p><strong>Expense</strong>: Generally more cost-effective due to lower
-read capacity consumption.</p>
-<h1 id="key-differences-between-scan-and-query">Key Differences Between
-Scan and Query</h1>
-<p><strong>Efficiency</strong>: Query outperforms Scan in efficiency,
-especially for large datasets.</p>
-<p><strong>Speed</strong>: Query operations are faster, utilizing
-primary keys or indexes.</p>
-<p><strong>Use Cases</strong>: Query is best for precise lookups, while
-Scan is for more comprehensive data retrievals.</p>
-<p><strong>Cost</strong>: Query is typically more cost-effective than
-Scan.</p>
-<h1 id="when-to-use-scan-vs-query">When to Use Scan vs Query</h1>
-<p><strong>Use Scan when:</strong></p>
-<ul>
-<li><p>You need to retrieve all the data from a table.</p></li>
-<li><p>Your search criteria do not align with the capabilities of a
-Query operation.</p></li>
-</ul>
-<p><strong>Use Query when:</strong></p>
-<ul>
-<li><p>You need to perform frequent lookups.</p></li>
-<li><p>You know the specific item(s) you are looking for.</p></li>
-<li><p>You are dealing with large datasets and require
-efficiency.</p></li>
-</ul>
-<h1 id="conclusion">Conclusion</h1>
-<p>Choosing between Scan and Query in DynamoDB depends on the specific
-requirements of your task. For efficient and cost-effective operations,
-prefer Query for its speed and precise data retrieval capabilities.
-Reserve Scan for scenarios where you need a complete overview of your
-data and where efficiency is not a primary concern.</p>
-<p>Understanding these operations and using them wisely will
-significantly impact the performance and cost of your DynamoDB usage.
-Remember, the right choice leads to better performance and optimized
-costs.</p>
-]]></content>
-      <categories>
-        <category>Cloud Computing</category>
-        <category>Database Management</category>
-        <category>AWS Services</category>
-        <category>Data Engineering</category>
-        <category>Big Data</category>
-      </categories>
-      <tags>
-        <tag>DynamoDB Scan</tag>
-        <tag>DynamoDB Query</tag>
-        <tag>AWS DynamoDB</tag>
-        <tag>NoSQL Database Operations</tag>
-        <tag>Database Performance Optimization</tag>
-        <tag>AWS Database Services</tag>
-        <tag>Read Capacity Management</tag>
-        <tag>Data Retrieval in DynamoDB</tag>
-        <tag>Efficient Database Queries</tag>
-        <tag>Scalable Database Solutions</tag>
-        <tag>Cloud Database Management</tag>
-        <tag>DynamoDB Best Practices</tag>
-        <tag>Key-Value Store Optimization</tag>
-        <tag>Cost-Effective Database Operations</tag>
-        <tag>DynamoDB Data Access Patterns</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms</title>
     <url>/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/</url>
     <content><![CDATA[<h1 id="introduction">Introduction</h1>
@@ -1936,6 +1834,108 @@ indispensable part of your development toolkit.</p>
         <tag>Docker Buildx Features</tag>
         <tag>Docker Build Optimization</tag>
         <tag>Software Development</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DynamoDB Scan vs Query: Choosing the Right Operation for Your Data</title>
+    <url>/2023/12/20/DynamoDB-Scan-vs-Query-Choosing-the-Right-Operation-for-Your-Data/</url>
+    <content><![CDATA[<p>When working with AWS DynamoDB, one of the key decisions you'll face
+is whether to use a Scan or a Query operation. Understanding the
+differences between these two operations is crucial for efficient
+database management and cost-effective operations. In this post, we'll
+explore the distinctions between Scan and Query in DynamoDB, and guide
+you on when to use each.</p>
+<p><img src="/images/2023-12-20/002.png" style="max-height: 540px;"></p>
+<h1 id="understanding-dynamodb-scan">Understanding DynamoDB Scan</h1>
+<p>The Scan operation in DynamoDB is straightforward but comes with a
+significant cost, especially for larger tables.</p>
+<h3 id="what-is-a-scan">What is a Scan?</h3>
+<a id="more"></a>
+<p><strong>Function</strong>: Scan reads every item in the table. It
+does not use the primary key or secondary indexes and simply examines
+all the data.</p>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<p><strong>Efficiency</strong>: Scan is less efficient as it goes
+through every item in the table, consuming more read capacity units.</p>
+<p><strong>Suitability</strong>: It's suitable when you need to retrieve
+all data or when your criteria cannot be addressed by a Query
+operation.</p>
+<h3 id="cost-implications">Cost Implications</h3>
+<p><strong>Expense</strong>: Scan can be more expensive, particularly
+for larger tables, due to higher read capacity usage.</p>
+<h1 id="understanding-dynamodb-query">Understanding DynamoDB Query</h1>
+<p>The Query operation, on the other hand, is more efficient and often
+the preferred choice for frequent data retrieval tasks.</p>
+<h2 id="what-is-a-query">What is a Query?</h2>
+<p><strong>Function</strong>: Query finds items using the primary key
+attribute and a specific value. It is much faster as it only retrieves
+selective items.</p>
+<h3 id="performance-considerations-1">Performance Considerations</h3>
+<p><strong>Efficiency</strong>: Query leverages primary keys or
+secondary indexes for efficient data retrieval.</p>
+<p><strong>Suitability</strong>: Ideal for frequent operations where you
+know the exact item or range of items you're searching for.</p>
+<h3 id="cost-implications-1">Cost Implications</h3>
+<p><strong>Expense</strong>: Generally more cost-effective due to lower
+read capacity consumption.</p>
+<h1 id="key-differences-between-scan-and-query">Key Differences Between
+Scan and Query</h1>
+<p><strong>Efficiency</strong>: Query outperforms Scan in efficiency,
+especially for large datasets.</p>
+<p><strong>Speed</strong>: Query operations are faster, utilizing
+primary keys or indexes.</p>
+<p><strong>Use Cases</strong>: Query is best for precise lookups, while
+Scan is for more comprehensive data retrievals.</p>
+<p><strong>Cost</strong>: Query is typically more cost-effective than
+Scan.</p>
+<h1 id="when-to-use-scan-vs-query">When to Use Scan vs Query</h1>
+<p><strong>Use Scan when:</strong></p>
+<ul>
+<li><p>You need to retrieve all the data from a table.</p></li>
+<li><p>Your search criteria do not align with the capabilities of a
+Query operation.</p></li>
+</ul>
+<p><strong>Use Query when:</strong></p>
+<ul>
+<li><p>You need to perform frequent lookups.</p></li>
+<li><p>You know the specific item(s) you are looking for.</p></li>
+<li><p>You are dealing with large datasets and require
+efficiency.</p></li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>Choosing between Scan and Query in DynamoDB depends on the specific
+requirements of your task. For efficient and cost-effective operations,
+prefer Query for its speed and precise data retrieval capabilities.
+Reserve Scan for scenarios where you need a complete overview of your
+data and where efficiency is not a primary concern.</p>
+<p>Understanding these operations and using them wisely will
+significantly impact the performance and cost of your DynamoDB usage.
+Remember, the right choice leads to better performance and optimized
+costs.</p>
+]]></content>
+      <categories>
+        <category>Cloud Computing</category>
+        <category>Database Management</category>
+        <category>AWS Services</category>
+        <category>Data Engineering</category>
+        <category>Big Data</category>
+      </categories>
+      <tags>
+        <tag>DynamoDB Scan</tag>
+        <tag>DynamoDB Query</tag>
+        <tag>AWS DynamoDB</tag>
+        <tag>NoSQL Database Operations</tag>
+        <tag>Database Performance Optimization</tag>
+        <tag>AWS Database Services</tag>
+        <tag>Read Capacity Management</tag>
+        <tag>Data Retrieval in DynamoDB</tag>
+        <tag>Efficient Database Queries</tag>
+        <tag>Scalable Database Solutions</tag>
+        <tag>Cloud Database Management</tag>
+        <tag>DynamoDB Best Practices</tag>
+        <tag>Key-Value Store Optimization</tag>
+        <tag>Cost-Effective Database Operations</tag>
+        <tag>DynamoDB Data Access Patterns</tag>
       </tags>
   </entry>
   <entry>
@@ -2601,113 +2601,6 @@ have the game enviroment implemented first.</p>
       </tags>
   </entry>
   <entry>
-    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
-    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
-<p>The <code>dig</code> command is a staple for web developers needing
-to troubleshoot and analyze DNS (Domain Name System) issues. It stands
-for Domain Information Groper, providing detailed DNS information with
-simplicity and flexibility.</p>
-<h1 id="check-dig-installation">Check dig Installation:</h1>
-<p>Run `dig -v`` in your terminal. This command checks if dig is
-installed on your Linux machine by returning the installed version.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
-<h1 id="install-dig-if-not-found">Install dig if not found</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
-<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
-<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
-This command fetches the A record of example.com, showing the IP address
-associated with the domain.</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
-<p>To query a specific DNS server, such as Google’s public DNS, use
-<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
-DNS resolution occurs through different servers.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
-<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
-Instead of translating a domain to an IP address, it does the opposite,
-revealing the domain linked to a given IP.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
-<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
-Queries:</h1>
-<p>For querying multiple domains, dig offers a batch mode. Simply create
-a file with a list of domains and execute
-<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
-DNS queries.</p>
-<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
-<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
-allows you to set default options tailored to your regular usage
-patterns.</p>
-<h1 id="conclusion">Conclusion:</h1>
-<p><code>dig</code> is an invaluable tool for developers dealing with
-DNS. It’s precise, flexible, and provides a depth of information crucial
-for diagnosing and understanding domain resolutions.</p>
-]]></content>
-      <categories>
-        <category>Linux System Administration</category>
-        <category>IT and Networking Tools</category>
-        <category>Command Line Utilities</category>
-      </categories>
-      <tags>
-        <tag>Linux Commands</tag>
-        <tag>DNS Lookup</tag>
-        <tag>Network Troubleshooting</tag>
-        <tag>DNS Query Tool</tag>
-        <tag>Command Line Tools</tag>
-        <tag>Linux Networking</tag>
-        <tag>System Administration</tag>
-        <tag>DNS Analysis</tag>
-        <tag>Linux Tutorials</tag>
-        <tag>Developer Tools</tag>
-        <tag>DNS Configuration</tag>
-        <tag>Linux Server Management</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
-    <url>/2020/11/23/Manage-ssh-keys/</url>
-    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
-<p>for example, I have 2 keys in my laptop</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>Next, add the new key you just created</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
-<p>You can check your added keys</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
-<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="test-the-connection">3. Test the connection</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
-<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add
-public key to your source control profile setting</h1>
-<p>Copy the public key to clipboard</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
-<p>Paste the key to gitlab ssh setting</p>
-<p><img src="/images/2020-11-23/001.png"></p>
-<p>Paste the key to github ssh setting</p>
-<p><img src="/images/2020-11-23/002.png"></p>
-<h1 id="clone-the-source-code-using-different-user">5. Clone the source
-code using different user</h1>
-<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
-<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
-<p>That's all! Good luck!</p>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>GitLab</tag>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Image Semantic Segmentation</title>
     <url>/2021/04/21/Image-Semantic-Segmentation/</url>
     <content><![CDATA[<h1 id="overview">1. Overview</h1>
@@ -2995,6 +2888,113 @@ visualization utils from tensorflow models</h2>
         <tag>MobileNet-V2</tag>
         <tag>Pretrain</tag>
         <tag>Fully Convolution Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
+    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
+<p>The <code>dig</code> command is a staple for web developers needing
+to troubleshoot and analyze DNS (Domain Name System) issues. It stands
+for Domain Information Groper, providing detailed DNS information with
+simplicity and flexibility.</p>
+<h1 id="check-dig-installation">Check dig Installation:</h1>
+<p>Run `dig -v`` in your terminal. This command checks if dig is
+installed on your Linux machine by returning the installed version.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
+<h1 id="install-dig-if-not-found">Install dig if not found</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
+<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
+<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
+This command fetches the A record of example.com, showing the IP address
+associated with the domain.</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
+<p>To query a specific DNS server, such as Google’s public DNS, use
+<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
+DNS resolution occurs through different servers.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
+<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
+Instead of translating a domain to an IP address, it does the opposite,
+revealing the domain linked to a given IP.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
+<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
+Queries:</h1>
+<p>For querying multiple domains, dig offers a batch mode. Simply create
+a file with a list of domains and execute
+<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
+DNS queries.</p>
+<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
+<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
+allows you to set default options tailored to your regular usage
+patterns.</p>
+<h1 id="conclusion">Conclusion:</h1>
+<p><code>dig</code> is an invaluable tool for developers dealing with
+DNS. It’s precise, flexible, and provides a depth of information crucial
+for diagnosing and understanding domain resolutions.</p>
+]]></content>
+      <categories>
+        <category>Linux System Administration</category>
+        <category>IT and Networking Tools</category>
+        <category>Command Line Utilities</category>
+      </categories>
+      <tags>
+        <tag>Linux Commands</tag>
+        <tag>DNS Lookup</tag>
+        <tag>Network Troubleshooting</tag>
+        <tag>DNS Query Tool</tag>
+        <tag>Command Line Tools</tag>
+        <tag>Linux Networking</tag>
+        <tag>System Administration</tag>
+        <tag>DNS Analysis</tag>
+        <tag>Linux Tutorials</tag>
+        <tag>Developer Tools</tag>
+        <tag>DNS Configuration</tag>
+        <tag>Linux Server Management</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Manage multiple ssh accounts for GitHub and GitLab</title>
+    <url>/2020/11/23/Manage-ssh-keys/</url>
+    <content><![CDATA[<h1 id="generate-new-rsa-ssh-keys">1. Generate new RSA SSH keys</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048 -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>for example, I have 2 keys in my laptop</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">~/.ssh/id_rsa</span><br><span class="line">~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>Next, add the new key you just created</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add ~/.ssh/tpp_rsa</span><br></pre></td></tr></table></figure>
+<p>You can check your added keys</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-add -l</span><br></pre></td></tr></table></figure>
+<h1 id="modify-the-ssh-config">2. Modify the ssh config</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nano ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Personal</span></span><br><span class="line">Host gitlab.com</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Gitlab Working</span></span><br><span class="line">Host gitlab.com-tpp</span><br><span class="line">        HostName gitlab.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Personal</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> GitHub Working</span></span><br><span class="line">Host github.com</span><br><span class="line">        HostName github.com-tpp</span><br><span class="line">        User git</span><br><span class="line">        IdentityFile ~/.ssh/tpp_rsa</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="test-the-connection">3. Test the connection</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@gitlab.com</span><br><span class="line">ssh -T git@gitlab.com-tpp</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@github.com-tpp</span><br></pre></td></tr></table></figure>
+<h1 id="add-public-key-to-your-source-control-profile-setting">4. Add
+public key to your source control profile setting</h1>
+<p>Copy the public key to clipboard</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/tpp_rsa.pub | xclip -selection c</span><br></pre></td></tr></table></figure>
+<p>Paste the key to gitlab ssh setting</p>
+<p><img src="/images/2020-11-23/001.png"></p>
+<p>Paste the key to github ssh setting</p>
+<p><img src="/images/2020-11-23/002.png"></p>
+<h1 id="clone-the-source-code-using-different-user">5. Clone the source
+code using different user</h1>
+<p>Use this config for your personal account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com:myname/myproject.git</span><br></pre></td></tr></table></figure></p>
+<p>For other account <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone git@gitlab.com-tpp:orga/projecta.git</span><br></pre></td></tr></table></figure></p>
+<p>That's all! Good luck!</p>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>GitLab</tag>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -3589,6 +3589,64 @@ thương của mình.</p>
       </tags>
   </entry>
   <entry>
+    <title>Rời Phố Về Núi, Ta Chill (P2)</title>
+    <url>/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/</url>
+    <content><![CDATA[<p>Rời phố về quê<br/> Sống với núi rừng<br/> Sương trời gió lộng<br/>
+Lòng này vẫn ấm.<br/></p>
+<p>Ai nói quê hương<br/> Một nghèo hai nhỏ<br/> Về rồi mới tỏ<br/> Hoa
+cỏ trầm hương.<br/></p>
+<p>Nắm tay người thương<br/> Nương tựa sớm tối<br/> Đông qua xuân
+tới<br/> Cười một đời hoa.<br/></p>
+<p>-- Thơ con cóc tự viết, các bạn đừng cười nha!--</p>
+<p>Từ khi rời phố về quê, cảm giác thật khác hẳn. Hoàn cảnh sống khác
+nên sẽ có những thú vui khác. Phần là xa cách phố phường huyên náo,
+không còn những nơi giải trí đa dạng, đồng thời bản thân bắt đầu gắn kết
+với thiên nhiên nhiều hơn, thấy mình cũng sống chậm lại hơn.</p>
+<a id="more"></a>
+<p>Công việc thì vẫn vậy, làm việc từ xa như hồi giãn cách vì dịch.
+Nhưng khi xong việc, đóng lại màn hình nhỏ, mình nghỉ ngơi và tìm niềm
+vui qua những việc chăm sóc nhà cửa và cây cảnh. Như là tưới cây, bón
+phân, dọn cỏ quanh vườn… Cuối tuần mình hay đèo vợ đi mua một vài chậu
+cây hoa về trang trí sân nhà. Không gian sân nhà bỗng bừng sinh khí hơn
+hẳn. Lúc nghỉ ngơi mà ra sân sau hóng gió, nhìn ngắm cây xanh hoa tươi
+thì con người mình thấy thư thái, thấy dễ chịu lắm. Nhiều ý tưởng hay ho
+cũng xuất hiện từ đây, trong đó có cả việc bày trí lại không gian sống
+như là khoan lắp thêm kệ sao cho khoa học, tiện lợi trong sinh hoạt.</p>
+<p>Ngoài việc chăm sóc cây cảnh thì mình còn một thú vui nữa là chạy xe
+phượt vài chục cây số lên Thành Phố Đà Lạt dạo, có thể nhấm nháp tý café
+rồi chạy về nhà. Hì hì, thật ra thì ở Sài Gòn ấy, bước ra đường là có
+quán café, hàng quán đồ gì cũng nhiều, thậm chí mở app (ứng dụng) lên
+đặt hàng là giao liền tận nơi luôn. Còn ở quê mình thì khác, gần nhà
+cũng có quán café chứ không phải không có, chỉ là phong cách của quán
+dành cho đối tượng cô dì chú bác từ U40 trở lên. Thêm nữa là mùi vị café
+cũng không phải gu của mình. Gu cafe của mình á là cafe Arabica phải
+rang nguyên chất, không trộn lẫn các phụ liệu hay gia vị khác như bơ,
+đậu... Những quán café trên thành phố Đà Lạt thì khác hẳn chỗ mình, từ
+phong cách quán đến hương vị pha chế thu hút giới trẻ như mình nhiều
+hơn. Thành ra thi thoảng tụi mình phóng xe lên đó thưởng thức cảnh đẹp
+và café cũng là một niềm vui thích và ý nghĩa. Gọi là thiên về trải
+nghiệm hành trình nhiều hơn là có được kết quả tiện lợi trong tích
+tắc.</p>
+<p>Nhiều người than phiền rằng cuộc sống sao mà nhàm chán quá, có lẽ các
+bạn ấy nên thử làm điều gì đó mới và khác đi, như là tận hưởng quá trình
+thay vì chú trọng kết quả. Ví như đi phượt đến nơi nào đó cùng bạn bè,
+hay tự tay làm ra một cái gì đó để tặng, để chia sẻ, hay chỉ đơn giản
+dành cho người thân thương của mình những giây phút chuyện trò kết nối.
+Rời xa những chiếc màn hình điện tử sẽ giúp bạn thoải mái hơn nhiều. Thế
+giới này rất rộng lớn, vẫn luôn đợi bạn ngẩng cao đầu, lao vào khám
+phá.</p>
+<p>Mình sẽ tiếp tục chia sẻ những trải nghiệm sống chất của một
+developer phía sau màn hình vào bài tiếp theo nhé!</p>
+]]></content>
+      <categories>
+        <category>Living</category>
+      </categories>
+      <tags>
+        <tag>chill</tag>
+        <tag>roi pho ve nui</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Rời Phố Về Núi, Ta Chill (P1)</title>
     <url>/2021/11/24/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P1/</url>
     <content><![CDATA[<p>11 giờ đêm. Ngày 19.11.21.</p>
@@ -3643,64 +3701,6 @@ nhất, và con đường, phương hướng ta đi sẽ cho ta một bài học
 trong cái không khí se lạnh vào đông ở miền núi. Tôi hít thở và tận
 hưởng không gian trong lành này, một chương mới của chúng tôi sẽ được
 viết tiếp từ đây.</p>
-]]></content>
-      <categories>
-        <category>Living</category>
-      </categories>
-      <tags>
-        <tag>chill</tag>
-        <tag>roi pho ve nui</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Rời Phố Về Núi, Ta Chill (P2)</title>
-    <url>/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/</url>
-    <content><![CDATA[<p>Rời phố về quê<br/> Sống với núi rừng<br/> Sương trời gió lộng<br/>
-Lòng này vẫn ấm.<br/></p>
-<p>Ai nói quê hương<br/> Một nghèo hai nhỏ<br/> Về rồi mới tỏ<br/> Hoa
-cỏ trầm hương.<br/></p>
-<p>Nắm tay người thương<br/> Nương tựa sớm tối<br/> Đông qua xuân
-tới<br/> Cười một đời hoa.<br/></p>
-<p>-- Thơ con cóc tự viết, các bạn đừng cười nha!--</p>
-<p>Từ khi rời phố về quê, cảm giác thật khác hẳn. Hoàn cảnh sống khác
-nên sẽ có những thú vui khác. Phần là xa cách phố phường huyên náo,
-không còn những nơi giải trí đa dạng, đồng thời bản thân bắt đầu gắn kết
-với thiên nhiên nhiều hơn, thấy mình cũng sống chậm lại hơn.</p>
-<a id="more"></a>
-<p>Công việc thì vẫn vậy, làm việc từ xa như hồi giãn cách vì dịch.
-Nhưng khi xong việc, đóng lại màn hình nhỏ, mình nghỉ ngơi và tìm niềm
-vui qua những việc chăm sóc nhà cửa và cây cảnh. Như là tưới cây, bón
-phân, dọn cỏ quanh vườn… Cuối tuần mình hay đèo vợ đi mua một vài chậu
-cây hoa về trang trí sân nhà. Không gian sân nhà bỗng bừng sinh khí hơn
-hẳn. Lúc nghỉ ngơi mà ra sân sau hóng gió, nhìn ngắm cây xanh hoa tươi
-thì con người mình thấy thư thái, thấy dễ chịu lắm. Nhiều ý tưởng hay ho
-cũng xuất hiện từ đây, trong đó có cả việc bày trí lại không gian sống
-như là khoan lắp thêm kệ sao cho khoa học, tiện lợi trong sinh hoạt.</p>
-<p>Ngoài việc chăm sóc cây cảnh thì mình còn một thú vui nữa là chạy xe
-phượt vài chục cây số lên Thành Phố Đà Lạt dạo, có thể nhấm nháp tý café
-rồi chạy về nhà. Hì hì, thật ra thì ở Sài Gòn ấy, bước ra đường là có
-quán café, hàng quán đồ gì cũng nhiều, thậm chí mở app (ứng dụng) lên
-đặt hàng là giao liền tận nơi luôn. Còn ở quê mình thì khác, gần nhà
-cũng có quán café chứ không phải không có, chỉ là phong cách của quán
-dành cho đối tượng cô dì chú bác từ U40 trở lên. Thêm nữa là mùi vị café
-cũng không phải gu của mình. Gu cafe của mình á là cafe Arabica phải
-rang nguyên chất, không trộn lẫn các phụ liệu hay gia vị khác như bơ,
-đậu... Những quán café trên thành phố Đà Lạt thì khác hẳn chỗ mình, từ
-phong cách quán đến hương vị pha chế thu hút giới trẻ như mình nhiều
-hơn. Thành ra thi thoảng tụi mình phóng xe lên đó thưởng thức cảnh đẹp
-và café cũng là một niềm vui thích và ý nghĩa. Gọi là thiên về trải
-nghiệm hành trình nhiều hơn là có được kết quả tiện lợi trong tích
-tắc.</p>
-<p>Nhiều người than phiền rằng cuộc sống sao mà nhàm chán quá, có lẽ các
-bạn ấy nên thử làm điều gì đó mới và khác đi, như là tận hưởng quá trình
-thay vì chú trọng kết quả. Ví như đi phượt đến nơi nào đó cùng bạn bè,
-hay tự tay làm ra một cái gì đó để tặng, để chia sẻ, hay chỉ đơn giản
-dành cho người thân thương của mình những giây phút chuyện trò kết nối.
-Rời xa những chiếc màn hình điện tử sẽ giúp bạn thoải mái hơn nhiều. Thế
-giới này rất rộng lớn, vẫn luôn đợi bạn ngẩng cao đầu, lao vào khám
-phá.</p>
-<p>Mình sẽ tiếp tục chia sẻ những trải nghiệm sống chất của một
-developer phía sau màn hình vào bài tiếp theo nhé!</p>
 ]]></content>
       <categories>
         <category>Living</category>
@@ -3862,6 +3862,64 @@ Docs</a></li>
       </tags>
   </entry>
   <entry>
+    <title>Setup your own Docker Private Registry</title>
+    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
+    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
+<ol type="1">
+<li>Create an <code>htpasswd</code> file containing the login
+credentials for the initial account.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Create a directory to hold the certs for the registry server</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Create a self-signed certificate for the registry.</li>
+</ol>
+<p>NOTE: For the <code>Common Name</code> field, enter the hostname of
+the registry server. Here I will use <code>registry.internal</code></p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
+<ol start="4" type="1">
+<li>Create a container to run the registry.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
+<ol start="5" type="1">
+<li>Once the registry starts up, verify that it is responsive. It's OK
+if this command returns nothing, just make sure it does not fail.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
+<h1 id="in-the-docker-client">In the Docker Client</h1>
+<ol type="1">
+<li>Add the registry's public self-signed certificate to
+<code>/etc/docker/certs.d</code>. The scp command is copying the file
+from the registry server to the client.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>Log in to the private registry. The credentials should be username
+<code>hienhoang</code> and password
+<code>SupP3rS3cureP@ssW0rd</code>.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>Test the setup by push a image to the registry</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Docker</tag>
+        <tag>Docker Registry</tag>
+        <tag>Openssl</tag>
+        <tag>Self-signed Certificate</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Setup On Premise Kubernetes Cluster</title>
     <url>/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/</url>
     <content><![CDATA[<h1 id="overview">Overview</h1>
@@ -3947,64 +4005,6 @@ host:</p>
         <tag>Kubernetes</tag>
         <tag>K8S</tag>
         <tag>On-premise</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Setup your own Docker Private Registry</title>
-    <url>/2022/07/18/Setup-your-own-Docker-Private-Registry/</url>
-    <content><![CDATA[<h1 id="in-the-registry-server">In the Registry Server</h1>
-<ol type="1">
-<li>Create an <code>htpasswd</code> file containing the login
-credentials for the initial account.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/auth</span><br><span class="line">docker run --entrypoint htpasswd registry:2.7.0 -Bbn hienhoang SupP3rS3cureP@ssW0rd &gt; ~/registry/auth/htpasswd</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Create a directory to hold the certs for the registry server</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/registry/certs</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Create a self-signed certificate for the registry.</li>
-</ol>
-<p>NOTE: For the <code>Common Name</code> field, enter the hostname of
-the registry server. Here I will use <code>registry.internal</code></p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openssl req \</span><br><span class="line">  -newkey rsa:4096 -nodes -sha256 -keyout ~/registry/certs/domain.key \</span><br><span class="line">  -x509 -days 365 -out ~/registry/certs/domain.crt</span><br></pre></td></tr></table></figure>
-<ol start="4" type="1">
-<li>Create a container to run the registry.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 443:443 --restart=always --name registry \</span><br><span class="line">  -v /home/hienhoang/registry/certs:/certs \</span><br><span class="line">  -v /home/hienhoang/registry/auth:/auth \</span><br><span class="line">  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \</span><br><span class="line">  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \</span><br><span class="line">  -e REGISTRY_AUTH=htpasswd \</span><br><span class="line">  -e <span class="string">&quot;REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm&quot;</span> \</span><br><span class="line">  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \</span><br><span class="line">  registry:2.7.0</span><br></pre></td></tr></table></figure>
-<ol start="5" type="1">
-<li>Once the registry starts up, verify that it is responsive. It's OK
-if this command returns nothing, just make sure it does not fail.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -k https://localhost:443</span><br></pre></td></tr></table></figure>
-<h1 id="in-the-docker-client">In the Docker Client</h1>
-<ol type="1">
-<li>Add the registry's public self-signed certificate to
-<code>/etc/docker/certs.d</code>. The scp command is copying the file
-from the registry server to the client.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker/certs.d/registry.internal:443</span><br><span class="line">sudo scp hienhoang@registry.internal:/home/hienhoang/registry/certs/domain.crt /etc/docker/certs.d/registry.internal:443</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Log in to the private registry. The credentials should be username
-<code>hienhoang</code> and password
-<code>SupP3rS3cureP@ssW0rd</code>.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login registry.internal:443</span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>Test the setup by push a image to the registry</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu</span><br><span class="line">docker tag ubuntu registry.internal:443/test-image:1</span><br><span class="line">docker push registry.internal:443/test-image:1</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Docker</tag>
-        <tag>Docker Registry</tag>
-        <tag>Openssl</tag>
-        <tag>Self-signed Certificate</tag>
       </tags>
   </entry>
   <entry>
@@ -4297,8 +4297,8 @@ right choice for your application.</p>
 of your application, so choose wisely!</p>
 ]]></content>
       <categories>
-        <category>Web Development</category>
         <category>Cloud Computing</category>
+        <category>Web Development</category>
         <category>Software Development</category>
         <category>Technology</category>
         <category>Database Technologies</category>
@@ -5204,6 +5204,136 @@ href="http://localhost:5000">http://localhost:5000</a></li>
         <tag>Automated Testing</tag>
         <tag>Tech How-To</tag>
         <tag>Docker Deployment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Safe Retries for SQS and Lambda Consumers</title>
+    <url>/2026/10/30/safe-retries-for-sqs-and-lambda/</url>
+    <content><![CDATA[<p>Retries are easy to add. With SQS and Lambda you do not even add
+them: they are on from the first deploy. Safe retries are the hard part,
+and they are your job, not the platform's.</p>
+<p>This post walks through where the second run of a message comes from,
+how to keep one bad message from replaying a whole batch, how to make
+the second run harmless, and how to keep the messages that never succeed
+in a state you can actually replay.</p>
+<a id="more"></a>
+<h1 id="where-the-second-run-comes-from">Where the second run comes
+from</h1>
+<p>A standard SQS queue delivers each message at least once. "At least"
+is doing real work in that sentence: the same message can reach your
+function twice even when nothing failed, and it will certainly come back
+when something did.</p>
+<p><img src="/images/2026-10-30/retry-loop.svg" alt="Animated: a message is received, the handler fails, the visibility timeout ends, the message is received again, and after the maximum receive count it moves to the dead-letter queue." style="max-height: 420px;"></p>
+<p>When Lambda polls a batch, SQS does not delete the messages. It hides
+them for the queue's visibility timeout. Lambda deletes them only when
+your function returns successfully. If the function throws, or runs past
+its own timeout, nothing deletes them, and when the visibility timeout
+ends they are visible again with their receive count one higher.</p>
+<p>Two settings decide how this loop behaves:</p>
+<ul>
+<li>The visibility timeout. AWS recommends at least six times the
+function timeout (plus the batch window, if you use one), so Lambda has
+time to retry a batch that was throttled. Lambda refuses a function
+timeout longer than the visibility timeout outright.</li>
+<li>The redrive policy's <code>maxReceiveCount</code>. After that many
+receives, SQS moves the message to the dead-letter queue. AWS recommends
+at least 5, which gives Lambda a few chances to retry before a message
+lands in the DLQ.</li>
+</ul>
+<p>The point to take away is that a second run is normal behaviour, not
+an incident. Design for it from the first handler.</p>
+<h1 id="one-bad-message-should-not-replay-the-batch">One bad message
+should not replay the batch</h1>
+<p>Lambda hands your function a batch of messages. By default, the batch
+succeeds or fails as a unit: if the function throws because one message
+is bad, every message in the batch returns to the queue, including the
+ones that were already processed.</p>
+<p><img src="/images/2026-10-30/partial-batch.svg" alt="Animated: one message in a batch of five fails. Without partial batch responses all five come back; with them, only the failed one does." style="max-height: 420px;"></p>
+<p>The fix is partial batch responses. Turn on
+<code>ReportBatchItemFailures</code> on the event source mapping, catch
+failures per message inside the handler, and return the IDs of the
+messages that failed in <code>batchItemFailures</code>. Lambda deletes
+the rest. Only the failures come back.</p>
+<p>A few details matter:</p>
+<ul>
+<li>Return the failures, do not throw. If the function throws, Lambda
+treats the whole batch as failed even with the setting on.</li>
+<li>An empty list means everything succeeded. A response Lambda cannot
+read, or an item ID that is not in the batch, counts as a failure of the
+whole batch.</li>
+<li>On a FIFO queue, order is the point. When one message fails, return
+it and every message after it in the batch, so nothing later in the
+group runs ahead of it.</li>
+</ul>
+<p>Partial responses shrink how much runs twice. They do not make the
+second run safe. That is the next part.</p>
+<h1 id="make-the-second-run-harmless">Make the second run harmless</h1>
+<p>A message that runs twice should leave the same result as a message
+that ran once. That property is idempotency, and the useful question is
+where the check lives.</p>
+<ul>
+<li>In the handler: easy to write, but every new handler has to remember
+it.</li>
+<li>In a shared library: one place to get it right. Powertools for AWS
+Lambda has an idempotency utility that records each key in a persistence
+store such as DynamoDB. It cannot see inside your database transaction,
+though.</li>
+<li>At the database, with a unique constraint on the idempotency key:
+the last line of defence, because it holds even when the code is
+wrong.</li>
+</ul>
+<p>I put the unique constraint in first and treat the handler or library
+check as an optimisation that saves work. A retry that hits the
+constraint is then a normal result: the work is already done, so the
+handler reports success and the message is deleted.</p>
+<p>Pick the key before any side effect happens. A message ID is not
+always enough, because the same business event can arrive in two
+different messages. A key built from the event itself (an order ID plus
+the action, for example) survives that.</p>
+<p>Side effects outside your database need the same care. A payment or
+an email cannot be rolled back with your transaction, so pass the
+idempotency key to the provider when its API accepts one, and record
+that you sent it.</p>
+<h1 id="dead-letters-you-can-actually-replay">Dead letters you can
+actually replay</h1>
+<p>A dead-letter queue full of messages is only useful if you can tell
+them apart. SQS moves a message to the DLQ unchanged: the body survives,
+the reason it failed does not.</p>
+<p>So log, next to every failure, what you will need later: the error
+type and message, the version of the consumer that failed it, the
+receive count, and a correlation ID back to the original request. With
+that you can sort the DLQ before replaying it: fixed by the new code,
+needs a data fix, or safe to drop.</p>
+<p>SQS can move messages from a DLQ back to the source queue (DLQ
+redrive, in the console or through the API). Replay the "fixed by the
+new code" group only, in small batches, and watch for the same error
+coming back. A replay that fails again is the DLQ telling you the fix
+did not cover what you thought it covered.</p>
+<h1 id="the-short-version">The short version</h1>
+<ul>
+<li>Expect every message to run more than once. It is how the queue
+works.</li>
+<li>Set the visibility timeout to at least six times the function
+timeout (plus any batch window), and <code>maxReceiveCount</code> to at
+least 5.</li>
+<li>Turn on <code>ReportBatchItemFailures</code> and return failed IDs
+instead of throwing.</li>
+<li>On FIFO queues, return the failed message and everything after
+it.</li>
+<li>Choose the idempotency key before any side effect, and back it with
+a unique constraint.</li>
+<li>Log enough with each failure to sort the DLQ, then replay in small
+batches after a fix.</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Cloud Architecture</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>AWS</tag>
+        <tag>Serverless</tag>
+        <tag>Reliability</tag>
       </tags>
   </entry>
   <entry>
