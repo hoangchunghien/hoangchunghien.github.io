@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hien.dev","root":"/","images":"/images","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Every team has the same pile: runbooks, decision records, postmortems, the page that explains what error E1042 means. Claude can use all of it, if it can search it. The usual answer is a vector databa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Knowledge Base for Claude in One Folder">
+<meta property="og:url" content="https://hien.dev/2026/11/03/a-knowledge-base-for-claude-in-one-folder/index.html">
+<meta property="og:site_name" content="Hien Hoang">
+<meta property="og:description" content="Every team has the same pile: runbooks, decision records, postmortems, the page that explains what error E1042 means. Claude can use all of it, if it can search it. The usual answer is a vector databa">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hien.dev/images/2026-11-03/answer-a-question.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-11-03/models-scifact.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-11-03/models-vidore.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-11-03/every-write-is-a-version.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-11-03/models-cpu.svg">
+<meta property="og:image" content="https://hien.dev/images/2026-11-03/models-clip.svg">
+<meta property="article:published_time" content="2026-11-03T09:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-03T01:40:49.970Z">
+<meta property="article:author" content="Hien Hoang">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="Vector Database">
+<meta property="article:tag" content="RAG">
+<meta property="article:tag" content="MCP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hien.dev/images/2026-11-03/answer-a-question.svg">
+
+
+<link rel="canonical" href="https://hien.dev/2026/11/03/a-knowledge-base-for-claude-in-one-folder/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>A Knowledge Base for Claude in One Folder | Hien Hoang</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+
+  <link rel="canonical" href="https://hien.dev/2026/11/03/a-knowledge-base-for-claude-in-one-folder/"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNVCW6TJVQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MNVCW6TJVQ');
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hien Hoang</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#why-lancedb"><span class="nav-text">Why LanceDB</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-a-question-gets-answered"><span class="nav-text">How a question gets answered</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-well-does-it-work"><span class="nav-text">How well does it work?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chunks-that-remember-where-they-came-from"><span class="nav-text">Chunks that remember
+where they came from</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pdfs-and-images"><span class="nav-text">PDFs and images</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#every-write-is-a-version"><span class="nav-text">Every write is a version</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#models-that-fit-on-a-laptop"><span class="nav-text">Models that fit on a laptop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#limits"><span class="nav-text">Limits</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-short-version"><span class="nav-text">The short version</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hien Hoang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">78</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">317</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hoangchunghien" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:mail@hien.dev" title="E-Mail → mailto:mail@hien.dev"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/hoangchunghien" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;hoangchunghien" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://hien.dev/2026/11/03/a-knowledge-base-for-claude-in-one-folder/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hien Hoang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hien Hoang">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          A Knowledge Base for Claude in One Folder
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-11-03 09:00:00 / Modified: 01:40:49" itemprop="dateCreated datePublished" datetime="2026-11-03T09:00:00+00:00">2026-11-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/AI-Engineering/" itemprop="url" rel="index"><span itemprop="name">AI Engineering</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Every team has the same pile: runbooks, decision records,
+postmortems, the page that explains what error E1042 means. Claude can
+use all of it, if it can search it. The usual answer is a vector
+database server, an embedding API and some glue.</p>
+<p>This post builds the small version instead: a knowledge base in one
+folder, running on a laptop with no server and no API key, plugged into
+Claude Code as an MCP server. It does hybrid search, lets Claude save
+notes, ingests Markdown, PDFs and images, and keeps every version so a
+bad write can be undone. The code is on GitHub as <a
+target="_blank" rel="noopener" href="https://github.com/hoangchunghien/lancedb-kb-mcp">lancedb-kb-mcp</a>,
+with setup steps in the README.</p>
+<a id="more"></a>
+<h1 id="why-lancedb">Why LanceDB</h1>
+<p>The <a href="/2026/10/29/do-you-need-a-vector-database/">vector
+database post</a> argued for starting small: exact search, data next to
+the vectors, no second system to keep in sync. LanceDB fits. It is an
+embedded database, like SQLite: a library that reads and writes files in
+a folder, not a server you run. Vectors sit in the same row as the text,
+title, tags and source file; keyword search runs on a built-in full-text
+index; and every write creates a new version you can read later.</p>
+<p>On disk, a table is a folder of columnar data files, plus a small
+manifest per version listing which files make up that version. A write
+never edits an old file: adding one note to the demo table added a data
+file, a rebuilt index and two manifests, and left every existing data
+file alone.</p>
+<p>Claude talks to it through the Model Context Protocol (MCP). Claude
+Code starts the server as a local process and talks to it over
+stdio.</p>
+<h1 id="how-a-question-gets-answered">How a question gets answered</h1>
+<p><img src="/images/2026-11-03/answer-a-question.svg" alt="Animated: Claude calls the search tool, the MCP server embeds the question with a local model, runs vector search and keyword search on the same table, merges the two rankings with reciprocal rank fusion, and returns chunks with their file and line range for Claude to cite." style="max-height: 420px;"></p>
+<p>When Claude needs context, it calls the <code>search</code> tool. The
+server embeds the question with a small local model and runs two
+searches on the same table: vector search for chunks that mean the same
+thing, and keyword search (BM25) for chunks with the same words.
+Reciprocal rank fusion merges the lists by each result's rank in both,
+so a cosine similarity is never compared with a BM25 score.</p>
+<p>Filters for project, kind or tag apply before the search, so a narrow
+filter still returns as many results as you asked for, which avoids the
+"too few results" trap from the earlier post. Every result carries its
+file and line range, so Claude can say where an answer came from.</p>
+<h1 id="how-well-does-it-work">How well does it work?</h1>
+<p>A demo that only works on its own sample files proves little, so I
+ran three public benchmarks with human relevance labels, one for each
+thing it claims to do. The scripts are in the repo's <code>bench/</code>
+folder.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>What</th>
+<th>Benchmark</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text</td>
+<td>BEIR SciFact: 5,183 science abstracts, 300 claims</td>
+<td>nDCG@10: hybrid 0.722, vector 0.713, keyword 0.676</td>
+</tr>
+<tr>
+<td>PDF pages</td>
+<td>ViDoRe V3: a 945-page textbook PDF, 132 questions</td>
+<td>the right page first for 74%, in the top five for 95%</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>Flickr30k: 1,000 photos, 5,000 captions</td>
+<td>the right photo first for 59%, in the top ten for 90%</td>
+</tr>
+</tbody>
+</table>
+<p>nDCG@10 scores, from 0 to 1, how close the right documents are to the
+top of the first ten. The keyword-only 0.676 is close to the 0.665 the
+BEIR paper reports for BM25, a good sign the setup is sound.</p>
+<p>Hybrid search came out best on text, but only just: 0.722 against
+0.713 for vectors alone. It earns its place on exact strings such as
+error codes and names, and costs little elsewhere. It can also misfire.
+On the repo's tiny sample docs, "how often do we ship" ranked a
+feature-flag decision above the release notes, because it contains the
+words "features ship". The tool takes a <code>mode</code> argument for
+when you know which kind of search you need.</p>
+<p>The PDF result covers the whole path: the real textbook PDF, read
+with plain text extraction, chunked and searched like everything else.
+Searching ViDoRe's cleaner per-page Markdown instead only moved "right
+page first" from 74% to 77%. One caveat: the labels belong to an older
+edition of the book, so the script fetches that edition from the
+Internet Archive, and questions about the other textbook in the set,
+whose edition is gone, are left out.</p>
+<p>Is a bigger model worth it? I ran the same benchmarks with seven
+other local models, from 23 million to 600 million parameters, and with
+the 8-billion-parameter model my own knowledge base runs on a GPU.</p>
+<p><img src="/images/2026-11-03/models-scifact.svg" alt="Scatter of SciFact nDCG@10 against model size: small models score 0.645 to 0.740 with vector search and 0.707 to 0.752 with hybrid search, above keyword-only search at 0.676; Qwen3-Embedding-8B scores 0.796 with vectors and 0.775 with hybrid." style="max-width: 100%; height: auto;"></p>
+<p>Among models a laptop runs comfortably, adding keyword search matters
+more than picking the model: hybrid lifts every one of them, and their
+spread shrinks from 0.65 to 0.74 down to 0.71 to 0.75. The 8B model is
+in another class at 0.796 with vectors alone, and it is the one model
+that adding keyword search made worse. Its vectors already find what the
+keywords would.</p>
+<p><img src="/images/2026-11-03/models-vidore.svg" alt="Bar chart of the share of questions where the right PDF page came first with hybrid search: Qwen3-Embedding-8B 82%, small models 73% to 77%, keyword only 69%." style="max-width: 100%; height: auto;"></p>
+<p>On the PDF, every model beat keyword-only search (69%). The small
+ones land between 73% and 77%, and with 132 questions one question is
+worth almost a point, so those few points are close to noise. The 8B
+model reaches 85% with vector search alone.</p>
+<h1 id="chunks-that-remember-where-they-came-from">Chunks that remember
+where they came from</h1>
+<p>Ingesting a folder splits each file at its headings, and long
+sections at blank lines, so a paragraph is never cut in half. Each chunk
+keeps its heading as a title and its line range. An early test caught a
+bug here: the first chunker only knew Markdown headings, so on mypy's
+reStructuredText docs every section ran into the next.</p>
+<p>Running ingest again is cheap. A content hash per file skips
+unchanged files, and a changed file has all its chunks replaced, so no
+stale copy is left behind. Claude can write too: <code>add_note</code>
+and <code>update_note</code> put decisions and findings in the same
+table, so a search finds them next to the documents.</p>
+<h1 id="pdfs-and-images">PDFs and images</h1>
+<p>A team's knowledge is not all Markdown. Postmortems get exported as
+PDFs, and the most useful thing in an incident channel is often a
+dashboard screenshot.</p>
+<video src="/videos/2026-11-03/files-to-answers.mp4" poster="/videos/2026-11-03/files-to-answers.jpg" controls playsinline preload="metadata" style="width: 100%; height: auto;" aria-label="Animation: a Markdown runbook is split at headings, a PDF postmortem is read page by page, and a dashboard screenshot goes through CLIP, into two tables in one folder. The question &quot;What happened to the queue backlog during the outage?&quot; returns page 1 of the postmortem, the dashboard, the runbook section and page 2. Then the catch: CLIP matches what a picture looks like, not what it means.">
+</video>
+<p>A PDF is read page by page and chunked like any other document, and
+every chunk keeps its page number. That needs a text layer: a scanned
+PDF needs OCR first.</p>
+<p>Images need a different model. CLIP was trained on pictures and their
+captions, so it puts an image and a sentence describing it close
+together, and a question can be compared with images directly. Images go
+in a second table, because CLIP vectors cannot be compared with the text
+vectors, and a search merges both tables' results by rank. On the sample
+files, "what happened to the queue backlog during the outage?" returns
+page 1 of the postmortem PDF, the dashboard screenshot, the runbook
+section for the backlog alert and page 2 of the postmortem.</p>
+<p>CLIP has a catch: it matches what a picture looks like, not what it
+means. "Architecture diagram of the order system" found the diagram;
+"which services does an order pass through" picked the dashboard. CLIP
+also scores unrelated pairs fairly high, so the demo leaves out images
+below 0.28. On Flickr30k that cut-off hid 10% of the correct photos and
+still let a photo through for 9% of questions about no photo at all. It
+is a trade-off, not a clean line.</p>
+<h1 id="every-write-is-a-version">Every write is a version</h1>
+<p><img src="/images/2026-11-03/every-write-is-a-version.svg" alt="Animated: a folder is ingested and chunked by heading, unchanged files are skipped, and the rows land as version 8; Claude saves a note (version 10), a note is deleted (version 12), a search at version 10 still finds it, and restoring version 10 writes version 14." style="max-height: 420px;"></p>
+<p>An agent that can write to your knowledge base can also write
+something wrong. <code>list_versions</code> shows the history,
+<code>search</code> takes a <code>version</code> to search the table as
+it was, and <code>restore_version</code> makes an old version current by
+writing it as a new one, so nothing is lost. The numbers in the diagram
+are from a real run; each write makes two versions, one for the rows and
+one for the rebuilt index.</p>
+<p>Old versions take disk space. LanceDB's <code>optimize</code>
+compacts files and by default removes versions older than seven days, so
+if you run it, that is your undo window.</p>
+<h1 id="models-that-fit-on-a-laptop">Models that fit on a laptop</h1>
+<p>Text uses BAAI's bge-small-en-v1.5: 33 million parameters, 384
+dimensions, a 129 MB download. On a desktop CPU with the GPU off, a
+question costs 12 ms: about 6 ms to embed it and 6 ms for the hybrid
+search. Keyword search alone takes 4 ms.</p>
+<p><img src="/images/2026-11-03/models-cpu.svg" alt="Bar chart of time per question on a CPU: keyword only 4 ms, all-MiniLM-L6 10 ms, bge-small 12 ms, e5-small, multilingual-e5-small and arctic-embed-s 14 ms, bge-base 22 ms, mxbai-large 54 ms, Qwen3-Embedding-0.6B 98 ms." style="max-width: 100%; height: auto;"></p>
+<p>That is why bge-small stays the default. bge-base scores a little
+higher on text for twice the time; the larger models cost four to eight
+times as much and gain little on these benchmarks. The step that pays is
+a GPU-sized model, which is a different setup from a folder on a
+laptop.</p>
+<p>Images use CLIP ViT-B/32, a 580 MB download, loaded only when the
+knowledge base has images.</p>
+<p><img src="/images/2026-11-03/models-clip.svg" alt="Bar chart of how often the right Flickr30k photo came first: CLIP ViT-B/32 59%, ViT-B/16 62%, ViT-L/14 65%." style="max-width: 100%; height: auto;"></p>
+<p>The larger CLIP models help a little: ViT-L/14 puts the right photo
+first 65% of the time against 59%, for 11 ms per question instead of
+7.</p>
+<p>Two details matter more than the choice of model. The model is part
+of your schema: vectors from different models are not comparable, so
+changing it means a fresh ingest. And bge's suggested query prefix
+depends on the data: it helped on mypy's error-code lookups and slightly
+hurt on SciFact (0.713 with it, 0.720 without). Measure it on yours.</p>
+<h1 id="limits">Limits</h1>
+<ul>
+<li>One writer at a time. Two sessions saving notes to the same folder
+can race. To share it with a team, have one scheduled job ingest the
+docs and let everyone else read a copy of the folder.</li>
+<li>Thousands of rows, not millions. The full-text index is rebuilt
+after every write and search is exact, with no vector index.</li>
+<li>No scanned PDFs, code, audio or video yet.</li>
+</ul>
+<p>None of that matters for a team's runbooks and decisions, which is
+the point: the smallest thing that works, in a folder you can read, copy
+and delete.</p>
+<h1 id="the-short-version">The short version</h1>
+<ul>
+<li>LanceDB keeps vectors, columns, full-text search and versions in one
+folder, with no server.</li>
+<li>As an MCP server, it gives Claude search, notes, ingest of Markdown,
+PDFs and images, and version history.</li>
+<li>On public benchmarks: nDCG@10 0.722 on SciFact with hybrid search,
+the right page of a 945-page PDF first for 74% of questions, and the
+right photo first for 59% of Flickr30k captions.</li>
+<li>Every answer cites its file, page or lines, and every write can be
+undone.</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/LLM/" rel="tag"># LLM</a>
+              <a href="/tags/Vector-Database/" rel="tag"># Vector Database</a>
+              <a href="/tags/RAG/" rel="tag"># RAG</a>
+              <a href="/tags/MCP/" rel="tag"># MCP</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/11/02/how-hnsw-finds-the-nearest-vector/" rel="prev" title="How HNSW Finds the Nearest Vector">
+                  <i class="fa fa-chevron-left"></i> How HNSW Finds the Nearest Vector
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hien Hoang</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

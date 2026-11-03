@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 546" width="800" height="546" role="img" aria-label="Time per question on a CPU. median of 100 questions, one at a time (lower is better). keyword only, no model: 4 ms; all-MiniLM-L6: 10 ms; bge-small: 12 ms; e5-small: 14 ms; multilingual-e5-small: 14 ms; arctic-embed-s: 14 ms; bge-base: 22 ms; mxbai-large: 54 ms; Qwen3-Embedding-0.6B: 98 ms">
+<style>
+svg{--bg:#ffffff;--ink:#1d2733;--sub:#5a6875;--grid:#e3e8ee;--axis:#9aa6b2;--bar:#2f6fb2;--hi:#2e9e6a;--ref:#c9665f}
+@media (prefers-color-scheme:dark){svg{--bg:#121820;--ink:#e6ebf1;--sub:#a9b6c3;--grid:#26303b;--axis:#5b6876;--bar:#7fb0e6;--hi:#82c99e;--ref:#e08a83}}
+.bg{fill:var(--bg)} .title{fill:var(--ink);font:700 22px Helvetica,Arial,sans-serif}
+.sub{fill:var(--sub);font:15px Helvetica,Arial,sans-serif} .lab{fill:var(--ink);font:15px Helvetica,Arial,sans-serif}
+.labb{fill:var(--ink);font:700 15px Helvetica,Arial,sans-serif}
+.lab,.labb{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round} .tick{fill:var(--sub);font:14px Helvetica,Arial,sans-serif}
+.val{fill:var(--ink);font:14px Helvetica,Arial,sans-serif} .grid{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--axis);stroke-width:1.2} .model{fill:var(--bar)} .default{fill:var(--hi)} .keyword{fill:var(--ref)}
+.ref{stroke:var(--ref);stroke-width:2;stroke-dasharray:6 5} .reft{fill:var(--ref);font:700 14px Helvetica,Arial,sans-serif}
+.lift{stroke:var(--axis);stroke-width:1.5} .hollow{fill:var(--bg);stroke:var(--bar);stroke-width:2.5}
+.dot{fill:var(--bar);stroke:var(--bg);stroke-width:2} .doth{fill:var(--hi);stroke:var(--bg);stroke-width:2}
+</style>
+<rect class="bg" width="800" height="546" rx="10"/>
+<text class="title" x="28" y="40">Time per question on a CPU</text>
+<text class="sub" x="28" y="66">median of 100 questions, one at a time (lower is better)</text>
+<line class="grid" x1="250.0" y1="86.0" x2="250.0" y2="452.0"/>
+<text class="tick" x="250.0" y="474.0" text-anchor="middle">0 ms</text>
+<line class="grid" x1="342.0" y1="86.0" x2="342.0" y2="452.0"/>
+<text class="tick" x="342.0" y="474.0" text-anchor="middle">20 ms</text>
+<line class="grid" x1="434.0" y1="86.0" x2="434.0" y2="452.0"/>
+<text class="tick" x="434.0" y="474.0" text-anchor="middle">40 ms</text>
+<line class="grid" x1="526.0" y1="86.0" x2="526.0" y2="452.0"/>
+<text class="tick" x="526.0" y="474.0" text-anchor="middle">60 ms</text>
+<line class="grid" x1="618.0" y1="86.0" x2="618.0" y2="452.0"/>
+<text class="tick" x="618.0" y="474.0" text-anchor="middle">80 ms</text>
+<line class="grid" x1="710.0" y1="86.0" x2="710.0" y2="452.0"/>
+<text class="tick" x="710.0" y="474.0" text-anchor="middle">100 ms</text>
+<text class="labb" x="238.0" y="117.0" text-anchor="end">keyword only, no model</text>
+<rect class="keyword" x="250.0" y="100.0" width="17.5" height="24.0" rx="3"/>
+<text class="val" x="275.5" y="117.0" text-anchor="start">4 ms</text>
+<text class="lab" x="238.0" y="157.0" text-anchor="end">all-MiniLM-L6</text>
+<rect class="model" x="250.0" y="140.0" width="47.4" height="24.0" rx="3"/>
+<text class="val" x="305.4" y="157.0" text-anchor="start">10 ms</text>
+<text class="labb" x="238.0" y="197.0" text-anchor="end">bge-small (default)</text>
+<rect class="default" x="250.0" y="180.0" width="54.7" height="24.0" rx="3"/>
+<text class="val" x="312.7" y="197.0" text-anchor="start">12 ms</text>
+<text class="lab" x="238.0" y="237.0" text-anchor="end">e5-small</text>
+<rect class="model" x="250.0" y="220.0" width="64.4" height="24.0" rx="3"/>
+<text class="val" x="322.4" y="237.0" text-anchor="start">14 ms</text>
+<text class="lab" x="238.0" y="277.0" text-anchor="end">multilingual-e5-small</text>
+<rect class="model" x="250.0" y="260.0" width="64.9" height="24.0" rx="3"/>
+<text class="val" x="322.9" y="277.0" text-anchor="start">14 ms</text>
+<text class="lab" x="238.0" y="317.0" text-anchor="end">arctic-embed-s</text>
+<rect class="model" x="250.0" y="300.0" width="66.7" height="24.0" rx="3"/>
+<text class="val" x="324.7" y="317.0" text-anchor="start">14 ms</text>
+<text class="lab" x="238.0" y="357.0" text-anchor="end">bge-base</text>
+<rect class="model" x="250.0" y="340.0" width="100.3" height="24.0" rx="3"/>
+<text class="val" x="358.3" y="357.0" text-anchor="start">22 ms</text>
+<text class="lab" x="238.0" y="397.0" text-anchor="end">mxbai-large</text>
+<rect class="model" x="250.0" y="380.0" width="247.9" height="24.0" rx="3"/>
+<text class="val" x="505.9" y="397.0" text-anchor="start">54 ms</text>
+<text class="lab" x="238.0" y="437.0" text-anchor="end">Qwen3-Embedding-0.6B</text>
+<rect class="model" x="250.0" y="420.0" width="452.2" height="24.0" rx="3"/>
+<text class="val" x="710.2" y="437.0" text-anchor="start">98 ms</text>
+<text class="tick" x="28.0" y="506.0" text-anchor="start">Embedding the question plus a hybrid search over 5,183 abstracts. Intel i7-14700F, GPU off.</text>
+<text class="tick" x="28.0" y="528.0" text-anchor="start">Qwen3-Embedding-8B is too big for a laptop CPU; on a GPU server it took 24 ms to embed a question.</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" role="img" aria-label="Text search quality vs model size. BEIR SciFact, 5,183 abstracts, 300 claims: nDCG@10 (higher is better). keyword only, no model: 0.676. all-MiniLM-L6 (23M): vector 0.645, hybrid 0.707; bge-small (33M): vector 0.713, hybrid 0.722; arctic-embed-s (33M): vector 0.699, hybrid 0.730; e5-small (33M): vector 0.688, hybrid 0.720; bge-base (109M): vector 0.740, hybrid 0.752; multilingual-e5-small (118M): vector 0.677, hybrid 0.713; mxbai-large (335M): vector 0.739, hybrid 0.747; Qwen3-Embedding-0.6B (596M): vector 0.700, hybrid 0.735; Qwen3-Embedding-8B (8000M): vector 0.796, hybrid 0.775">
+<style>
+svg{--bg:#ffffff;--ink:#1d2733;--sub:#5a6875;--grid:#e3e8ee;--axis:#9aa6b2;--bar:#2f6fb2;--hi:#2e9e6a;--ref:#c9665f}
+@media (prefers-color-scheme:dark){svg{--bg:#121820;--ink:#e6ebf1;--sub:#a9b6c3;--grid:#26303b;--axis:#5b6876;--bar:#7fb0e6;--hi:#82c99e;--ref:#e08a83}}
+.bg{fill:var(--bg)} .title{fill:var(--ink);font:700 22px Helvetica,Arial,sans-serif}
+.sub{fill:var(--sub);font:15px Helvetica,Arial,sans-serif} .lab{fill:var(--ink);font:15px Helvetica,Arial,sans-serif}
+.labb{fill:var(--ink);font:700 15px Helvetica,Arial,sans-serif}
+.lab,.labb{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round} .tick{fill:var(--sub);font:14px Helvetica,Arial,sans-serif}
+.val{fill:var(--ink);font:14px Helvetica,Arial,sans-serif} .grid{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--axis);stroke-width:1.2} .model{fill:var(--bar)} .default{fill:var(--hi)} .keyword{fill:var(--ref)}
+.ref{stroke:var(--ref);stroke-width:2;stroke-dasharray:6 5} .reft{fill:var(--ref);font:700 14px Helvetica,Arial,sans-serif}
+.lift{stroke:var(--axis);stroke-width:1.5} .hollow{fill:var(--bg);stroke:var(--bar);stroke-width:2.5}
+.dot{fill:var(--bar);stroke:var(--bg);stroke-width:2} .doth{fill:var(--hi);stroke:var(--bg);stroke-width:2}
+</style>
+<rect class="bg" width="800" height="540" rx="10"/>
+<text class="title" x="28" y="40">Text search quality vs model size</text>
+<text class="sub" x="28" y="66">BEIR SciFact, 5,183 abstracts, 300 claims: nDCG@10 (higher is better)</text>
+<line class="grid" x1="109.3" y1="100.0" x2="109.3" y2="454.0"/>
+<text class="tick" x="109.3" y="476.0" text-anchor="middle">20M</text>
+<line class="grid" x1="202.5" y1="100.0" x2="202.5" y2="454.0"/>
+<text class="tick" x="202.5" y="476.0" text-anchor="middle">50M</text>
+<line class="grid" x1="273.0" y1="100.0" x2="273.0" y2="454.0"/>
+<text class="tick" x="273.0" y="476.0" text-anchor="middle">100M</text>
+<line class="grid" x1="384.7" y1="100.0" x2="384.7" y2="454.0"/>
+<text class="tick" x="384.7" y="476.0" text-anchor="middle">300M</text>
+<line class="grid" x1="507.2" y1="100.0" x2="507.2" y2="454.0"/>
+<text class="tick" x="507.2" y="476.0" text-anchor="middle">1B</text>
+<line class="grid" x1="718.8" y1="100.0" x2="718.8" y2="454.0"/>
+<text class="tick" x="718.8" y="476.0" text-anchor="middle">8B</text>
+<line class="grid" x1="80.0" y1="454.0" x2="760.0" y2="454.0"/>
+<text class="tick" x="70.0" y="459.0" text-anchor="end">0.64</text>
+<line class="grid" x1="80.0" y1="409.7" x2="760.0" y2="409.7"/>
+<text class="tick" x="70.0" y="414.7" text-anchor="end">0.66</text>
+<line class="grid" x1="80.0" y1="365.5" x2="760.0" y2="365.5"/>
+<text class="tick" x="70.0" y="370.5" text-anchor="end">0.68</text>
+<line class="grid" x1="80.0" y1="321.3" x2="760.0" y2="321.3"/>
+<text class="tick" x="70.0" y="326.3" text-anchor="end">0.70</text>
+<line class="grid" x1="80.0" y1="277.0" x2="760.0" y2="277.0"/>
+<text class="tick" x="70.0" y="282.0" text-anchor="end">0.72</text>
+<line class="grid" x1="80.0" y1="232.8" x2="760.0" y2="232.8"/>
+<text class="tick" x="70.0" y="237.8" text-anchor="end">0.74</text>
+<line class="grid" x1="80.0" y1="188.5" x2="760.0" y2="188.5"/>
+<text class="tick" x="70.0" y="193.5" text-anchor="end">0.76</text>
+<line class="grid" x1="80.0" y1="144.3" x2="760.0" y2="144.3"/>
+<text class="tick" x="70.0" y="149.3" text-anchor="end">0.78</text>
+<line class="grid" x1="80.0" y1="100.0" x2="760.0" y2="100.0"/>
+<text class="tick" x="70.0" y="105.0" text-anchor="end">0.80</text>
+<line class="axis" x1="80.0" y1="454.0" x2="760.0" y2="454.0"/>
+<line class="axis" x1="80.0" y1="100.0" x2="80.0" y2="454.0"/>
+<text class="tick" x="420.0" y="500.0" text-anchor="middle">model size, parameters (log scale)</text>
+<line class="ref" x1="80.0" y1="374.3" x2="760.0" y2="374.3"/>
+<text class="reft" x="756.0" y="394.3" text-anchor="end">keyword only, no model: 0.676</text>
+<line class="lift" x1="123.5" y1="442.7" x2="123.5" y2="306.4"/>
+<circle class="hollow" cx="123.5" cy="442.7" r="6"/>
+<circle class="dot" cx="123.5" cy="306.4" r="7"/>
+<line class="lift" x1="160.2" y1="323.0" x2="160.2" y2="256.0"/>
+<circle class="hollow" cx="160.2" cy="323.0" r="6"/>
+<circle class="dot" cx="160.2" cy="256.0" r="7"/>
+<line class="lift" x1="160.2" y1="348.9" x2="160.2" y2="276.6"/>
+<circle class="hollow" cx="160.2" cy="348.9" r="6"/>
+<circle class="dot" cx="160.2" cy="276.6" r="7"/>
+<line class="lift" x1="281.8" y1="231.9" x2="281.8" y2="205.5"/>
+<circle class="hollow" cx="281.8" cy="231.9" r="6"/>
+<circle class="dot" cx="281.8" cy="205.5" r="7"/>
+<line class="lift" x1="289.8" y1="372.1" x2="289.8" y2="293.4"/>
+<circle class="hollow" cx="289.8" cy="372.1" r="6"/>
+<circle class="dot" cx="289.8" cy="293.4" r="7"/>
+<line class="lift" x1="396.0" y1="235.0" x2="396.0" y2="216.6"/>
+<circle class="hollow" cx="396.0" cy="235.0" r="6"/>
+<circle class="dot" cx="396.0" cy="216.6" r="7"/>
+<line class="lift" x1="454.6" y1="321.7" x2="454.6" y2="244.5"/>
+<circle class="hollow" cx="454.6" cy="321.7" r="6"/>
+<circle class="dot" cx="454.6" cy="244.5" r="7"/>
+<line class="lift" x1="718.8" y1="108.9" x2="718.8" y2="155.8"/>
+<circle class="hollow" cx="718.8" cy="108.9" r="6"/>
+<circle class="dot" cx="718.8" cy="155.8" r="7"/>
+<line class="lift" x1="160.2" y1="293.2" x2="160.2" y2="271.9"/>
+<circle class="hollow" cx="160.2" cy="293.2" r="6"/>
+<circle class="doth" cx="160.2" cy="271.9" r="7"/>
+<text class="lab" x="134.5" y="311.4" text-anchor="start">all-MiniLM-L6</text>
+<line class="lift" x1="168.2" y1="256.0" x2="212.2" y2="256.0"/>
+<text class="lab" x="216.2" y="261.0" text-anchor="start">arctic-embed-s</text>
+<line class="lift" x1="168.2" y1="271.9" x2="212.2" y2="277.0"/>
+<text class="labb" x="216.2" y="282.0" text-anchor="start">bge-small</text>
+<line class="lift" x1="168.2" y1="276.6" x2="212.2" y2="298.0"/>
+<text class="lab" x="216.2" y="303.0" text-anchor="start">e5-small</text>
+<text class="lab" x="292.8" y="210.5" text-anchor="start">bge-base</text>
+<text class="lab" x="300.8" y="298.4" text-anchor="start">multilingual-e5-small</text>
+<text class="lab" x="407.0" y="221.6" text-anchor="start">mxbai-large</text>
+<text class="lab" x="465.6" y="249.5" text-anchor="start">Qwen3-Embedding-0.6B</text>
+<text class="lab" x="704.8" y="160.8" text-anchor="end">Qwen3-Embedding-8B</text>
+<circle class="hollow" cx="98.0" cy="86.0" r="6"/>
+<text class="tick" x="110.0" y="91.0" text-anchor="start">vector only</text>
+<circle class="dot" cx="220.0" cy="86.0" r="7"/>
+<text class="tick" x="232.0" y="91.0" text-anchor="start">hybrid (vector + keyword)</text>
+<text class="tick" x="28.0" y="528.0" text-anchor="start">Each model uses its recommended prompts. Line: the change from adding keyword search.</text>
+</svg>

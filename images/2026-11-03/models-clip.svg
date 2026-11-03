@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 306" width="800" height="306" role="img" aria-label="Finding a photo from a sentence. Flickr30k 1k test, 5,000 captions: right photo first (recall@1). CLIP ViT-B/32 (151M): 59%; CLIP ViT-B/16 (150M): 62%; CLIP ViT-L/14 (428M): 65%">
+<style>
+svg{--bg:#ffffff;--ink:#1d2733;--sub:#5a6875;--grid:#e3e8ee;--axis:#9aa6b2;--bar:#2f6fb2;--hi:#2e9e6a;--ref:#c9665f}
+@media (prefers-color-scheme:dark){svg{--bg:#121820;--ink:#e6ebf1;--sub:#a9b6c3;--grid:#26303b;--axis:#5b6876;--bar:#7fb0e6;--hi:#82c99e;--ref:#e08a83}}
+.bg{fill:var(--bg)} .title{fill:var(--ink);font:700 22px Helvetica,Arial,sans-serif}
+.sub{fill:var(--sub);font:15px Helvetica,Arial,sans-serif} .lab{fill:var(--ink);font:15px Helvetica,Arial,sans-serif}
+.labb{fill:var(--ink);font:700 15px Helvetica,Arial,sans-serif}
+.lab,.labb{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round} .tick{fill:var(--sub);font:14px Helvetica,Arial,sans-serif}
+.val{fill:var(--ink);font:14px Helvetica,Arial,sans-serif} .grid{stroke:var(--grid);stroke-width:1}
+.axis{stroke:var(--axis);stroke-width:1.2} .model{fill:var(--bar)} .default{fill:var(--hi)} .keyword{fill:var(--ref)}
+.ref{stroke:var(--ref);stroke-width:2;stroke-dasharray:6 5} .reft{fill:var(--ref);font:700 14px Helvetica,Arial,sans-serif}
+.lift{stroke:var(--axis);stroke-width:1.5} .hollow{fill:var(--bg);stroke:var(--bar);stroke-width:2.5}
+.dot{fill:var(--bar);stroke:var(--bg);stroke-width:2} .doth{fill:var(--hi);stroke:var(--bg);stroke-width:2}
+</style>
+<rect class="bg" width="800" height="306" rx="10"/>
+<text class="title" x="28" y="40">Finding a photo from a sentence</text>
+<text class="sub" x="28" y="66">Flickr30k 1k test, 5,000 captions: right photo first (recall@1)</text>
+<line class="grid" x1="250.0" y1="86.0" x2="250.0" y2="212.0"/>
+<text class="tick" x="250.0" y="234.0" text-anchor="middle">0%</text>
+<line class="grid" x1="342.0" y1="86.0" x2="342.0" y2="212.0"/>
+<text class="tick" x="342.0" y="234.0" text-anchor="middle">20%</text>
+<line class="grid" x1="434.0" y1="86.0" x2="434.0" y2="212.0"/>
+<text class="tick" x="434.0" y="234.0" text-anchor="middle">40%</text>
+<line class="grid" x1="526.0" y1="86.0" x2="526.0" y2="212.0"/>
+<text class="tick" x="526.0" y="234.0" text-anchor="middle">60%</text>
+<line class="grid" x1="618.0" y1="86.0" x2="618.0" y2="212.0"/>
+<text class="tick" x="618.0" y="234.0" text-anchor="middle">80%</text>
+<line class="grid" x1="710.0" y1="86.0" x2="710.0" y2="212.0"/>
+<text class="tick" x="710.0" y="234.0" text-anchor="middle">100%</text>
+<text class="labb" x="238.0" y="117.0" text-anchor="end">CLIP ViT-B/32 (151M) (default)</text>
+<rect class="default" x="250.0" y="100.0" width="273.1" height="24.0" rx="3"/>
+<text class="val" x="531.1" y="117.0" text-anchor="start">59%</text>
+<text class="lab" x="238.0" y="157.0" text-anchor="end">CLIP ViT-B/16 (150M)</text>
+<rect class="model" x="250.0" y="140.0" width="286.9" height="24.0" rx="3"/>
+<text class="val" x="544.9" y="157.0" text-anchor="start">62%</text>
+<text class="lab" x="238.0" y="197.0" text-anchor="end">CLIP ViT-L/14 (428M)</text>
+<rect class="model" x="250.0" y="180.0" width="299.3" height="24.0" rx="3"/>
+<text class="val" x="557.3" y="197.0" text-anchor="start">65%</text>
+<text class="tick" x="28.0" y="266.0" text-anchor="start">CPU time to embed a question: CLIP ViT-B/32 7 ms, CLIP ViT-B/16 10 ms, CLIP ViT-L/14 11 ms.</text>
+<text class="tick" x="28.0" y="288.0" text-anchor="start">Photos have no text, so there is no keyword-only row.</text>
+</svg>
