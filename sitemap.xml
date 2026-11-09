@@ -254,13 +254,6 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/2021/06/12/Azure-Administrator-achievement/</loc>
-    
-    <lastmod>2026-10-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hien.dev/2021/06/13/Azure-DevOps-Expert-achievement/</loc>
     
     <lastmod>2026-10-26</lastmod>
@@ -269,6 +262,13 @@
   
   <url>
     <loc>https://hien.dev/2023/12/21/10-Tips-You-Must-Know-for-Effectively-Using-CloudWatch-Logs-Insights/</loc>
+    
+    <lastmod>2026-10-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/2021/06/12/Azure-Administrator-achievement/</loc>
     
     <lastmod>2026-10-26</lastmod>
     
@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</loc>
+    <loc>https://hien.dev/2020/11/22/Build-a-Search-Engine-with-TF-IDF/</loc>
     
     <lastmod>2026-10-26</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hien.dev/2020/11/22/Build-a-Search-Engine-with-TF-IDF/</loc>
+    <loc>https://hien.dev/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</loc>
     
     <lastmod>2026-10-26</lastmod>
     
@@ -522,13 +522,6 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Administrator/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hien.dev/tags/DevOps/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -621,6 +614,13 @@
   
   <url>
     <loc>https://hien.dev/tags/AWS-Operational-Insights/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Administrator/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -746,48 +746,6 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/tags/Pub-Sub/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/GCP/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Google-Cloud/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Distributed-Processing/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Minibatch-Processing/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Python/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hien.dev/tags/TF-IDF/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -830,7 +788,49 @@
   </url>
   
   <url>
+    <loc>https://hien.dev/tags/Python/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hien.dev/tags/Scikit-Learn/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Pub-Sub/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/GCP/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Google-Cloud/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Distributed-Processing/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Minibatch-Processing/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2237,6 +2237,27 @@
   </url>
   
   <url>
+    <loc>https://hien.dev/tags/Remote-Work/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Tech-Humor/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/tags/Work-Life-Balance/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hien.dev/tags/AI-Coding-Agents/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -2266,27 +2287,6 @@
   
   <url>
     <loc>https://hien.dev/tags/Human-in-the-Loop/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Remote-Work/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Tech-Humor/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hien.dev/tags/Work-Life-Balance/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2694,13 +2694,6 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Google-Cloud/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hien.dev/categories/Natural-Language-Processing/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -2708,7 +2701,7 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Python/</loc>
+    <loc>https://hien.dev/categories/Google-Cloud/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2716,6 +2709,13 @@
   
   <url>
     <loc>https://hien.dev/categories/AWS-Services/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Python/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2799,13 +2799,6 @@
   </url>
   
   <url>
-    <loc>https://hien.dev/categories/Python/Django/</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hien.dev/categories/Benchmark/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
@@ -2814,6 +2807,13 @@
   
   <url>
     <loc>https://hien.dev/categories/IT-Monitoring-and-Analytics/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hien.dev/categories/Python/Django/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

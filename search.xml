@@ -69,43 +69,6 @@ efficient.</p>
       </tags>
   </entry>
   <entry>
-    <title>Azure Administrator Associate achievement</title>
-    <url>/2021/06/12/Azure-Administrator-achievement/</url>
-    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
-<a id="more"></a>
-<p>After getting the first <code>Azure Fundamentals Certificate</code>,
-I went on studying the higher level to achieve this one as an
-Administrator Associate. I spent most of my free time to learn <a
-href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
-learning website</a> and to do the exercises for about a week, as soon
-as having full knowledge of the course.</p>
-<p>Then I officially took an online exam at home due to the spreading of
-Covid-19 in the city. The exam lasted for 2 hours in a private quiet
-room, but to me, I just finished the test in within 1 hour. A check-in
-progress was required before the exam started (about 30 minutes),
-including capturing angles of the room, making sure that no sounds
-happened to disturb the exam, or else candidates could be considered to
-be fail.</p>
-<p>The feeling of taking the online exam at home was pretty awesome and
-safe. I was confident to pass the test because I had had practiced many
-many times and learned from them, and you know what, I did it. I passed
-the exam! The result was announced as soon as the test was submitted,
-the certification was released in about 30 minutes later. I couldn't
-wait to publish it on muy Linkedin page! It showed that my studying
-method was right and useful, which could help me get the
-certification.</p>
-]]></content>
-      <categories>
-        <category>Certification</category>
-      </categories>
-      <tags>
-        <tag>Microsoft</tag>
-        <tag>Azure</tag>
-        <tag>Microsoft Certified</tag>
-        <tag>Administrator</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Azure DevOps Engineering Expert achievement</title>
     <url>/2021/06/13/Azure-DevOps-Expert-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/841717b5-747f-467d-bb68-071edb5ede22"><img src="/images/2021-06-12/002.jpg"></a></p>
@@ -976,6 +939,43 @@ trends.</li>
       </tags>
   </entry>
   <entry>
+    <title>Azure Administrator Associate achievement</title>
+    <url>/2021/06/12/Azure-Administrator-achievement/</url>
+    <content><![CDATA[<p><a href="https://www.credly.com/badges/cd4b0991-dc38-458b-a010-c91e1c3d6b1d"><img src="/images/2021-06-12/001.jpg"></a></p>
+<a id="more"></a>
+<p>After getting the first <code>Azure Fundamentals Certificate</code>,
+I went on studying the higher level to achieve this one as an
+Administrator Associate. I spent most of my free time to learn <a
+href="https://docs.microsoft.com/en-us/learn/certifications/azure-administrator/">Microsoft
+learning website</a> and to do the exercises for about a week, as soon
+as having full knowledge of the course.</p>
+<p>Then I officially took an online exam at home due to the spreading of
+Covid-19 in the city. The exam lasted for 2 hours in a private quiet
+room, but to me, I just finished the test in within 1 hour. A check-in
+progress was required before the exam started (about 30 minutes),
+including capturing angles of the room, making sure that no sounds
+happened to disturb the exam, or else candidates could be considered to
+be fail.</p>
+<p>The feeling of taking the online exam at home was pretty awesome and
+safe. I was confident to pass the test because I had had practiced many
+many times and learned from them, and you know what, I did it. I passed
+the exam! The result was announced as soon as the test was submitted,
+the certification was released in about 30 minutes later. I couldn't
+wait to publish it on muy Linkedin page! It showed that my studying
+method was right and useful, which could help me get the
+certification.</p>
+]]></content>
+      <categories>
+        <category>Certification</category>
+      </categories>
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Azure</tag>
+        <tag>Microsoft Certified</tag>
+        <tag>Administrator</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Azure Fundamentals Achievement</title>
     <url>/2021/04/24/Azure-Fundamentals-achievement/</url>
     <content><![CDATA[<p><a href="https://www.credly.com/badges/a7507eae-db25-495e-a3df-30eb9053e389?source=linked_in_profile"><img src="/images/2021-04-24/001.jpeg"></a></p>
@@ -1184,58 +1184,6 @@ tech-driven lives with the richness of our traditions!</p>
         <tag>Family Memories</tag>
         <tag>Traditional Celebrations</tag>
         <tag>Life Reflections</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Distributed Tasks Processing With Google Pub/Sub</title>
-    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
-    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
-<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services
-that produce events from services that process events. You can use
-Pub/Sub as messaging-oriented middleware or event ingestion and delivery
-for streaming analytics pipelines. Pub/Sub offers durable message
-storage and real-time message delivery with high availability and
-consistent performance at scale. Pub/Sub servers run in all Google Cloud
-regions around the world.</p>
-<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
-<h1 id="core-concepts">Core concepts</h1>
-<ul>
-<li><strong>Topic</strong>: A named resource to which messages are sent
-by publishers.</li>
-<li><strong>Subscription</strong>: A named resource representing the
-stream of messages from a single, specific topic, to be delivered to the
-subscribing application.</li>
-<li><strong>Message</strong>: The combination of data and (optional)
-attributes that a publisher sends to a topic and is eventually delivered
-to subscribers.</li>
-<li><strong>Message attribute</strong>: A key-value pair that a
-publisher can define for a message. For example, key
-iana.org/language_tag and value en could be added to messages to mark
-them as readable by an English-speaking subscriber.</li>
-</ul>
-<a id="more"></a>
-<h1 id="install">Install</h1>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
-<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
-<p>In this example, the publisher will act as a task distributer.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
-<p>Multiple workers will subscribe to a same subscriptions to receive
-difference tasks from a same publisher.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Google Cloud</category>
-        <category>Pub/Sub</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>Pub/Sub</tag>
-        <tag>GCP</tag>
-        <tag>Google Cloud</tag>
-        <tag>Distributed Processing</tag>
-        <tag>Minibatch Processing</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1498,14 +1446,66 @@ algorithm. Not bad isn't it?</p>
         <category>Natural Language Processing</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>TF-IDF</tag>
         <tag>NLP</tag>
         <tag>Search Engine</tag>
         <tag>Bag of Words</tag>
         <tag>BOW</tag>
         <tag>Information Retrieval</tag>
+        <tag>Python</tag>
         <tag>Scikit-Learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Distributed Tasks Processing With Google Pub/Sub</title>
+    <url>/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/</url>
+    <content><![CDATA[<h1 id="what-is-pubsub">What is Pub/Sub?</h1>
+<blockquote><p>Pub/Sub is an asynchronous messaging service that decouples services
+that produce events from services that process events. You can use
+Pub/Sub as messaging-oriented middleware or event ingestion and delivery
+for streaming analytics pipelines. Pub/Sub offers durable message
+storage and real-time message delivery with high availability and
+consistent performance at scale. Pub/Sub servers run in all Google Cloud
+regions around the world.</p>
+<footer><strong>Google Cloud</strong><cite><a href="https://cloud.google.com/pubsub/docs/overview">cloud.google.com/pubsub/docs/overview</a></cite></footer></blockquote>
+<h1 id="core-concepts">Core concepts</h1>
+<ul>
+<li><strong>Topic</strong>: A named resource to which messages are sent
+by publishers.</li>
+<li><strong>Subscription</strong>: A named resource representing the
+stream of messages from a single, specific topic, to be delivered to the
+subscribing application.</li>
+<li><strong>Message</strong>: The combination of data and (optional)
+attributes that a publisher sends to a topic and is eventually delivered
+to subscribers.</li>
+<li><strong>Message attribute</strong>: A key-value pair that a
+publisher can define for a message. For example, key
+iana.org/language_tag and value en could be added to messages to mark
+them as readable by an English-speaking subscriber.</li>
+</ul>
+<a id="more"></a>
+<h1 id="install">Install</h1>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install google-cloud-pubsub</span><br></pre></td></tr></table></figure>
+<h1 id="task-dispatcher-publisher">Task Dispatcher (Publisher)</h1>
+<p>In this example, the publisher will act as a task distributer.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&#x27;GCP_PROJECT_ID&#x27;</span>)</span><br><span class="line">topic_id = os.environ.get(<span class="string">&#x27;GCP_PUBSUB_TOPIC_ID&#x27;</span>)</span><br><span class="line"></span><br><span class="line">publisher = pubsub_v1.PublisherClient()</span><br><span class="line"><span class="comment"># The `topic_path` method creates a fully qualified identifier</span></span><br><span class="line"><span class="comment"># in the form `projects/&#123;project_id&#125;/topics/&#123;topic_id&#125;`</span></span><br><span class="line">topic_path = publisher.topic_path(project_id, topic_id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    data = <span class="string">&quot;Message number &#123;&#125;&quot;</span>.<span class="built_in">format</span>(n)</span><br><span class="line">    <span class="comment"># Data must be a bytestring</span></span><br><span class="line">    data = data.encode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    <span class="comment"># When you publish a message, the client returns a future.</span></span><br><span class="line">    future = publisher.publish(topic_path, data)</span><br><span class="line">    print(future.result())</span><br><span class="line"></span><br><span class="line">print(<span class="string">f&quot;Published messages to <span class="subst">&#123;topic_path&#125;</span>.&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="task-workers-subscribers">Task Workers (Subscribers)</h1>
+<p>Multiple workers will subscribe to a same subscriptions to receive
+difference tasks from a same publisher.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> google.cloud <span class="keyword">import</span> pubsub_v1</span><br><span class="line"></span><br><span class="line">project_id = os.environ.get(<span class="string">&quot;GCP_PROJECT_ID&quot;</span>)</span><br><span class="line">subscription_id = os.environ.get(<span class="string">&quot;GCP_PUBSUB_SUBSCRIPTION_ID&quot;</span>)</span><br><span class="line"></span><br><span class="line">subscriber = pubsub_v1.SubscriberClient()</span><br><span class="line">subscription_path = subscriber.subscription_path(project_id, subscription_id)</span><br><span class="line"></span><br><span class="line">NUM_MESSAGES = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Wrap the subscriber in a &#x27;with&#x27; block to automatically call close() to</span></span><br><span class="line"><span class="comment"># close the underlying gRPC channel when done.</span></span><br><span class="line"><span class="keyword">with</span> subscriber:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="comment"># The subscriber pulls a specific number of messages.</span></span><br><span class="line">        print(<span class="string">f&quot;Waiting for a message...&quot;</span>)</span><br><span class="line">        response = subscriber.pull(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;max_messages&quot;</span>: NUM_MESSAGES&#125;</span><br><span class="line">        )</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> response:</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        </span><br><span class="line">        ack_ids = []</span><br><span class="line">        <span class="keyword">for</span> received_message <span class="keyword">in</span> response.received_messages:</span><br><span class="line">            print(<span class="string">f&quot;Received: <span class="subst">&#123;received_message.message.data&#125;</span>.&quot;</span>)</span><br><span class="line">            ack_ids.append(received_message.ack_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># Acknowledges the received messages so they will not be sent again.</span></span><br><span class="line">        subscriber.acknowledge(</span><br><span class="line">            request=&#123;<span class="string">&quot;subscription&quot;</span>: subscription_path, <span class="string">&quot;ack_ids&quot;</span>: ack_ids&#125;</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        print(</span><br><span class="line">            <span class="string">f&quot;Received and acknowledged <span class="subst">&#123;<span class="built_in">len</span>(response.received_messages)&#125;</span> messages from <span class="subst">&#123;subscription_path&#125;</span>.&quot;</span></span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Google Cloud</category>
+        <category>Pub/Sub</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>Python</tag>
+        <tag>Pub/Sub</tag>
+        <tag>GCP</tag>
+        <tag>Google Cloud</tag>
+        <tag>Distributed Processing</tag>
+        <tag>Minibatch Processing</tag>
       </tags>
   </entry>
   <entry>
@@ -4608,6 +4608,53 @@ undone.</li>
       </tags>
   </entry>
   <entry>
+    <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
+    <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
+    <content><![CDATA[<p>Hey code warriors!</p>
+<p>Ever wondered what it's like to tackle bugs in your shorts while
+sipping home-brewed coffee? Welcome to my world of remote work in Đà Lạt
+– where the dress code is 'come as you are' and the office view is
+unbeatable.</p>
+<p><strong>The Work-From-Home Setup:</strong></p>
+<p>Think of your ideal dev setup. Now, add power outages and roosters
+crowing in the background – welcome to rural remote working! It’s all
+about a reliable machine (laptop or desktop), headphones (to drown out
+the chickens), and a Wi-Fi connection that’s as unpredictable as
+JavaScript. And let’s not forget the power bank – because who hasn’t
+faced the final boss of remote work, the dreaded power cut?</p>
+<a id="more"></a>
+<p><strong>Perks and Quirks:</strong></p>
+<p>The good stuff? I'm living the developer dream – trading business
+casual for 'whatever-I-found-on-the-floor' chic. Lunch breaks are
+gourmet thanks to my home chef (shoutout to my wife!). And bathroom
+breaks during meetings? Just keep your video off, and you're golden.</p>
+<p>The catch? Balancing code sprints with power sprints. I've become a
+master of typing with one hand while holding a flashlight with the
+other.</p>
+<p><strong>Missing The Office... Sort Of:</strong></p>
+<p>Sure, remote work has its charm, but sometimes I miss the office –
+like the sound of my colleague's mechanical keyboard, which was oddly
+soothing. I even organized a virtual 'Nhậu' session. Spoiler: It’s weird
+toasting to a webcam, but hey, we adapt!</p>
+<hr />
+<p>Would I trade my remote work life for the office? It's a tough call.
+Each has its own version of ‘runtime errors’. But hey, I wouldn't trade
+my code-filled days in Đà Lạt for anything – even if it means
+troubleshooting my Wi-Fi more than my code.</p>
+<p>So, fellow devs, are you ready to join the remote work revolution, or
+are you clinging to your cubicle for dear life? Let me know in the
+comments!</p>
+]]></content>
+      <categories>
+        <category>Tech and Humanity</category>
+      </categories>
+      <tags>
+        <tag>Remote Work</tag>
+        <tag>Tech Humor</tag>
+        <tag>Work-Life Balance</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Approve What Your Headless Coding Agent Does With One Telegram Button</title>
     <url>/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/</url>
     <content><![CDATA[<h1 id="the-problem-with-letting-agents-run-unattended">The problem with
@@ -4723,53 +4770,6 @@ me.</p>
         <tag>Automation</tag>
         <tag>Telegram</tag>
         <tag>Human in the Loop</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
-    <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
-    <content><![CDATA[<p>Hey code warriors!</p>
-<p>Ever wondered what it's like to tackle bugs in your shorts while
-sipping home-brewed coffee? Welcome to my world of remote work in Đà Lạt
-– where the dress code is 'come as you are' and the office view is
-unbeatable.</p>
-<p><strong>The Work-From-Home Setup:</strong></p>
-<p>Think of your ideal dev setup. Now, add power outages and roosters
-crowing in the background – welcome to rural remote working! It’s all
-about a reliable machine (laptop or desktop), headphones (to drown out
-the chickens), and a Wi-Fi connection that’s as unpredictable as
-JavaScript. And let’s not forget the power bank – because who hasn’t
-faced the final boss of remote work, the dreaded power cut?</p>
-<a id="more"></a>
-<p><strong>Perks and Quirks:</strong></p>
-<p>The good stuff? I'm living the developer dream – trading business
-casual for 'whatever-I-found-on-the-floor' chic. Lunch breaks are
-gourmet thanks to my home chef (shoutout to my wife!). And bathroom
-breaks during meetings? Just keep your video off, and you're golden.</p>
-<p>The catch? Balancing code sprints with power sprints. I've become a
-master of typing with one hand while holding a flashlight with the
-other.</p>
-<p><strong>Missing The Office... Sort Of:</strong></p>
-<p>Sure, remote work has its charm, but sometimes I miss the office –
-like the sound of my colleague's mechanical keyboard, which was oddly
-soothing. I even organized a virtual 'Nhậu' session. Spoiler: It’s weird
-toasting to a webcam, but hey, we adapt!</p>
-<hr />
-<p>Would I trade my remote work life for the office? It's a tough call.
-Each has its own version of ‘runtime errors’. But hey, I wouldn't trade
-my code-filled days in Đà Lạt for anything – even if it means
-troubleshooting my Wi-Fi more than my code.</p>
-<p>So, fellow devs, are you ready to join the remote work revolution, or
-are you clinging to your cubicle for dear life? Let me know in the
-comments!</p>
-]]></content>
-      <categories>
-        <category>Tech and Humanity</category>
-      </categories>
-      <tags>
-        <tag>Remote Work</tag>
-        <tag>Tech Humor</tag>
-        <tag>Work-Life Balance</tag>
       </tags>
   </entry>
   <entry>
