@@ -1,0 +1,116 @@
+# Hien Hoang (hien.dev)
+
+> Personal technical blog of Hien Hoang, a software engineer writing about AI engineering (RAG, vector search, LLM agents, MCP), AWS serverless architecture, distributed systems and developer tooling.
+
+## About
+- [About Hien Hoang](https://hien.dev/about/): who writes this blog and why.
+- [github.com](https://github.com/hoangchunghien)
+- [linkedin.com](https://www.linkedin.com/in/hoangchunghien)
+
+## AI Engineering
+- [How Hermes Agent Learns Between Conversations](https://hien.dev/2026/11/09/how-hermes-agent-learns-between-conversations/): Most coding agents start every session from zero. You explain the project again, correct the same habit again, and paste the same paths again. Hermes Agent from Nous Research is built around the...
+- [A Knowledge Base for Claude in One Folder](https://hien.dev/2026/11/03/a-knowledge-base-for-claude-in-one-folder/): Every team has the same pile: runbooks, decision records, postmortems, the page that explains what error E1042 means. Claude can use all of it, if it can search it. The usual answer is a vector...
+- [How HNSW Finds the Nearest Vector](https://hien.dev/2026/11/02/how-hnsw-finds-the-nearest-vector/): The last post said that a vector database's real job is finding the nearest vectors quickly, and that most of them do it with an index called HNSW. pgvector, Qdrant, Chroma, Weaviate and Milvus all...
+- [Do You Need a Vector Database?](https://hien.dev/2026/10/29/do-you-need-a-vector-database/): Most RAG tutorials start by setting up a vector database. For a lot of projects that is the first piece of infrastructure they did not need yet. For others it is the right call, and knowing which...
+- [What LangChain Is For: Six Problems Every LLM App Runs Into](https://hien.dev/2026/10/28/what-langchain-is-for/): A model API is simple: text goes in, text comes out. Every real application then rebuilds the same plumbing around that one call. LangChain is that plumbing, packaged once.
+- [Every Issue Already Had a PR: Contributing to Open Source When Agents Got There First](https://hien.dev/2026/10/27/every-issue-already-had-a-pr/): I set out to do one useful open source contribution a day, with a coding agent doing the legwork and me approving every comment and pull request before it went out. The plan was the classic one: find...
+- [Approve What Your Headless Coding Agent Does With One Telegram Button](https://hien.dev/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/): I run several coding agents headless on my workstation. One reviews pull requests, one implements tickets from a written plan, one watches repositories and regenerates documentation when the code...
+
+## Cloud Architecture
+- [Safe Retries for SQS and Lambda Consumers](https://hien.dev/2026/10/30/safe-retries-for-sqs-and-lambda/): Retries are easy to add. With SQS and Lambda you do not even add them: they are on from the first deploy. Safe retries are the hard part, and they are your job, not the platform's.
+
+## Python
+- [Simplifying Data Validation in Python with Pydantic](https://hien.dev/2023/12/25/Simplifying-Data-Validation-in-Python-with-Pydantic/): In the dynamic world of Python programming, data validation and parsing are crucial for robust application development. One library that has been gaining traction for these tasks is Pydantic. Known...
+- [Django Object Level Permission Template](https://hien.dev/2021/01/21/Django-Object-Level-Permission-Templage/): A template to guide you how to setup a Django Project with Object Level Permission.
+- [Schedule Task Runner with Celery](https://hien.dev/2020/11/27/Schedule-Task-Runner-with-Celery/): Celery is a task queue with batteries included. It’s easy to use so that you can get started without learning the full complexities of the problem it solves. It’s designed around best practices so...
+- [SQLAlchemy for Python ORM Mapping](https://hien.dev/2020/11/26/SQLAlchemy-for-Python-ORM-Mapping/): SQLAlchemy is most famous for its object-relational mapper (ORM), an optional component that provides the data mapper pattern, where classes can be mapped to the database in open ended, multiple ways...
+
+## Web Development
+- [A Time-Travel Through JavaScript's Asynchronous Landscape](https://hien.dev/2023/12/25/A-Time-Travel-Through-JavaScript-s-Asynchronous-Landscape/): Hello, JavaScript adventurers! Today, let's embark on a time-traveling journey through the evolution of JavaScript's asynchronous capabilities. From the early days of callbacks to the modern elegance...
+- [Understanding the Key Differences: AWS DynamoDB vs MongoDB](https://hien.dev/2023/12/20/Understanding-the-Key-Differences-AWS-DynamoDB-vs-MongoDB/): In the realm of NoSQL databases, AWS DynamoDB and MongoDB stand out as two of the most popular choices. Both databases offer unique features and capabilities, making them suitable for a variety of...
+- [Run Headless Chrome Browser Inside a Docker Container](https://hien.dev/2020/11/20/run-headless-chrome-inside-a-docker-container/): This is a simple example of how to config your own headless chrome browser inside a docker container. Then use a simple Python web application to say hello world with python selenium.
+
+## Artificial Intelligence
+- [Bringing Generative AI to Your Desktop: A Developer's Journey 🚀](https://hien.dev/2023/12/22/Bringing-Generative-AI-to-Your-Desktop-A-Developer-s-Journey/): Hey there, fellow devs and tech enthusiasts! 🧑‍💻 Today, I'm diving into something super exciting: running generative AI, like the famous ChatGPT and Google Bard, right from our own computers. Yep,...
+- [Mastering GitHub Copilot: 10 Tips for Writing Effective Comments](https://hien.dev/2023/12/21/Mastering-GitHub-Copilot-10-Tips-for-Writing-Effective-Comments/): Hey there, fellow coders! 👋 Welcome to my cozy corner where I talk all things code, with a special spotlight on our AI buddy, GitHub Copilot. Today, I'm excited to share some super cool tips on how...
+- [Maximizing Efficiency with GitHub Copilot: A Python Developer's Guide](https://hien.dev/2023/12/20/Maximizing-Efficiency-with-GitHub-Copilot-A-Python-Developer-s-Guide/): As a technical architect deeply engaged in the evolving landscape of development tools, I've been exploring GitHub Copilot's capabilities. This AI-powered coding assistant from GitHub and OpenAI has...
+
+## Cloud Computing
+- [10 Tips You Must Know for Effectively Using CloudWatch Logs Insights](https://hien.dev/2023/12/21/10-Tips-You-Must-Know-for-Effectively-Using-CloudWatch-Logs-Insights/): Amazon CloudWatch Logs Insights is a robust tool for log analysis, allowing you to delve into your log data for valuable insights. Whether you're monitoring application health, debugging issues, or...
+- [DynamoDB Scan vs Query: Choosing the Right Operation for Your Data](https://hien.dev/2023/12/20/DynamoDB-Scan-vs-Query-Choosing-the-Right-Operation-for-Your-Data/): When working with AWS DynamoDB, one of the key decisions you'll face is whether to use a Scan or a Query operation. Understanding the differences between these two operations is crucial for efficient...
+- [Understanding Reserved and Provisioned Concurrency in AWS Lambda: Key Differences and Use Cases](https://hien.dev/2023/12/19/Understanding-Reserved-and-Provisioned-Concurrency-in-AWS-Lambda-Key-Differences-and-Use-Cases/): In the realm of serverless computing, AWS Lambda stands out as a powerful service that allows developers to run code without managing servers. An important aspect of Lambda is managing how many...
+- [Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration](https://hien.dev/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/): In the world of workflow orchestration, AWS Step Functions and Apache Airflow stand out as prominent tools, each with its unique features, purposes, and operational models. Understanding their...
+- [Docker Buildx: Revolutionizing Container Builds Across Multiple Platforms](https://hien.dev/2023/12/19/Docker-Buildx-Revolutionizing-Container-Builds-Across-Multiple-Platforms/): Multi-Platform Support: Docker Buildx stands out with its ability to build container images for various platforms, like amd64 and arm64, from a single code base. This is a game-changer for developers...
+- [Mastering DAGs in Apache Airflow: The Key to Efficient Workflow Automation](https://hien.dev/2023/12/18/Mastering-DAGs-in-Apache-Airflow-The-Key-to-Efficient-Workflow-Automation/): Apache Airflow has revolutionized the way we automate and orchestrate workflows, and at the heart of this powerful tool lies the concept of Directed Acyclic Graphs (DAGs). Understanding DAGs is...
+
+## Linux System Administration
+- [Linux dig Command: Simplified Guide for Efficient DNS Lookups](https://hien.dev/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/): The dig command is a staple for web developers needing to troubleshoot and analyze DNS (Domain Name System) issues. It stands for Domain Information Groper, providing detailed DNS information with...
+
+## Kubernetes
+- [Setup On Premise Kubernetes Cluster](https://hien.dev/2022/08/01/Setup-On-Premise-Kubernetes-Cluster/): I'll setup a k8s cluster with 3 nodes (1 control, 2 workers).
+
+## DevOps
+- [Setup your own Docker Private Registry](https://hien.dev/2022/07/18/Setup-your-own-Docker-Private-Registry/): NOTE: For the Common Name field, enter the hostname of the registry server. Here I will use registry.internal
+- [Setup Apache Airflow Using Docker Compose](https://hien.dev/2021/05/08/Setup-Apache-Airflow-Using-Docker-Compose/): Do you find it so complicated to set up Apache Airflow for using right away? Don't worry, I can show you a simple and fast way! Are you ready? Then please take a look the instruction below.
+- [Use Vagrant for cross environment development](https://hien.dev/2020/12/28/Use-Vagrant-for-cross-environment-development/): What's Vagrant? Vagrant is a tool for building and managing virtual machine environments in a single workflow. With an easy-to-use workflow and focus on automation, Vagrant lowers development...
+- [Manage multiple ssh accounts for GitHub and GitLab](https://hien.dev/2020/11/23/Manage-ssh-keys/): for example, I have 2 keys in my laptop
+- [How to clone an GCP instance to machine-image and restore it](https://hien.dev/2020/11/10/How-to-clone-an-GCP-instance-to-machine-image-and-restore-it/): IAM & Admin -> Service Accounts -> Your account name -> Add key -> Create New Key
+- [Setup your VPN server the easy way using docker](https://hien.dev/2020/10/30/setup-self-openvpn-server/): In this post, I will show you how to setup your own VPN server in a few simple steps.
+
+## Tech and Humanity
+- [Coding in Pajamas: My Remote Work Adventure in Đà Lạt](https://hien.dev/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/): Hey code warriors!
+- [Reflecting on Unexpected Changes: A Developer's Perspective on the Ukraine-Russia Situation](https://hien.dev/2022/02/28/reflecting-on-unexpected-changes-a-developer-perspective-on-the-ukraine-russia-situation/): Hey fellow developers,
+- [Debugging Parenthood: Celebrating Donnie's First Milestone](https://hien.dev/2021/05/14/debugging-parenthood-celebrating-donnie-first-milestone/): Hey fellow coders,
+
+## Living
+- [Rời Phố Về Núi, Ta Chill (P2)](https://hien.dev/2022/03/17/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P2/): Rời phố về quê Sống với núi rừng Sương trời gió lộng Lòng này vẫn ấm.
+- [Rời Phố Về Núi, Ta Chill (P1)](https://hien.dev/2021/11/24/Roi%20Pho%20Ve%20Nui%20Ta%20Chill%20P1/): 11 giờ đêm. Ngày 19.11.21.
+- [Rau Yêu Thương](https://hien.dev/2021/08/23/Rau-Yeu-Thuong/): Đã gần ba tháng rồi tôi chưa được ra đường, nếu tôi không có công việc thì đây quả thật là một khoảng thời gian dài bế tắc, vật vã để trải qua từng ngày giãn cách. Bởi tình hình Covid-19 vẫn còn phức...
+- [Ngày giãn cách ở Sài Gòn](https://hien.dev/2021/07/18/Ngay-gian-cach-o-Sai-Gon/): Sống ở Sài Gòn hơn chục năm, tôi đã rất quen với khung cảnh phồn hoa náo nhiệt của một thành phố trẻ đầy sức sống. Năm nay, cơn sóng COVID-19 lại một lần nữa phủ xuống Sài Gòn, mà lần này mọi chuyện...
+
+## Benchmark
+- [Pandas Efficient Data Storage Benchmark](https://hien.dev/2021/07/10/Pandas-Efficient-Data-Storage-Benchmark/): Do you agree that dealing with large data file is such a painful task? If yes, then you shouldn't ignore this post! In this post, I'll show you which is the best storage format to work with if you...
+
+## Certification
+- [Azure Solution Architect Achievement](https://hien.dev/2021/07/03/Azure-Solution-Architect-Achievement/): Finally got it, after many days of learning from Microsoft Learning.
+- [Azure DevOps Engineering Expert achievement](https://hien.dev/2021/06/13/Azure-DevOps-Expert-achievement/): To be able to achieve Microsoft Azure DevOps Expert Certification you have to achieve Azure Administrator Certification. The responsibilities for the DevOps role include designing and implementing...
+- [Azure Administrator Associate achievement](https://hien.dev/2021/06/12/Azure-Administrator-achievement/): After getting the first Azure Fundamentals Certificate, I went on studying the higher level to achieve this one as an Administrator Associate. I spent most of my free time to learn Microsoft learning...
+- [Azure Fundamentals Achievement](https://hien.dev/2021/04/24/Azure-Fundamentals-achievement/): Great engineers always keep on learning and improving knowledge, skills as well as new technologies. Recently, I have just achieved the Microsoft Certified Azure Fundamentals after one-month...
+
+## Machine Learning
+- [Image Semantic Segmentation](https://hien.dev/2021/04/21/Image-Semantic-Segmentation/): Source: https://www.robots.ox.ac.uk/~vgg/data/pets/
+- [Encode image using Autoencoders](https://hien.dev/2021/04/17/Encode-your-image-using-Autoencoders/): An autoencoder is a type of artificial neural network used to learn efficient data codings in an unsupervised manner. The aim of an autoencoder is to learn a representation (encoding) for a set of...
+
+## Reinforcement Learning
+- [How to teach computer to play Tictactoe](https://hien.dev/2021/03/14/How-to-tech-computer-to-play-Tictactoe/): What make people become good game players? They get the game instruction, start practicing and then learn from failure. How about a computer? Can we train it to play a game? The answer is absolutely!...
+
+## Tech Life Balance
+- [Decoding Relaxation: My Year-End Company Trip to Ho Tram Beach](https://hien.dev/2021/02/01/decoding-relaxation-my-year-end-company-trip-to-ho-tram-beach/): Hey tech enthusiasts!
+
+## Shell
+- [How to replace environment variables in a file](https://hien.dev/2021/01/28/how-to-replace-environment-variables-in-a-file/)
+
+## Security
+- [How to find a website IP behind CloudFlare](https://hien.dev/2020/12/26/How-to-find-a-website-IP-behide-CloudFlare/): CloudFlare provides high security for the target website to hide their real server IP address. Make it harder for the hacker to attack the website real server. But it doesn't mean it is impossible....
+
+## Networking
+- [Hijack your computer http request with Fiddler](https://hien.dev/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/): Capture all HTTP(S) traffic between your computer and the Internet with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle with requests & responses.
+
+## Google Cloud
+- [Distributed Tasks Processing With Google Pub/Sub](https://hien.dev/2020/12/12/Distributed-Tasks-Processing-With-Google-Pub-Sub/): Pub/Sub is an asynchronous messaging service that decouples services that produce events from services that process events. You can use Pub/Sub as messaging-oriented middleware or event ingestion and...
+
+## Natural Language Processing
+- [Build a Search Engine with TF-IDF](https://hien.dev/2020/11/22/Build-a-Search-Engine-with-TF-IDF/): TF-IDF short for term frequency – inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as...
+
+## Developer Lifestyle
+- [Hello World! My Coding Journey into Fatherhood](https://hien.dev/2020/11/14/hello-world-my-coding-journey-into-fatherhood/): Hey fellow coders! Let me share a personal fork in my life's repository - becoming a dad. It's like deploying a new life feature that brings unexpected joys and challenges.
+
+## Cultural Reflections
+- [Coding in the Clouds: My Digital Detox at The Double Ninth Festival](https://hien.dev/2020/10/26/Coding-in-the-Clouds-My-Digital-Detox-at-The-Double-Ninth-Festival/): Hey fellow programmers!
+
+## Analytics
+- [Visualize high-dimensional dataset in a 2D Chart.](https://hien.dev/2020/10/23/how-to-visualize-your-dataset-in-a-2d-or-3d-chart/): I'm using matplotlib and seaborn for visualization. numpy and pandas to handle numerical arrays and dataframe. I'm also use scikit-learn to get the data and perform t-SNE.
+
+## Optional
+- [Sitemap](https://hien.dev/sitemap.xml)
+- [Archives](https://hien.dev/archives/)

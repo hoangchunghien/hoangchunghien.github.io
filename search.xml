@@ -2177,56 +2177,6 @@ dataset</h2>
       </tags>
   </entry>
   <entry>
-    <title>Hijack your computer http request with Fiddler</title>
-    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
-    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
-<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet
-with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle
-with requests &amp; responses.</p>
-<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
-<p><a
-href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
-<p>On my laptop, I use the linux version. You can download here</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
-<h1 id="configuration">Configuration</h1>
-<p>This is the main view of the tool</p>
-<p><img src="/images/2020-12-23/001.png"></p>
-<ol type="1">
-<li>To enable capture HTTPS
-<code>View -&gt; Preferences -&gt; HTTPS</code>. Click
-<code>Export root certificate to Desktop</code>, then enable
-<code>Capture HTTPS traffic</code> +
-<code>Ignore server certificate error (unsafe)</code>. Click
-<code>Save</code>.</li>
-</ol>
-<p><img src="/images/2020-12-23/005.png"></p>
-<ol start="2" type="1">
-<li>Open any browser, go to the <code>Certificate</code> Preferences,
-Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and
-enable Trust this certificate.</li>
-</ol>
-<p><img src="/images/2020-12-23/003.png"></p>
-<ol start="3" type="1">
-<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
-</ol>
-<p><img src="/images/2020-12-23/004.png"></p>
-<h1 id="experiement">Experiement</h1>
-<p>Now open any Web Browser with any url. You will see all the network
-requests sent out using HTTP(s)</p>
-<p><img src="/images/2020-12-23/002.png"></p>
-]]></content>
-      <categories>
-        <category>Networking</category>
-      </categories>
-      <tags>
-        <tag>Networking</tag>
-        <tag>Tool</tag>
-        <tag>HTTP</tag>
-        <tag>Debugging</tag>
-        <tag>Snipping</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Enhancing Your Understanding of AWS Step Functions vs. Apache Airflow for Workflow Orchestration</title>
     <url>/2023/12/19/Enhancing-Your-Understanding-of-AWS-Step-Functions-vs-Apache-Airflow-for-Workflow-Orchestration/</url>
     <content><![CDATA[<p>In the world of workflow orchestration, AWS Step Functions and Apache
@@ -2418,6 +2368,56 @@ familiar with its paradigm.</p>
       </tags>
   </entry>
   <entry>
+    <title>Hijack your computer http request with Fiddler</title>
+    <url>/2020/12/23/Hijack-your-computer-http-request-with-Fiddler/</url>
+    <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
+<blockquote><p>Capture all HTTP(S) traffic between your computer and the Internet
+with Fiddler HTTP(S) proxy. Inspect traffic, set breakpoints, and fiddle
+with requests &amp; responses.</p>
+<footer><strong>Fiddler</strong><cite><a href="https://www.telerik.com/fiddler">www.telerik.com/fiddler</a></cite></footer></blockquote>
+<p><a
+href="https://www.telerik.com/download/fiddler-everywhere">Download</a></p>
+<p>On my laptop, I use the linux version. You can download here</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -O fiddler.AppImage https://downloads.getfiddler.com/linux/fiddler-everywhere-1.4.1.AppImage</span><br><span class="line">chmod u+x fiddler.AppImage </span><br><span class="line">./fiddler.AppImage</span><br></pre></td></tr></table></figure>
+<h1 id="configuration">Configuration</h1>
+<p>This is the main view of the tool</p>
+<p><img src="/images/2020-12-23/001.png"></p>
+<ol type="1">
+<li>To enable capture HTTPS
+<code>View -&gt; Preferences -&gt; HTTPS</code>. Click
+<code>Export root certificate to Desktop</code>, then enable
+<code>Capture HTTPS traffic</code> +
+<code>Ignore server certificate error (unsafe)</code>. Click
+<code>Save</code>.</li>
+</ol>
+<p><img src="/images/2020-12-23/005.png"></p>
+<ol start="2" type="1">
+<li>Open any browser, go to the <code>Certificate</code> Preferences,
+Import the <code>FiddlerRootCertificate.crt</code> on the Desktop and
+enable Trust this certificate.</li>
+</ol>
+<p><img src="/images/2020-12-23/003.png"></p>
+<ol start="3" type="1">
+<li>Config Browser proxy to Fiddler <code>localhost:8866</code></li>
+</ol>
+<p><img src="/images/2020-12-23/004.png"></p>
+<h1 id="experiement">Experiement</h1>
+<p>Now open any Web Browser with any url. You will see all the network
+requests sent out using HTTP(s)</p>
+<p><img src="/images/2020-12-23/002.png"></p>
+]]></content>
+      <categories>
+        <category>Networking</category>
+      </categories>
+      <tags>
+        <tag>Networking</tag>
+        <tag>Tool</tag>
+        <tag>HTTP</tag>
+        <tag>Debugging</tag>
+        <tag>Snipping</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How to clone an GCP instance to machine-image and restore it</title>
     <url>/2020/11/10/How-to-clone-an-GCP-instance-to-machine-image-and-restore-it/</url>
     <content><![CDATA[<h1 id="getting-started">Getting Started</h1>
@@ -2598,71 +2598,6 @@ have the game enviroment implemented first.</p>
         <tag>Tictactoe</tag>
         <tag>Game</tag>
         <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
-    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
-    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
-<p>The <code>dig</code> command is a staple for web developers needing
-to troubleshoot and analyze DNS (Domain Name System) issues. It stands
-for Domain Information Groper, providing detailed DNS information with
-simplicity and flexibility.</p>
-<h1 id="check-dig-installation">Check dig Installation:</h1>
-<p>Run `dig -v`` in your terminal. This command checks if dig is
-installed on your Linux machine by returning the installed version.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
-<h1 id="install-dig-if-not-found">Install dig if not found</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
-<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
-<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
-This command fetches the A record of example.com, showing the IP address
-associated with the domain.</p>
-<a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
-<p>To query a specific DNS server, such as Google’s public DNS, use
-<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
-DNS resolution occurs through different servers.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
-<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
-<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
-Instead of translating a domain to an IP address, it does the opposite,
-revealing the domain linked to a given IP.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
-<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
-Queries:</h1>
-<p>For querying multiple domains, dig offers a batch mode. Simply create
-a file with a list of domains and execute
-<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
-DNS queries.</p>
-<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
-<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
-allows you to set default options tailored to your regular usage
-patterns.</p>
-<h1 id="conclusion">Conclusion:</h1>
-<p><code>dig</code> is an invaluable tool for developers dealing with
-DNS. It’s precise, flexible, and provides a depth of information crucial
-for diagnosing and understanding domain resolutions.</p>
-]]></content>
-      <categories>
-        <category>Linux System Administration</category>
-        <category>IT and Networking Tools</category>
-        <category>Command Line Utilities</category>
-      </categories>
-      <tags>
-        <tag>Linux Commands</tag>
-        <tag>DNS Lookup</tag>
-        <tag>Network Troubleshooting</tag>
-        <tag>DNS Query Tool</tag>
-        <tag>Command Line Tools</tag>
-        <tag>Linux Networking</tag>
-        <tag>System Administration</tag>
-        <tag>DNS Analysis</tag>
-        <tag>Linux Tutorials</tag>
-        <tag>Developer Tools</tag>
-        <tag>DNS Configuration</tag>
-        <tag>Linux Server Management</tag>
       </tags>
   </entry>
   <entry>
@@ -2953,6 +2888,71 @@ visualization utils from tensorflow models</h2>
         <tag>MobileNet-V2</tag>
         <tag>Pretrain</tag>
         <tag>Fully Convolution Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux dig Command: Simplified Guide for Efficient DNS Lookups</title>
+    <url>/2023/12/20/Linux-dig-Command-Simplified-Guide-for-Efficient-DNS-Lookups/</url>
+    <content><![CDATA[<h1 id="introduction">Introduction:</h1>
+<p>The <code>dig</code> command is a staple for web developers needing
+to troubleshoot and analyze DNS (Domain Name System) issues. It stands
+for Domain Information Groper, providing detailed DNS information with
+simplicity and flexibility.</p>
+<h1 id="check-dig-installation">Check dig Installation:</h1>
+<p>Run `dig -v`` in your terminal. This command checks if dig is
+installed on your Linux machine by returning the installed version.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -v</span><br><span class="line"></span><br><span class="line">DiG 9.10.6</span><br></pre></td></tr></table></figure>
+<h1 id="install-dig-if-not-found">Install dig if not found</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install dnsutils</span><br></pre></td></tr></table></figure>
+<h1 id="perform-basic-dns-query">Perform Basic DNS Query:</h1>
+<p>Use <code>dig example.com</code> for a straightforward DNS lookup.
+This command fetches the A record of example.com, showing the IP address
+associated with the domain.</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; example.com</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 11748</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18293	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 44 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:06:43 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="specify-dns-server-for-query">Specify DNS Server for Query:</h1>
+<p>To query a specific DNS server, such as Google’s public DNS, use
+<code>dig @8.8.8.8 example.com</code>. This is useful for comparing how
+DNS resolution occurs through different servers.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig @8.8.8.8 example.com</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; @8.8.8.8 example.com</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NOERROR, id: 39681</span></span><br><span class="line"><span class="string">;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;example.com.			IN	A</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; ANSWER SECTION:</span></span><br><span class="line"><span class="string">example.com.		18237	IN	A	93.184.216.34</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 47 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:07:39 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 56</span></span><br></pre></td></tr></table></figure>
+<h1 id="reverse-dns-lookup">Reverse DNS Lookup:</h1>
+<p><code>dig -x 93.184.216.34</code> performs a reverse DNS lookup.
+Instead of translating a domain to an IP address, it does the opposite,
+revealing the domain linked to a given IP.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dig -x 93.184.216.34</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 93.184.216.34</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- <span class="string">opcode: QUERY, status: NXDOMAIN, id: 61393</span></span><br><span class="line"><span class="string">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; OPT PSEUDOSECTION:</span></span><br><span class="line"><span class="string">; EDNS: version: 0, flags:; udp: 512</span></span><br><span class="line"><span class="string">;; QUESTION SECTION:</span></span><br><span class="line"><span class="string">;34.216.184.93.in-addr.arpa.	IN	PTR</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; AUTHORITY SECTION:</span></span><br><span class="line"><span class="string">216.184.93.in-addr.arpa. 436	IN	SOA	ns1.edgecastcdn.net. noc.edgecast.com. 1589310095 3600 600 604800 600</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">;; Query time: 40 msec</span></span><br><span class="line"><span class="string">;; SERVER: 8.8.8.8#53(8.8.8.8)</span></span><br><span class="line"><span class="string">;; WHEN: Wed Dec 20 18:09:00 +07 2023</span></span><br><span class="line"><span class="string">;; MSG SIZE  rcvd: 126</span></span><br></pre></td></tr></table></figure>
+<h1 id="batch-mode-for-multiple-queries">Batch Mode for Multiple
+Queries:</h1>
+<p>For querying multiple domains, dig offers a batch mode. Simply create
+a file with a list of domains and execute
+<code>dig -f yourfile.txt</code>. It’s an efficient way to handle bulk
+DNS queries.</p>
+<h1 id="customize-dig-defaults">Customize dig Defaults:</h1>
+<p>Customize dig's behavior by editing <code>~/.digrc</code>. This
+allows you to set default options tailored to your regular usage
+patterns.</p>
+<h1 id="conclusion">Conclusion:</h1>
+<p><code>dig</code> is an invaluable tool for developers dealing with
+DNS. It’s precise, flexible, and provides a depth of information crucial
+for diagnosing and understanding domain resolutions.</p>
+]]></content>
+      <categories>
+        <category>Linux System Administration</category>
+        <category>IT and Networking Tools</category>
+        <category>Command Line Utilities</category>
+      </categories>
+      <tags>
+        <tag>Linux Commands</tag>
+        <tag>DNS Lookup</tag>
+        <tag>Network Troubleshooting</tag>
+        <tag>DNS Query Tool</tag>
+        <tag>Command Line Tools</tag>
+        <tag>Linux Networking</tag>
+        <tag>System Administration</tag>
+        <tag>DNS Analysis</tag>
+        <tag>Linux Tutorials</tag>
+        <tag>Developer Tools</tag>
+        <tag>DNS Configuration</tag>
+        <tag>Linux Server Management</tag>
       </tags>
   </entry>
   <entry>
@@ -4608,53 +4608,6 @@ undone.</li>
       </tags>
   </entry>
   <entry>
-    <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
-    <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
-    <content><![CDATA[<p>Hey code warriors!</p>
-<p>Ever wondered what it's like to tackle bugs in your shorts while
-sipping home-brewed coffee? Welcome to my world of remote work in Đà Lạt
-– where the dress code is 'come as you are' and the office view is
-unbeatable.</p>
-<p><strong>The Work-From-Home Setup:</strong></p>
-<p>Think of your ideal dev setup. Now, add power outages and roosters
-crowing in the background – welcome to rural remote working! It’s all
-about a reliable machine (laptop or desktop), headphones (to drown out
-the chickens), and a Wi-Fi connection that’s as unpredictable as
-JavaScript. And let’s not forget the power bank – because who hasn’t
-faced the final boss of remote work, the dreaded power cut?</p>
-<a id="more"></a>
-<p><strong>Perks and Quirks:</strong></p>
-<p>The good stuff? I'm living the developer dream – trading business
-casual for 'whatever-I-found-on-the-floor' chic. Lunch breaks are
-gourmet thanks to my home chef (shoutout to my wife!). And bathroom
-breaks during meetings? Just keep your video off, and you're golden.</p>
-<p>The catch? Balancing code sprints with power sprints. I've become a
-master of typing with one hand while holding a flashlight with the
-other.</p>
-<p><strong>Missing The Office... Sort Of:</strong></p>
-<p>Sure, remote work has its charm, but sometimes I miss the office –
-like the sound of my colleague's mechanical keyboard, which was oddly
-soothing. I even organized a virtual 'Nhậu' session. Spoiler: It’s weird
-toasting to a webcam, but hey, we adapt!</p>
-<hr />
-<p>Would I trade my remote work life for the office? It's a tough call.
-Each has its own version of ‘runtime errors’. But hey, I wouldn't trade
-my code-filled days in Đà Lạt for anything – even if it means
-troubleshooting my Wi-Fi more than my code.</p>
-<p>So, fellow devs, are you ready to join the remote work revolution, or
-are you clinging to your cubicle for dear life? Let me know in the
-comments!</p>
-]]></content>
-      <categories>
-        <category>Tech and Humanity</category>
-      </categories>
-      <tags>
-        <tag>Remote Work</tag>
-        <tag>Tech Humor</tag>
-        <tag>Work-Life Balance</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Approve What Your Headless Coding Agent Does With One Telegram Button</title>
     <url>/2026/10/26/approve-headless-coding-agents-with-a-telegram-button/</url>
     <content><![CDATA[<h1 id="the-problem-with-letting-agents-run-unattended">The problem with
@@ -4770,6 +4723,53 @@ me.</p>
         <tag>Automation</tag>
         <tag>Telegram</tag>
         <tag>Human in the Loop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Coding in Pajamas: My Remote Work Adventure in Đà Lạt</title>
+    <url>/2022/06/12/coding-in-pajamas-my-remote-work-adventure-in-da-lat/</url>
+    <content><![CDATA[<p>Hey code warriors!</p>
+<p>Ever wondered what it's like to tackle bugs in your shorts while
+sipping home-brewed coffee? Welcome to my world of remote work in Đà Lạt
+– where the dress code is 'come as you are' and the office view is
+unbeatable.</p>
+<p><strong>The Work-From-Home Setup:</strong></p>
+<p>Think of your ideal dev setup. Now, add power outages and roosters
+crowing in the background – welcome to rural remote working! It’s all
+about a reliable machine (laptop or desktop), headphones (to drown out
+the chickens), and a Wi-Fi connection that’s as unpredictable as
+JavaScript. And let’s not forget the power bank – because who hasn’t
+faced the final boss of remote work, the dreaded power cut?</p>
+<a id="more"></a>
+<p><strong>Perks and Quirks:</strong></p>
+<p>The good stuff? I'm living the developer dream – trading business
+casual for 'whatever-I-found-on-the-floor' chic. Lunch breaks are
+gourmet thanks to my home chef (shoutout to my wife!). And bathroom
+breaks during meetings? Just keep your video off, and you're golden.</p>
+<p>The catch? Balancing code sprints with power sprints. I've become a
+master of typing with one hand while holding a flashlight with the
+other.</p>
+<p><strong>Missing The Office... Sort Of:</strong></p>
+<p>Sure, remote work has its charm, but sometimes I miss the office –
+like the sound of my colleague's mechanical keyboard, which was oddly
+soothing. I even organized a virtual 'Nhậu' session. Spoiler: It’s weird
+toasting to a webcam, but hey, we adapt!</p>
+<hr />
+<p>Would I trade my remote work life for the office? It's a tough call.
+Each has its own version of ‘runtime errors’. But hey, I wouldn't trade
+my code-filled days in Đà Lạt for anything – even if it means
+troubleshooting my Wi-Fi more than my code.</p>
+<p>So, fellow devs, are you ready to join the remote work revolution, or
+are you clinging to your cubicle for dear life? Let me know in the
+comments!</p>
+]]></content>
+      <categories>
+        <category>Tech and Humanity</category>
+      </categories>
+      <tags>
+        <tag>Remote Work</tag>
+        <tag>Tech Humor</tag>
+        <tag>Work-Life Balance</tag>
       </tags>
   </entry>
   <entry>
@@ -5033,6 +5033,67 @@ with keyword search.</li>
       </tags>
   </entry>
   <entry>
+    <title>Hello World! My Coding Journey into Fatherhood</title>
+    <url>/2020/11/14/hello-world-my-coding-journey-into-fatherhood/</url>
+    <content><![CDATA[<p>Hey fellow coders! Let me share a personal fork in my life's
+repository - becoming a dad. It's like deploying a new life feature that
+brings unexpected joys and challenges.</p>
+<p><strong>The Big Reveal</strong></p>
+<p>Our journey began in Dalat City, not with debugging, but with
+discovering we were expecting. The moment I learned about our upcoming
+'release' (our baby), it felt like a successful code compilation after
+countless errors.</p>
+<p><strong>Health Check Commit</strong></p>
+<p>We faced our first 'bug' early on due to missed health checks. My
+wife, a fellow enthusiast of chill beers and algorithms, had her
+concerns. Thankfully, our little 'program' was error-free and running
+smoothly.</p>
+<p><strong>The Deployment Day</strong></p>
+<a id="more"></a>
+<p>Our son's arrival was like a product launch under tight deadlines.
+Rushing to the hospital at 3:00 am, praying for zero downtime. And in
+the early hours of the morning, our latest 'version' was successfully
+deployed - a healthy baby boy!</p>
+<p><img src="/images/2020-12-15/003.jpg" style="max-height: 540px;"></p>
+<p><strong>Refactoring Life</strong></p>
+<p>After navigating through the initial challenges and excitement of our
+new arrival, just like in a development project, it was time to enter
+the 'Refactoring Life' phase. This is where I applied some essential
+updates and optimizations to our family's daily routine.</p>
+<ol type="1">
+<li><p><strong>Home Setup</strong>: Just like optimizing our work
+environment for productivity, I revamped our living space for the new
+family member.</p></li>
+<li><p><strong>Listening to User Feedback</strong>: Pregnancy and
+postpartum are like customer feedback sessions. I've been tuning into my
+wife's needs and emotions, debugging together to ensure a smooth
+run.</p></li>
+<li><p><strong>Financial and Career Scaling</strong>: With a new member
+in our 'dev team', I started consuming more content on financial
+algorithms and career scaling to provide a robust framework for our
+family's future.</p></li>
+<li><p><strong>New Features and Hobbies</strong>: Fatherhood introduced
+new hobbies, like photography - capturing our little 'project's
+milestones. It's like keeping a visual log of our family's development
+process.</p></li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>Becoming a father is a bit like diving into a new programming
+language - daunting at first but immensely rewarding as you learn. I
+hope my story resonates with you, fellow devs, as we navigate the
+incredible journey of parenthood in the tech world.</p>
+]]></content>
+      <categories>
+        <category>Developer Lifestyle</category>
+        <category>Parenting in Tech</category>
+      </categories>
+      <tags>
+        <tag>Work-Life Balance</tag>
+        <tag>Developer Dad</tag>
+        <tag>Tech Family</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Every Issue Already Had a PR: Contributing to Open Source When Agents Got There First</title>
     <url>/2026/10/27/every-issue-already-had-a-pr/</url>
     <content><![CDATA[<h1 id="the-plan-that-didnt-survive-the-first-afternoon">The plan that
@@ -5144,67 +5205,6 @@ already changed someone's project. I'll come back with the rest.</p>
         <tag>AI Coding Agents</tag>
         <tag>Claude Code</tag>
         <tag>Open Source</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World! My Coding Journey into Fatherhood</title>
-    <url>/2020/11/14/hello-world-my-coding-journey-into-fatherhood/</url>
-    <content><![CDATA[<p>Hey fellow coders! Let me share a personal fork in my life's
-repository - becoming a dad. It's like deploying a new life feature that
-brings unexpected joys and challenges.</p>
-<p><strong>The Big Reveal</strong></p>
-<p>Our journey began in Dalat City, not with debugging, but with
-discovering we were expecting. The moment I learned about our upcoming
-'release' (our baby), it felt like a successful code compilation after
-countless errors.</p>
-<p><strong>Health Check Commit</strong></p>
-<p>We faced our first 'bug' early on due to missed health checks. My
-wife, a fellow enthusiast of chill beers and algorithms, had her
-concerns. Thankfully, our little 'program' was error-free and running
-smoothly.</p>
-<p><strong>The Deployment Day</strong></p>
-<a id="more"></a>
-<p>Our son's arrival was like a product launch under tight deadlines.
-Rushing to the hospital at 3:00 am, praying for zero downtime. And in
-the early hours of the morning, our latest 'version' was successfully
-deployed - a healthy baby boy!</p>
-<p><img src="/images/2020-12-15/003.jpg" style="max-height: 540px;"></p>
-<p><strong>Refactoring Life</strong></p>
-<p>After navigating through the initial challenges and excitement of our
-new arrival, just like in a development project, it was time to enter
-the 'Refactoring Life' phase. This is where I applied some essential
-updates and optimizations to our family's daily routine.</p>
-<ol type="1">
-<li><p><strong>Home Setup</strong>: Just like optimizing our work
-environment for productivity, I revamped our living space for the new
-family member.</p></li>
-<li><p><strong>Listening to User Feedback</strong>: Pregnancy and
-postpartum are like customer feedback sessions. I've been tuning into my
-wife's needs and emotions, debugging together to ensure a smooth
-run.</p></li>
-<li><p><strong>Financial and Career Scaling</strong>: With a new member
-in our 'dev team', I started consuming more content on financial
-algorithms and career scaling to provide a robust framework for our
-family's future.</p></li>
-<li><p><strong>New Features and Hobbies</strong>: Fatherhood introduced
-new hobbies, like photography - capturing our little 'project's
-milestones. It's like keeping a visual log of our family's development
-process.</p></li>
-</ol>
-<p><strong>Conclusion</strong></p>
-<p>Becoming a father is a bit like diving into a new programming
-language - daunting at first but immensely rewarding as you learn. I
-hope my story resonates with you, fellow devs, as we navigate the
-incredible journey of parenthood in the tech world.</p>
-]]></content>
-      <categories>
-        <category>Developer Lifestyle</category>
-        <category>Parenting in Tech</category>
-      </categories>
-      <tags>
-        <tag>Work-Life Balance</tag>
-        <tag>Developer Dad</tag>
-        <tag>Tech Family</tag>
       </tags>
   </entry>
   <entry>

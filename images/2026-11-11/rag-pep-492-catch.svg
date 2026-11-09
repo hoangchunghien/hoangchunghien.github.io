@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 540" width="1080" height="540" role="img" aria-label="Animated: asked which PEP introduced asyncio, a question the 40 PEPs do not answer, a 3B model claimed PEP 492 and quoted real text from the passage it cited. The quote check passed, but the number 492 is not in that passage, so the claim was cut and the answer became: the documents I was given do not answer this.">
+<style>
+svg{--bg:#ffffff;--ink:#1d2733;--sub:#4a5866;--dim:#c9d1da;--packet:#2f6fb2;--cap:#f1f4f8;
+--agent-f:#dae8fc;--agent-s:#6c8ebf;--file-f:#fff2cc;--file-s:#d6b656;--tg-f:#e1f5fe;--tg-s:#0288d1;
+--you-f:#d5e8d4;--you-s:#82b366;--pub-f:#f8cecc;--pub-s:#b85450;--ext-f:#f5f5f5;--ext-s:#666666}
+@media (prefers-color-scheme:dark){svg{--bg:#121820;--ink:#e6ebf1;--sub:#a9b6c3;--dim:#3a4652;--packet:#7fb0e6;--cap:#1b232d;
+--agent-f:#1e2b3d;--file-f:#33301a;--tg-f:#10303d;--you-f:#1d3320;--pub-f:#3d2222;--ext-f:#24282d;--ext-s:#9aa3ad}}
+.bg{fill:var(--bg)} .t{fill:var(--ink);font:600 16px Helvetica,Arial,sans-serif} .s{fill:var(--sub);font:13px Helvetica,Arial,sans-serif}
+.cap{fill:var(--ink);font:600 19px Helvetica,Arial,sans-serif} .capbg{fill:var(--cap)}
+.dim{stroke:var(--dim);stroke-width:2;fill:none} .live{stroke:var(--packet);stroke-width:2.5;fill:none}
+.badge{fill:var(--bg);stroke:var(--packet);stroke-width:1.5} .bt{fill:var(--packet);font:700 12px Helvetica,Arial,sans-serif}
+.leg{font:13px Helvetica,Arial,sans-serif;fill:var(--ink)} .bar{fill:var(--packet)} .track{fill:var(--dim)}
+.agent{fill:var(--agent-f);stroke:var(--agent-s)}.file{fill:var(--file-f);stroke:var(--file-s)}.tg{fill:var(--tg-f);stroke:var(--tg-s)}.you{fill:var(--you-f);stroke:var(--you-s)}.pub{fill:var(--pub-f);stroke:var(--pub-s)}.ext{fill:var(--ext-f);stroke:var(--ext-s)}
+@media (prefers-reduced-motion:reduce){animate,animateMotion{display:none}}
+</style>
+<rect class="bg" width="1080" height="540"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--packet)"/></marker><marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--dim)"/></marker></defs>
+<path class="dim" d="M250 97.0 H300" marker-end="url(#ad)"/>
+<path class="dim" d="M510 97.0 H560" marker-end="url(#ad)"/>
+<path class="dim" d="M770 97.0 H820" marker-end="url(#ad)"/>
+<path class="dim" d="M925.0 134 V250" marker-end="url(#ad)"/>
+<path class="dim" d="M820 287.0 H770" marker-end="url(#ad)"/>
+<path class="dim" d="M560 287.0 H510" marker-end="url(#ad)"/>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.0536;0.0679;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="you" x="40" y="60" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.0536;0.0643;0.1250;0.1357;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="145.0" y="82.0" text-anchor="middle">Trap question</text>
+<text class="s" x="145.0" y="102.0" text-anchor="middle">which PEP added asyncio?</text>
+<text class="s" x="145.0" y="122.0" text-anchor="middle">not in the 40 PEPs</text>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.1393;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="ext" x="300" y="60" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.1357;0.2143;0.2250;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="405.0" y="82.0" text-anchor="middle">Passages</text>
+<text class="s" x="405.0" y="102.0" text-anchor="middle">mention asyncio,</text>
+<text class="s" x="405.0" y="122.0" text-anchor="middle">never answer it</text>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.2143;0.2286;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="agent" x="560" y="60" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.2143;0.2250;0.3214;0.3321;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="665.0" y="82.0" text-anchor="middle">3B model claims</text>
+<text class="s" x="665.0" y="102.0" text-anchor="middle">"PEP 492 introduced</text>
+<text class="s" x="665.0" y="122.0" text-anchor="middle">the asyncio module"</text>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.3214;0.3357;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="file" x="820" y="60" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.3214;0.3321;0.4464;0.4571;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="925.0" y="82.0" text-anchor="middle">Quote check</text>
+<text class="s" x="925.0" y="102.0" text-anchor="middle">the quote is real text</text>
+<text class="s" x="925.0" y="122.0" text-anchor="middle">from the cited passage</text>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.4464;0.4607;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="pub" x="820" y="250" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.4464;0.4571;0.5714;0.5821;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="925.0" y="272.0" text-anchor="middle">Specifics check</text>
+<text class="s" x="925.0" y="292.0" text-anchor="middle">is "492" in that</text>
+<text class="s" x="925.0" y="312.0" text-anchor="middle">passage? No.</text>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.5714;0.5857;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="pub" x="560" y="250" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.5714;0.5821;0.6786;0.6893;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="665.0" y="282.0" text-anchor="middle">Claim cut</text>
+<text class="s" x="665.0" y="302.0" text-anchor="middle">after one repair round</text>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.6786;0.6929;0.9786;0.9964;1.0000" values="0.22;0.22;1;1;0.22;0.22"/>
+<rect class="you" x="300" y="250" width="210" height="74" rx="10" stroke-width="1.5">
+<animate attributeName="stroke-width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.6786;0.6893;0.8036;0.8143;1.0000" values="1.5;1.5;4;4;1.5;1.5"/></rect>
+<text class="t" x="405.0" y="272.0" text-anchor="middle">Answer</text>
+<text class="s" x="405.0" y="292.0" text-anchor="middle">"The documents I was</text>
+<text class="s" x="405.0" y="312.0" text-anchor="middle">given do not answer this"</text>
+</g>
+<path id="e1" class="live" d="M250 97.0 H300" marker-end="url(#ah)" stroke-dasharray="50.0 50.0" stroke-dashoffset="50.0" opacity="0.9">
+<animate attributeName="stroke-dashoffset" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.1571;0.9786;0.9964;1.0000" values="50.0;50.0;0;0;50.0;50.0"/></path>
+<circle r="7" fill="var(--packet)" opacity="0">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.1246;0.1250;0.1571;0.1607;1.0000" values="0;0;1;1;0;0"/>
+<animateMotion dur="28.0s" repeatCount="indefinite" path="M250 97.0 H300" keyPoints="0;0;1;1" keyTimes="0.0000;0.1250;0.1571;1.0000" calcMode="linear"/></circle>
+<g opacity="0"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.1250;0.1429;0.9786;0.9964;1.0000" values="0;0;1;1;0;0"/><circle class="badge" cx="275.0" cy="81.0" r="10"/><text class="bt" x="275.0" y="85.0" text-anchor="middle">1</text></g>
+<path id="e2" class="live" d="M510 97.0 H560" marker-end="url(#ah)" stroke-dasharray="50.0 50.0" stroke-dashoffset="50.0" opacity="0.9">
+<animate attributeName="stroke-dashoffset" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.2143;0.2464;0.9786;0.9964;1.0000" values="50.0;50.0;0;0;50.0;50.0"/></path>
+<circle r="7" fill="var(--packet)" opacity="0">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.2139;0.2143;0.2464;0.2500;1.0000" values="0;0;1;1;0;0"/>
+<animateMotion dur="28.0s" repeatCount="indefinite" path="M510 97.0 H560" keyPoints="0;0;1;1" keyTimes="0.0000;0.2143;0.2464;1.0000" calcMode="linear"/></circle>
+<g opacity="0"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.2143;0.2321;0.9786;0.9964;1.0000" values="0;0;1;1;0;0"/><circle class="badge" cx="535.0" cy="81.0" r="10"/><text class="bt" x="535.0" y="85.0" text-anchor="middle">2</text></g>
+<path id="e3" class="live" d="M770 97.0 H820" marker-end="url(#ah)" stroke-dasharray="50.0 50.0" stroke-dashoffset="50.0" opacity="0.9">
+<animate attributeName="stroke-dashoffset" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.3214;0.3536;0.9786;0.9964;1.0000" values="50.0;50.0;0;0;50.0;50.0"/></path>
+<circle r="7" fill="var(--packet)" opacity="0">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.3211;0.3214;0.3536;0.3571;1.0000" values="0;0;1;1;0;0"/>
+<animateMotion dur="28.0s" repeatCount="indefinite" path="M770 97.0 H820" keyPoints="0;0;1;1" keyTimes="0.0000;0.3214;0.3536;1.0000" calcMode="linear"/></circle>
+<g opacity="0"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.3214;0.3393;0.9786;0.9964;1.0000" values="0;0;1;1;0;0"/><circle class="badge" cx="795.0" cy="81.0" r="10"/><text class="bt" x="795.0" y="85.0" text-anchor="middle">3</text></g>
+<path id="e4" class="live" d="M925.0 134 V250" marker-end="url(#ah)" stroke-dasharray="116.0 116.0" stroke-dashoffset="116.0" opacity="0.9">
+<animate attributeName="stroke-dashoffset" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.4464;0.4786;0.9786;0.9964;1.0000" values="116.0;116.0;0;0;116.0;116.0"/></path>
+<circle r="7" fill="var(--packet)" opacity="0">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.4461;0.4464;0.4786;0.4821;1.0000" values="0;0;1;1;0;0"/>
+<animateMotion dur="28.0s" repeatCount="indefinite" path="M925.0 134 V250" keyPoints="0;0;1;1" keyTimes="0.0000;0.4464;0.4786;1.0000" calcMode="linear"/></circle>
+<g opacity="0"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.4464;0.4643;0.9786;0.9964;1.0000" values="0;0;1;1;0;0"/><circle class="badge" cx="925.0" cy="192.0" r="10"/><text class="bt" x="925.0" y="196.0" text-anchor="middle">4</text></g>
+<path id="e5" class="live" d="M820 287.0 H770" marker-end="url(#ah)" stroke-dasharray="50.0 50.0" stroke-dashoffset="50.0" opacity="0.9">
+<animate attributeName="stroke-dashoffset" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.5714;0.6036;0.9786;0.9964;1.0000" values="50.0;50.0;0;0;50.0;50.0"/></path>
+<circle r="7" fill="var(--packet)" opacity="0">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.5711;0.5714;0.6036;0.6071;1.0000" values="0;0;1;1;0;0"/>
+<animateMotion dur="28.0s" repeatCount="indefinite" path="M820 287.0 H770" keyPoints="0;0;1;1" keyTimes="0.0000;0.5714;0.6036;1.0000" calcMode="linear"/></circle>
+<g opacity="0"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.5714;0.5893;0.9786;0.9964;1.0000" values="0;0;1;1;0;0"/><circle class="badge" cx="795.0" cy="271.0" r="10"/><text class="bt" x="795.0" y="275.0" text-anchor="middle">5</text></g>
+<path id="e6" class="live" d="M560 287.0 H510" marker-end="url(#ah)" stroke-dasharray="50.0 50.0" stroke-dashoffset="50.0" opacity="0.9">
+<animate attributeName="stroke-dashoffset" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.6786;0.7107;0.9786;0.9964;1.0000" values="50.0;50.0;0;0;50.0;50.0"/></path>
+<circle r="7" fill="var(--packet)" opacity="0">
+<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.6782;0.6786;0.7107;0.7143;1.0000" values="0;0;1;1;0;0"/>
+<animateMotion dur="28.0s" repeatCount="indefinite" path="M560 287.0 H510" keyPoints="0;0;1;1" keyTimes="0.0000;0.6786;0.7107;1.0000" calcMode="linear"/></circle>
+<g opacity="0"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.6786;0.6964;0.9786;0.9964;1.0000" values="0;0;1;1;0;0"/><circle class="badge" cx="535.0" cy="271.0" r="10"/><text class="bt" x="535.0" y="275.0" text-anchor="middle">6</text></g>
+<g opacity="0.55"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.8036;0.8179;0.9786;0.9964;1.0000" values="0.55;0.55;1;1;0.55;0.55"/><rect class="agent" x="40" y="360" width="210" height="32" rx="8" stroke-width="1.5"/><text class="leg" x="145.0" y="381" text-anchor="middle">Model: sounds sure</text></g>
+<g opacity="0.55"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.8036;0.8179;0.9786;0.9964;1.0000" values="0.55;0.55;1;1;0.55;0.55"/><rect class="pub" x="300" y="360" width="210" height="32" rx="8" stroke-width="1.5"/><text class="leg" x="405.0" y="381" text-anchor="middle">Checks: string matching</text></g>
+<g opacity="0.55"><animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.8036;0.8179;0.9786;0.9964;1.0000" values="0.55;0.55;1;1;0.55;0.55"/><rect class="you" x="560" y="360" width="210" height="32" rx="8" stroke-width="1.5"/><text class="leg" x="665.0" y="381" text-anchor="middle">Outcome: honest</text></g>
+<rect class="capbg" x="0" y="430" width="1080" height="86"/>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">A real quote under a wrong sentence<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.0464;0.0536;1.0000" values="1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">A trap: the corpus does not answer this<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.0532;0.0643;0.1179;0.1250;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">The retriever still returns its best passages<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.1246;0.1357;0.2071;0.2143;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">The model names a PEP anyway<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.2139;0.2250;0.3143;0.3214;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">Its quote is real, so a quote check alone would pass<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.3211;0.3321;0.4393;0.4464;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">But the number it names is not in that passage<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.4461;0.4571;0.5643;0.5714;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">So the claim is cut<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.5711;0.5821;0.6714;0.6786;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="0">The honest answer is the one left<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.6782;0.6893;0.7964;0.8036;1.0000" values="0;0;1;1;0;0"/></text>
+<text class="cap" x="540.0" y="480" text-anchor="middle" opacity="1">A citation alone would have looked fine<animate attributeName="opacity" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;0.8032;0.8143;0.9714;0.9786;1.0000" values="0;0;1;1;0;0"/></text>
+<rect class="track" x="0" y="534" width="1080" height="6"/>
+<rect class="bar" x="0" y="534" width="0" height="6"><animate attributeName="width" dur="28.0s" repeatCount="indefinite" keyTimes="0.0000;1.0000" values="0;1080"/></rect>
+</svg>
